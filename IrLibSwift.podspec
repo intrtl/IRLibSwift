@@ -14,5 +14,5 @@ Pod::Spec.new do |spec|
   spec.source_files = 'IRLib/IrLibSwift.framework/Headers/*.h'
   spec.public_header_files = 'IRLib/IrLibSwift.framework/Headers/*.h'
   spec.ios.vendored_frameworks = 'IRLib/IrLibSwift.framework'
-  spec.dependency = "Realm", "~> 4.3.0"
+  spec.dependency "Realm", "~> 4.3.0"
 end
