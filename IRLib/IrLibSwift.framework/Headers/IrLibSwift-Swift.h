@@ -221,6 +221,7 @@ SWIFT_CLASS("_TtC10IrLibSwift13IRDataManager")
 - (nonnull instancetype)initWithSettings:(IRDataManagerSettings * _Nonnull)settings OBJC_DESIGNATED_INITIALIZER;
 - (void)fetchVisitsForStoreId:(NSInteger)storeId completed:(void (^ _Nonnull)(NSArray<VisitStoredEntity *> * _Nonnull))completed;
 - (void)fetchStoresWithCompletion:(void (^ _Nonnull)(NSArray<Store *> * _Nonnull, NSError * _Nullable))completion;
++ (void)clearStoresLoadDate;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -524,6 +525,7 @@ SWIFT_CLASS("_TtC10IrLibSwift13IRDataManager")
 - (nonnull instancetype)initWithSettings:(IRDataManagerSettings * _Nonnull)settings OBJC_DESIGNATED_INITIALIZER;
 - (void)fetchVisitsForStoreId:(NSInteger)storeId completed:(void (^ _Nonnull)(NSArray<VisitStoredEntity *> * _Nonnull))completed;
 - (void)fetchStoresWithCompletion:(void (^ _Nonnull)(NSArray<Store *> * _Nonnull, NSError * _Nullable))completion;
++ (void)clearStoresLoadDate;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
