@@ -188,6 +188,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import CoreLocation;
 @import Foundation;
 @import ObjectiveC;
 @import Realm;
@@ -209,31 +210,114 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
+@class UIBarButtonItem;
+
+SWIFT_PROTOCOL("_TtP10IrLibSwift16BarButtonShowing_")
+@protocol BarButtonShowing
+- (void)addBarButton:(UIBarButtonItem * _Nonnull)button;
+@end
 
 
-@class IRDataManagerSettings;
-@class VisitStoredEntity;
-@class Store;
-@class NSError;
 
-SWIFT_CLASS("_TtC10IrLibSwift13IRDataManager")
-@interface IRDataManager : NSObject
-- (nonnull instancetype)initWithSettings:(IRDataManagerSettings * _Nonnull)settings OBJC_DESIGNATED_INITIALIZER;
-- (void)fetchVisitsForStoreId:(NSInteger)storeId completed:(void (^ _Nonnull)(NSArray<VisitStoredEntity *> * _Nonnull))completed;
-- (void)fetchStoresWithCompletion:(void (^ _Nonnull)(NSArray<Store *> * _Nonnull, NSError * _Nullable))completion;
-+ (void)clearStoresLoadDate;
+
+
+
+
+@class RLMRealmConfiguration;
+@class NSNumber;
+
+SWIFT_CLASS("_TtC10IrLibSwift18IRDataBaseSettings")
+@interface IRDataBaseSettings : NSObject
+- (nonnull instancetype)initWithRealmConfig:(RLMRealmConfiguration * _Nonnull)realmConfig previousDbVersion:(NSNumber * _Nullable)previousDbVersion OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-@class RLMRealmConfiguration;
+@class IRDataManagerSettings;
+@class NSError;
+@class Photo;
+
+SWIFT_CLASS("_TtC10IrLibSwift13IRDataManager")
+@interface IRDataManager : NSObject
+- (nonnull instancetype)initWithSettings:(IRDataManagerSettings * _Nonnull)settings OBJC_DESIGNATED_INITIALIZER;
+- (void)fetchStoresWithCompletion:(void (^ _Nonnull)(NSError * _Nullable))completion;
++ (void)clearStoresLoadDate;
+- (void)createVisitWithStoreId:(NSInteger)storeId;
+- (void)sendCurrentVisit;
+- (void)fetchRecognitionResultWithPhotoId:(NSString * _Nonnull)photoId completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
+- (void)createTestPhotoWithPhotoId:(NSString * _Nonnull)photoId visitId:(NSString * _Nonnull)visitId path:(NSString * _Nonnull)path storeId:(NSInteger)storeId photoNumber:(NSInteger)photoNumber sceneId:(NSString * _Nonnull)sceneId taskId:(NSString * _Nonnull)taskId;
+- (void)sendPhotoWithPhotoId:(NSString * _Nonnull)photoId completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
+/// Взаимодействие с новым классом Photo
+- (NSArray<Photo *> * _Nonnull)photosReadyToSendWithVisitId:(NSString * _Nullable)visitId SWIFT_WARN_UNUSED_RESULT;
+- (BOOL)recognitionResultRecivedCompletelyForPhotoWithId:(NSString * _Nonnull)id SWIFT_WARN_UNUSED_RESULT;
+- (NSArray<Photo *> * _Nonnull)photosWithNoRecognitionResult SWIFT_WARN_UNUSED_RESULT;
+- (BOOL)canDoRecognitionResultWithPhotoId:(NSString * _Nonnull)photoId SWIFT_WARN_UNUSED_RESULT;
+/// Обновление выбранной торговой точки. Используется в случае работы с либой / через диплинки.
+/// \param storeId идентификатор торговой точки
+///
+- (void)updateCurrentStoreWithStoreId:(NSInteger)storeId;
+- (void)updateExternalDataWithVisitId:(NSString * _Nonnull)visitId;
+- (void)updateCurrentUserWithName:(NSString * _Nonnull)name externalId:(NSString * _Nonnull)externalId;
+- (void)updateSettingsFrom:(IRDataManagerSettings * _Nonnull)settings;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 @class IRSharedSettings;
 
 SWIFT_CLASS("_TtC10IrLibSwift21IRDataManagerSettings")
 @interface IRDataManagerSettings : NSObject
-- (nonnull instancetype)initWithUserToken:(NSString * _Nonnull)userToken realmConfig:(RLMRealmConfiguration * _Nonnull)realmConfig basePath:(NSString * _Nonnull)basePath sharedSettings:(IRSharedSettings * _Nonnull)sharedSettings OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithUserToken:(NSString * _Nonnull)userToken basePath:(NSString * _Nonnull)basePath dbSettings:(IRDataBaseSettings * _Nonnull)dbSettings sharedSettings:(IRSharedSettings * _Nonnull)sharedSettings OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+enum IRLocationErrorBlockType : NSInteger;
+
+/// Настройки запретов на съёмку в зависимости от геолокации
+SWIFT_CLASS("_TtC10IrLibSwift32IRGeolocationErrorSharedSettings")
+@interface IRGeolocationErrorSharedSettings : NSObject
+@property (nonatomic) enum IRLocationErrorBlockType type;
+@property (nonatomic) NSInteger threshold;
+- (nonnull instancetype)initWithType:(enum IRLocationErrorBlockType)type threshold:(NSInteger)threshold OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+typedef SWIFT_ENUM(NSInteger, IRLocationErrorBlockType, closed) {
+  IRLocationErrorBlockTypeNone = 0,
+  IRLocationErrorBlockTypeFull = 1,
+  IRLocationErrorBlockTypePartial = 2,
+};
+
+typedef SWIFT_ENUM(NSInteger, IRNetworkError, closed) {
+  IRNetworkErrorNoConnection = 503,
+  IRNetworkErrorAuthError = 403,
+  IRNetworkErrorProcessing = 202,
+  IRNetworkErrorServerError = 500,
+  IRNetworkErrorDecodeError = 901,
+  IRNetworkErrorEncodeError = 902,
+  IRNetworkErrorResponseDecodeError = 903,
+  IRNetworkErrorUnknown = -1,
+};
+
+@protocol StoresModuleOutput;
+@class UIViewController;
+
+SWIFT_CLASS("_TtC10IrLibSwift19IRNewScreensBuilder")
+@interface IRNewScreensBuilder : NSObject
+- (nonnull instancetype)initWithSettings:(IRDataManagerSettings * _Nonnull)settings OBJC_DESIGNATED_INITIALIZER;
+- (UIViewController * _Nonnull)storesScreenWithOutput:(id <StoresModuleOutput> _Nonnull)output SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC10IrLibSwift14IRNotification")
+@interface IRNotification : NSObject
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSNotificationName _Nonnull authErrorNotification;)
++ (NSNotificationName _Nonnull)authErrorNotification SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @class IRStoresSharedSettings;
@@ -242,25 +326,316 @@ SWIFT_CLASS("_TtC10IrLibSwift21IRDataManagerSettings")
 /// Временное решение для передачи необходимых настроек из старой либы в новую. Позже запрос на getSettings будет вынесен в эту либу.
 SWIFT_CLASS("_TtC10IrLibSwift16IRSharedSettings")
 @interface IRSharedSettings : NSObject
-@property (nonatomic, strong) IRStoresSharedSettings * _Nullable storesSetings;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, readonly, strong) IRStoresSharedSettings * _Nullable storesSettings;
+@property (nonatomic, readonly, strong) IRGeolocationErrorSharedSettings * _Nonnull locationError;
+- (nonnull instancetype)initWithStoresSettings:(IRStoresSharedSettings * _Nonnull)storesSettings locationError:(IRGeolocationErrorSharedSettings * _Nonnull)locationError OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-@class NSNumber;
+@class IRStoredSettingsVisit;
+@class IRStoredSettingsStore;
+
+SWIFT_CLASS("_TtC10IrLibSwift16IRStoredSettings")
+@interface IRStoredSettings : NSObject
+- (nonnull instancetype)initWithRealmConfig:(RLMRealmConfiguration * _Nonnull)realmConfig settings:(IRDataManagerSettings * _Nonnull)settings OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, readonly, strong) IRStoredSettingsVisit * _Nullable currentVisit;
+@property (nonatomic, readonly, strong) IRStoredSettingsStore * _Nullable currentStore;
+- (void)clearCurrentVisit;
+- (void)updateCurrentStoreId:(NSInteger)storeId;
+- (void)updateCurrentUserWithId:(NSString * _Nonnull)id name:(NSString * _Nonnull)name externalId:(NSString * _Nullable)externalId;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC10IrLibSwift21IRStoredSettingsStore")
+@interface IRStoredSettingsStore : NSObject
+@property (nonatomic, readonly) NSInteger storeId;
+@property (nonatomic, readonly, copy) NSString * _Nonnull name;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC10IrLibSwift21IRStoredSettingsVisit")
+@interface IRStoredSettingsVisit : NSObject
+@property (nonatomic, readonly, copy) NSString * _Nonnull visitId;
+@property (nonatomic, readonly, copy) NSString * _Nullable externalVisitId;
+@property (nonatomic, readonly, copy) NSString * _Nonnull userName;
+@property (nonatomic, readonly, copy) NSString * _Nullable externalUserId;
+@property (nonatomic, readonly, copy) NSString * _Nonnull startTimestamp;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 
 SWIFT_CLASS("_TtC10IrLibSwift22IRStoresSharedSettings")
 @interface IRStoresSharedSettings : NSObject
 @property (nonatomic, strong) NSNumber * _Nullable forceUpdateInterval;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithForceUpdateInterval:(NSNumber * _Nullable)forceUpdateInterval OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 
 
 
 
+@class RecognitionResultRealogram;
+@class RecognitionResultActualAssortment;
+
+SWIFT_CLASS("_TtC10IrLibSwift5Photo")
+@interface Photo : RLMObject
+@property (nonatomic, copy) NSString * _Nonnull photoId;
+@property (nonatomic) NSInteger storeId;
+@property (nonatomic, copy) NSString * _Nullable externalStoreId;
+@property (nonatomic, copy) NSString * _Nonnull visitId;
+@property (nonatomic, copy) NSString * _Nullable externalVisitId;
+@property (nonatomic, copy) NSString * _Nonnull sceneId;
+@property (nonatomic, copy) NSString * _Nullable taskId;
+@property (nonatomic, copy) NSString * _Nullable path;
+@property (nonatomic, copy) NSString * _Nullable imageUrl;
+@property (nonatomic, copy) NSDate * _Nullable createdTime;
+@property (nonatomic) double latitude;
+@property (nonatomic) double longitude;
+@property (nonatomic) NSInteger state;
+@property (nonatomic) NSInteger sceneNumber;
+@property (nonatomic) NSInteger photoNumber;
+@property (nonatomic) NSInteger innerNumber;
+@property (nonatomic) NSInteger maxNumber;
+/// Результат анализа
+@property (nonatomic) NSInteger blur;
+@property (nonatomic) BOOL isQualityError;
+@property (nonatomic) BOOL isGeolocationError;
+@property (nonatomic) BOOL isTiltAngleError;
+@property (nonatomic) BOOL isApproved;
+@property (nonatomic) BOOL isSelected;
+@property (nonatomic) BOOL isSceneClosed;
+/// Ошибки
+@property (nonatomic) NSInteger errorState;
+@property (nonatomic, copy) NSString * _Nullable errorMessage;
+/// Отправка на сервер и получение результата
+@property (nonatomic) NSInteger sendPhotoAttemptsCounter;
+@property (nonatomic) NSInteger timeNextAttemptToSendPhoto;
+/// Время следующей попытки отправить фото
+@property (nonatomic) NSInteger recognitionResultAttemptsCounter;
+@property (nonatomic) NSInteger timeNextAttemptToRecognitionResult;
+/// Время следующей попытки отправить запрос отчета
+/// Результаты распознования
+@property (nonatomic, strong) RLMArray<RecognitionResultRealogram *> * _Nonnull realogram;
+@property (nonatomic, strong) RLMArray<RecognitionResultActualAssortment *> * _Nonnull actualAssortment;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+/// Новые типы можно добавлять только в конец, так как порядок имеет значение. Перемешивать после публикации новой версии тоже не стоит
+/// В objC вызов вида IRPhotoStateВeleted
+typedef SWIFT_ENUM(NSInteger, IRPhotoState, closed) {
+  IRPhotoStateDeleted = 1,
+  IRPhotoStateNotReadyToSend = 2,
+  IRPhotoStateReadyToSend = 3,
+  IRPhotoStateNotStitched = 4,
+  IRPhotoStateNotAnalysed = 5,
+  IRPhotoStateNotSaved = 6,
+  IRPhotoStateSent = 7,
+  IRPhotoStateFinished = 8,
+};
+
+/// Статусы ошибок, пока они нужны так как старая логика сильно завязана, в дальнейшем можно будет перенести ошибки в IRPhotoState как статус отправки
+typedef SWIFT_ENUM(NSInteger, IRPhotoErrorState, closed) {
+  IRPhotoErrorStateNoError = 1,
+  IRPhotoErrorStateAnalyseError = 2,
+  IRPhotoErrorStateStitcherError = 3,
+  IRPhotoErrorStateSentError = 4,
+  IRPhotoErrorStateRecognitionResultError = 5,
+};
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@class RecognitionResultWidth;
+
+SWIFT_CLASS("_TtC10IrLibSwift33RecognitionResultActualAssortment")
+@interface RecognitionResultActualAssortment : RLMObject
+@property (nonatomic, copy) NSString * _Nonnull productId;
+@property (nonatomic, copy) NSString * _Nullable externalId;
+@property (nonatomic, copy) NSString * _Nullable categoryId;
+@property (nonatomic) NSInteger facing;
+@property (nonatomic, copy) NSString * _Nullable price;
+@property (nonatomic) NSInteger priceType;
+@property (nonatomic, strong) RecognitionResultWidth * _Nullable width;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class RecognitionResultProductGroup;
+@class RecognitionResultScene;
+@class RecognitionResultSceneGroup;
+
+SWIFT_CLASS("_TtC10IrLibSwift38RecognitionResultAssortmentAchievement")
+@interface RecognitionResultAssortmentAchievement : RLMObject
+@property (nonatomic, copy) NSString * _Nonnull id;
+@property (nonatomic) NSInteger facingPlan;
+@property (nonatomic) NSInteger facingFact;
+@property (nonatomic, copy) NSString * _Nullable productId;
+@property (nonatomic, copy) NSString * _Nullable externalId;
+@property (nonatomic) BOOL isUserBrand;
+@property (nonatomic, copy) NSString * _Nullable productName;
+@property (nonatomic, copy) NSString * _Nullable brandName;
+@property (nonatomic, copy) NSString * _Nullable brandId;
+@property (nonatomic, copy) NSString * _Nullable categoryName;
+@property (nonatomic, copy) NSString * _Nullable macrocategoryId;
+@property (nonatomic, copy) NSString * _Nullable macrocategoryName;
+@property (nonatomic, copy) NSString * _Nullable categoryId;
+@property (nonatomic) BOOL isKey;
+@property (nonatomic) NSInteger facingReal;
+@property (nonatomic, strong) RLMArray<RecognitionResultProductGroup *> * _Nonnull productGroup;
+@property (nonatomic, strong) RLMArray<RecognitionResultScene *> * _Nonnull scene;
+@property (nonatomic, strong) RLMArray<RecognitionResultSceneGroup *> * _Nonnull sceneGroup;
+@property (nonatomic, copy) NSString * _Nullable price;
+@property (nonatomic) BOOL isYellowPrice;
++ (NSString * _Nullable)primaryKey SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class RecognitionResultTotal;
+@class RecognitionResultValue;
+
+SWIFT_CLASS("_TtC10IrLibSwift21RecognitionResultLack")
+@interface RecognitionResultLack : RLMObject
+@property (nonatomic, strong) RecognitionResultTotal * _Nullable total;
+@property (nonatomic, strong) RLMArray<RecognitionResultValue *> * _Nonnull values;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10IrLibSwift30RecognitionResultOldAssortment")
+@interface RecognitionResultOldAssortment : RLMObject
+@property (nonatomic, strong) RLMArray<RecognitionResultAssortmentAchievement *> * _Nonnull assortmentAchievement;
+@property (nonatomic, strong) RecognitionResultLack * _Nullable lackOfAssortment;
+@property (nonatomic) NSInteger performanceAssortment;
+@property (nonatomic) NSInteger lackOfAssortmentDelta;
+@property (nonatomic) NSInteger performanceAssortmentDelta;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10IrLibSwift29RecognitionResultProductGroup")
+@interface RecognitionResultProductGroup : RLMObject
+@property (nonatomic, copy) NSString * _Nonnull name;
+@property (nonatomic, copy) NSString * _Nonnull code;
+@property (nonatomic) NSInteger value;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10IrLibSwift26RecognitionResultRealogram")
+@interface RecognitionResultRealogram : RLMObject
+@property (nonatomic, copy) NSString * _Nonnull id;
+@property (nonatomic, copy) NSString * _Nonnull productId;
+@property (nonatomic, copy) NSString * _Nullable productName;
+@property (nonatomic, copy) NSString * _Nullable tinyName;
+@property (nonatomic) NSInteger statusId;
+@property (nonatomic) NSInteger x1;
+@property (nonatomic) NSInteger y1;
+@property (nonatomic) NSInteger x2;
+@property (nonatomic) NSInteger y2;
+@property (nonatomic) NSInteger x01;
+@property (nonatomic) NSInteger y01;
+@property (nonatomic) NSInteger x02;
+@property (nonatomic) NSInteger y02;
+@property (nonatomic) BOOL isUserBrand;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10IrLibSwift22RecognitionResultScene")
+@interface RecognitionResultScene : RLMObject
+@property (nonatomic, copy) NSString * _Nonnull id;
+@property (nonatomic) NSInteger facingFact;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10IrLibSwift27RecognitionResultSceneGroup")
+@interface RecognitionResultSceneGroup : RLMObject
+@property (nonatomic) NSInteger id;
+@property (nonatomic) NSInteger facingFact;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class TaskKpi;
+
+SWIFT_CLASS("_TtC10IrLibSwift21RecognitionResultTask")
+@interface RecognitionResultTask : RLMObject
+@property (nonatomic, copy) NSString * _Nonnull taskId;
+@property (nonatomic, copy) NSString * _Nullable sourceId;
+@property (nonatomic) NSInteger totalScore;
+@property (nonatomic) double percentage;
+@property (nonatomic, strong) RLMArray<TaskKpi *> * _Nonnull kpis;
++ (NSString * _Nullable)primaryKey SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+
+
+SWIFT_CLASS("_TtC10IrLibSwift22RecognitionResultTotal")
+@interface RecognitionResultTotal : RLMObject
+@property (nonatomic) NSInteger value;
+@property (nonatomic) NSInteger previousValue;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10IrLibSwift22RecognitionResultValue")
+@interface RecognitionResultValue : RLMObject
+@property (nonatomic, copy) NSString * _Nonnull id;
+@property (nonatomic, copy) NSString * _Nullable name;
+@property (nonatomic) NSInteger plan;
+@property (nonatomic) NSInteger fact;
+@property (nonatomic, copy) NSString * _Nullable productCategoryName;
+@property (nonatomic, copy) NSString * _Nullable miniature;
+@property (nonatomic, copy) NSString * _Nullable state;
+@property (nonatomic) NSInteger reasonId;
+@property (nonatomic, copy) NSString * _Nullable comment;
+@property (nonatomic) BOOL isUserBrand;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10IrLibSwift22RecognitionResultWidth")
+@interface RecognitionResultWidth : RLMObject
+@property (nonatomic) double cm;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10IrLibSwift7Segment")
+@interface Segment : RLMObject
+@property (nonatomic, copy) NSString * _Nonnull segmentId;
+@property (nonatomic, copy) NSString * _Nonnull name;
++ (NSString * _Nullable)primaryKey SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
 
 
 
@@ -271,16 +646,35 @@ SWIFT_CLASS("_TtC10IrLibSwift5Store")
 @property (nonatomic, copy) NSString * _Nonnull storeIdString;
 @property (nonatomic, copy) NSString * _Nullable externalId;
 @property (nonatomic, copy) NSString * _Nonnull name;
+@property (nonatomic, copy) NSString * _Nullable retailerName;
+@property (nonatomic, copy) NSString * _Nonnull address;
+@property (nonatomic, copy) NSString * _Nullable segmentId;
+@property (nonatomic, copy) NSString * _Nullable segmentName;
+@property (nonatomic, copy) NSString * _Nullable storeTypeName;
 @property (nonatomic) double lat;
 @property (nonatomic) double lon;
 @property (nonatomic) double distance;
+@property (nonatomic, copy) NSString * _Nullable cityName;
 + (NSString * _Nullable)primaryKey SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
-SWIFT_CLASS("_TtC10IrLibSwift16StoredAssortment")
-@interface StoredAssortment : RLMObject
+
+
+SWIFT_PROTOCOL("_TtP10IrLibSwift18StoresModuleOutput_")
+@protocol StoresModuleOutput
+- (void)didTriggerStartShootingForTaskWithId:(NSString * _Nullable)taskId;
+- (void)didStartVisitForStoreWithId:(NSInteger)storeId;
+- (void)didFinishVisitForStoreWithId:(NSInteger)storeId readyToFinishHandler:(void (^ _Nonnull)(BOOL))readyToFinishHandler;
+- (void)didTriggerOpenAssortmentForStoreWithId:(NSInteger)storeId;
+- (void)didTriggerOpenSummaryReportForStoreWithId:(NSInteger)storeId;
+@end
+
+
+SWIFT_CLASS("_TtC10IrLibSwift7TaskKpi")
+@interface TaskKpi : RLMObject
+@property (nonatomic, copy) NSString * _Nonnull name;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -293,10 +687,47 @@ SWIFT_CLASS("_TtC10IrLibSwift16StoredAssortment")
 
 
 
-SWIFT_CLASS("_TtC10IrLibSwift17VisitStoredEntity")
-@interface VisitStoredEntity : RLMObject
+
+
+
+
+
+
+
+
+
+
+
+
+SWIFT_CLASS("_TtC10IrLibSwift5Visit")
+@interface Visit : RLMObject
+@property (nonatomic, copy) NSString * _Nonnull visitId;
+@property (nonatomic, copy) NSString * _Nonnull userName;
+@property (nonatomic, copy) NSString * _Nullable externalUserId;
+@property (nonatomic, copy) NSString * _Nullable externalId;
+@property (nonatomic) NSInteger storeId;
+@property (nonatomic, copy) NSString * _Nonnull storeName;
+@property (nonatomic, copy) NSString * _Nullable externalStoreId;
+@property (nonatomic, copy) NSString * _Nonnull timestamp;
+@property (nonatomic, copy) NSString * _Nonnull timestampFull;
+@property (nonatomic, copy) NSString * _Nonnull timestampStart;
+@property (nonatomic, copy) NSString * _Nullable timestampEnd;
+@property (nonatomic) NSInteger timestampLong;
+@property (nonatomic) BOOL isSended;
+@property (nonatomic) BOOL isShareShelfReceived;
+@property (nonatomic) BOOL isCustomShareShelfReceived;
+@property (nonatomic) NSInteger notificationsCount;
+@property (nonatomic) NSInteger isReportRequested;
+@property (nonatomic) BOOL isProductGroupReceived;
+@property (nonatomic) BOOL isConfirmedWithReceivedReports;
+@property (nonatomic, strong) RLMArray<RecognitionResultTask *> * _Nonnull resultTasks;
+@property (nonatomic, strong) RecognitionResultOldAssortment * _Nullable resultOldAssortment;
+@property (nonatomic) double latitude;
+@property (nonatomic) double longitude;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
+
+
 
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop
@@ -492,6 +923,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import CoreLocation;
 @import Foundation;
 @import ObjectiveC;
 @import Realm;
@@ -513,31 +945,114 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
+@class UIBarButtonItem;
+
+SWIFT_PROTOCOL("_TtP10IrLibSwift16BarButtonShowing_")
+@protocol BarButtonShowing
+- (void)addBarButton:(UIBarButtonItem * _Nonnull)button;
+@end
 
 
-@class IRDataManagerSettings;
-@class VisitStoredEntity;
-@class Store;
-@class NSError;
 
-SWIFT_CLASS("_TtC10IrLibSwift13IRDataManager")
-@interface IRDataManager : NSObject
-- (nonnull instancetype)initWithSettings:(IRDataManagerSettings * _Nonnull)settings OBJC_DESIGNATED_INITIALIZER;
-- (void)fetchVisitsForStoreId:(NSInteger)storeId completed:(void (^ _Nonnull)(NSArray<VisitStoredEntity *> * _Nonnull))completed;
-- (void)fetchStoresWithCompletion:(void (^ _Nonnull)(NSArray<Store *> * _Nonnull, NSError * _Nullable))completion;
-+ (void)clearStoresLoadDate;
+
+
+
+
+@class RLMRealmConfiguration;
+@class NSNumber;
+
+SWIFT_CLASS("_TtC10IrLibSwift18IRDataBaseSettings")
+@interface IRDataBaseSettings : NSObject
+- (nonnull instancetype)initWithRealmConfig:(RLMRealmConfiguration * _Nonnull)realmConfig previousDbVersion:(NSNumber * _Nullable)previousDbVersion OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-@class RLMRealmConfiguration;
+@class IRDataManagerSettings;
+@class NSError;
+@class Photo;
+
+SWIFT_CLASS("_TtC10IrLibSwift13IRDataManager")
+@interface IRDataManager : NSObject
+- (nonnull instancetype)initWithSettings:(IRDataManagerSettings * _Nonnull)settings OBJC_DESIGNATED_INITIALIZER;
+- (void)fetchStoresWithCompletion:(void (^ _Nonnull)(NSError * _Nullable))completion;
++ (void)clearStoresLoadDate;
+- (void)createVisitWithStoreId:(NSInteger)storeId;
+- (void)sendCurrentVisit;
+- (void)fetchRecognitionResultWithPhotoId:(NSString * _Nonnull)photoId completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
+- (void)createTestPhotoWithPhotoId:(NSString * _Nonnull)photoId visitId:(NSString * _Nonnull)visitId path:(NSString * _Nonnull)path storeId:(NSInteger)storeId photoNumber:(NSInteger)photoNumber sceneId:(NSString * _Nonnull)sceneId taskId:(NSString * _Nonnull)taskId;
+- (void)sendPhotoWithPhotoId:(NSString * _Nonnull)photoId completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
+/// Взаимодействие с новым классом Photo
+- (NSArray<Photo *> * _Nonnull)photosReadyToSendWithVisitId:(NSString * _Nullable)visitId SWIFT_WARN_UNUSED_RESULT;
+- (BOOL)recognitionResultRecivedCompletelyForPhotoWithId:(NSString * _Nonnull)id SWIFT_WARN_UNUSED_RESULT;
+- (NSArray<Photo *> * _Nonnull)photosWithNoRecognitionResult SWIFT_WARN_UNUSED_RESULT;
+- (BOOL)canDoRecognitionResultWithPhotoId:(NSString * _Nonnull)photoId SWIFT_WARN_UNUSED_RESULT;
+/// Обновление выбранной торговой точки. Используется в случае работы с либой / через диплинки.
+/// \param storeId идентификатор торговой точки
+///
+- (void)updateCurrentStoreWithStoreId:(NSInteger)storeId;
+- (void)updateExternalDataWithVisitId:(NSString * _Nonnull)visitId;
+- (void)updateCurrentUserWithName:(NSString * _Nonnull)name externalId:(NSString * _Nonnull)externalId;
+- (void)updateSettingsFrom:(IRDataManagerSettings * _Nonnull)settings;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 @class IRSharedSettings;
 
 SWIFT_CLASS("_TtC10IrLibSwift21IRDataManagerSettings")
 @interface IRDataManagerSettings : NSObject
-- (nonnull instancetype)initWithUserToken:(NSString * _Nonnull)userToken realmConfig:(RLMRealmConfiguration * _Nonnull)realmConfig basePath:(NSString * _Nonnull)basePath sharedSettings:(IRSharedSettings * _Nonnull)sharedSettings OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithUserToken:(NSString * _Nonnull)userToken basePath:(NSString * _Nonnull)basePath dbSettings:(IRDataBaseSettings * _Nonnull)dbSettings sharedSettings:(IRSharedSettings * _Nonnull)sharedSettings OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+enum IRLocationErrorBlockType : NSInteger;
+
+/// Настройки запретов на съёмку в зависимости от геолокации
+SWIFT_CLASS("_TtC10IrLibSwift32IRGeolocationErrorSharedSettings")
+@interface IRGeolocationErrorSharedSettings : NSObject
+@property (nonatomic) enum IRLocationErrorBlockType type;
+@property (nonatomic) NSInteger threshold;
+- (nonnull instancetype)initWithType:(enum IRLocationErrorBlockType)type threshold:(NSInteger)threshold OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+typedef SWIFT_ENUM(NSInteger, IRLocationErrorBlockType, closed) {
+  IRLocationErrorBlockTypeNone = 0,
+  IRLocationErrorBlockTypeFull = 1,
+  IRLocationErrorBlockTypePartial = 2,
+};
+
+typedef SWIFT_ENUM(NSInteger, IRNetworkError, closed) {
+  IRNetworkErrorNoConnection = 503,
+  IRNetworkErrorAuthError = 403,
+  IRNetworkErrorProcessing = 202,
+  IRNetworkErrorServerError = 500,
+  IRNetworkErrorDecodeError = 901,
+  IRNetworkErrorEncodeError = 902,
+  IRNetworkErrorResponseDecodeError = 903,
+  IRNetworkErrorUnknown = -1,
+};
+
+@protocol StoresModuleOutput;
+@class UIViewController;
+
+SWIFT_CLASS("_TtC10IrLibSwift19IRNewScreensBuilder")
+@interface IRNewScreensBuilder : NSObject
+- (nonnull instancetype)initWithSettings:(IRDataManagerSettings * _Nonnull)settings OBJC_DESIGNATED_INITIALIZER;
+- (UIViewController * _Nonnull)storesScreenWithOutput:(id <StoresModuleOutput> _Nonnull)output SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC10IrLibSwift14IRNotification")
+@interface IRNotification : NSObject
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSNotificationName _Nonnull authErrorNotification;)
++ (NSNotificationName _Nonnull)authErrorNotification SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @class IRStoresSharedSettings;
@@ -546,25 +1061,316 @@ SWIFT_CLASS("_TtC10IrLibSwift21IRDataManagerSettings")
 /// Временное решение для передачи необходимых настроек из старой либы в новую. Позже запрос на getSettings будет вынесен в эту либу.
 SWIFT_CLASS("_TtC10IrLibSwift16IRSharedSettings")
 @interface IRSharedSettings : NSObject
-@property (nonatomic, strong) IRStoresSharedSettings * _Nullable storesSetings;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, readonly, strong) IRStoresSharedSettings * _Nullable storesSettings;
+@property (nonatomic, readonly, strong) IRGeolocationErrorSharedSettings * _Nonnull locationError;
+- (nonnull instancetype)initWithStoresSettings:(IRStoresSharedSettings * _Nonnull)storesSettings locationError:(IRGeolocationErrorSharedSettings * _Nonnull)locationError OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-@class NSNumber;
+@class IRStoredSettingsVisit;
+@class IRStoredSettingsStore;
+
+SWIFT_CLASS("_TtC10IrLibSwift16IRStoredSettings")
+@interface IRStoredSettings : NSObject
+- (nonnull instancetype)initWithRealmConfig:(RLMRealmConfiguration * _Nonnull)realmConfig settings:(IRDataManagerSettings * _Nonnull)settings OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, readonly, strong) IRStoredSettingsVisit * _Nullable currentVisit;
+@property (nonatomic, readonly, strong) IRStoredSettingsStore * _Nullable currentStore;
+- (void)clearCurrentVisit;
+- (void)updateCurrentStoreId:(NSInteger)storeId;
+- (void)updateCurrentUserWithId:(NSString * _Nonnull)id name:(NSString * _Nonnull)name externalId:(NSString * _Nullable)externalId;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC10IrLibSwift21IRStoredSettingsStore")
+@interface IRStoredSettingsStore : NSObject
+@property (nonatomic, readonly) NSInteger storeId;
+@property (nonatomic, readonly, copy) NSString * _Nonnull name;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC10IrLibSwift21IRStoredSettingsVisit")
+@interface IRStoredSettingsVisit : NSObject
+@property (nonatomic, readonly, copy) NSString * _Nonnull visitId;
+@property (nonatomic, readonly, copy) NSString * _Nullable externalVisitId;
+@property (nonatomic, readonly, copy) NSString * _Nonnull userName;
+@property (nonatomic, readonly, copy) NSString * _Nullable externalUserId;
+@property (nonatomic, readonly, copy) NSString * _Nonnull startTimestamp;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 
 SWIFT_CLASS("_TtC10IrLibSwift22IRStoresSharedSettings")
 @interface IRStoresSharedSettings : NSObject
 @property (nonatomic, strong) NSNumber * _Nullable forceUpdateInterval;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithForceUpdateInterval:(NSNumber * _Nullable)forceUpdateInterval OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 
 
 
 
+@class RecognitionResultRealogram;
+@class RecognitionResultActualAssortment;
+
+SWIFT_CLASS("_TtC10IrLibSwift5Photo")
+@interface Photo : RLMObject
+@property (nonatomic, copy) NSString * _Nonnull photoId;
+@property (nonatomic) NSInteger storeId;
+@property (nonatomic, copy) NSString * _Nullable externalStoreId;
+@property (nonatomic, copy) NSString * _Nonnull visitId;
+@property (nonatomic, copy) NSString * _Nullable externalVisitId;
+@property (nonatomic, copy) NSString * _Nonnull sceneId;
+@property (nonatomic, copy) NSString * _Nullable taskId;
+@property (nonatomic, copy) NSString * _Nullable path;
+@property (nonatomic, copy) NSString * _Nullable imageUrl;
+@property (nonatomic, copy) NSDate * _Nullable createdTime;
+@property (nonatomic) double latitude;
+@property (nonatomic) double longitude;
+@property (nonatomic) NSInteger state;
+@property (nonatomic) NSInteger sceneNumber;
+@property (nonatomic) NSInteger photoNumber;
+@property (nonatomic) NSInteger innerNumber;
+@property (nonatomic) NSInteger maxNumber;
+/// Результат анализа
+@property (nonatomic) NSInteger blur;
+@property (nonatomic) BOOL isQualityError;
+@property (nonatomic) BOOL isGeolocationError;
+@property (nonatomic) BOOL isTiltAngleError;
+@property (nonatomic) BOOL isApproved;
+@property (nonatomic) BOOL isSelected;
+@property (nonatomic) BOOL isSceneClosed;
+/// Ошибки
+@property (nonatomic) NSInteger errorState;
+@property (nonatomic, copy) NSString * _Nullable errorMessage;
+/// Отправка на сервер и получение результата
+@property (nonatomic) NSInteger sendPhotoAttemptsCounter;
+@property (nonatomic) NSInteger timeNextAttemptToSendPhoto;
+/// Время следующей попытки отправить фото
+@property (nonatomic) NSInteger recognitionResultAttemptsCounter;
+@property (nonatomic) NSInteger timeNextAttemptToRecognitionResult;
+/// Время следующей попытки отправить запрос отчета
+/// Результаты распознования
+@property (nonatomic, strong) RLMArray<RecognitionResultRealogram *> * _Nonnull realogram;
+@property (nonatomic, strong) RLMArray<RecognitionResultActualAssortment *> * _Nonnull actualAssortment;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+/// Новые типы можно добавлять только в конец, так как порядок имеет значение. Перемешивать после публикации новой версии тоже не стоит
+/// В objC вызов вида IRPhotoStateВeleted
+typedef SWIFT_ENUM(NSInteger, IRPhotoState, closed) {
+  IRPhotoStateDeleted = 1,
+  IRPhotoStateNotReadyToSend = 2,
+  IRPhotoStateReadyToSend = 3,
+  IRPhotoStateNotStitched = 4,
+  IRPhotoStateNotAnalysed = 5,
+  IRPhotoStateNotSaved = 6,
+  IRPhotoStateSent = 7,
+  IRPhotoStateFinished = 8,
+};
+
+/// Статусы ошибок, пока они нужны так как старая логика сильно завязана, в дальнейшем можно будет перенести ошибки в IRPhotoState как статус отправки
+typedef SWIFT_ENUM(NSInteger, IRPhotoErrorState, closed) {
+  IRPhotoErrorStateNoError = 1,
+  IRPhotoErrorStateAnalyseError = 2,
+  IRPhotoErrorStateStitcherError = 3,
+  IRPhotoErrorStateSentError = 4,
+  IRPhotoErrorStateRecognitionResultError = 5,
+};
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@class RecognitionResultWidth;
+
+SWIFT_CLASS("_TtC10IrLibSwift33RecognitionResultActualAssortment")
+@interface RecognitionResultActualAssortment : RLMObject
+@property (nonatomic, copy) NSString * _Nonnull productId;
+@property (nonatomic, copy) NSString * _Nullable externalId;
+@property (nonatomic, copy) NSString * _Nullable categoryId;
+@property (nonatomic) NSInteger facing;
+@property (nonatomic, copy) NSString * _Nullable price;
+@property (nonatomic) NSInteger priceType;
+@property (nonatomic, strong) RecognitionResultWidth * _Nullable width;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class RecognitionResultProductGroup;
+@class RecognitionResultScene;
+@class RecognitionResultSceneGroup;
+
+SWIFT_CLASS("_TtC10IrLibSwift38RecognitionResultAssortmentAchievement")
+@interface RecognitionResultAssortmentAchievement : RLMObject
+@property (nonatomic, copy) NSString * _Nonnull id;
+@property (nonatomic) NSInteger facingPlan;
+@property (nonatomic) NSInteger facingFact;
+@property (nonatomic, copy) NSString * _Nullable productId;
+@property (nonatomic, copy) NSString * _Nullable externalId;
+@property (nonatomic) BOOL isUserBrand;
+@property (nonatomic, copy) NSString * _Nullable productName;
+@property (nonatomic, copy) NSString * _Nullable brandName;
+@property (nonatomic, copy) NSString * _Nullable brandId;
+@property (nonatomic, copy) NSString * _Nullable categoryName;
+@property (nonatomic, copy) NSString * _Nullable macrocategoryId;
+@property (nonatomic, copy) NSString * _Nullable macrocategoryName;
+@property (nonatomic, copy) NSString * _Nullable categoryId;
+@property (nonatomic) BOOL isKey;
+@property (nonatomic) NSInteger facingReal;
+@property (nonatomic, strong) RLMArray<RecognitionResultProductGroup *> * _Nonnull productGroup;
+@property (nonatomic, strong) RLMArray<RecognitionResultScene *> * _Nonnull scene;
+@property (nonatomic, strong) RLMArray<RecognitionResultSceneGroup *> * _Nonnull sceneGroup;
+@property (nonatomic, copy) NSString * _Nullable price;
+@property (nonatomic) BOOL isYellowPrice;
++ (NSString * _Nullable)primaryKey SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class RecognitionResultTotal;
+@class RecognitionResultValue;
+
+SWIFT_CLASS("_TtC10IrLibSwift21RecognitionResultLack")
+@interface RecognitionResultLack : RLMObject
+@property (nonatomic, strong) RecognitionResultTotal * _Nullable total;
+@property (nonatomic, strong) RLMArray<RecognitionResultValue *> * _Nonnull values;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10IrLibSwift30RecognitionResultOldAssortment")
+@interface RecognitionResultOldAssortment : RLMObject
+@property (nonatomic, strong) RLMArray<RecognitionResultAssortmentAchievement *> * _Nonnull assortmentAchievement;
+@property (nonatomic, strong) RecognitionResultLack * _Nullable lackOfAssortment;
+@property (nonatomic) NSInteger performanceAssortment;
+@property (nonatomic) NSInteger lackOfAssortmentDelta;
+@property (nonatomic) NSInteger performanceAssortmentDelta;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10IrLibSwift29RecognitionResultProductGroup")
+@interface RecognitionResultProductGroup : RLMObject
+@property (nonatomic, copy) NSString * _Nonnull name;
+@property (nonatomic, copy) NSString * _Nonnull code;
+@property (nonatomic) NSInteger value;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10IrLibSwift26RecognitionResultRealogram")
+@interface RecognitionResultRealogram : RLMObject
+@property (nonatomic, copy) NSString * _Nonnull id;
+@property (nonatomic, copy) NSString * _Nonnull productId;
+@property (nonatomic, copy) NSString * _Nullable productName;
+@property (nonatomic, copy) NSString * _Nullable tinyName;
+@property (nonatomic) NSInteger statusId;
+@property (nonatomic) NSInteger x1;
+@property (nonatomic) NSInteger y1;
+@property (nonatomic) NSInteger x2;
+@property (nonatomic) NSInteger y2;
+@property (nonatomic) NSInteger x01;
+@property (nonatomic) NSInteger y01;
+@property (nonatomic) NSInteger x02;
+@property (nonatomic) NSInteger y02;
+@property (nonatomic) BOOL isUserBrand;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10IrLibSwift22RecognitionResultScene")
+@interface RecognitionResultScene : RLMObject
+@property (nonatomic, copy) NSString * _Nonnull id;
+@property (nonatomic) NSInteger facingFact;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10IrLibSwift27RecognitionResultSceneGroup")
+@interface RecognitionResultSceneGroup : RLMObject
+@property (nonatomic) NSInteger id;
+@property (nonatomic) NSInteger facingFact;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class TaskKpi;
+
+SWIFT_CLASS("_TtC10IrLibSwift21RecognitionResultTask")
+@interface RecognitionResultTask : RLMObject
+@property (nonatomic, copy) NSString * _Nonnull taskId;
+@property (nonatomic, copy) NSString * _Nullable sourceId;
+@property (nonatomic) NSInteger totalScore;
+@property (nonatomic) double percentage;
+@property (nonatomic, strong) RLMArray<TaskKpi *> * _Nonnull kpis;
++ (NSString * _Nullable)primaryKey SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+
+
+SWIFT_CLASS("_TtC10IrLibSwift22RecognitionResultTotal")
+@interface RecognitionResultTotal : RLMObject
+@property (nonatomic) NSInteger value;
+@property (nonatomic) NSInteger previousValue;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10IrLibSwift22RecognitionResultValue")
+@interface RecognitionResultValue : RLMObject
+@property (nonatomic, copy) NSString * _Nonnull id;
+@property (nonatomic, copy) NSString * _Nullable name;
+@property (nonatomic) NSInteger plan;
+@property (nonatomic) NSInteger fact;
+@property (nonatomic, copy) NSString * _Nullable productCategoryName;
+@property (nonatomic, copy) NSString * _Nullable miniature;
+@property (nonatomic, copy) NSString * _Nullable state;
+@property (nonatomic) NSInteger reasonId;
+@property (nonatomic, copy) NSString * _Nullable comment;
+@property (nonatomic) BOOL isUserBrand;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10IrLibSwift22RecognitionResultWidth")
+@interface RecognitionResultWidth : RLMObject
+@property (nonatomic) double cm;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10IrLibSwift7Segment")
+@interface Segment : RLMObject
+@property (nonatomic, copy) NSString * _Nonnull segmentId;
+@property (nonatomic, copy) NSString * _Nonnull name;
++ (NSString * _Nullable)primaryKey SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
 
 
 
@@ -575,16 +1381,35 @@ SWIFT_CLASS("_TtC10IrLibSwift5Store")
 @property (nonatomic, copy) NSString * _Nonnull storeIdString;
 @property (nonatomic, copy) NSString * _Nullable externalId;
 @property (nonatomic, copy) NSString * _Nonnull name;
+@property (nonatomic, copy) NSString * _Nullable retailerName;
+@property (nonatomic, copy) NSString * _Nonnull address;
+@property (nonatomic, copy) NSString * _Nullable segmentId;
+@property (nonatomic, copy) NSString * _Nullable segmentName;
+@property (nonatomic, copy) NSString * _Nullable storeTypeName;
 @property (nonatomic) double lat;
 @property (nonatomic) double lon;
 @property (nonatomic) double distance;
+@property (nonatomic, copy) NSString * _Nullable cityName;
 + (NSString * _Nullable)primaryKey SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
-SWIFT_CLASS("_TtC10IrLibSwift16StoredAssortment")
-@interface StoredAssortment : RLMObject
+
+
+SWIFT_PROTOCOL("_TtP10IrLibSwift18StoresModuleOutput_")
+@protocol StoresModuleOutput
+- (void)didTriggerStartShootingForTaskWithId:(NSString * _Nullable)taskId;
+- (void)didStartVisitForStoreWithId:(NSInteger)storeId;
+- (void)didFinishVisitForStoreWithId:(NSInteger)storeId readyToFinishHandler:(void (^ _Nonnull)(BOOL))readyToFinishHandler;
+- (void)didTriggerOpenAssortmentForStoreWithId:(NSInteger)storeId;
+- (void)didTriggerOpenSummaryReportForStoreWithId:(NSInteger)storeId;
+@end
+
+
+SWIFT_CLASS("_TtC10IrLibSwift7TaskKpi")
+@interface TaskKpi : RLMObject
+@property (nonatomic, copy) NSString * _Nonnull name;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -597,10 +1422,47 @@ SWIFT_CLASS("_TtC10IrLibSwift16StoredAssortment")
 
 
 
-SWIFT_CLASS("_TtC10IrLibSwift17VisitStoredEntity")
-@interface VisitStoredEntity : RLMObject
+
+
+
+
+
+
+
+
+
+
+
+
+SWIFT_CLASS("_TtC10IrLibSwift5Visit")
+@interface Visit : RLMObject
+@property (nonatomic, copy) NSString * _Nonnull visitId;
+@property (nonatomic, copy) NSString * _Nonnull userName;
+@property (nonatomic, copy) NSString * _Nullable externalUserId;
+@property (nonatomic, copy) NSString * _Nullable externalId;
+@property (nonatomic) NSInteger storeId;
+@property (nonatomic, copy) NSString * _Nonnull storeName;
+@property (nonatomic, copy) NSString * _Nullable externalStoreId;
+@property (nonatomic, copy) NSString * _Nonnull timestamp;
+@property (nonatomic, copy) NSString * _Nonnull timestampFull;
+@property (nonatomic, copy) NSString * _Nonnull timestampStart;
+@property (nonatomic, copy) NSString * _Nullable timestampEnd;
+@property (nonatomic) NSInteger timestampLong;
+@property (nonatomic) BOOL isSended;
+@property (nonatomic) BOOL isShareShelfReceived;
+@property (nonatomic) BOOL isCustomShareShelfReceived;
+@property (nonatomic) NSInteger notificationsCount;
+@property (nonatomic) NSInteger isReportRequested;
+@property (nonatomic) BOOL isProductGroupReceived;
+@property (nonatomic) BOOL isConfirmedWithReceivedReports;
+@property (nonatomic, strong) RLMArray<RecognitionResultTask *> * _Nonnull resultTasks;
+@property (nonatomic, strong) RecognitionResultOldAssortment * _Nullable resultOldAssortment;
+@property (nonatomic) double latitude;
+@property (nonatomic) double longitude;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
+
+
 
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop
