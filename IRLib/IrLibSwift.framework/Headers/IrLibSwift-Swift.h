@@ -236,6 +236,10 @@ SWIFT_CLASS("_TtC10IrLibSwift18IRDataBaseSettings")
 @class IRDataManagerSettings;
 @class NSError;
 @class Photo;
+@class Visit;
+@class VisitWidgetMatrix;
+@class VisitWidgetMacroCategory;
+@class VisitWidgetTasksData;
 
 SWIFT_CLASS("_TtC10IrLibSwift13IRDataManager")
 @interface IRDataManager : NSObject
@@ -245,7 +249,6 @@ SWIFT_CLASS("_TtC10IrLibSwift13IRDataManager")
 - (void)createVisitWithStoreId:(NSInteger)storeId;
 - (void)sendCurrentVisit;
 - (void)fetchRecognitionResultWithPhotoId:(NSString * _Nonnull)photoId completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
-- (void)createTestPhotoWithPhotoId:(NSString * _Nonnull)photoId visitId:(NSString * _Nonnull)visitId path:(NSString * _Nonnull)path storeId:(NSInteger)storeId photoNumber:(NSInteger)photoNumber sceneId:(NSString * _Nonnull)sceneId taskId:(NSString * _Nonnull)taskId;
 - (void)sendPhotoWithPhotoId:(NSString * _Nonnull)photoId completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 /// Взаимодействие с новым классом Photo
 - (NSArray<Photo *> * _Nonnull)photosReadyToSendWithVisitId:(NSString * _Nullable)visitId SWIFT_WARN_UNUSED_RESULT;
@@ -257,8 +260,18 @@ SWIFT_CLASS("_TtC10IrLibSwift13IRDataManager")
 ///
 - (void)updateCurrentStoreWithStoreId:(NSInteger)storeId;
 - (void)updateExternalDataWithVisitId:(NSString * _Nonnull)visitId;
++ (void)updateExternalDataWithVisitId:(NSString * _Nonnull)visitId;
++ (void)clearExternalData;
 - (void)updateCurrentUserWithName:(NSString * _Nonnull)name externalId:(NSString * _Nonnull)externalId;
 - (void)updateSettingsFrom:(IRDataManagerSettings * _Nonnull)settings;
+- (void)fetchWidgetsWithVisitId:(NSString * _Nonnull)visitId completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
+- (NSArray<Visit *> * _Nonnull)visitsWithNoWidgets SWIFT_WARN_UNUSED_RESULT;
+- (VisitWidgetMatrix * _Nullable)defaultMatrixFromVisitWithVisitId:(NSString * _Nonnull)visitId widgetType:(NSString * _Nonnull)widgetType taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
+- (NSArray<VisitWidgetMacroCategory *> * _Nullable)widgetMacroCategoriesForVisitWithVisitId:(NSString * _Nonnull)visitId widgetType:(NSString * _Nonnull)widgetType matrixType:(NSString * _Nonnull)matrixType taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
+- (VisitWidgetMatrix * _Nullable)widgetMatrixForVisitWithVisitId:(NSString * _Nonnull)visitId widgetType:(NSString * _Nonnull)widgetType matrixType:(NSString * _Nonnull)matrixType taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
+- (NSArray<VisitWidgetMatrix *> * _Nullable)widgetMatricesForVisitWithVisitId:(NSString * _Nonnull)visitId widgetType:(NSString * _Nonnull)widgetType taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
+- (NSArray<VisitWidgetTasksData *> * _Nullable)widgetTasksForVisitWithVisitId:(NSString * _Nonnull)visitId widgetType:(NSString * _Nonnull)widgetType SWIFT_WARN_UNUSED_RESULT;
+- (void)updateProductForVisitWithVisitId:(NSString * _Nonnull)visitId widgetType:(NSString * _Nonnull)widgetType matrixType:(NSString * _Nonnull)matrixType taskId:(NSString * _Nullable)taskId macroCategoryId:(NSString * _Nonnull)macroCategoryId productId:(NSString * _Nonnull)productId reasonId:(NSInteger)reasonId comment:(NSString * _Nullable)comment;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -472,6 +485,17 @@ typedef SWIFT_ENUM(NSInteger, IRPhotoErrorState, closed) {
 
 
 
+
+
+
+SWIFT_CLASS("_TtC10IrLibSwift8RealmInt")
+@interface RealmInt : RLMObject
+@property (nonatomic) NSInteger integerValue;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+
 @class RecognitionResultWidth;
 
 SWIFT_CLASS("_TtC10IrLibSwift33RecognitionResultActualAssortment")
@@ -665,6 +689,7 @@ SWIFT_CLASS("_TtC10IrLibSwift5Store")
 SWIFT_PROTOCOL("_TtP10IrLibSwift18StoresModuleOutput_")
 @protocol StoresModuleOutput
 - (void)didTriggerStartShootingForTaskWithId:(NSString * _Nullable)taskId;
+- (void)didTriggerOpenOsaReportForTaskWithId:(NSString * _Nullable)taskId;
 - (void)didStartVisitForStoreWithId:(NSInteger)storeId;
 - (void)didFinishVisitForStoreWithId:(NSInteger)storeId readyToFinishHandler:(void (^ _Nonnull)(BOOL))readyToFinishHandler;
 - (void)didTriggerOpenAssortmentForStoreWithId:(NSInteger)storeId;
@@ -672,9 +697,47 @@ SWIFT_PROTOCOL("_TtP10IrLibSwift18StoresModuleOutput_")
 @end
 
 
+SWIFT_CLASS("_TtC10IrLibSwift10TaskAnswer")
+@interface TaskAnswer : RLMObject
+@property (nonatomic) NSInteger index;
+@property (nonatomic, copy) NSString * _Nonnull type;
+@property (nonatomic, copy) NSString * _Nonnull name;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+
+
+SWIFT_CLASS("_TtC10IrLibSwift14TaskAttachment")
+@interface TaskAttachment : RLMObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+
+
 SWIFT_CLASS("_TtC10IrLibSwift7TaskKpi")
 @interface TaskKpi : RLMObject
 @property (nonatomic, copy) NSString * _Nonnull name;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+
+
+
+
+
+
+SWIFT_CLASS("_TtC10IrLibSwift12TaskQuestion")
+@interface TaskQuestion : RLMObject
+@property (nonatomic) NSInteger index;
+@property (nonatomic, copy) NSString * _Nonnull type;
+@property (nonatomic, copy) NSString * _Nonnull name;
+@property (nonatomic) BOOL isRequired;
+@property (nonatomic, strong) RLMArray<TaskAnswer *> * _Nonnull answers;
+@property (nonatomic, strong) RLMArray<RealmInt *> * _Nonnull selectedAnswers;
+@property (nonatomic, copy) NSString * _Nullable enteredAnswer;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -694,10 +757,8 @@ SWIFT_CLASS("_TtC10IrLibSwift7TaskKpi")
 
 
 
-
-
-
-
+@class VisitWidget;
+@class VisitTask;
 
 SWIFT_CLASS("_TtC10IrLibSwift5Visit")
 @interface Visit : RLMObject
@@ -716,18 +777,207 @@ SWIFT_CLASS("_TtC10IrLibSwift5Visit")
 @property (nonatomic) BOOL isSended;
 @property (nonatomic) BOOL isShareShelfReceived;
 @property (nonatomic) BOOL isCustomShareShelfReceived;
+@property (nonatomic) BOOL isWidgetReceived;
 @property (nonatomic) NSInteger notificationsCount;
 @property (nonatomic) NSInteger isReportRequested;
 @property (nonatomic) BOOL isProductGroupReceived;
 @property (nonatomic) BOOL isConfirmedWithReceivedReports;
 @property (nonatomic, strong) RLMArray<RecognitionResultTask *> * _Nonnull resultTasks;
 @property (nonatomic, strong) RecognitionResultOldAssortment * _Nullable resultOldAssortment;
+@property (nonatomic, strong) RLMArray<VisitWidget *> * _Nonnull widgets;
 @property (nonatomic) double latitude;
 @property (nonatomic) double longitude;
+@property (nonatomic, strong) RLMArray<VisitTask *> * _Nonnull tasks;
+/// Был ли визит когда-либо завершён
+@property (nonatomic) BOOL wasFinished;
++ (NSString * _Nullable)primaryKey SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
+
+
+/// Задача привязанная. Добавляется в базу в момент создания визита и остается неизменной, даже если задача на сервере обновилась
+SWIFT_CLASS("_TtC10IrLibSwift9VisitTask")
+@interface VisitTask : RLMObject
+/// Идентификатор задачи на бэке
+@property (nonatomic, copy) NSString * _Nonnull taskId;
+/// Внутренний идентификатор задачи для привязки к визиту
+@property (nonatomic, copy) NSString * _Nonnull internalId;
+@property (nonatomic, copy) NSString * _Nonnull name;
+@property (nonatomic, copy) NSString * _Nonnull text;
+@property (nonatomic) BOOL isDisabled;
+@property (nonatomic) BOOL isRequired;
+@property (nonatomic) BOOL shouldUseAllVisitPhotos;
+@property (nonatomic) BOOL isPhotoRequired;
+@property (nonatomic, copy) NSString * _Nullable sceneTypeId;
+@property (nonatomic) NSInteger order;
+@property (nonatomic, copy) NSString * _Nullable visitImage;
+@property (nonatomic, strong) RLMArray<TaskAttachment *> * _Nonnull attachments;
+@property (nonatomic, strong) RLMArray<TaskKpi *> * _Nonnull kpis;
+@property (nonatomic, strong) RLMArray<TaskQuestion *> * _Nonnull questions;
+@property (nonatomic, copy) NSString * _Nonnull matrixType;
++ (NSString * _Nullable)primaryKey SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+
+
+
+
+
+
+SWIFT_CLASS("_TtC10IrLibSwift11VisitWidget")
+@interface VisitWidget : RLMObject
+@property (nonatomic, copy) NSString * _Nonnull type;
+@property (nonatomic, strong) RLMArray<VisitWidgetMatrix *> * _Nonnull data;
+@property (nonatomic, strong) RLMArray<VisitWidgetTasksData *> * _Nonnull tasksData;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class VisitWidgetProduct;
+
+SWIFT_CLASS("_TtC10IrLibSwift26VisitWidgetAssortmentGroup")
+@interface VisitWidgetAssortmentGroup : RLMObject
+@property (nonatomic) NSInteger planBySku;
+@property (nonatomic) NSInteger osaBySku;
+@property (nonatomic) double osaBySkuPercentage;
+@property (nonatomic) NSInteger planByShelf;
+@property (nonatomic) NSInteger osaByShelf;
+@property (nonatomic) double osaByShelfPercentage;
+@property (nonatomic) NSInteger planByFacing;
+@property (nonatomic) NSInteger osaByFacing;
+@property (nonatomic) double osaByFacingPercentage;
+@property (nonatomic, strong) RLMArray<VisitWidgetProduct *> * _Nonnull products;
+@property (nonatomic, copy) NSString * _Nullable assortmentGroupName;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10IrLibSwift16VisitWidgetBrand")
+@interface VisitWidgetBrand : RLMObject
+@property (nonatomic) NSInteger planBySku;
+@property (nonatomic) NSInteger osaBySku;
+@property (nonatomic) double osaBySkuPercentage;
+@property (nonatomic) NSInteger planByShelf;
+@property (nonatomic) NSInteger osaByShelf;
+@property (nonatomic) double osaByShelfPercentage;
+@property (nonatomic) NSInteger planByFacing;
+@property (nonatomic) NSInteger osaByFacing;
+@property (nonatomic) double osaByFacingPercentage;
+@property (nonatomic, strong) RLMArray<VisitWidgetProduct *> * _Nonnull products;
+@property (nonatomic, copy) NSString * _Nonnull brandId;
+@property (nonatomic, copy) NSString * _Nonnull brandName;
+@property (nonatomic, strong) RLMArray<VisitWidgetAssortmentGroup *> * _Nonnull assortmentGroups;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10IrLibSwift21VisitWidgetBrandOwner")
+@interface VisitWidgetBrandOwner : RLMObject
+@property (nonatomic) NSInteger planBySku;
+@property (nonatomic) NSInteger osaBySku;
+@property (nonatomic) double osaBySkuPercentage;
+@property (nonatomic) NSInteger planByShelf;
+@property (nonatomic) NSInteger osaByShelf;
+@property (nonatomic) double osaByShelfPercentage;
+@property (nonatomic) NSInteger planByFacing;
+@property (nonatomic) NSInteger osaByFacing;
+@property (nonatomic) double osaByFacingPercentage;
+@property (nonatomic, strong) RLMArray<VisitWidgetProduct *> * _Nonnull products;
+@property (nonatomic, copy) NSString * _Nonnull brandOwnerId;
+@property (nonatomic, copy) NSString * _Nonnull brandOwnerName;
+@property (nonatomic, strong) RLMArray<VisitWidgetAssortmentGroup *> * _Nonnull assortmentGroups;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10IrLibSwift24VisitWidgetMacroCategory")
+@interface VisitWidgetMacroCategory : RLMObject
+@property (nonatomic) NSInteger planBySku;
+@property (nonatomic) NSInteger osaBySku;
+@property (nonatomic) double osaBySkuPercentage;
+@property (nonatomic) NSInteger planByShelf;
+@property (nonatomic) NSInteger osaByShelf;
+@property (nonatomic) double osaByShelfPercentage;
+@property (nonatomic) NSInteger planByFacing;
+@property (nonatomic) NSInteger osaByFacing;
+@property (nonatomic) double osaByFacingPercentage;
+@property (nonatomic, strong) RLMArray<VisitWidgetProduct *> * _Nonnull products;
+@property (nonatomic, copy) NSString * _Nonnull macroCategoryId;
+@property (nonatomic, copy) NSString * _Nonnull macroCategoryName;
+@property (nonatomic, strong) RLMArray<VisitWidgetAssortmentGroup *> * _Nonnull assortmentGroups;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class VisitWidgetTotal;
+
+SWIFT_CLASS("_TtC10IrLibSwift17VisitWidgetMatrix")
+@interface VisitWidgetMatrix : RLMObject
+@property (nonatomic, strong) VisitWidgetTotal * _Nullable total;
+@property (nonatomic, copy) NSString * _Nonnull matrixType;
+@property (nonatomic, copy) NSString * _Nonnull matrixTypeName;
+@property (nonatomic) NSInteger planBySku;
+@property (nonatomic) NSInteger osaBySku;
+@property (nonatomic) double osaBySkuPercentage;
+@property (nonatomic) NSInteger planByShelf;
+@property (nonatomic) NSInteger osaByShelf;
+@property (nonatomic) double osaByShelfPercentage;
+@property (nonatomic) NSInteger planByFacing;
+@property (nonatomic) NSInteger osaByFacing;
+@property (nonatomic) double osaByFacingPercentage;
+@property (nonatomic, strong) RLMArray<VisitWidgetProduct *> * _Nonnull products;
+@property (nonatomic, strong) RLMArray<VisitWidgetAssortmentGroup *> * _Nonnull assortmentGroups;
+@property (nonatomic, strong) RLMArray<VisitWidgetMacroCategory *> * _Nonnull macroCategories;
+@property (nonatomic, strong) RLMArray<VisitWidgetBrandOwner *> * _Nonnull brandOwners;
+@property (nonatomic, strong) RLMArray<VisitWidgetBrand *> * _Nonnull brands;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10IrLibSwift18VisitWidgetProduct")
+@interface VisitWidgetProduct : RLMObject
+@property (nonatomic) NSInteger plan;
+@property (nonatomic) NSInteger facingFact;
+@property (nonatomic) NSInteger osaByFacing;
+@property (nonatomic) double other;
+@property (nonatomic) NSInteger groupFact;
+@property (nonatomic) double price;
+@property (nonatomic) NSInteger priceType;
+@property (nonatomic, copy) NSString * _Nonnull productName;
+@property (nonatomic, copy) NSString * _Nullable tinyName;
+@property (nonatomic) NSInteger sceneType;
+@property (nonatomic, copy) NSString * _Nonnull productId;
+@property (nonatomic, copy) NSString * _Nullable productCategoryId;
+@property (nonatomic, copy) NSString * _Nullable brandId;
+@property (nonatomic, copy) NSString * _Nullable brandOwnerId;
+@property (nonatomic) BOOL isUserBrand;
+@property (nonatomic, copy) NSString * _Nullable miniature;
+@property (nonatomic, copy) NSString * _Nullable comment;
+@property (nonatomic, copy) NSString * _Nullable name;
+@property (nonatomic, copy) NSString * _Nullable reason;
+@property (nonatomic) NSInteger reasonId;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10IrLibSwift20VisitWidgetTasksData")
+@interface VisitWidgetTasksData : RLMObject
+@property (nonatomic, copy) NSString * _Nullable taskId;
+@property (nonatomic, strong) VisitWidgetTotal * _Nullable total;
+@property (nonatomic, strong) RLMArray<VisitWidgetProduct *> * _Nonnull products;
+@property (nonatomic, strong) RLMArray<VisitWidgetMatrix *> * _Nonnull matrices;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10IrLibSwift16VisitWidgetTotal")
+@interface VisitWidgetTotal : RLMObject
+@property (nonatomic) NSInteger value;
+@property (nonatomic) NSInteger diff;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
 
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop
@@ -971,6 +1221,10 @@ SWIFT_CLASS("_TtC10IrLibSwift18IRDataBaseSettings")
 @class IRDataManagerSettings;
 @class NSError;
 @class Photo;
+@class Visit;
+@class VisitWidgetMatrix;
+@class VisitWidgetMacroCategory;
+@class VisitWidgetTasksData;
 
 SWIFT_CLASS("_TtC10IrLibSwift13IRDataManager")
 @interface IRDataManager : NSObject
@@ -980,7 +1234,6 @@ SWIFT_CLASS("_TtC10IrLibSwift13IRDataManager")
 - (void)createVisitWithStoreId:(NSInteger)storeId;
 - (void)sendCurrentVisit;
 - (void)fetchRecognitionResultWithPhotoId:(NSString * _Nonnull)photoId completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
-- (void)createTestPhotoWithPhotoId:(NSString * _Nonnull)photoId visitId:(NSString * _Nonnull)visitId path:(NSString * _Nonnull)path storeId:(NSInteger)storeId photoNumber:(NSInteger)photoNumber sceneId:(NSString * _Nonnull)sceneId taskId:(NSString * _Nonnull)taskId;
 - (void)sendPhotoWithPhotoId:(NSString * _Nonnull)photoId completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 /// Взаимодействие с новым классом Photo
 - (NSArray<Photo *> * _Nonnull)photosReadyToSendWithVisitId:(NSString * _Nullable)visitId SWIFT_WARN_UNUSED_RESULT;
@@ -992,8 +1245,18 @@ SWIFT_CLASS("_TtC10IrLibSwift13IRDataManager")
 ///
 - (void)updateCurrentStoreWithStoreId:(NSInteger)storeId;
 - (void)updateExternalDataWithVisitId:(NSString * _Nonnull)visitId;
++ (void)updateExternalDataWithVisitId:(NSString * _Nonnull)visitId;
++ (void)clearExternalData;
 - (void)updateCurrentUserWithName:(NSString * _Nonnull)name externalId:(NSString * _Nonnull)externalId;
 - (void)updateSettingsFrom:(IRDataManagerSettings * _Nonnull)settings;
+- (void)fetchWidgetsWithVisitId:(NSString * _Nonnull)visitId completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
+- (NSArray<Visit *> * _Nonnull)visitsWithNoWidgets SWIFT_WARN_UNUSED_RESULT;
+- (VisitWidgetMatrix * _Nullable)defaultMatrixFromVisitWithVisitId:(NSString * _Nonnull)visitId widgetType:(NSString * _Nonnull)widgetType taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
+- (NSArray<VisitWidgetMacroCategory *> * _Nullable)widgetMacroCategoriesForVisitWithVisitId:(NSString * _Nonnull)visitId widgetType:(NSString * _Nonnull)widgetType matrixType:(NSString * _Nonnull)matrixType taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
+- (VisitWidgetMatrix * _Nullable)widgetMatrixForVisitWithVisitId:(NSString * _Nonnull)visitId widgetType:(NSString * _Nonnull)widgetType matrixType:(NSString * _Nonnull)matrixType taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
+- (NSArray<VisitWidgetMatrix *> * _Nullable)widgetMatricesForVisitWithVisitId:(NSString * _Nonnull)visitId widgetType:(NSString * _Nonnull)widgetType taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
+- (NSArray<VisitWidgetTasksData *> * _Nullable)widgetTasksForVisitWithVisitId:(NSString * _Nonnull)visitId widgetType:(NSString * _Nonnull)widgetType SWIFT_WARN_UNUSED_RESULT;
+- (void)updateProductForVisitWithVisitId:(NSString * _Nonnull)visitId widgetType:(NSString * _Nonnull)widgetType matrixType:(NSString * _Nonnull)matrixType taskId:(NSString * _Nullable)taskId macroCategoryId:(NSString * _Nonnull)macroCategoryId productId:(NSString * _Nonnull)productId reasonId:(NSInteger)reasonId comment:(NSString * _Nullable)comment;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -1207,6 +1470,17 @@ typedef SWIFT_ENUM(NSInteger, IRPhotoErrorState, closed) {
 
 
 
+
+
+
+SWIFT_CLASS("_TtC10IrLibSwift8RealmInt")
+@interface RealmInt : RLMObject
+@property (nonatomic) NSInteger integerValue;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+
 @class RecognitionResultWidth;
 
 SWIFT_CLASS("_TtC10IrLibSwift33RecognitionResultActualAssortment")
@@ -1400,6 +1674,7 @@ SWIFT_CLASS("_TtC10IrLibSwift5Store")
 SWIFT_PROTOCOL("_TtP10IrLibSwift18StoresModuleOutput_")
 @protocol StoresModuleOutput
 - (void)didTriggerStartShootingForTaskWithId:(NSString * _Nullable)taskId;
+- (void)didTriggerOpenOsaReportForTaskWithId:(NSString * _Nullable)taskId;
 - (void)didStartVisitForStoreWithId:(NSInteger)storeId;
 - (void)didFinishVisitForStoreWithId:(NSInteger)storeId readyToFinishHandler:(void (^ _Nonnull)(BOOL))readyToFinishHandler;
 - (void)didTriggerOpenAssortmentForStoreWithId:(NSInteger)storeId;
@@ -1407,9 +1682,47 @@ SWIFT_PROTOCOL("_TtP10IrLibSwift18StoresModuleOutput_")
 @end
 
 
+SWIFT_CLASS("_TtC10IrLibSwift10TaskAnswer")
+@interface TaskAnswer : RLMObject
+@property (nonatomic) NSInteger index;
+@property (nonatomic, copy) NSString * _Nonnull type;
+@property (nonatomic, copy) NSString * _Nonnull name;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+
+
+SWIFT_CLASS("_TtC10IrLibSwift14TaskAttachment")
+@interface TaskAttachment : RLMObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+
+
 SWIFT_CLASS("_TtC10IrLibSwift7TaskKpi")
 @interface TaskKpi : RLMObject
 @property (nonatomic, copy) NSString * _Nonnull name;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+
+
+
+
+
+
+SWIFT_CLASS("_TtC10IrLibSwift12TaskQuestion")
+@interface TaskQuestion : RLMObject
+@property (nonatomic) NSInteger index;
+@property (nonatomic, copy) NSString * _Nonnull type;
+@property (nonatomic, copy) NSString * _Nonnull name;
+@property (nonatomic) BOOL isRequired;
+@property (nonatomic, strong) RLMArray<TaskAnswer *> * _Nonnull answers;
+@property (nonatomic, strong) RLMArray<RealmInt *> * _Nonnull selectedAnswers;
+@property (nonatomic, copy) NSString * _Nullable enteredAnswer;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -1429,10 +1742,8 @@ SWIFT_CLASS("_TtC10IrLibSwift7TaskKpi")
 
 
 
-
-
-
-
+@class VisitWidget;
+@class VisitTask;
 
 SWIFT_CLASS("_TtC10IrLibSwift5Visit")
 @interface Visit : RLMObject
@@ -1451,18 +1762,207 @@ SWIFT_CLASS("_TtC10IrLibSwift5Visit")
 @property (nonatomic) BOOL isSended;
 @property (nonatomic) BOOL isShareShelfReceived;
 @property (nonatomic) BOOL isCustomShareShelfReceived;
+@property (nonatomic) BOOL isWidgetReceived;
 @property (nonatomic) NSInteger notificationsCount;
 @property (nonatomic) NSInteger isReportRequested;
 @property (nonatomic) BOOL isProductGroupReceived;
 @property (nonatomic) BOOL isConfirmedWithReceivedReports;
 @property (nonatomic, strong) RLMArray<RecognitionResultTask *> * _Nonnull resultTasks;
 @property (nonatomic, strong) RecognitionResultOldAssortment * _Nullable resultOldAssortment;
+@property (nonatomic, strong) RLMArray<VisitWidget *> * _Nonnull widgets;
 @property (nonatomic) double latitude;
 @property (nonatomic) double longitude;
+@property (nonatomic, strong) RLMArray<VisitTask *> * _Nonnull tasks;
+/// Был ли визит когда-либо завершён
+@property (nonatomic) BOOL wasFinished;
++ (NSString * _Nullable)primaryKey SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
+
+
+/// Задача привязанная. Добавляется в базу в момент создания визита и остается неизменной, даже если задача на сервере обновилась
+SWIFT_CLASS("_TtC10IrLibSwift9VisitTask")
+@interface VisitTask : RLMObject
+/// Идентификатор задачи на бэке
+@property (nonatomic, copy) NSString * _Nonnull taskId;
+/// Внутренний идентификатор задачи для привязки к визиту
+@property (nonatomic, copy) NSString * _Nonnull internalId;
+@property (nonatomic, copy) NSString * _Nonnull name;
+@property (nonatomic, copy) NSString * _Nonnull text;
+@property (nonatomic) BOOL isDisabled;
+@property (nonatomic) BOOL isRequired;
+@property (nonatomic) BOOL shouldUseAllVisitPhotos;
+@property (nonatomic) BOOL isPhotoRequired;
+@property (nonatomic, copy) NSString * _Nullable sceneTypeId;
+@property (nonatomic) NSInteger order;
+@property (nonatomic, copy) NSString * _Nullable visitImage;
+@property (nonatomic, strong) RLMArray<TaskAttachment *> * _Nonnull attachments;
+@property (nonatomic, strong) RLMArray<TaskKpi *> * _Nonnull kpis;
+@property (nonatomic, strong) RLMArray<TaskQuestion *> * _Nonnull questions;
+@property (nonatomic, copy) NSString * _Nonnull matrixType;
++ (NSString * _Nullable)primaryKey SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+
+
+
+
+
+
+SWIFT_CLASS("_TtC10IrLibSwift11VisitWidget")
+@interface VisitWidget : RLMObject
+@property (nonatomic, copy) NSString * _Nonnull type;
+@property (nonatomic, strong) RLMArray<VisitWidgetMatrix *> * _Nonnull data;
+@property (nonatomic, strong) RLMArray<VisitWidgetTasksData *> * _Nonnull tasksData;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class VisitWidgetProduct;
+
+SWIFT_CLASS("_TtC10IrLibSwift26VisitWidgetAssortmentGroup")
+@interface VisitWidgetAssortmentGroup : RLMObject
+@property (nonatomic) NSInteger planBySku;
+@property (nonatomic) NSInteger osaBySku;
+@property (nonatomic) double osaBySkuPercentage;
+@property (nonatomic) NSInteger planByShelf;
+@property (nonatomic) NSInteger osaByShelf;
+@property (nonatomic) double osaByShelfPercentage;
+@property (nonatomic) NSInteger planByFacing;
+@property (nonatomic) NSInteger osaByFacing;
+@property (nonatomic) double osaByFacingPercentage;
+@property (nonatomic, strong) RLMArray<VisitWidgetProduct *> * _Nonnull products;
+@property (nonatomic, copy) NSString * _Nullable assortmentGroupName;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10IrLibSwift16VisitWidgetBrand")
+@interface VisitWidgetBrand : RLMObject
+@property (nonatomic) NSInteger planBySku;
+@property (nonatomic) NSInteger osaBySku;
+@property (nonatomic) double osaBySkuPercentage;
+@property (nonatomic) NSInteger planByShelf;
+@property (nonatomic) NSInteger osaByShelf;
+@property (nonatomic) double osaByShelfPercentage;
+@property (nonatomic) NSInteger planByFacing;
+@property (nonatomic) NSInteger osaByFacing;
+@property (nonatomic) double osaByFacingPercentage;
+@property (nonatomic, strong) RLMArray<VisitWidgetProduct *> * _Nonnull products;
+@property (nonatomic, copy) NSString * _Nonnull brandId;
+@property (nonatomic, copy) NSString * _Nonnull brandName;
+@property (nonatomic, strong) RLMArray<VisitWidgetAssortmentGroup *> * _Nonnull assortmentGroups;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10IrLibSwift21VisitWidgetBrandOwner")
+@interface VisitWidgetBrandOwner : RLMObject
+@property (nonatomic) NSInteger planBySku;
+@property (nonatomic) NSInteger osaBySku;
+@property (nonatomic) double osaBySkuPercentage;
+@property (nonatomic) NSInteger planByShelf;
+@property (nonatomic) NSInteger osaByShelf;
+@property (nonatomic) double osaByShelfPercentage;
+@property (nonatomic) NSInteger planByFacing;
+@property (nonatomic) NSInteger osaByFacing;
+@property (nonatomic) double osaByFacingPercentage;
+@property (nonatomic, strong) RLMArray<VisitWidgetProduct *> * _Nonnull products;
+@property (nonatomic, copy) NSString * _Nonnull brandOwnerId;
+@property (nonatomic, copy) NSString * _Nonnull brandOwnerName;
+@property (nonatomic, strong) RLMArray<VisitWidgetAssortmentGroup *> * _Nonnull assortmentGroups;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10IrLibSwift24VisitWidgetMacroCategory")
+@interface VisitWidgetMacroCategory : RLMObject
+@property (nonatomic) NSInteger planBySku;
+@property (nonatomic) NSInteger osaBySku;
+@property (nonatomic) double osaBySkuPercentage;
+@property (nonatomic) NSInteger planByShelf;
+@property (nonatomic) NSInteger osaByShelf;
+@property (nonatomic) double osaByShelfPercentage;
+@property (nonatomic) NSInteger planByFacing;
+@property (nonatomic) NSInteger osaByFacing;
+@property (nonatomic) double osaByFacingPercentage;
+@property (nonatomic, strong) RLMArray<VisitWidgetProduct *> * _Nonnull products;
+@property (nonatomic, copy) NSString * _Nonnull macroCategoryId;
+@property (nonatomic, copy) NSString * _Nonnull macroCategoryName;
+@property (nonatomic, strong) RLMArray<VisitWidgetAssortmentGroup *> * _Nonnull assortmentGroups;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class VisitWidgetTotal;
+
+SWIFT_CLASS("_TtC10IrLibSwift17VisitWidgetMatrix")
+@interface VisitWidgetMatrix : RLMObject
+@property (nonatomic, strong) VisitWidgetTotal * _Nullable total;
+@property (nonatomic, copy) NSString * _Nonnull matrixType;
+@property (nonatomic, copy) NSString * _Nonnull matrixTypeName;
+@property (nonatomic) NSInteger planBySku;
+@property (nonatomic) NSInteger osaBySku;
+@property (nonatomic) double osaBySkuPercentage;
+@property (nonatomic) NSInteger planByShelf;
+@property (nonatomic) NSInteger osaByShelf;
+@property (nonatomic) double osaByShelfPercentage;
+@property (nonatomic) NSInteger planByFacing;
+@property (nonatomic) NSInteger osaByFacing;
+@property (nonatomic) double osaByFacingPercentage;
+@property (nonatomic, strong) RLMArray<VisitWidgetProduct *> * _Nonnull products;
+@property (nonatomic, strong) RLMArray<VisitWidgetAssortmentGroup *> * _Nonnull assortmentGroups;
+@property (nonatomic, strong) RLMArray<VisitWidgetMacroCategory *> * _Nonnull macroCategories;
+@property (nonatomic, strong) RLMArray<VisitWidgetBrandOwner *> * _Nonnull brandOwners;
+@property (nonatomic, strong) RLMArray<VisitWidgetBrand *> * _Nonnull brands;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10IrLibSwift18VisitWidgetProduct")
+@interface VisitWidgetProduct : RLMObject
+@property (nonatomic) NSInteger plan;
+@property (nonatomic) NSInteger facingFact;
+@property (nonatomic) NSInteger osaByFacing;
+@property (nonatomic) double other;
+@property (nonatomic) NSInteger groupFact;
+@property (nonatomic) double price;
+@property (nonatomic) NSInteger priceType;
+@property (nonatomic, copy) NSString * _Nonnull productName;
+@property (nonatomic, copy) NSString * _Nullable tinyName;
+@property (nonatomic) NSInteger sceneType;
+@property (nonatomic, copy) NSString * _Nonnull productId;
+@property (nonatomic, copy) NSString * _Nullable productCategoryId;
+@property (nonatomic, copy) NSString * _Nullable brandId;
+@property (nonatomic, copy) NSString * _Nullable brandOwnerId;
+@property (nonatomic) BOOL isUserBrand;
+@property (nonatomic, copy) NSString * _Nullable miniature;
+@property (nonatomic, copy) NSString * _Nullable comment;
+@property (nonatomic, copy) NSString * _Nullable name;
+@property (nonatomic, copy) NSString * _Nullable reason;
+@property (nonatomic) NSInteger reasonId;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10IrLibSwift20VisitWidgetTasksData")
+@interface VisitWidgetTasksData : RLMObject
+@property (nonatomic, copy) NSString * _Nullable taskId;
+@property (nonatomic, strong) VisitWidgetTotal * _Nullable total;
+@property (nonatomic, strong) RLMArray<VisitWidgetProduct *> * _Nonnull products;
+@property (nonatomic, strong) RLMArray<VisitWidgetMatrix *> * _Nonnull matrices;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10IrLibSwift16VisitWidgetTotal")
+@interface VisitWidgetTotal : RLMObject
+@property (nonatomic) NSInteger value;
+@property (nonatomic) NSInteger diff;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
 
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop
