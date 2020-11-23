@@ -250,7 +250,7 @@ SWIFT_PROTOCOL("_TtP10IrLibSwift21IRDataManagerProtocol_")
 @protocol IRDataManagerProtocol
 - (void)fetchStoresWithCompletion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 + (void)clearStoresLoadDate;
-- (void)createVisitWithStoreId:(NSInteger)storeId;
+- (BOOL)createVisitWithStoreId:(NSInteger)storeId externalStoreId:(NSString * _Nullable)externalStoreId error:(NSError * _Nullable * _Nullable)error;
 - (void)sendCurrentVisit;
 - (void)fetchRecognitionResultWithPhotoId:(NSString * _Nonnull)photoId completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 - (void)sendPhotoWithPhotoId:(NSString * _Nonnull)photoId completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
@@ -258,7 +258,7 @@ SWIFT_PROTOCOL("_TtP10IrLibSwift21IRDataManagerProtocol_")
 - (BOOL)recognitionResultRecivedCompletelyForPhotoWithId:(NSString * _Nonnull)id SWIFT_WARN_UNUSED_RESULT;
 - (NSArray<Photo *> * _Nonnull)photosWithNoRecognitionResult SWIFT_WARN_UNUSED_RESULT;
 - (BOOL)canDoRecognitionResultWithPhotoId:(NSString * _Nonnull)photoId SWIFT_WARN_UNUSED_RESULT;
-- (void)updateCurrentStoreWithStoreId:(NSInteger)storeId;
+- (void)updateCurrentStoreWithStoreId:(NSInteger)storeId externalStoreId:(NSString * _Nullable)externalStoreId;
 - (void)updateExternalDataWithVisitId:(NSString * _Nonnull)visitId;
 + (void)updateExternalDataWithVisitId:(NSString * _Nonnull)visitId;
 + (void)clearExternalData;
@@ -285,7 +285,7 @@ SWIFT_CLASS("_TtC10IrLibSwift13IRDataManager")
 - (nonnull instancetype)initWithSettings:(IRDataManagerSettings * _Nonnull)settings OBJC_DESIGNATED_INITIALIZER;
 - (void)fetchStoresWithCompletion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 + (void)clearStoresLoadDate;
-- (void)createVisitWithStoreId:(NSInteger)storeId;
+- (BOOL)createVisitWithStoreId:(NSInteger)storeId externalStoreId:(NSString * _Nullable)externalStoreId error:(NSError * _Nullable * _Nullable)error;
 - (void)sendCurrentVisit;
 - (void)fetchRecognitionResultWithPhotoId:(NSString * _Nonnull)photoId completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 - (void)sendPhotoWithPhotoId:(NSString * _Nonnull)photoId completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
@@ -297,7 +297,7 @@ SWIFT_CLASS("_TtC10IrLibSwift13IRDataManager")
 /// Обновление выбранной торговой точки. Используется в случае работы с либой / через диплинки.
 /// \param storeId идентификатор торговой точки
 ///
-- (void)updateCurrentStoreWithStoreId:(NSInteger)storeId;
+- (void)updateCurrentStoreWithStoreId:(NSInteger)storeId externalStoreId:(NSString * _Nullable)externalStoreId;
 - (void)updateExternalDataWithVisitId:(NSString * _Nonnull)visitId;
 + (void)updateExternalDataWithVisitId:(NSString * _Nonnull)visitId;
 + (void)clearExternalData;
@@ -324,6 +324,7 @@ SWIFT_CLASS("_TtC10IrLibSwift13IRDataManager")
 @class IRTokenProvider;
 @class IRSharedSettings;
 
+/// Класс для настройки IRDataManager.
 SWIFT_CLASS("_TtC10IrLibSwift21IRDataManagerSettings")
 @interface IRDataManagerSettings : NSObject
 - (nonnull instancetype)initWithTokenProvider:(IRTokenProvider * _Nonnull)tokenProvider basePathProvider:(IRBasePathProvider * _Nonnull)basePathProvider dbSettings:(IRDataBaseSettings * _Nonnull)dbSettings sharedSettings:(IRSharedSettings * _Nonnull)sharedSettings installId:(NSString * _Nonnull)installId OBJC_DESIGNATED_INITIALIZER;
@@ -396,6 +397,8 @@ SWIFT_CLASS("_TtC10IrLibSwift16IRSharedSettings")
 @class IRStoredSettingsVisit;
 @class IRStoredSettingsStore;
 
+/// Хранимые настройки текущего состояния - идентификаторы текущего визита, торговой точки и тому подобное.
+/// Ojbc-библиотека использует этот класс для получения и обновления актуальных данных.
 SWIFT_CLASS("_TtC10IrLibSwift16IRStoredSettings")
 @interface IRStoredSettings : NSObject
 - (nonnull instancetype)initWithRealmConfig:(RLMRealmConfiguration * _Nonnull)realmConfig settings:(IRDataManagerSettings * _Nonnull)settings OBJC_DESIGNATED_INITIALIZER;
@@ -403,6 +406,7 @@ SWIFT_CLASS("_TtC10IrLibSwift16IRStoredSettings")
 @property (nonatomic, readonly, strong) IRStoredSettingsStore * _Nullable currentStore;
 - (void)clearCurrentVisit;
 - (void)updateCurrentStoreId:(NSInteger)storeId;
+- (void)updateCurrentExternalStoreId:(NSString * _Nonnull)externalStoreId;
 - (void)updateCurrentUserWithId:(NSString * _Nonnull)id name:(NSString * _Nonnull)name externalId:(NSString * _Nullable)externalId;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -412,7 +416,8 @@ SWIFT_CLASS("_TtC10IrLibSwift16IRStoredSettings")
 SWIFT_CLASS("_TtC10IrLibSwift21IRStoredSettingsStore")
 @interface IRStoredSettingsStore : NSObject
 @property (nonatomic, readonly) NSInteger storeId;
-@property (nonatomic, readonly, copy) NSString * _Nonnull name;
+@property (nonatomic, readonly, copy) NSString * _Nullable externalStoreId;
+@property (nonatomic, readonly, copy) NSString * _Nullable name;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -745,7 +750,7 @@ SWIFT_CLASS("_TtC10IrLibSwift5Store")
 SWIFT_PROTOCOL("_TtP10IrLibSwift18StoresModuleOutput_")
 @protocol StoresModuleOutput
 - (void)didFinishLoadingCatalogs;
-- (void)didTriggerStartShootingForTaskWithId:(NSString * _Nullable)taskId;
+- (void)didTriggerStartShootingForTaskWithId:(NSString * _Nullable)taskId valuesUpdateHandler:(void (^ _Nonnull)(void))valuesUpdateHandler;
 - (void)didTriggerOpenOsaReportForTaskWithId:(NSString * _Nullable)taskId;
 - (void)didTriggerOpenSosReportForTaskWithId:(NSString * _Nullable)taskId;
 - (void)didTriggerOpenPriceExecutionReportForTaskWithId:(NSString * _Nullable)taskId;
@@ -1297,7 +1302,7 @@ SWIFT_PROTOCOL("_TtP10IrLibSwift21IRDataManagerProtocol_")
 @protocol IRDataManagerProtocol
 - (void)fetchStoresWithCompletion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 + (void)clearStoresLoadDate;
-- (void)createVisitWithStoreId:(NSInteger)storeId;
+- (BOOL)createVisitWithStoreId:(NSInteger)storeId externalStoreId:(NSString * _Nullable)externalStoreId error:(NSError * _Nullable * _Nullable)error;
 - (void)sendCurrentVisit;
 - (void)fetchRecognitionResultWithPhotoId:(NSString * _Nonnull)photoId completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 - (void)sendPhotoWithPhotoId:(NSString * _Nonnull)photoId completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
@@ -1305,7 +1310,7 @@ SWIFT_PROTOCOL("_TtP10IrLibSwift21IRDataManagerProtocol_")
 - (BOOL)recognitionResultRecivedCompletelyForPhotoWithId:(NSString * _Nonnull)id SWIFT_WARN_UNUSED_RESULT;
 - (NSArray<Photo *> * _Nonnull)photosWithNoRecognitionResult SWIFT_WARN_UNUSED_RESULT;
 - (BOOL)canDoRecognitionResultWithPhotoId:(NSString * _Nonnull)photoId SWIFT_WARN_UNUSED_RESULT;
-- (void)updateCurrentStoreWithStoreId:(NSInteger)storeId;
+- (void)updateCurrentStoreWithStoreId:(NSInteger)storeId externalStoreId:(NSString * _Nullable)externalStoreId;
 - (void)updateExternalDataWithVisitId:(NSString * _Nonnull)visitId;
 + (void)updateExternalDataWithVisitId:(NSString * _Nonnull)visitId;
 + (void)clearExternalData;
@@ -1332,7 +1337,7 @@ SWIFT_CLASS("_TtC10IrLibSwift13IRDataManager")
 - (nonnull instancetype)initWithSettings:(IRDataManagerSettings * _Nonnull)settings OBJC_DESIGNATED_INITIALIZER;
 - (void)fetchStoresWithCompletion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 + (void)clearStoresLoadDate;
-- (void)createVisitWithStoreId:(NSInteger)storeId;
+- (BOOL)createVisitWithStoreId:(NSInteger)storeId externalStoreId:(NSString * _Nullable)externalStoreId error:(NSError * _Nullable * _Nullable)error;
 - (void)sendCurrentVisit;
 - (void)fetchRecognitionResultWithPhotoId:(NSString * _Nonnull)photoId completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 - (void)sendPhotoWithPhotoId:(NSString * _Nonnull)photoId completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
@@ -1344,7 +1349,7 @@ SWIFT_CLASS("_TtC10IrLibSwift13IRDataManager")
 /// Обновление выбранной торговой точки. Используется в случае работы с либой / через диплинки.
 /// \param storeId идентификатор торговой точки
 ///
-- (void)updateCurrentStoreWithStoreId:(NSInteger)storeId;
+- (void)updateCurrentStoreWithStoreId:(NSInteger)storeId externalStoreId:(NSString * _Nullable)externalStoreId;
 - (void)updateExternalDataWithVisitId:(NSString * _Nonnull)visitId;
 + (void)updateExternalDataWithVisitId:(NSString * _Nonnull)visitId;
 + (void)clearExternalData;
@@ -1371,6 +1376,7 @@ SWIFT_CLASS("_TtC10IrLibSwift13IRDataManager")
 @class IRTokenProvider;
 @class IRSharedSettings;
 
+/// Класс для настройки IRDataManager.
 SWIFT_CLASS("_TtC10IrLibSwift21IRDataManagerSettings")
 @interface IRDataManagerSettings : NSObject
 - (nonnull instancetype)initWithTokenProvider:(IRTokenProvider * _Nonnull)tokenProvider basePathProvider:(IRBasePathProvider * _Nonnull)basePathProvider dbSettings:(IRDataBaseSettings * _Nonnull)dbSettings sharedSettings:(IRSharedSettings * _Nonnull)sharedSettings installId:(NSString * _Nonnull)installId OBJC_DESIGNATED_INITIALIZER;
@@ -1443,6 +1449,8 @@ SWIFT_CLASS("_TtC10IrLibSwift16IRSharedSettings")
 @class IRStoredSettingsVisit;
 @class IRStoredSettingsStore;
 
+/// Хранимые настройки текущего состояния - идентификаторы текущего визита, торговой точки и тому подобное.
+/// Ojbc-библиотека использует этот класс для получения и обновления актуальных данных.
 SWIFT_CLASS("_TtC10IrLibSwift16IRStoredSettings")
 @interface IRStoredSettings : NSObject
 - (nonnull instancetype)initWithRealmConfig:(RLMRealmConfiguration * _Nonnull)realmConfig settings:(IRDataManagerSettings * _Nonnull)settings OBJC_DESIGNATED_INITIALIZER;
@@ -1450,6 +1458,7 @@ SWIFT_CLASS("_TtC10IrLibSwift16IRStoredSettings")
 @property (nonatomic, readonly, strong) IRStoredSettingsStore * _Nullable currentStore;
 - (void)clearCurrentVisit;
 - (void)updateCurrentStoreId:(NSInteger)storeId;
+- (void)updateCurrentExternalStoreId:(NSString * _Nonnull)externalStoreId;
 - (void)updateCurrentUserWithId:(NSString * _Nonnull)id name:(NSString * _Nonnull)name externalId:(NSString * _Nullable)externalId;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -1459,7 +1468,8 @@ SWIFT_CLASS("_TtC10IrLibSwift16IRStoredSettings")
 SWIFT_CLASS("_TtC10IrLibSwift21IRStoredSettingsStore")
 @interface IRStoredSettingsStore : NSObject
 @property (nonatomic, readonly) NSInteger storeId;
-@property (nonatomic, readonly, copy) NSString * _Nonnull name;
+@property (nonatomic, readonly, copy) NSString * _Nullable externalStoreId;
+@property (nonatomic, readonly, copy) NSString * _Nullable name;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -1792,7 +1802,7 @@ SWIFT_CLASS("_TtC10IrLibSwift5Store")
 SWIFT_PROTOCOL("_TtP10IrLibSwift18StoresModuleOutput_")
 @protocol StoresModuleOutput
 - (void)didFinishLoadingCatalogs;
-- (void)didTriggerStartShootingForTaskWithId:(NSString * _Nullable)taskId;
+- (void)didTriggerStartShootingForTaskWithId:(NSString * _Nullable)taskId valuesUpdateHandler:(void (^ _Nonnull)(void))valuesUpdateHandler;
 - (void)didTriggerOpenOsaReportForTaskWithId:(NSString * _Nullable)taskId;
 - (void)didTriggerOpenSosReportForTaskWithId:(NSString * _Nullable)taskId;
 - (void)didTriggerOpenPriceExecutionReportForTaskWithId:(NSString * _Nullable)taskId;
