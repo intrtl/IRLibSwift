@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "IrLibSwift"
-  spec.version      = "1.14.0"
+  spec.version      = "1.15.0"
   spec.summary      = "Framework with Intelligence Retail functionality written on Swift"
   spec.static_framework = true;
   spec.description  = <<-DESC
@@ -16,4 +16,5 @@ Pod::Spec.new do |spec|
   spec.ios.vendored_frameworks = 'IRLib/IrLibSwift.framework'
   spec.dependency "Realm", "~> 5.5.0"
   spec.dependency "YandexMobileMetrica/Dynamic", "3.11.1"
+  spec.dependency "Bugfender", "1.8.0"
 end

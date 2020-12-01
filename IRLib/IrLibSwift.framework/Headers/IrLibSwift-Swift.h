@@ -380,6 +380,11 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSNotificationName _
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+typedef SWIFT_ENUM(NSInteger, IRPhotoApproveMode, closed) {
+  IRPhotoApproveModeManual = 0,
+  IRPhotoApproveModeAutomatic = 1,
+};
+
 @class IRStoresSharedSettings;
 
 /// Группа классов ответственная за общие настройки библиотеки, получаемые с сервера в запросе getSettings.
@@ -388,22 +393,23 @@ SWIFT_CLASS("_TtC10IrLibSwift16IRSharedSettings")
 @interface IRSharedSettings : NSObject
 @property (nonatomic, readonly, strong) IRStoresSharedSettings * _Nullable storesSettings;
 @property (nonatomic, readonly, strong) IRGeolocationErrorSharedSettings * _Nonnull locationError;
+@property (nonatomic, readonly) enum IRPhotoApproveMode photoApproveMode;
 @property (nonatomic, readonly) BOOL shouldSyncManually;
-- (nonnull instancetype)initWithStoresSettings:(IRStoresSharedSettings * _Nonnull)storesSettings locationError:(IRGeolocationErrorSharedSettings * _Nonnull)locationError shouldSyncManually:(BOOL)shouldSyncManually OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithStoresSettings:(IRStoresSharedSettings * _Nonnull)storesSettings locationError:(IRGeolocationErrorSharedSettings * _Nonnull)locationError photoApproveMode:(enum IRPhotoApproveMode)photoApproveMode shouldSyncManually:(BOOL)shouldSyncManually OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-@class IRStoredSettingsVisit;
-@class IRStoredSettingsStore;
+@class IRStoredStateSettingsVisit;
+@class IRStoredStateSettingsStore;
 
 /// Хранимые настройки текущего состояния - идентификаторы текущего визита, торговой точки и тому подобное.
 /// Ojbc-библиотека использует этот класс для получения и обновления актуальных данных.
-SWIFT_CLASS("_TtC10IrLibSwift16IRStoredSettings")
-@interface IRStoredSettings : NSObject
+SWIFT_CLASS("_TtC10IrLibSwift21IRStoredStateSettings")
+@interface IRStoredStateSettings : NSObject
 - (nonnull instancetype)initWithRealmConfig:(RLMRealmConfiguration * _Nonnull)realmConfig settings:(IRDataManagerSettings * _Nonnull)settings OBJC_DESIGNATED_INITIALIZER;
-@property (nonatomic, readonly, strong) IRStoredSettingsVisit * _Nullable currentVisit;
-@property (nonatomic, readonly, strong) IRStoredSettingsStore * _Nullable currentStore;
+@property (nonatomic, readonly, strong) IRStoredStateSettingsVisit * _Nullable currentVisit;
+@property (nonatomic, readonly, strong) IRStoredStateSettingsStore * _Nullable currentStore;
 - (void)clearCurrentVisit;
 - (void)updateCurrentStoreId:(NSInteger)storeId;
 - (void)updateCurrentExternalStoreId:(NSString * _Nonnull)externalStoreId;
@@ -413,8 +419,8 @@ SWIFT_CLASS("_TtC10IrLibSwift16IRStoredSettings")
 @end
 
 
-SWIFT_CLASS("_TtC10IrLibSwift21IRStoredSettingsStore")
-@interface IRStoredSettingsStore : NSObject
+SWIFT_CLASS("_TtC10IrLibSwift26IRStoredStateSettingsStore")
+@interface IRStoredStateSettingsStore : NSObject
 @property (nonatomic, readonly) NSInteger storeId;
 @property (nonatomic, readonly, copy) NSString * _Nullable externalStoreId;
 @property (nonatomic, readonly, copy) NSString * _Nullable name;
@@ -423,8 +429,8 @@ SWIFT_CLASS("_TtC10IrLibSwift21IRStoredSettingsStore")
 @end
 
 
-SWIFT_CLASS("_TtC10IrLibSwift21IRStoredSettingsVisit")
-@interface IRStoredSettingsVisit : NSObject
+SWIFT_CLASS("_TtC10IrLibSwift26IRStoredStateSettingsVisit")
+@interface IRStoredStateSettingsVisit : NSObject
 @property (nonatomic, readonly, copy) NSString * _Nonnull visitId;
 @property (nonatomic, readonly, copy) NSString * _Nullable externalVisitId;
 @property (nonatomic, readonly, copy) NSString * _Nonnull userName;
@@ -1432,6 +1438,11 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSNotificationName _
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+typedef SWIFT_ENUM(NSInteger, IRPhotoApproveMode, closed) {
+  IRPhotoApproveModeManual = 0,
+  IRPhotoApproveModeAutomatic = 1,
+};
+
 @class IRStoresSharedSettings;
 
 /// Группа классов ответственная за общие настройки библиотеки, получаемые с сервера в запросе getSettings.
@@ -1440,22 +1451,23 @@ SWIFT_CLASS("_TtC10IrLibSwift16IRSharedSettings")
 @interface IRSharedSettings : NSObject
 @property (nonatomic, readonly, strong) IRStoresSharedSettings * _Nullable storesSettings;
 @property (nonatomic, readonly, strong) IRGeolocationErrorSharedSettings * _Nonnull locationError;
+@property (nonatomic, readonly) enum IRPhotoApproveMode photoApproveMode;
 @property (nonatomic, readonly) BOOL shouldSyncManually;
-- (nonnull instancetype)initWithStoresSettings:(IRStoresSharedSettings * _Nonnull)storesSettings locationError:(IRGeolocationErrorSharedSettings * _Nonnull)locationError shouldSyncManually:(BOOL)shouldSyncManually OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithStoresSettings:(IRStoresSharedSettings * _Nonnull)storesSettings locationError:(IRGeolocationErrorSharedSettings * _Nonnull)locationError photoApproveMode:(enum IRPhotoApproveMode)photoApproveMode shouldSyncManually:(BOOL)shouldSyncManually OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-@class IRStoredSettingsVisit;
-@class IRStoredSettingsStore;
+@class IRStoredStateSettingsVisit;
+@class IRStoredStateSettingsStore;
 
 /// Хранимые настройки текущего состояния - идентификаторы текущего визита, торговой точки и тому подобное.
 /// Ojbc-библиотека использует этот класс для получения и обновления актуальных данных.
-SWIFT_CLASS("_TtC10IrLibSwift16IRStoredSettings")
-@interface IRStoredSettings : NSObject
+SWIFT_CLASS("_TtC10IrLibSwift21IRStoredStateSettings")
+@interface IRStoredStateSettings : NSObject
 - (nonnull instancetype)initWithRealmConfig:(RLMRealmConfiguration * _Nonnull)realmConfig settings:(IRDataManagerSettings * _Nonnull)settings OBJC_DESIGNATED_INITIALIZER;
-@property (nonatomic, readonly, strong) IRStoredSettingsVisit * _Nullable currentVisit;
-@property (nonatomic, readonly, strong) IRStoredSettingsStore * _Nullable currentStore;
+@property (nonatomic, readonly, strong) IRStoredStateSettingsVisit * _Nullable currentVisit;
+@property (nonatomic, readonly, strong) IRStoredStateSettingsStore * _Nullable currentStore;
 - (void)clearCurrentVisit;
 - (void)updateCurrentStoreId:(NSInteger)storeId;
 - (void)updateCurrentExternalStoreId:(NSString * _Nonnull)externalStoreId;
@@ -1465,8 +1477,8 @@ SWIFT_CLASS("_TtC10IrLibSwift16IRStoredSettings")
 @end
 
 
-SWIFT_CLASS("_TtC10IrLibSwift21IRStoredSettingsStore")
-@interface IRStoredSettingsStore : NSObject
+SWIFT_CLASS("_TtC10IrLibSwift26IRStoredStateSettingsStore")
+@interface IRStoredStateSettingsStore : NSObject
 @property (nonatomic, readonly) NSInteger storeId;
 @property (nonatomic, readonly, copy) NSString * _Nullable externalStoreId;
 @property (nonatomic, readonly, copy) NSString * _Nullable name;
@@ -1475,8 +1487,8 @@ SWIFT_CLASS("_TtC10IrLibSwift21IRStoredSettingsStore")
 @end
 
 
-SWIFT_CLASS("_TtC10IrLibSwift21IRStoredSettingsVisit")
-@interface IRStoredSettingsVisit : NSObject
+SWIFT_CLASS("_TtC10IrLibSwift26IRStoredStateSettingsVisit")
+@interface IRStoredStateSettingsVisit : NSObject
 @property (nonatomic, readonly, copy) NSString * _Nonnull visitId;
 @property (nonatomic, readonly, copy) NSString * _Nullable externalVisitId;
 @property (nonatomic, readonly, copy) NSString * _Nonnull userName;
