@@ -277,6 +277,7 @@ SWIFT_PROTOCOL("_TtP10IrLibSwift21IRDataManagerProtocol_")
 - (void)fetchVisitsPlansAndFactsWithCompletion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 - (void)fetchPreviousVisitsWithLimit:(NSInteger)limit completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 - (void)downloadPhotosForPreviousVisitsWithLimit:(NSInteger)limit completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
+- (void)updatePhotoResultIntervals:(NSArray<NSNumber *> * _Nonnull)intervals;
 @end
 
 
@@ -316,6 +317,7 @@ SWIFT_CLASS("_TtC10IrLibSwift13IRDataManager")
 - (void)fetchVisitsPlansAndFactsWithCompletion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 - (void)fetchPreviousVisitsWithLimit:(NSInteger)limit completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 - (void)downloadPhotosForPreviousVisitsWithLimit:(NSInteger)limit completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
+- (void)updatePhotoResultIntervals:(NSArray<NSNumber *> * _Nonnull)intervals;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -1335,6 +1337,7 @@ SWIFT_PROTOCOL("_TtP10IrLibSwift21IRDataManagerProtocol_")
 - (void)fetchVisitsPlansAndFactsWithCompletion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 - (void)fetchPreviousVisitsWithLimit:(NSInteger)limit completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 - (void)downloadPhotosForPreviousVisitsWithLimit:(NSInteger)limit completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
+- (void)updatePhotoResultIntervals:(NSArray<NSNumber *> * _Nonnull)intervals;
 @end
 
 
@@ -1374,6 +1377,7 @@ SWIFT_CLASS("_TtC10IrLibSwift13IRDataManager")
 - (void)fetchVisitsPlansAndFactsWithCompletion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 - (void)fetchPreviousVisitsWithLimit:(NSInteger)limit completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 - (void)downloadPhotosForPreviousVisitsWithLimit:(NSInteger)limit completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
+- (void)updatePhotoResultIntervals:(NSArray<NSNumber *> * _Nonnull)intervals;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
