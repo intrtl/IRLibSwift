@@ -278,6 +278,10 @@ SWIFT_PROTOCOL("_TtP10IrLibSwift21IRDataManagerProtocol_")
 - (void)fetchPreviousVisitsWithLimit:(NSInteger)limit completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 - (void)downloadPhotosForPreviousVisitsWithLimit:(NSInteger)limit completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 - (void)updatePhotoResultIntervals:(NSArray<NSNumber *> * _Nonnull)intervals;
+- (void)addSendSceneBlockToSequenceWithSceneId:(NSString * _Nonnull)sceneId block:(void (^ _Nonnull)(void))block;
+- (void)restartSendPhotoSequenceWithResetAttemptIntervals:(BOOL)resetAttemptIntervals completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
+- (void)deletePhotoWithId:(NSString * _Nonnull)id;
+- (void)cancelRequests;
 @end
 
 
@@ -289,6 +293,7 @@ SWIFT_CLASS("_TtC10IrLibSwift13IRDataManager")
 - (BOOL)createVisitWithStoreId:(NSInteger)storeId externalStoreId:(NSString * _Nullable)externalStoreId error:(NSError * _Nullable * _Nullable)error;
 - (void)sendCurrentVisit;
 - (void)fetchRecognitionResultWithPhotoId:(NSString * _Nonnull)photoId completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
+- (void)restartSendPhotoSequenceWithResetAttemptIntervals:(BOOL)resetAttemptIntervals completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 - (void)sendPhotoWithPhotoId:(NSString * _Nonnull)photoId completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 /// Взаимодействие с новым классом Photo
 - (NSArray<Photo *> * _Nonnull)photosReadyToSendWithVisitId:(NSString * _Nullable)visitId SWIFT_WARN_UNUSED_RESULT;
@@ -318,6 +323,9 @@ SWIFT_CLASS("_TtC10IrLibSwift13IRDataManager")
 - (void)fetchPreviousVisitsWithLimit:(NSInteger)limit completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 - (void)downloadPhotosForPreviousVisitsWithLimit:(NSInteger)limit completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 - (void)updatePhotoResultIntervals:(NSArray<NSNumber *> * _Nonnull)intervals;
+- (void)addSendSceneBlockToSequenceWithSceneId:(NSString * _Nonnull)sceneId block:(void (^ _Nonnull)(void))block;
+- (void)deletePhotoWithId:(NSString * _Nonnull)id;
+- (void)cancelRequests;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -329,7 +337,7 @@ SWIFT_CLASS("_TtC10IrLibSwift13IRDataManager")
 /// Класс для настройки IRDataManager.
 SWIFT_CLASS("_TtC10IrLibSwift21IRDataManagerSettings")
 @interface IRDataManagerSettings : NSObject
-- (nonnull instancetype)initWithTokenProvider:(IRTokenProvider * _Nonnull)tokenProvider basePathProvider:(IRBasePathProvider * _Nonnull)basePathProvider dbSettings:(IRDataBaseSettings * _Nonnull)dbSettings sharedSettings:(IRSharedSettings * _Nonnull)sharedSettings installId:(NSString * _Nonnull)installId OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithTokenProvider:(IRTokenProvider * _Nonnull)tokenProvider basePathProvider:(IRBasePathProvider * _Nonnull)basePathProvider dbSettings:(IRDataBaseSettings * _Nonnull)dbSettings sharedSettings:(IRSharedSettings * _Nonnull)sharedSettings installId:(NSString * _Nonnull)installId notificationPrefix:(NSString * _Nullable)notificationPrefix OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -459,6 +467,7 @@ SWIFT_CLASS("_TtC10IrLibSwift15IRTokenProvider")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
 
 
 
@@ -1338,6 +1347,10 @@ SWIFT_PROTOCOL("_TtP10IrLibSwift21IRDataManagerProtocol_")
 - (void)fetchPreviousVisitsWithLimit:(NSInteger)limit completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 - (void)downloadPhotosForPreviousVisitsWithLimit:(NSInteger)limit completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 - (void)updatePhotoResultIntervals:(NSArray<NSNumber *> * _Nonnull)intervals;
+- (void)addSendSceneBlockToSequenceWithSceneId:(NSString * _Nonnull)sceneId block:(void (^ _Nonnull)(void))block;
+- (void)restartSendPhotoSequenceWithResetAttemptIntervals:(BOOL)resetAttemptIntervals completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
+- (void)deletePhotoWithId:(NSString * _Nonnull)id;
+- (void)cancelRequests;
 @end
 
 
@@ -1349,6 +1362,7 @@ SWIFT_CLASS("_TtC10IrLibSwift13IRDataManager")
 - (BOOL)createVisitWithStoreId:(NSInteger)storeId externalStoreId:(NSString * _Nullable)externalStoreId error:(NSError * _Nullable * _Nullable)error;
 - (void)sendCurrentVisit;
 - (void)fetchRecognitionResultWithPhotoId:(NSString * _Nonnull)photoId completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
+- (void)restartSendPhotoSequenceWithResetAttemptIntervals:(BOOL)resetAttemptIntervals completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 - (void)sendPhotoWithPhotoId:(NSString * _Nonnull)photoId completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 /// Взаимодействие с новым классом Photo
 - (NSArray<Photo *> * _Nonnull)photosReadyToSendWithVisitId:(NSString * _Nullable)visitId SWIFT_WARN_UNUSED_RESULT;
@@ -1378,6 +1392,9 @@ SWIFT_CLASS("_TtC10IrLibSwift13IRDataManager")
 - (void)fetchPreviousVisitsWithLimit:(NSInteger)limit completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 - (void)downloadPhotosForPreviousVisitsWithLimit:(NSInteger)limit completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 - (void)updatePhotoResultIntervals:(NSArray<NSNumber *> * _Nonnull)intervals;
+- (void)addSendSceneBlockToSequenceWithSceneId:(NSString * _Nonnull)sceneId block:(void (^ _Nonnull)(void))block;
+- (void)deletePhotoWithId:(NSString * _Nonnull)id;
+- (void)cancelRequests;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -1389,7 +1406,7 @@ SWIFT_CLASS("_TtC10IrLibSwift13IRDataManager")
 /// Класс для настройки IRDataManager.
 SWIFT_CLASS("_TtC10IrLibSwift21IRDataManagerSettings")
 @interface IRDataManagerSettings : NSObject
-- (nonnull instancetype)initWithTokenProvider:(IRTokenProvider * _Nonnull)tokenProvider basePathProvider:(IRBasePathProvider * _Nonnull)basePathProvider dbSettings:(IRDataBaseSettings * _Nonnull)dbSettings sharedSettings:(IRSharedSettings * _Nonnull)sharedSettings installId:(NSString * _Nonnull)installId OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithTokenProvider:(IRTokenProvider * _Nonnull)tokenProvider basePathProvider:(IRBasePathProvider * _Nonnull)basePathProvider dbSettings:(IRDataBaseSettings * _Nonnull)dbSettings sharedSettings:(IRSharedSettings * _Nonnull)sharedSettings installId:(NSString * _Nonnull)installId notificationPrefix:(NSString * _Nullable)notificationPrefix OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -1519,6 +1536,7 @@ SWIFT_CLASS("_TtC10IrLibSwift15IRTokenProvider")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
 
 
 
