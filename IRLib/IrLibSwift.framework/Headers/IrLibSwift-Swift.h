@@ -220,10 +220,13 @@ SWIFT_PROTOCOL("_TtP10IrLibSwift16BarButtonShowing_")
 
 
 
-SWIFT_CLASS("_TtC10IrLibSwift18IRBasePathProvider")
-@interface IRBasePathProvider : NSObject
+SWIFT_CLASS("_TtC10IrLibSwift18IRAuthInfoProvider")
+@interface IRAuthInfoProvider : NSObject
+@property (nonatomic, copy) NSString * _Nonnull userToken;
 @property (nonatomic, copy) NSString * _Nonnull basePath;
-- (nonnull instancetype)initWithBasePath:(NSString * _Nonnull)basePath OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, copy) NSString * _Nonnull domain;
+@property (nonatomic) BOOL isMultiportal;
+- (nonnull instancetype)initWithUserToken:(NSString * _Nonnull)userToken basePath:(NSString * _Nonnull)basePath domain:(NSString * _Nonnull)domain isMultiportal:(BOOL)isMultiportal OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -231,11 +234,10 @@ SWIFT_CLASS("_TtC10IrLibSwift18IRBasePathProvider")
 @class RLMRealmConfiguration;
 @class NSNumber;
 
-SWIFT_CLASS("_TtC10IrLibSwift18IRDataBaseSettings")
-@interface IRDataBaseSettings : NSObject
-- (nonnull instancetype)initWithRealmConfig:(RLMRealmConfiguration * _Nonnull)realmConfig previousDbVersion:(NSNumber * _Nullable)previousDbVersion OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+SWIFT_PROTOCOL("_TtP10IrLibSwift26IRDataBaseSettingsProvider_")
+@protocol IRDataBaseSettingsProvider
+@property (nonatomic, readonly, strong) RLMRealmConfiguration * _Nonnull realmConfig;
+@property (nonatomic, readonly, strong) NSNumber * _Nullable previousDbVersion;
 @end
 
 @class NSError;
@@ -335,13 +337,12 @@ SWIFT_CLASS("_TtC10IrLibSwift13IRDataManager")
 @end
 
 
-@class IRTokenProvider;
 @class IRSharedSettings;
 
 /// Класс для настройки IRDataManager.
 SWIFT_CLASS("_TtC10IrLibSwift21IRDataManagerSettings")
 @interface IRDataManagerSettings : NSObject
-- (nonnull instancetype)initWithTokenProvider:(IRTokenProvider * _Nonnull)tokenProvider basePathProvider:(IRBasePathProvider * _Nonnull)basePathProvider dbSettings:(IRDataBaseSettings * _Nonnull)dbSettings sharedSettings:(IRSharedSettings * _Nonnull)sharedSettings installId:(NSString * _Nonnull)installId notificationPrefix:(NSString * _Nullable)notificationPrefix OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithAuthInfoProvider:(IRAuthInfoProvider * _Nonnull)authInfoProvider dbSettingsProvider:(id <IRDataBaseSettingsProvider> _Nonnull)dbSettingsProvider sharedSettings:(IRSharedSettings * _Nonnull)sharedSettings installId:(NSString * _Nonnull)installId notificationPrefix:(NSString * _Nullable)notificationPrefix OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -414,6 +415,13 @@ SWIFT_CLASS("_TtC10IrLibSwift16IRSharedSettings")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+
+SWIFT_CLASS("_TtC10IrLibSwift27IRStoredClassesInfoProvider")
+@interface IRStoredClassesInfoProvider : NSObject
++ (NSArray * _Nonnull)storedClasses SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class IRStoredStateSettingsVisit;
 @class IRStoredStateSettingsStore;
 
@@ -421,7 +429,7 @@ SWIFT_CLASS("_TtC10IrLibSwift16IRSharedSettings")
 /// Ojbc-библиотека использует этот класс для получения и обновления актуальных данных.
 SWIFT_CLASS("_TtC10IrLibSwift21IRStoredStateSettings")
 @interface IRStoredStateSettings : NSObject
-- (nonnull instancetype)initWithRealmConfig:(RLMRealmConfiguration * _Nonnull)realmConfig settings:(IRDataManagerSettings * _Nonnull)settings OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithSettings:(IRDataManagerSettings * _Nonnull)settings OBJC_DESIGNATED_INITIALIZER;
 @property (nonatomic, readonly, strong) IRStoredStateSettingsVisit * _Nullable currentVisit;
 @property (nonatomic, readonly, strong) IRStoredStateSettingsStore * _Nullable currentStore;
 - (void)clearCurrentVisit;
@@ -459,15 +467,6 @@ SWIFT_CLASS("_TtC10IrLibSwift22IRStoresSharedSettings")
 @interface IRStoresSharedSettings : NSObject
 @property (nonatomic, strong) NSNumber * _Nullable forceUpdateInterval;
 - (nonnull instancetype)initWithForceUpdateInterval:(NSNumber * _Nullable)forceUpdateInterval OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-
-SWIFT_CLASS("_TtC10IrLibSwift15IRTokenProvider")
-@interface IRTokenProvider : NSObject
-@property (nonatomic, copy) NSString * _Nonnull userToken;
-- (nonnull instancetype)initWithUserToken:(NSString * _Nonnull)userToken OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -1293,10 +1292,13 @@ SWIFT_PROTOCOL("_TtP10IrLibSwift16BarButtonShowing_")
 
 
 
-SWIFT_CLASS("_TtC10IrLibSwift18IRBasePathProvider")
-@interface IRBasePathProvider : NSObject
+SWIFT_CLASS("_TtC10IrLibSwift18IRAuthInfoProvider")
+@interface IRAuthInfoProvider : NSObject
+@property (nonatomic, copy) NSString * _Nonnull userToken;
 @property (nonatomic, copy) NSString * _Nonnull basePath;
-- (nonnull instancetype)initWithBasePath:(NSString * _Nonnull)basePath OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, copy) NSString * _Nonnull domain;
+@property (nonatomic) BOOL isMultiportal;
+- (nonnull instancetype)initWithUserToken:(NSString * _Nonnull)userToken basePath:(NSString * _Nonnull)basePath domain:(NSString * _Nonnull)domain isMultiportal:(BOOL)isMultiportal OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -1304,11 +1306,10 @@ SWIFT_CLASS("_TtC10IrLibSwift18IRBasePathProvider")
 @class RLMRealmConfiguration;
 @class NSNumber;
 
-SWIFT_CLASS("_TtC10IrLibSwift18IRDataBaseSettings")
-@interface IRDataBaseSettings : NSObject
-- (nonnull instancetype)initWithRealmConfig:(RLMRealmConfiguration * _Nonnull)realmConfig previousDbVersion:(NSNumber * _Nullable)previousDbVersion OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+SWIFT_PROTOCOL("_TtP10IrLibSwift26IRDataBaseSettingsProvider_")
+@protocol IRDataBaseSettingsProvider
+@property (nonatomic, readonly, strong) RLMRealmConfiguration * _Nonnull realmConfig;
+@property (nonatomic, readonly, strong) NSNumber * _Nullable previousDbVersion;
 @end
 
 @class NSError;
@@ -1408,13 +1409,12 @@ SWIFT_CLASS("_TtC10IrLibSwift13IRDataManager")
 @end
 
 
-@class IRTokenProvider;
 @class IRSharedSettings;
 
 /// Класс для настройки IRDataManager.
 SWIFT_CLASS("_TtC10IrLibSwift21IRDataManagerSettings")
 @interface IRDataManagerSettings : NSObject
-- (nonnull instancetype)initWithTokenProvider:(IRTokenProvider * _Nonnull)tokenProvider basePathProvider:(IRBasePathProvider * _Nonnull)basePathProvider dbSettings:(IRDataBaseSettings * _Nonnull)dbSettings sharedSettings:(IRSharedSettings * _Nonnull)sharedSettings installId:(NSString * _Nonnull)installId notificationPrefix:(NSString * _Nullable)notificationPrefix OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithAuthInfoProvider:(IRAuthInfoProvider * _Nonnull)authInfoProvider dbSettingsProvider:(id <IRDataBaseSettingsProvider> _Nonnull)dbSettingsProvider sharedSettings:(IRSharedSettings * _Nonnull)sharedSettings installId:(NSString * _Nonnull)installId notificationPrefix:(NSString * _Nullable)notificationPrefix OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -1487,6 +1487,13 @@ SWIFT_CLASS("_TtC10IrLibSwift16IRSharedSettings")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+
+SWIFT_CLASS("_TtC10IrLibSwift27IRStoredClassesInfoProvider")
+@interface IRStoredClassesInfoProvider : NSObject
++ (NSArray * _Nonnull)storedClasses SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class IRStoredStateSettingsVisit;
 @class IRStoredStateSettingsStore;
 
@@ -1494,7 +1501,7 @@ SWIFT_CLASS("_TtC10IrLibSwift16IRSharedSettings")
 /// Ojbc-библиотека использует этот класс для получения и обновления актуальных данных.
 SWIFT_CLASS("_TtC10IrLibSwift21IRStoredStateSettings")
 @interface IRStoredStateSettings : NSObject
-- (nonnull instancetype)initWithRealmConfig:(RLMRealmConfiguration * _Nonnull)realmConfig settings:(IRDataManagerSettings * _Nonnull)settings OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithSettings:(IRDataManagerSettings * _Nonnull)settings OBJC_DESIGNATED_INITIALIZER;
 @property (nonatomic, readonly, strong) IRStoredStateSettingsVisit * _Nullable currentVisit;
 @property (nonatomic, readonly, strong) IRStoredStateSettingsStore * _Nullable currentStore;
 - (void)clearCurrentVisit;
@@ -1532,15 +1539,6 @@ SWIFT_CLASS("_TtC10IrLibSwift22IRStoresSharedSettings")
 @interface IRStoresSharedSettings : NSObject
 @property (nonatomic, strong) NSNumber * _Nullable forceUpdateInterval;
 - (nonnull instancetype)initWithForceUpdateInterval:(NSNumber * _Nullable)forceUpdateInterval OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-
-SWIFT_CLASS("_TtC10IrLibSwift15IRTokenProvider")
-@interface IRTokenProvider : NSObject
-@property (nonatomic, copy) NSString * _Nonnull userToken;
-- (nonnull instancetype)initWithUserToken:(NSString * _Nonnull)userToken OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
