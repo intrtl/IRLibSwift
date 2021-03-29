@@ -1,4 +1,0 @@
-framework module IrLibSwift {
-  header "IrLibSwift-Swift.h"
-  requires objc
-}
