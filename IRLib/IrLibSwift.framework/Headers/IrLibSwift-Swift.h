@@ -296,11 +296,11 @@ SWIFT_PROTOCOL("_TtP10IrLibSwift21IRDataManagerProtocol_")
 - (void)downloadPhotosForPreviousVisitsWithVisitId:(NSString * _Nullable)visitId limit:(NSInteger)limit completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 - (void)updatePhotoResultIntervals:(NSArray<NSNumber *> * _Nonnull)intervals;
 - (void)addSendSceneBlockToSequenceWithSceneId:(NSString * _Nonnull)sceneId block:(void (^ _Nonnull)(void))block;
-- (void)restartSendPhotoSequenceWithResetAttemptIntervals:(BOOL)resetAttemptIntervals completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
+- (void)restartSendPhotoSequenceWithResetAttemptIntervals:(BOOL)resetAttemptIntervals completion:(void (^ _Nonnull)(NSString * _Nullable, NSError * _Nullable))completion;
 - (void)deletePhotoWithId:(NSString * _Nonnull)id completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 - (void)cancelRequests;
 - (NSString * _Nullable)internalTaskIdWithExternalVisitId:(NSString * _Nonnull)externalVisitId taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
-- (void)updateRecognitionOperationsSequence;
+- (void)updateRecognitionOperationsSequenceWithCompletion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 @end
 
 
@@ -314,8 +314,8 @@ SWIFT_CLASS("_TtC10IrLibSwift13IRDataManager")
 - (NSString * _Nullable)createVisitWithStoreId:(NSInteger)storeId externalStoreId:(NSString * _Nullable)externalStoreId error:(NSError * _Nullable * _Nullable)error;
 - (void)sendCurrentVisit;
 - (void)fetchRecognitionResultWithPhotoId:(NSString * _Nonnull)photoId completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
-- (void)restartSendPhotoSequenceWithResetAttemptIntervals:(BOOL)resetAttemptIntervals completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
-- (void)updateRecognitionOperationsSequence;
+- (void)restartSendPhotoSequenceWithResetAttemptIntervals:(BOOL)resetAttemptIntervals completion:(void (^ _Nonnull)(NSString * _Nullable, NSError * _Nullable))completion;
+- (void)updateRecognitionOperationsSequenceWithCompletion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 - (void)sendPhotoWithPhotoId:(NSString * _Nonnull)photoId completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 /// Взаимодействие с новым классом Photo
 - (NSArray<Photo *> * _Nonnull)photosReadyToSendWithVisitId:(NSString * _Nullable)visitId SWIFT_WARN_UNUSED_RESULT;
@@ -394,6 +394,7 @@ typedef SWIFT_ENUM(NSInteger, IRNetworkError, closed) {
   IRNetworkErrorDecodeError = 901,
   IRNetworkErrorEncodeError = 902,
   IRNetworkErrorResponseDecodeError = 903,
+  IRNetworkErrorRetryError = 904,
   IRNetworkErrorNoContent = 204,
   IRNetworkErrorUnknown = -1,
 };
@@ -1415,11 +1416,11 @@ SWIFT_PROTOCOL("_TtP10IrLibSwift21IRDataManagerProtocol_")
 - (void)downloadPhotosForPreviousVisitsWithVisitId:(NSString * _Nullable)visitId limit:(NSInteger)limit completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 - (void)updatePhotoResultIntervals:(NSArray<NSNumber *> * _Nonnull)intervals;
 - (void)addSendSceneBlockToSequenceWithSceneId:(NSString * _Nonnull)sceneId block:(void (^ _Nonnull)(void))block;
-- (void)restartSendPhotoSequenceWithResetAttemptIntervals:(BOOL)resetAttemptIntervals completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
+- (void)restartSendPhotoSequenceWithResetAttemptIntervals:(BOOL)resetAttemptIntervals completion:(void (^ _Nonnull)(NSString * _Nullable, NSError * _Nullable))completion;
 - (void)deletePhotoWithId:(NSString * _Nonnull)id completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 - (void)cancelRequests;
 - (NSString * _Nullable)internalTaskIdWithExternalVisitId:(NSString * _Nonnull)externalVisitId taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
-- (void)updateRecognitionOperationsSequence;
+- (void)updateRecognitionOperationsSequenceWithCompletion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 @end
 
 
@@ -1433,8 +1434,8 @@ SWIFT_CLASS("_TtC10IrLibSwift13IRDataManager")
 - (NSString * _Nullable)createVisitWithStoreId:(NSInteger)storeId externalStoreId:(NSString * _Nullable)externalStoreId error:(NSError * _Nullable * _Nullable)error;
 - (void)sendCurrentVisit;
 - (void)fetchRecognitionResultWithPhotoId:(NSString * _Nonnull)photoId completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
-- (void)restartSendPhotoSequenceWithResetAttemptIntervals:(BOOL)resetAttemptIntervals completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
-- (void)updateRecognitionOperationsSequence;
+- (void)restartSendPhotoSequenceWithResetAttemptIntervals:(BOOL)resetAttemptIntervals completion:(void (^ _Nonnull)(NSString * _Nullable, NSError * _Nullable))completion;
+- (void)updateRecognitionOperationsSequenceWithCompletion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 - (void)sendPhotoWithPhotoId:(NSString * _Nonnull)photoId completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 /// Взаимодействие с новым классом Photo
 - (NSArray<Photo *> * _Nonnull)photosReadyToSendWithVisitId:(NSString * _Nullable)visitId SWIFT_WARN_UNUSED_RESULT;
@@ -1513,6 +1514,7 @@ typedef SWIFT_ENUM(NSInteger, IRNetworkError, closed) {
   IRNetworkErrorDecodeError = 901,
   IRNetworkErrorEncodeError = 902,
   IRNetworkErrorResponseDecodeError = 903,
+  IRNetworkErrorRetryError = 904,
   IRNetworkErrorNoContent = 204,
   IRNetworkErrorUnknown = -1,
 };
