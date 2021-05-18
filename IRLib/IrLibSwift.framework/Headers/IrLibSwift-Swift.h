@@ -250,6 +250,27 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) AiletColorsG
 @interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
 @end
 
+@class UIColor;
+
+SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors17AiletColorsAccent")
+@interface AiletColorsAccent : NSObject
+/// $accent-01
+@property (nonatomic, readonly, strong) UIColor * _Nonnull accent01;
+/// $accent-02
+@property (nonatomic, readonly, strong) UIColor * _Nonnull accent02;
+/// $accent-03
+@property (nonatomic, readonly, strong) UIColor * _Nonnull accent03;
+/// $accent-04
+@property (nonatomic, readonly, strong) UIColor * _Nonnull accent04;
+/// $accent-05
+@property (nonatomic, readonly, strong) UIColor * _Nonnull accent05;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
+@end
+
 @class AiletGradientColor;
 
 SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors19AiletColorsGradient")
@@ -273,7 +294,6 @@ SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors19AiletColorsGradient")
 @interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
 @end
 
-@class UIColor;
 
 SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors15AiletColorsText")
 @interface AiletColorsText : NSObject
@@ -392,26 +412,6 @@ SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors17AiletColorsBorder")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-
-@interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
-@end
-
-
-SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors17AiletColorsAccent")
-@interface AiletColorsAccent : NSObject
-/// $accent-01
-@property (nonatomic, readonly, strong) UIColor * _Nonnull accent01;
-/// $accent-02
-@property (nonatomic, readonly, strong) UIColor * _Nonnull accent02;
-/// $accent-03
-@property (nonatomic, readonly, strong) UIColor * _Nonnull accent03;
-/// $accent-04
-@property (nonatomic, readonly, strong) UIColor * _Nonnull accent04;
-/// $accent-05
-@property (nonatomic, readonly, strong) UIColor * _Nonnull accent05;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
 @class AiletFontsCaption;
 @class AiletFontsSubheadline;
 @class AiletFontsHeadline;
@@ -488,8 +488,21 @@ SWIFT_CLASS("_TtC10IrLibSwift18AiletGradientColor")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-@class NSString;
 @class NSNumber;
+@class NSCoder;
+
+IB_DESIGNABLE
+SWIFT_CLASS("_TtC10IrLibSwift17AiletPieChartView")
+@interface AiletPieChartView : UIView
+- (void)addSegmentWithValue:(float)value color:(UIColor * _Nonnull)color;
+- (void)resetSegments;
+- (void)drawRect:(CGRect)rect;
+- (void)prepareForInterfaceBuilder;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class NSString;
 
 SWIFT_CLASS("_TtC10IrLibSwift6Ankets")
 @interface Ankets : RLMObject
@@ -523,7 +536,6 @@ SWIFT_PROTOCOL("_TtP10IrLibSwift16BarButtonShowing_")
 
 
 
-@class NSCoder;
 @class UITouch;
 @class UIEvent;
 
@@ -977,18 +989,6 @@ typedef SWIFT_ENUM(NSInteger, IRPhotoErrorState, closed) {
   IRPhotoErrorStateRecognitionResultError = 5,
 };
 
-
-
-IB_DESIGNABLE
-SWIFT_CLASS("_TtC10IrLibSwift12PieChartView")
-@interface PieChartView : UIView
-- (void)addSegmentWithValue:(float)value color:(UIColor * _Nonnull)color;
-- (void)resetSegments;
-- (void)drawRect:(CGRect)rect;
-- (void)prepareForInterfaceBuilder;
-- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-@end
 
 
 SWIFT_CLASS("_TtC10IrLibSwift12ProductGroup")
@@ -1867,6 +1867,27 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) AiletColorsG
 @interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
 @end
 
+@class UIColor;
+
+SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors17AiletColorsAccent")
+@interface AiletColorsAccent : NSObject
+/// $accent-01
+@property (nonatomic, readonly, strong) UIColor * _Nonnull accent01;
+/// $accent-02
+@property (nonatomic, readonly, strong) UIColor * _Nonnull accent02;
+/// $accent-03
+@property (nonatomic, readonly, strong) UIColor * _Nonnull accent03;
+/// $accent-04
+@property (nonatomic, readonly, strong) UIColor * _Nonnull accent04;
+/// $accent-05
+@property (nonatomic, readonly, strong) UIColor * _Nonnull accent05;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
+@end
+
 @class AiletGradientColor;
 
 SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors19AiletColorsGradient")
@@ -1890,7 +1911,6 @@ SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors19AiletColorsGradient")
 @interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
 @end
 
-@class UIColor;
 
 SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors15AiletColorsText")
 @interface AiletColorsText : NSObject
@@ -2009,26 +2029,6 @@ SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors17AiletColorsBorder")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-
-@interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
-@end
-
-
-SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors17AiletColorsAccent")
-@interface AiletColorsAccent : NSObject
-/// $accent-01
-@property (nonatomic, readonly, strong) UIColor * _Nonnull accent01;
-/// $accent-02
-@property (nonatomic, readonly, strong) UIColor * _Nonnull accent02;
-/// $accent-03
-@property (nonatomic, readonly, strong) UIColor * _Nonnull accent03;
-/// $accent-04
-@property (nonatomic, readonly, strong) UIColor * _Nonnull accent04;
-/// $accent-05
-@property (nonatomic, readonly, strong) UIColor * _Nonnull accent05;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
 @class AiletFontsCaption;
 @class AiletFontsSubheadline;
 @class AiletFontsHeadline;
@@ -2105,8 +2105,21 @@ SWIFT_CLASS("_TtC10IrLibSwift18AiletGradientColor")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-@class NSString;
 @class NSNumber;
+@class NSCoder;
+
+IB_DESIGNABLE
+SWIFT_CLASS("_TtC10IrLibSwift17AiletPieChartView")
+@interface AiletPieChartView : UIView
+- (void)addSegmentWithValue:(float)value color:(UIColor * _Nonnull)color;
+- (void)resetSegments;
+- (void)drawRect:(CGRect)rect;
+- (void)prepareForInterfaceBuilder;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class NSString;
 
 SWIFT_CLASS("_TtC10IrLibSwift6Ankets")
 @interface Ankets : RLMObject
@@ -2140,7 +2153,6 @@ SWIFT_PROTOCOL("_TtP10IrLibSwift16BarButtonShowing_")
 
 
 
-@class NSCoder;
 @class UITouch;
 @class UIEvent;
 
@@ -2594,18 +2606,6 @@ typedef SWIFT_ENUM(NSInteger, IRPhotoErrorState, closed) {
   IRPhotoErrorStateRecognitionResultError = 5,
 };
 
-
-
-IB_DESIGNABLE
-SWIFT_CLASS("_TtC10IrLibSwift12PieChartView")
-@interface PieChartView : UIView
-- (void)addSegmentWithValue:(float)value color:(UIColor * _Nonnull)color;
-- (void)resetSegments;
-- (void)drawRect:(CGRect)rect;
-- (void)prepareForInterfaceBuilder;
-- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-@end
 
 
 SWIFT_CLASS("_TtC10IrLibSwift12ProductGroup")
