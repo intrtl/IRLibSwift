@@ -850,7 +850,8 @@ SWIFT_CLASS("_TtC10IrLibSwift16IRSharedSettings")
 @property (nonatomic, readonly, strong) IRGeolocationErrorSharedSettings * _Nonnull locationError;
 @property (nonatomic, readonly) enum IRPhotoApproveMode photoApproveMode;
 @property (nonatomic, readonly) BOOL shouldSyncManually;
-- (nonnull instancetype)initWithStoresSettings:(IRStoresSharedSettings * _Nonnull)storesSettings locationError:(IRGeolocationErrorSharedSettings * _Nonnull)locationError photoApproveMode:(enum IRPhotoApproveMode)photoApproveMode shouldSyncManually:(BOOL)shouldSyncManually OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, readonly) BOOL LOAReasonRequired;
+- (nonnull instancetype)initWithStoresSettings:(IRStoresSharedSettings * _Nonnull)storesSettings locationError:(IRGeolocationErrorSharedSettings * _Nonnull)locationError photoApproveMode:(enum IRPhotoApproveMode)photoApproveMode shouldSyncManually:(BOOL)shouldSyncManually LOAReasonRequired:(BOOL)LOAReasonRequired OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -1257,6 +1258,7 @@ SWIFT_PROTOCOL("_TtP10IrLibSwift18StoreDetailsOutput_")
 - (void)didTriggerOpenOsaReportForTaskWithId:(NSString * _Nullable)taskId;
 - (void)didTriggerOpenSosReportForTaskWithId:(NSString * _Nullable)taskId;
 - (void)didTriggerOpenPriceExecutionReportForTaskWithId:(NSString * _Nullable)taskId;
+- (void)didTriggerOpenOosReport;
 - (void)didTriggerOpenSummaryReportForStoreWithId:(NSInteger)storeId;
 - (void)didStartVisitForStoreWithId:(NSInteger)storeId;
 - (void)didFinishVisitForStoreWithId:(NSInteger)storeId readyToFinishHandler:(void (^ _Nonnull)(BOOL))readyToFinishHandler;
@@ -1274,6 +1276,7 @@ SWIFT_PROTOCOL("_TtP10IrLibSwift18StoresModuleOutput_")
 - (void)didTriggerOpenOsaReportForTaskWithId:(NSString * _Nullable)taskId;
 - (void)didTriggerOpenSosReportForTaskWithId:(NSString * _Nullable)taskId;
 - (void)didTriggerOpenPriceExecutionReportForTaskWithId:(NSString * _Nullable)taskId;
+- (void)didTriggerOpenOosReport;
 - (void)didStartVisitForStoreWithId:(NSInteger)storeId;
 - (void)didFinishVisitForStoreWithId:(NSInteger)storeId readyToFinishHandler:(void (^ _Nonnull)(BOOL))readyToFinishHandler;
 - (void)didTriggerOpenAssortmentForStoreWithId:(NSInteger)storeId;
@@ -2467,7 +2470,8 @@ SWIFT_CLASS("_TtC10IrLibSwift16IRSharedSettings")
 @property (nonatomic, readonly, strong) IRGeolocationErrorSharedSettings * _Nonnull locationError;
 @property (nonatomic, readonly) enum IRPhotoApproveMode photoApproveMode;
 @property (nonatomic, readonly) BOOL shouldSyncManually;
-- (nonnull instancetype)initWithStoresSettings:(IRStoresSharedSettings * _Nonnull)storesSettings locationError:(IRGeolocationErrorSharedSettings * _Nonnull)locationError photoApproveMode:(enum IRPhotoApproveMode)photoApproveMode shouldSyncManually:(BOOL)shouldSyncManually OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, readonly) BOOL LOAReasonRequired;
+- (nonnull instancetype)initWithStoresSettings:(IRStoresSharedSettings * _Nonnull)storesSettings locationError:(IRGeolocationErrorSharedSettings * _Nonnull)locationError photoApproveMode:(enum IRPhotoApproveMode)photoApproveMode shouldSyncManually:(BOOL)shouldSyncManually LOAReasonRequired:(BOOL)LOAReasonRequired OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -2874,6 +2878,7 @@ SWIFT_PROTOCOL("_TtP10IrLibSwift18StoreDetailsOutput_")
 - (void)didTriggerOpenOsaReportForTaskWithId:(NSString * _Nullable)taskId;
 - (void)didTriggerOpenSosReportForTaskWithId:(NSString * _Nullable)taskId;
 - (void)didTriggerOpenPriceExecutionReportForTaskWithId:(NSString * _Nullable)taskId;
+- (void)didTriggerOpenOosReport;
 - (void)didTriggerOpenSummaryReportForStoreWithId:(NSInteger)storeId;
 - (void)didStartVisitForStoreWithId:(NSInteger)storeId;
 - (void)didFinishVisitForStoreWithId:(NSInteger)storeId readyToFinishHandler:(void (^ _Nonnull)(BOOL))readyToFinishHandler;
@@ -2891,6 +2896,7 @@ SWIFT_PROTOCOL("_TtP10IrLibSwift18StoresModuleOutput_")
 - (void)didTriggerOpenOsaReportForTaskWithId:(NSString * _Nullable)taskId;
 - (void)didTriggerOpenSosReportForTaskWithId:(NSString * _Nullable)taskId;
 - (void)didTriggerOpenPriceExecutionReportForTaskWithId:(NSString * _Nullable)taskId;
+- (void)didTriggerOpenOosReport;
 - (void)didStartVisitForStoreWithId:(NSInteger)storeId;
 - (void)didFinishVisitForStoreWithId:(NSInteger)storeId readyToFinishHandler:(void (^ _Nonnull)(BOOL))readyToFinishHandler;
 - (void)didTriggerOpenAssortmentForStoreWithId:(NSInteger)storeId;
