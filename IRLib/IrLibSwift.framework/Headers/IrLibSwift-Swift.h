@@ -250,27 +250,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) AiletColorsG
 @interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
 @end
 
-@class UIColor;
-
-SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors17AiletColorsAccent")
-@interface AiletColorsAccent : NSObject
-/// $accent-01
-@property (nonatomic, readonly, strong) UIColor * _Nonnull accent01;
-/// $accent-02
-@property (nonatomic, readonly, strong) UIColor * _Nonnull accent02;
-/// $accent-03
-@property (nonatomic, readonly, strong) UIColor * _Nonnull accent03;
-/// $accent-04
-@property (nonatomic, readonly, strong) UIColor * _Nonnull accent04;
-/// $accent-05
-@property (nonatomic, readonly, strong) UIColor * _Nonnull accent05;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-@interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
-@end
-
 @class AiletGradientColor;
 
 SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors19AiletColorsGradient")
@@ -294,23 +273,20 @@ SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors19AiletColorsGradient")
 @interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
 @end
 
+@class UIColor;
 
-SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors15AiletColorsText")
-@interface AiletColorsText : NSObject
-/// $text-01
-@property (nonatomic, readonly, strong) UIColor * _Nonnull primary;
-/// $text-02
-@property (nonatomic, readonly, strong) UIColor * _Nonnull secondary;
-/// $text-03
-@property (nonatomic, readonly, strong) UIColor * _Nonnull placeholder;
-/// $text-04
-@property (nonatomic, readonly, strong) UIColor * _Nonnull interactive;
-/// $text-error
-@property (nonatomic, readonly, strong) UIColor * _Nonnull error;
-/// $text-success
-@property (nonatomic, readonly, strong) UIColor * _Nonnull success;
-/// $link-01
-@property (nonatomic, readonly, strong) UIColor * _Nonnull links;
+SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors17AiletColorsAccent")
+@interface AiletColorsAccent : NSObject
+/// $accent-01
+@property (nonatomic, readonly, strong) UIColor * _Nonnull accent01;
+/// $accent-02
+@property (nonatomic, readonly, strong) UIColor * _Nonnull accent02;
+/// $accent-03
+@property (nonatomic, readonly, strong) UIColor * _Nonnull accent03;
+/// $accent-04
+@property (nonatomic, readonly, strong) UIColor * _Nonnull accent04;
+/// $accent-05
+@property (nonatomic, readonly, strong) UIColor * _Nonnull accent05;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -319,12 +295,26 @@ SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors15AiletColorsText")
 @end
 
 
-SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors22AiletColorsInteractive")
-@interface AiletColorsInteractive : NSObject
-/// $interactive-01
+SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors17AiletColorsBorder")
+@interface AiletColorsBorder : NSObject
+/// $border-01
 @property (nonatomic, readonly, strong) UIColor * _Nonnull primary;
-/// $interactive-02
-@property (nonatomic, readonly, strong) UIColor * _Nonnull secondary;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
+@end
+
+
+SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors18AiletColorsSupport")
+@interface AiletColorsSupport : NSObject
+/// $support-01
+@property (nonatomic, readonly, strong) UIColor * _Nonnull error;
+/// $support-02
+@property (nonatomic, readonly, strong) UIColor * _Nonnull success;
+/// $support-03
+@property (nonatomic, readonly, strong) UIColor * _Nonnull warning;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -375,11 +365,35 @@ SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors15AiletColorsIcon")
 @end
 
 
-SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors16AiletColorsInput")
-@interface AiletColorsInput : NSObject
-/// $field-01
+SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors15AiletColorsText")
+@interface AiletColorsText : NSObject
+/// $text-01
 @property (nonatomic, readonly, strong) UIColor * _Nonnull primary;
-/// $field-02
+/// $text-02
+@property (nonatomic, readonly, strong) UIColor * _Nonnull secondary;
+/// $text-03
+@property (nonatomic, readonly, strong) UIColor * _Nonnull placeholder;
+/// $text-04
+@property (nonatomic, readonly, strong) UIColor * _Nonnull interactive;
+/// $text-error
+@property (nonatomic, readonly, strong) UIColor * _Nonnull error;
+/// $text-success
+@property (nonatomic, readonly, strong) UIColor * _Nonnull success;
+/// $link-01
+@property (nonatomic, readonly, strong) UIColor * _Nonnull links;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
+@end
+
+
+SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors22AiletColorsInteractive")
+@interface AiletColorsInteractive : NSObject
+/// $interactive-01
+@property (nonatomic, readonly, strong) UIColor * _Nonnull primary;
+/// $interactive-02
 @property (nonatomic, readonly, strong) UIColor * _Nonnull secondary;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -389,26 +403,12 @@ SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors16AiletColorsInput")
 @end
 
 
-SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors18AiletColorsSupport")
-@interface AiletColorsSupport : NSObject
-/// $support-01
-@property (nonatomic, readonly, strong) UIColor * _Nonnull error;
-/// $support-02
-@property (nonatomic, readonly, strong) UIColor * _Nonnull success;
-/// $support-03
-@property (nonatomic, readonly, strong) UIColor * _Nonnull warning;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-@interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
-@end
-
-
-SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors17AiletColorsBorder")
-@interface AiletColorsBorder : NSObject
-/// $border-01
+SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors16AiletColorsInput")
+@interface AiletColorsInput : NSObject
+/// $field-01
 @property (nonatomic, readonly, strong) UIColor * _Nonnull primary;
+/// $field-02
+@property (nonatomic, readonly, strong) UIColor * _Nonnull secondary;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -1263,7 +1263,7 @@ SWIFT_PROTOCOL("_TtP10IrLibSwift18StoreDetailsOutput_")
 - (void)didStartVisitForStoreWithId:(NSInteger)storeId;
 - (void)didFinishVisitForStoreWithId:(NSInteger)storeId readyToFinishHandler:(void (^ _Nonnull)(BOOL))readyToFinishHandler;
 - (void)didTriggerFetchAnketForStoreWithId:(NSInteger)storeId completion:(void (^ _Nullable)(void))completion;
-- (void)didTriggerOpenAnketForStoreWithId:(NSInteger)storeId;
+- (void)didTriggerOpenAnketWithStoreId:(NSInteger)storeId visitId:(NSString * _Nullable)visitId shouldOnlyView:(BOOL)shouldOnlyView;
 - (void)didTriggerOpenSupport;
 - (void)didTriggerOpenAssortmentMatrixForStoreWithId:(NSInteger)storeId;
 @end
@@ -1282,7 +1282,7 @@ SWIFT_PROTOCOL("_TtP10IrLibSwift18StoresModuleOutput_")
 - (void)didTriggerOpenAssortmentForStoreWithId:(NSInteger)storeId;
 - (void)didTriggerOpenSummaryReportForStoreWithId:(NSInteger)storeId;
 - (void)didTriggerFetchAnketForStoreWithId:(NSInteger)storeId completion:(void (^ _Nullable)(void))completion;
-- (void)didTriggerOpenAnketForStoreWithId:(NSInteger)storeId;
+- (void)didTriggerOpenAnketWithStoreId:(NSInteger)storeId visitId:(NSString * _Nullable)visitId shouldOnlyView:(BOOL)shouldOnlyView;
 - (void)didTriggerOpenSupport;
 @end
 
@@ -1359,6 +1359,7 @@ SWIFT_CLASS("_TtC10IrLibSwift10UserAnkets")
 @property (nonatomic) NSInteger is_sended;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
+
 
 @class VisitWidget;
 @class VisitTask;
@@ -1870,27 +1871,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) AiletColorsG
 @interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
 @end
 
-@class UIColor;
-
-SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors17AiletColorsAccent")
-@interface AiletColorsAccent : NSObject
-/// $accent-01
-@property (nonatomic, readonly, strong) UIColor * _Nonnull accent01;
-/// $accent-02
-@property (nonatomic, readonly, strong) UIColor * _Nonnull accent02;
-/// $accent-03
-@property (nonatomic, readonly, strong) UIColor * _Nonnull accent03;
-/// $accent-04
-@property (nonatomic, readonly, strong) UIColor * _Nonnull accent04;
-/// $accent-05
-@property (nonatomic, readonly, strong) UIColor * _Nonnull accent05;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-@interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
-@end
-
 @class AiletGradientColor;
 
 SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors19AiletColorsGradient")
@@ -1914,23 +1894,20 @@ SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors19AiletColorsGradient")
 @interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
 @end
 
+@class UIColor;
 
-SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors15AiletColorsText")
-@interface AiletColorsText : NSObject
-/// $text-01
-@property (nonatomic, readonly, strong) UIColor * _Nonnull primary;
-/// $text-02
-@property (nonatomic, readonly, strong) UIColor * _Nonnull secondary;
-/// $text-03
-@property (nonatomic, readonly, strong) UIColor * _Nonnull placeholder;
-/// $text-04
-@property (nonatomic, readonly, strong) UIColor * _Nonnull interactive;
-/// $text-error
-@property (nonatomic, readonly, strong) UIColor * _Nonnull error;
-/// $text-success
-@property (nonatomic, readonly, strong) UIColor * _Nonnull success;
-/// $link-01
-@property (nonatomic, readonly, strong) UIColor * _Nonnull links;
+SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors17AiletColorsAccent")
+@interface AiletColorsAccent : NSObject
+/// $accent-01
+@property (nonatomic, readonly, strong) UIColor * _Nonnull accent01;
+/// $accent-02
+@property (nonatomic, readonly, strong) UIColor * _Nonnull accent02;
+/// $accent-03
+@property (nonatomic, readonly, strong) UIColor * _Nonnull accent03;
+/// $accent-04
+@property (nonatomic, readonly, strong) UIColor * _Nonnull accent04;
+/// $accent-05
+@property (nonatomic, readonly, strong) UIColor * _Nonnull accent05;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -1939,12 +1916,26 @@ SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors15AiletColorsText")
 @end
 
 
-SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors22AiletColorsInteractive")
-@interface AiletColorsInteractive : NSObject
-/// $interactive-01
+SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors17AiletColorsBorder")
+@interface AiletColorsBorder : NSObject
+/// $border-01
 @property (nonatomic, readonly, strong) UIColor * _Nonnull primary;
-/// $interactive-02
-@property (nonatomic, readonly, strong) UIColor * _Nonnull secondary;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
+@end
+
+
+SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors18AiletColorsSupport")
+@interface AiletColorsSupport : NSObject
+/// $support-01
+@property (nonatomic, readonly, strong) UIColor * _Nonnull error;
+/// $support-02
+@property (nonatomic, readonly, strong) UIColor * _Nonnull success;
+/// $support-03
+@property (nonatomic, readonly, strong) UIColor * _Nonnull warning;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -1995,11 +1986,35 @@ SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors15AiletColorsIcon")
 @end
 
 
-SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors16AiletColorsInput")
-@interface AiletColorsInput : NSObject
-/// $field-01
+SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors15AiletColorsText")
+@interface AiletColorsText : NSObject
+/// $text-01
 @property (nonatomic, readonly, strong) UIColor * _Nonnull primary;
-/// $field-02
+/// $text-02
+@property (nonatomic, readonly, strong) UIColor * _Nonnull secondary;
+/// $text-03
+@property (nonatomic, readonly, strong) UIColor * _Nonnull placeholder;
+/// $text-04
+@property (nonatomic, readonly, strong) UIColor * _Nonnull interactive;
+/// $text-error
+@property (nonatomic, readonly, strong) UIColor * _Nonnull error;
+/// $text-success
+@property (nonatomic, readonly, strong) UIColor * _Nonnull success;
+/// $link-01
+@property (nonatomic, readonly, strong) UIColor * _Nonnull links;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
+@end
+
+
+SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors22AiletColorsInteractive")
+@interface AiletColorsInteractive : NSObject
+/// $interactive-01
+@property (nonatomic, readonly, strong) UIColor * _Nonnull primary;
+/// $interactive-02
 @property (nonatomic, readonly, strong) UIColor * _Nonnull secondary;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -2009,26 +2024,12 @@ SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors16AiletColorsInput")
 @end
 
 
-SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors18AiletColorsSupport")
-@interface AiletColorsSupport : NSObject
-/// $support-01
-@property (nonatomic, readonly, strong) UIColor * _Nonnull error;
-/// $support-02
-@property (nonatomic, readonly, strong) UIColor * _Nonnull success;
-/// $support-03
-@property (nonatomic, readonly, strong) UIColor * _Nonnull warning;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-@interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
-@end
-
-
-SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors17AiletColorsBorder")
-@interface AiletColorsBorder : NSObject
-/// $border-01
+SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors16AiletColorsInput")
+@interface AiletColorsInput : NSObject
+/// $field-01
 @property (nonatomic, readonly, strong) UIColor * _Nonnull primary;
+/// $field-02
+@property (nonatomic, readonly, strong) UIColor * _Nonnull secondary;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -2883,7 +2884,7 @@ SWIFT_PROTOCOL("_TtP10IrLibSwift18StoreDetailsOutput_")
 - (void)didStartVisitForStoreWithId:(NSInteger)storeId;
 - (void)didFinishVisitForStoreWithId:(NSInteger)storeId readyToFinishHandler:(void (^ _Nonnull)(BOOL))readyToFinishHandler;
 - (void)didTriggerFetchAnketForStoreWithId:(NSInteger)storeId completion:(void (^ _Nullable)(void))completion;
-- (void)didTriggerOpenAnketForStoreWithId:(NSInteger)storeId;
+- (void)didTriggerOpenAnketWithStoreId:(NSInteger)storeId visitId:(NSString * _Nullable)visitId shouldOnlyView:(BOOL)shouldOnlyView;
 - (void)didTriggerOpenSupport;
 - (void)didTriggerOpenAssortmentMatrixForStoreWithId:(NSInteger)storeId;
 @end
@@ -2902,7 +2903,7 @@ SWIFT_PROTOCOL("_TtP10IrLibSwift18StoresModuleOutput_")
 - (void)didTriggerOpenAssortmentForStoreWithId:(NSInteger)storeId;
 - (void)didTriggerOpenSummaryReportForStoreWithId:(NSInteger)storeId;
 - (void)didTriggerFetchAnketForStoreWithId:(NSInteger)storeId completion:(void (^ _Nullable)(void))completion;
-- (void)didTriggerOpenAnketForStoreWithId:(NSInteger)storeId;
+- (void)didTriggerOpenAnketWithStoreId:(NSInteger)storeId visitId:(NSString * _Nullable)visitId shouldOnlyView:(BOOL)shouldOnlyView;
 - (void)didTriggerOpenSupport;
 @end
 
@@ -2979,6 +2980,7 @@ SWIFT_CLASS("_TtC10IrLibSwift10UserAnkets")
 @property (nonatomic) NSInteger is_sended;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
+
 
 @class VisitWidget;
 @class VisitTask;
