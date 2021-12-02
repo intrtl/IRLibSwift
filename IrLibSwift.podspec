@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
   spec.name         = "IrLibSwift"
   spec.version      = "1.23.0.6"
-  spec.summary      = "Framework with Intelligence Retail functionality written on Swift"
+  spec.summary      = "Framework with Intelligence Retail functionality written on Swift" 
   spec.static_framework = true;
   spec.description  = <<-DESC
                          Framework with Intelligence Retail functionality written on Swift.
