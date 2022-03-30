@@ -253,22 +253,44 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) AiletColorsG
 
 @class UIColor;
 
-SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors15AiletColorsText")
-@interface AiletColorsText : NSObject
-/// $text-01
+SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors21AiletColorsBackground")
+@interface AiletColorsBackground : NSObject
+/// $ui-bg, wihte
 @property (nonatomic, readonly, strong) UIColor * _Nonnull primary;
-/// $text-02
+/// $ui-01, gray10
+@property (nonatomic, readonly, strong) UIColor * _Nonnull background01;
+/// $ui-02, gray20
+@property (nonatomic, readonly, strong) UIColor * _Nonnull background02;
+/// $ui-03, gray30
+@property (nonatomic, readonly, strong) UIColor * _Nonnull background03;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
+@end
+
+
+SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors22AiletColorsInteractive")
+@interface AiletColorsInteractive : NSObject
+/// $interactive-01
+@property (nonatomic, readonly, strong) UIColor * _Nonnull primary;
+/// $interactive-02
 @property (nonatomic, readonly, strong) UIColor * _Nonnull secondary;
-/// $text-03
-@property (nonatomic, readonly, strong) UIColor * _Nonnull placeholder;
-/// $text-04
-@property (nonatomic, readonly, strong) UIColor * _Nonnull interactive;
-/// $text-error
-@property (nonatomic, readonly, strong) UIColor * _Nonnull error;
-/// $text-success
-@property (nonatomic, readonly, strong) UIColor * _Nonnull success;
-/// $link-01
-@property (nonatomic, readonly, strong) UIColor * _Nonnull links;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
+@end
+
+
+SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors16AiletColorsInput")
+@interface AiletColorsInput : NSObject
+/// $field-01
+@property (nonatomic, readonly, strong) UIColor * _Nonnull primary;
+/// $field-02
+@property (nonatomic, readonly, strong) UIColor * _Nonnull secondary;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -300,20 +322,22 @@ SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors19AiletColorsGradient")
 @end
 
 
-SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors15AiletColorsIcon")
-@interface AiletColorsIcon : NSObject
-/// $icon-01
+SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors15AiletColorsText")
+@interface AiletColorsText : NSObject
+/// $text-01
 @property (nonatomic, readonly, strong) UIColor * _Nonnull primary;
-/// $icon-02
+/// $text-02
 @property (nonatomic, readonly, strong) UIColor * _Nonnull secondary;
-/// $icon-04
-@property (nonatomic, readonly, strong) UIColor * _Nonnull onInteractiveColors;
-/// $icon-05
-@property (nonatomic, readonly, strong) UIColor * _Nonnull accent01;
-/// $icon-06
-@property (nonatomic, readonly, strong) UIColor * _Nonnull accent02;
-/// $icon-07
-@property (nonatomic, readonly, strong) UIColor * _Nonnull accent03;
+/// $text-03
+@property (nonatomic, readonly, strong) UIColor * _Nonnull placeholder;
+/// $text-04
+@property (nonatomic, readonly, strong) UIColor * _Nonnull interactive;
+/// $text-error
+@property (nonatomic, readonly, strong) UIColor * _Nonnull error;
+/// $text-success
+@property (nonatomic, readonly, strong) UIColor * _Nonnull success;
+/// $link-01
+@property (nonatomic, readonly, strong) UIColor * _Nonnull links;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -370,44 +394,20 @@ SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors18AiletColorsSupport")
 @end
 
 
-SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors21AiletColorsBackground")
-@interface AiletColorsBackground : NSObject
-/// $ui-bg, wihte
+SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors15AiletColorsIcon")
+@interface AiletColorsIcon : NSObject
+/// $icon-01
 @property (nonatomic, readonly, strong) UIColor * _Nonnull primary;
-/// $ui-01, gray10
-@property (nonatomic, readonly, strong) UIColor * _Nonnull background01;
-/// $ui-02, gray20
-@property (nonatomic, readonly, strong) UIColor * _Nonnull background02;
-/// $ui-03, gray30
-@property (nonatomic, readonly, strong) UIColor * _Nonnull background03;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-@interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
-@end
-
-
-SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors22AiletColorsInteractive")
-@interface AiletColorsInteractive : NSObject
-/// $interactive-01
-@property (nonatomic, readonly, strong) UIColor * _Nonnull primary;
-/// $interactive-02
+/// $icon-02
 @property (nonatomic, readonly, strong) UIColor * _Nonnull secondary;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-@interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
-@end
-
-
-SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors16AiletColorsInput")
-@interface AiletColorsInput : NSObject
-/// $field-01
-@property (nonatomic, readonly, strong) UIColor * _Nonnull primary;
-/// $field-02
-@property (nonatomic, readonly, strong) UIColor * _Nonnull secondary;
+/// $icon-04
+@property (nonatomic, readonly, strong) UIColor * _Nonnull onInteractiveColors;
+/// $icon-05
+@property (nonatomic, readonly, strong) UIColor * _Nonnull accent01;
+/// $icon-06
+@property (nonatomic, readonly, strong) UIColor * _Nonnull accent02;
+/// $icon-07
+@property (nonatomic, readonly, strong) UIColor * _Nonnull accent03;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -695,8 +695,6 @@ SWIFT_PROTOCOL("_TtP10IrLibSwift21IRDataManagerProtocol_")
 - (NSString * _Nullable)internalTaskIdWithExternalVisitId:(NSString * _Nonnull)externalVisitId taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
 - (void)updateRecognitionOperationsSequenceWithCompletion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 - (void)logScreenTimeEventWithId:(NSString * _Nonnull)id name:(NSString * _Nonnull)name duration:(NSInteger)duration;
-- (void)stopReportTimeTracking;
-- (void)startReportTimeTracking;
 - (UIViewController * _Nullable)cameraViewControllerWithOutput:(id <CameraModuleOutput> _Nullable)output externalVisitId:(NSString * _Nonnull)externalVisitId taskId:(NSString * _Nullable)taskId externalStoreId:(NSString * _Nonnull)externalStoreId isOpenedViaDeeplinks:(BOOL)isOpenedViaDeeplinks SWIFT_WARN_UNUSED_RESULT;
 - (UIViewController * _Nullable)taskDetailsViewControllerWithOutput:(id <TaskDetailsModuleOutput> _Nonnull)output externalVisitId:(NSString * _Nonnull)externalVisitId externalStoreId:(NSString * _Nonnull)externalStoreId taskId:(NSString * _Nonnull)taskId SWIFT_WARN_UNUSED_RESULT;
 - (UIViewController * _Nullable)reportPhotoBrowseViewControllerWithVisitId:(NSString * _Nonnull)visitId taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
@@ -706,7 +704,6 @@ SWIFT_PROTOCOL("_TtP10IrLibSwift21IRDataManagerProtocol_")
 - (void)clearVisitsWithoutPhotosAndFilledAnswers;
 @end
 
-@protocol ImageResizer;
 
 SWIFT_CLASS("_TtC10IrLibSwift13IRDataManager")
 @interface IRDataManager : NSObject <IRDataManagerProtocol>
@@ -763,15 +760,12 @@ SWIFT_CLASS("_TtC10IrLibSwift13IRDataManager")
 - (UIViewController * _Nullable)taskDetailsViewControllerWithOutput:(id <TaskDetailsModuleOutput> _Nonnull)output externalVisitId:(NSString * _Nonnull)externalVisitId externalStoreId:(NSString * _Nonnull)externalStoreId taskId:(NSString * _Nonnull)taskId SWIFT_WARN_UNUSED_RESULT;
 - (UIViewController * _Nullable)reportPhotoBrowseViewControllerWithVisitId:(NSString * _Nonnull)visitId taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
 - (void)logScreenTimeEventWithId:(NSString * _Nonnull)id name:(NSString * _Nonnull)name duration:(NSInteger)duration;
-- (void)startReportTimeTracking;
-- (void)stopReportTimeTracking;
 - (NSDictionary<NSString *, id> * _Nonnull)visitStatsWithVisitId:(NSString * _Nonnull)visitId photoId:(NSString * _Nullable)photoId SWIFT_WARN_UNUSED_RESULT;
 /// Перезапуск сервиса получения геопопозиции (для выхода из фона)
 - (void)restartLocationService;
 - (NSSet<NSString *> * _Nonnull)visitsWithPhotosIds SWIFT_WARN_UNUSED_RESULT;
 - (void)clearVisitsWithoutPhotos;
 - (void)clearVisitsWithoutPhotosAndFilledAnswers;
-- (id <ImageResizer> _Nonnull)imageResizerWith:(CGFloat)compressionQuality SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -943,8 +937,7 @@ SWIFT_CLASS("_TtC10IrLibSwift16IRSharedSettings")
 @property (nonatomic, readonly) BOOL shouldSyncManually;
 @property (nonatomic, readonly) BOOL LOAReasonRequired;
 @property (nonatomic, readonly, strong) IRLegacyApiSharedSettings * _Nonnull legacyApiSettings;
-@property (nonatomic, readonly) BOOL isSupportEnabled;
-- (nonnull instancetype)initWithStores:(IRStoresSharedSettings * _Nonnull)storesSettings photo:(IRPhotoSharedSettings * _Nonnull)photoSettings camera:(IRCameraSharedSettings * _Nonnull)cameraSettings visit:(IRVisitSharedSettings * _Nonnull)visitSettings locationError:(IRGeolocationErrorSharedSettings * _Nonnull)locationError memory:(IRMemorySharedSettings * _Nonnull)memory legacyApiSettings:(IRLegacyApiSharedSettings * _Nonnull)legacyApiSettings photoApproveMode:(enum IRPhotoApproveMode)photoApproveMode shouldSyncManually:(BOOL)shouldSyncManually LOAReasonRequired:(BOOL)LOAReasonRequired isSupportEnabled:(BOOL)isSupportEnabled OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithStores:(IRStoresSharedSettings * _Nonnull)storesSettings photo:(IRPhotoSharedSettings * _Nonnull)photoSettings camera:(IRCameraSharedSettings * _Nonnull)cameraSettings visit:(IRVisitSharedSettings * _Nonnull)visitSettings locationError:(IRGeolocationErrorSharedSettings * _Nonnull)locationError memory:(IRMemorySharedSettings * _Nonnull)memory legacyApiSettings:(IRLegacyApiSharedSettings * _Nonnull)legacyApiSettings photoApproveMode:(enum IRPhotoApproveMode)photoApproveMode shouldSyncManually:(BOOL)shouldSyncManually LOAReasonRequired:(BOOL)LOAReasonRequired OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -1012,13 +1005,6 @@ SWIFT_CLASS("_TtC10IrLibSwift21IRVisitSharedSettings")
 - (nonnull instancetype)initWithShouldBlockIfErrorPhotosExist:(BOOL)shouldBlockIfErrorPhotosExist OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-@class NSData;
-
-SWIFT_PROTOCOL("_TtP10IrLibSwift12ImageResizer_")
-@protocol ImageResizer
-- (NSData * _Nonnull)resizeWithPhotoData:(NSData * _Nonnull)photoData downTo:(float)targetLargerSideSize SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
@@ -2185,22 +2171,44 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) AiletColorsG
 
 @class UIColor;
 
-SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors15AiletColorsText")
-@interface AiletColorsText : NSObject
-/// $text-01
+SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors21AiletColorsBackground")
+@interface AiletColorsBackground : NSObject
+/// $ui-bg, wihte
 @property (nonatomic, readonly, strong) UIColor * _Nonnull primary;
-/// $text-02
+/// $ui-01, gray10
+@property (nonatomic, readonly, strong) UIColor * _Nonnull background01;
+/// $ui-02, gray20
+@property (nonatomic, readonly, strong) UIColor * _Nonnull background02;
+/// $ui-03, gray30
+@property (nonatomic, readonly, strong) UIColor * _Nonnull background03;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
+@end
+
+
+SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors22AiletColorsInteractive")
+@interface AiletColorsInteractive : NSObject
+/// $interactive-01
+@property (nonatomic, readonly, strong) UIColor * _Nonnull primary;
+/// $interactive-02
 @property (nonatomic, readonly, strong) UIColor * _Nonnull secondary;
-/// $text-03
-@property (nonatomic, readonly, strong) UIColor * _Nonnull placeholder;
-/// $text-04
-@property (nonatomic, readonly, strong) UIColor * _Nonnull interactive;
-/// $text-error
-@property (nonatomic, readonly, strong) UIColor * _Nonnull error;
-/// $text-success
-@property (nonatomic, readonly, strong) UIColor * _Nonnull success;
-/// $link-01
-@property (nonatomic, readonly, strong) UIColor * _Nonnull links;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
+@end
+
+
+SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors16AiletColorsInput")
+@interface AiletColorsInput : NSObject
+/// $field-01
+@property (nonatomic, readonly, strong) UIColor * _Nonnull primary;
+/// $field-02
+@property (nonatomic, readonly, strong) UIColor * _Nonnull secondary;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -2232,20 +2240,22 @@ SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors19AiletColorsGradient")
 @end
 
 
-SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors15AiletColorsIcon")
-@interface AiletColorsIcon : NSObject
-/// $icon-01
+SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors15AiletColorsText")
+@interface AiletColorsText : NSObject
+/// $text-01
 @property (nonatomic, readonly, strong) UIColor * _Nonnull primary;
-/// $icon-02
+/// $text-02
 @property (nonatomic, readonly, strong) UIColor * _Nonnull secondary;
-/// $icon-04
-@property (nonatomic, readonly, strong) UIColor * _Nonnull onInteractiveColors;
-/// $icon-05
-@property (nonatomic, readonly, strong) UIColor * _Nonnull accent01;
-/// $icon-06
-@property (nonatomic, readonly, strong) UIColor * _Nonnull accent02;
-/// $icon-07
-@property (nonatomic, readonly, strong) UIColor * _Nonnull accent03;
+/// $text-03
+@property (nonatomic, readonly, strong) UIColor * _Nonnull placeholder;
+/// $text-04
+@property (nonatomic, readonly, strong) UIColor * _Nonnull interactive;
+/// $text-error
+@property (nonatomic, readonly, strong) UIColor * _Nonnull error;
+/// $text-success
+@property (nonatomic, readonly, strong) UIColor * _Nonnull success;
+/// $link-01
+@property (nonatomic, readonly, strong) UIColor * _Nonnull links;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -2302,44 +2312,20 @@ SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors18AiletColorsSupport")
 @end
 
 
-SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors21AiletColorsBackground")
-@interface AiletColorsBackground : NSObject
-/// $ui-bg, wihte
+SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors15AiletColorsIcon")
+@interface AiletColorsIcon : NSObject
+/// $icon-01
 @property (nonatomic, readonly, strong) UIColor * _Nonnull primary;
-/// $ui-01, gray10
-@property (nonatomic, readonly, strong) UIColor * _Nonnull background01;
-/// $ui-02, gray20
-@property (nonatomic, readonly, strong) UIColor * _Nonnull background02;
-/// $ui-03, gray30
-@property (nonatomic, readonly, strong) UIColor * _Nonnull background03;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-@interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
-@end
-
-
-SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors22AiletColorsInteractive")
-@interface AiletColorsInteractive : NSObject
-/// $interactive-01
-@property (nonatomic, readonly, strong) UIColor * _Nonnull primary;
-/// $interactive-02
+/// $icon-02
 @property (nonatomic, readonly, strong) UIColor * _Nonnull secondary;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-@interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
-@end
-
-
-SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors16AiletColorsInput")
-@interface AiletColorsInput : NSObject
-/// $field-01
-@property (nonatomic, readonly, strong) UIColor * _Nonnull primary;
-/// $field-02
-@property (nonatomic, readonly, strong) UIColor * _Nonnull secondary;
+/// $icon-04
+@property (nonatomic, readonly, strong) UIColor * _Nonnull onInteractiveColors;
+/// $icon-05
+@property (nonatomic, readonly, strong) UIColor * _Nonnull accent01;
+/// $icon-06
+@property (nonatomic, readonly, strong) UIColor * _Nonnull accent02;
+/// $icon-07
+@property (nonatomic, readonly, strong) UIColor * _Nonnull accent03;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -2627,8 +2613,6 @@ SWIFT_PROTOCOL("_TtP10IrLibSwift21IRDataManagerProtocol_")
 - (NSString * _Nullable)internalTaskIdWithExternalVisitId:(NSString * _Nonnull)externalVisitId taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
 - (void)updateRecognitionOperationsSequenceWithCompletion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 - (void)logScreenTimeEventWithId:(NSString * _Nonnull)id name:(NSString * _Nonnull)name duration:(NSInteger)duration;
-- (void)stopReportTimeTracking;
-- (void)startReportTimeTracking;
 - (UIViewController * _Nullable)cameraViewControllerWithOutput:(id <CameraModuleOutput> _Nullable)output externalVisitId:(NSString * _Nonnull)externalVisitId taskId:(NSString * _Nullable)taskId externalStoreId:(NSString * _Nonnull)externalStoreId isOpenedViaDeeplinks:(BOOL)isOpenedViaDeeplinks SWIFT_WARN_UNUSED_RESULT;
 - (UIViewController * _Nullable)taskDetailsViewControllerWithOutput:(id <TaskDetailsModuleOutput> _Nonnull)output externalVisitId:(NSString * _Nonnull)externalVisitId externalStoreId:(NSString * _Nonnull)externalStoreId taskId:(NSString * _Nonnull)taskId SWIFT_WARN_UNUSED_RESULT;
 - (UIViewController * _Nullable)reportPhotoBrowseViewControllerWithVisitId:(NSString * _Nonnull)visitId taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
@@ -2638,7 +2622,6 @@ SWIFT_PROTOCOL("_TtP10IrLibSwift21IRDataManagerProtocol_")
 - (void)clearVisitsWithoutPhotosAndFilledAnswers;
 @end
 
-@protocol ImageResizer;
 
 SWIFT_CLASS("_TtC10IrLibSwift13IRDataManager")
 @interface IRDataManager : NSObject <IRDataManagerProtocol>
@@ -2695,15 +2678,12 @@ SWIFT_CLASS("_TtC10IrLibSwift13IRDataManager")
 - (UIViewController * _Nullable)taskDetailsViewControllerWithOutput:(id <TaskDetailsModuleOutput> _Nonnull)output externalVisitId:(NSString * _Nonnull)externalVisitId externalStoreId:(NSString * _Nonnull)externalStoreId taskId:(NSString * _Nonnull)taskId SWIFT_WARN_UNUSED_RESULT;
 - (UIViewController * _Nullable)reportPhotoBrowseViewControllerWithVisitId:(NSString * _Nonnull)visitId taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
 - (void)logScreenTimeEventWithId:(NSString * _Nonnull)id name:(NSString * _Nonnull)name duration:(NSInteger)duration;
-- (void)startReportTimeTracking;
-- (void)stopReportTimeTracking;
 - (NSDictionary<NSString *, id> * _Nonnull)visitStatsWithVisitId:(NSString * _Nonnull)visitId photoId:(NSString * _Nullable)photoId SWIFT_WARN_UNUSED_RESULT;
 /// Перезапуск сервиса получения геопопозиции (для выхода из фона)
 - (void)restartLocationService;
 - (NSSet<NSString *> * _Nonnull)visitsWithPhotosIds SWIFT_WARN_UNUSED_RESULT;
 - (void)clearVisitsWithoutPhotos;
 - (void)clearVisitsWithoutPhotosAndFilledAnswers;
-- (id <ImageResizer> _Nonnull)imageResizerWith:(CGFloat)compressionQuality SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -2875,8 +2855,7 @@ SWIFT_CLASS("_TtC10IrLibSwift16IRSharedSettings")
 @property (nonatomic, readonly) BOOL shouldSyncManually;
 @property (nonatomic, readonly) BOOL LOAReasonRequired;
 @property (nonatomic, readonly, strong) IRLegacyApiSharedSettings * _Nonnull legacyApiSettings;
-@property (nonatomic, readonly) BOOL isSupportEnabled;
-- (nonnull instancetype)initWithStores:(IRStoresSharedSettings * _Nonnull)storesSettings photo:(IRPhotoSharedSettings * _Nonnull)photoSettings camera:(IRCameraSharedSettings * _Nonnull)cameraSettings visit:(IRVisitSharedSettings * _Nonnull)visitSettings locationError:(IRGeolocationErrorSharedSettings * _Nonnull)locationError memory:(IRMemorySharedSettings * _Nonnull)memory legacyApiSettings:(IRLegacyApiSharedSettings * _Nonnull)legacyApiSettings photoApproveMode:(enum IRPhotoApproveMode)photoApproveMode shouldSyncManually:(BOOL)shouldSyncManually LOAReasonRequired:(BOOL)LOAReasonRequired isSupportEnabled:(BOOL)isSupportEnabled OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithStores:(IRStoresSharedSettings * _Nonnull)storesSettings photo:(IRPhotoSharedSettings * _Nonnull)photoSettings camera:(IRCameraSharedSettings * _Nonnull)cameraSettings visit:(IRVisitSharedSettings * _Nonnull)visitSettings locationError:(IRGeolocationErrorSharedSettings * _Nonnull)locationError memory:(IRMemorySharedSettings * _Nonnull)memory legacyApiSettings:(IRLegacyApiSharedSettings * _Nonnull)legacyApiSettings photoApproveMode:(enum IRPhotoApproveMode)photoApproveMode shouldSyncManually:(BOOL)shouldSyncManually LOAReasonRequired:(BOOL)LOAReasonRequired OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -2944,13 +2923,6 @@ SWIFT_CLASS("_TtC10IrLibSwift21IRVisitSharedSettings")
 - (nonnull instancetype)initWithShouldBlockIfErrorPhotosExist:(BOOL)shouldBlockIfErrorPhotosExist OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-@class NSData;
-
-SWIFT_PROTOCOL("_TtP10IrLibSwift12ImageResizer_")
-@protocol ImageResizer
-- (NSData * _Nonnull)resizeWithPhotoData:(NSData * _Nonnull)photoData downTo:(float)targetLargerSideSize SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
