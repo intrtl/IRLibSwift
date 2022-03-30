@@ -1,4 +1,11 @@
 framework module IrLibSwift {
-  header "IrLibSwift-Swift.h"
-  requires objc
+  umbrella header "IrLibSwift.h"
+
+  export *
+  module * { export * }
+}
+
+module IrLibSwift.Swift {
+    header "IrLibSwift-Swift.h"
+    requires objc
 }
