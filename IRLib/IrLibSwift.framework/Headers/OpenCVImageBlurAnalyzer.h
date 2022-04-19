@@ -7,10 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#ifdef __cplusplus
-#undef NO
-#import "OpenCVImageProcessing.h"
-#endif
 
 NS_ASSUME_NONNULL_BEGIN
 
