@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "IrLibSwift"
-  spec.version      = "4.5.1"
+  spec.version      = "4.6.1"
   spec.summary      = "Framework with Ailet functionality written on Swift" 
   spec.static_framework = true;
   spec.description  = <<-DESC
@@ -9,7 +9,7 @@ Pod::Spec.new do |spec|
   spec.homepage     = "https://github.com/intrtl/IRLibSwift.git"
   spec.license      = "MIT"
   spec.author             = { "Alexander Shmakov" => "alexander.shmakov@intrtl.com" }
-  spec.platform     = :ios, "10.0"
+  spec.platform     = :ios, "12.0"
   spec.source       = { :git => "https://github.com/intrtl/IRLibSwift.git", :tag => "#{spec.version}" }
   spec.source_files = 'IRLib/IrLibSwift.framework/Headers/*.h'
   spec.public_header_files = 'IRLib/IrLibSwift.framework/Headers/*.h'
