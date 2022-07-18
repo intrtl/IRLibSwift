@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
-// swift-module-flags: -target x86_64-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name IrLibSwift
+// swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name IrLibSwift
 import AVFAudio
 import AVFoundation
 import Amplitude
@@ -65,7 +65,7 @@ import simd
   @objc deinit
 }
 @objc public protocol StoreDetailsOutput {
-  @objc func didTriggerOpenOsaReportForTaskWithId(_ taskId: Swift.String?)
+  @objc func didTriggerOpenOsaReportForTaskWithId(_ taskId: Swift.String?, matrixType: Swift.String?)
   @objc func didTriggerOpenSosReportForTaskWithId(_ taskId: Swift.String?)
   @objc func didTriggerOpenPriceExecutionReportForTaskWithId(_ taskId: Swift.String?)
   @objc func didTriggerOpenOosReport()
@@ -92,6 +92,7 @@ import simd
   @objc dynamic public var x02: Swift.Int
   @objc dynamic public var y02: Swift.Int
   @objc dynamic public var isUserBrand: Swift.Bool
+  @objc dynamic public var isOffline: Swift.Bool
   @objc override dynamic public init()
   @objc deinit
 }
@@ -777,6 +778,7 @@ extension UIKit.UIColor {
   @objc dynamic public var questions: Realm.RLMArray<IrLibSwift.TaskQuestion>
   @objc dynamic public var matrixType: Swift.String
   @objc dynamic public var totalScoreCountType: Swift.String
+  @objc dynamic public var isExistScoreFormula: Swift.Bool
   @objc override dynamic public class func primaryKey() -> Swift.String?
   @objc override dynamic public init()
   @objc deinit
@@ -831,7 +833,7 @@ extension UIKit.UIImage {
 }
 @objc public protocol StoresModuleOutput {
   @objc func didFinishLoadingCatalogs()
-  @objc func didTriggerOpenOsaReportForTaskWithId(_ taskId: Swift.String?)
+  @objc func didTriggerOpenOsaReportForTaskWithId(_ taskId: Swift.String?, matrixType: Swift.String?)
   @objc func didTriggerOpenSosReportForTaskWithId(_ taskId: Swift.String?)
   @objc func didTriggerOpenPriceExecutionReportForTaskWithId(_ taskId: Swift.String?)
   @objc func didTriggerOpenOosReport()
@@ -906,6 +908,30 @@ extension CoreGraphics.CGContext {
 extension CoreGraphics.CGImage {
   public func hasAlpha() -> Swift.Bool
 }
+public struct PhotosResultOldAssortmentEntity : Swift.Decodable {
+  public struct RealogramAssortment : Swift.Decodable {
+    public let id: Swift.String
+    public let visitId: Swift.String?
+    public let sceneId: Swift.String?
+    public let photoId: Swift.String?
+    public let productId: Swift.String?
+    public let productName: Swift.String?
+    public let tinyName: Swift.String?
+    public let statusId: Swift.Int?
+    public let x1: Swift.Int?
+    public let y1: Swift.Int?
+    public let x2: Swift.Int?
+    public let y2: Swift.Int?
+    public let x01: Swift.Int?
+    public let y01: Swift.Int?
+    public let x02: Swift.Int?
+    public let y02: Swift.Int?
+    public let isOther: Swift.String?
+    public var isOffline: Swift.Bool
+    public init(from decoder: Swift.Decoder) throws
+  }
+  public init(from decoder: Swift.Decoder) throws
+}
 @_inheritsConvenienceInitializers @objc public class Photo : Realm.RLMObject {
   @objc dynamic public var photoId: Swift.String
   @objc dynamic public var storeId: Swift.Int
@@ -933,6 +959,7 @@ extension CoreGraphics.CGImage {
   @objc dynamic public var isQualityError: Swift.Bool
   @objc dynamic public var isGeolocationError: Swift.Bool
   @objc dynamic public var isTiltAngleError: Swift.Bool
+  @objc dynamic public var hasSignsOfFraud: Swift.Bool
   @objc dynamic public var isApproved: Swift.Bool
   @objc dynamic public var isSelected: Swift.Bool
   @objc dynamic public var isSceneClosed: Swift.Bool
@@ -945,6 +972,11 @@ extension CoreGraphics.CGImage {
   @objc dynamic public var realogram: Realm.RLMArray<IrLibSwift.RecognitionResultRealogram>
   @objc dynamic public var actualAssortment: Realm.RLMArray<IrLibSwift.RecognitionResultActualAssortment>
   @objc dynamic public var domain: Swift.String?
+  @objc dynamic public var isRecognizedOffline: Swift.Bool
+  @objc dynamic public var isPuzzle: Swift.Bool
+  @objc dynamic public var puzzleId: Swift.String
+  @objc dynamic public var row: Swift.Int
+  @objc dynamic public var col: Swift.Int
   @objc public enum IRPhotoState : Swift.Int {
     case deleted = 1
     case notReadyToSend = 2
@@ -1045,6 +1077,7 @@ extension IrLibSwift.Perspective {
 }
 public enum Shadows {
   public static let elevation100: IrLibSwift.ComplexShadow
+  public static let elevation200: IrLibSwift.ComplexShadow
   public static let elevation300: IrLibSwift.ComplexShadow
 }
 @_inheritsConvenienceInitializers @objc public class DeletedPhoto : Realm.RLMObject {
@@ -1167,6 +1200,11 @@ extension IrLibSwift.AiletColors {
     @objc override dynamic public init()
     @objc deinit
   }
+}
+public struct CGLine : Swift.Equatable {
+  public let from: CoreGraphics.CGPoint
+  public let to: CoreGraphics.CGPoint
+  public static func == (a: IrLibSwift.CGLine, b: IrLibSwift.CGLine) -> Swift.Bool
 }
 @_inheritsConvenienceInitializers @objc public class Shareshelf_by_brands : Realm.RLMObject {
   @objc dynamic public var visit_id: Swift.String
@@ -1413,7 +1451,7 @@ extension IrLibSwift.ShadowShowing where Self : UIKit.UIView {
   @objc dynamic public var index: Swift.Int
   @objc dynamic public var type: Swift.String
   @objc dynamic public var name: Swift.String
-  @objc dynamic public var point: Swift.Int
+  @objc dynamic public var point: Swift.Double
   @objc override dynamic public init()
   @objc deinit
 }
@@ -1439,8 +1477,8 @@ extension Swift.KeyedDecodingContainer {
   @objc dynamic public var matrices: Realm.RLMArray<IrLibSwift.VisitWidgetReport>
   @objc dynamic public var kpis: Realm.RLMArray<IrLibSwift.VisitWidgetTaskReportKPI>
   @objc dynamic public var questions: Realm.RLMArray<IrLibSwift.VisitWidgetTaskReportQuestion>
-  @objc dynamic public var totalScore: Swift.Int
-  @objc dynamic public var percentage: Swift.Int
+  @objc dynamic public var totalScore: Swift.Double
+  @objc dynamic public var percentage: Swift.Double
   @objc override dynamic public init()
   @objc deinit
 }
@@ -1565,7 +1603,7 @@ public struct Gradient {
   @objc dynamic public var percent: Swift.Int
   @objc dynamic public var isError: Swift.Bool
   @objc dynamic public var calculationType: Swift.String
-  @objc dynamic public var totalVisitScore: Swift.Int
+  @objc dynamic public var totalVisitScore: Swift.Double
   @objc override dynamic public init()
   @objc deinit
 }
@@ -1616,7 +1654,7 @@ public struct Gradient {
   @objc dynamic public var taskId: Swift.String
   @objc dynamic public var visitId: Swift.String
   @objc dynamic public var sourceId: Swift.String?
-  @objc dynamic public var totalScore: Swift.Int
+  @objc dynamic public var totalScore: Swift.Double
   @objc dynamic public var percentage: Swift.Double
   @objc dynamic public var averagePercentage: Swift.Double
   @objc dynamic public var kpis: Realm.RLMArray<IrLibSwift.TaskKpi>
@@ -1670,7 +1708,7 @@ extension UIKit.UITableView {
   @objc deinit
 }
 @objc public protocol TaskDetailsModuleOutput {
-  @objc func didTriggerOpenOsaReportForTaskWithId(_ taskId: Swift.String?)
+  @objc func didTriggerOpenOsaReportForTaskWithId(_ taskId: Swift.String?, matrixType: Swift.String?)
   @objc func didTriggerOpenSosReportForTaskWithId(_ taskId: Swift.String?)
   @objc func didTriggerOpenPriceExecutionReportForTaskWithId(_ taskId: Swift.String?)
   @objc func didTriggerFetchedPerfectStoreShortWidget()
@@ -1803,6 +1841,7 @@ public struct ComplexShadow {
 extension UIKit.UITableView {
   @_Concurrency.MainActor(unsafe) public func cellWithClass<CellType>(className: CellType.Type, indexPath: Foundation.IndexPath, reuseId: Swift.String? = nil) -> CellType where CellType : UIKit.UITableViewCell
   @_Concurrency.MainActor(unsafe) public func dequeueReusableCell<T>(withClass: T.Type, indexPath: Foundation.IndexPath) -> T where T : UIKit.UITableViewCell
+  @_Concurrency.MainActor(unsafe) public func dequeueReusableView<T>(withClass: T.Type) -> T where T : UIKit.UITableViewHeaderFooterView
 }
 @objc public protocol CameraModuleOutput {
   @objc func didCompleteCapture()
@@ -1811,10 +1850,10 @@ extension UIKit.UITableView {
   @objc dynamic public var name: Swift.String
   @objc dynamic public var metricType: Swift.String
   @objc dynamic public var matrixType: Swift.String
-  @objc dynamic public var planValue: Swift.Int
-  @objc dynamic public var factValue: Swift.Int
-  @objc dynamic public var scoreValue: Swift.Int
-  @objc dynamic public var percentage: Swift.Int
+  @objc dynamic public var planValue: Swift.Double
+  @objc dynamic public var factValue: Swift.Double
+  @objc dynamic public var scoreValue: Swift.Double
+  @objc dynamic public var percentage: Swift.Double
   @objc dynamic public var isEmpty: Swift.Bool
   @objc override dynamic public init()
   @objc deinit

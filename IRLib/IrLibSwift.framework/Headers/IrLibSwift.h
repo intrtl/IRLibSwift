@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <IrLibSwift/RealogramCoordinatesTransformer.h>
+#import <IrLibSwift/RecognitionResultsCoordinatesTransformer.h>
+#import <IrLibSwift/DefaultRealogramCoordinatesTransformer.h>
 #import <IrLibSwift/OpenCVImageBlurAnalyzer.h>
 #import <IrLibSwift/OpenCVImageOverwhiteAnalyzer.h>
 #import <IrLibSwift/OpenCVPanoramaStitcher.h>
