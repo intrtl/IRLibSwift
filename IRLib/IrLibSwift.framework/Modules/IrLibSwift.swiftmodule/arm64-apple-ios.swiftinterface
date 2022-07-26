@@ -1060,6 +1060,7 @@ extension IrLibSwift.Perspective {
 @objc public enum IRNetworkError : Swift.Int {
   case noConnection = 503
   case notFound = 404
+  case conflict = 409
   case authError = 403
   case processing = 202
   case serverError = 500

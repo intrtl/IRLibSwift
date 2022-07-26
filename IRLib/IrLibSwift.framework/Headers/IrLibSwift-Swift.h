@@ -862,6 +862,7 @@ SWIFT_CLASS("_TtC10IrLibSwift22IRMemorySharedSettings")
 typedef SWIFT_ENUM(NSInteger, IRNetworkError, open) {
   IRNetworkErrorNoConnection = 503,
   IRNetworkErrorNotFound = 404,
+  IRNetworkErrorConflict = 409,
   IRNetworkErrorAuthError = 403,
   IRNetworkErrorProcessing = 202,
   IRNetworkErrorServerError = 500,
