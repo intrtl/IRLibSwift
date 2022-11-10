@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "IrLibSwift"
-  spec.version      = "4.7.0"
+  spec.version      = "4.9.0"
   spec.summary      = "Framework with Ailet functionality written on Swift" 
   spec.static_framework = true;
   spec.description  = <<-DESC

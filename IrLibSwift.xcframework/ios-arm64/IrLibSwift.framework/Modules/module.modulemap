@@ -6,6 +6,6 @@ framework module IrLibSwift {
 }
 
 module IrLibSwift.Swift {
-    header "IrLibSwift-Swift.h"
-    requires objc
+  header "IrLibSwift-Swift.h"
+  requires objc
 }
