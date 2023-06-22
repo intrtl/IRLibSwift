@@ -13,7 +13,6 @@ import CoreImage
 import CoreML
 import CoreMotion
 import CoreTelephony
-import FirebaseMessaging
 import Foundation
 import Intercom
 @_exported import IrLibSwift
@@ -1810,11 +1809,6 @@ public struct Gradient {
 }
 @_hasMissingDesignatedInitializers @objc public class AuthServiceInteractionProvider : ObjectiveC.NSObject {
   @objc deinit
-}
-extension IrLibSwift.AuthServiceInteractionProvider {
-  public func fetchUserPortals(login: Swift.String, password: Swift.String, completion: @escaping (Swift.Result<[IrLibSwift.AiletSharedPortal], IrLibSwift.AiletNetworkError>) -> Swift.Void)
-  public func authorize(on domain: Swift.String, login: Swift.String, password: Swift.String, externalUserId: Swift.String?, completion: @escaping (Swift.Result<Swift.String, IrLibSwift.AiletNetworkError>) -> Swift.Void)
-  public func logout()
 }
 @objc extension IrLibSwift.AuthServiceInteractionProvider {
   @objc dynamic public var authToken: Swift.String {

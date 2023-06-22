@@ -326,12 +326,26 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) AiletColorsG
 
 @class UIColor;
 
-SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors22AiletColorsInteractive")
-@interface AiletColorsInteractive : NSObject
-/// $interactive-01
+SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors18AiletColorsSupport")
+@interface AiletColorsSupport : NSObject
+/// $support-01
+@property (nonatomic, readonly, strong) UIColor * _Nonnull error;
+/// $support-02
+@property (nonatomic, readonly, strong) UIColor * _Nonnull success;
+/// $support-03
+@property (nonatomic, readonly, strong) UIColor * _Nonnull warning;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
+@end
+
+
+SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors17AiletColorsBorder")
+@interface AiletColorsBorder : NSObject
+/// $border-01
 @property (nonatomic, readonly, strong) UIColor * _Nonnull primary;
-/// $interactive-02
-@property (nonatomic, readonly, strong) UIColor * _Nonnull secondary;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -359,11 +373,22 @@ SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors17AiletColorsAccent")
 @interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
 @end
 
+@class AiletGradientColor;
 
-SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors17AiletColorsBorder")
-@interface AiletColorsBorder : NSObject
-/// $border-01
-@property (nonatomic, readonly, strong) UIColor * _Nonnull primary;
+SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors19AiletColorsGradient")
+@interface AiletColorsGradient : NSObject
+/// $gradient-01, blue
+@property (nonatomic, readonly, strong) AiletGradientColor * _Nonnull gradient01;
+/// $gradient-02, red
+@property (nonatomic, readonly, strong) AiletGradientColor * _Nonnull gradient02;
+/// $gradient-03, violet
+@property (nonatomic, readonly, strong) AiletGradientColor * _Nonnull gradient03;
+/// $gradient-04, gray
+@property (nonatomic, readonly, strong) AiletGradientColor * _Nonnull gradient04;
+/// $gradient-06, green
+@property (nonatomic, readonly, strong) AiletGradientColor * _Nonnull gradient06;
+/// $gradient-07, mavi
+@property (nonatomic, readonly, strong) AiletGradientColor * _Nonnull gradient07;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -372,14 +397,58 @@ SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors17AiletColorsBorder")
 @end
 
 
-SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors18AiletColorsSupport")
-@interface AiletColorsSupport : NSObject
-/// $support-01
+SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors22AiletColorsInteractive")
+@interface AiletColorsInteractive : NSObject
+/// $interactive-01
+@property (nonatomic, readonly, strong) UIColor * _Nonnull primary;
+/// $interactive-02
+@property (nonatomic, readonly, strong) UIColor * _Nonnull secondary;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
+@end
+
+
+SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors15AiletColorsText")
+@interface AiletColorsText : NSObject
+/// $text-01
+@property (nonatomic, readonly, strong) UIColor * _Nonnull primary;
+/// $text-02
+@property (nonatomic, readonly, strong) UIColor * _Nonnull secondary;
+/// $text-03
+@property (nonatomic, readonly, strong) UIColor * _Nonnull placeholder;
+/// $text-04
+@property (nonatomic, readonly, strong) UIColor * _Nonnull interactive;
+/// $text-error
 @property (nonatomic, readonly, strong) UIColor * _Nonnull error;
-/// $support-02
+/// $text-success
 @property (nonatomic, readonly, strong) UIColor * _Nonnull success;
-/// $support-03
-@property (nonatomic, readonly, strong) UIColor * _Nonnull warning;
+/// $link-01
+@property (nonatomic, readonly, strong) UIColor * _Nonnull links;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
+@end
+
+
+SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors15AiletColorsIcon")
+@interface AiletColorsIcon : NSObject
+/// $icon-01
+@property (nonatomic, readonly, strong) UIColor * _Nonnull primary;
+/// $icon-02
+@property (nonatomic, readonly, strong) UIColor * _Nonnull secondary;
+/// $icon-04
+@property (nonatomic, readonly, strong) UIColor * _Nonnull onInteractiveColors;
+/// $icon-05
+@property (nonatomic, readonly, strong) UIColor * _Nonnull accent01;
+/// $icon-06
+@property (nonatomic, readonly, strong) UIColor * _Nonnull accent02;
+/// $icon-07
+@property (nonatomic, readonly, strong) UIColor * _Nonnull accent03;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -412,75 +481,6 @@ SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors21AiletColorsBackground")
 @property (nonatomic, readonly, strong) UIColor * _Nonnull background02;
 /// $ui-03, gray30
 @property (nonatomic, readonly, strong) UIColor * _Nonnull background03;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-@interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
-@end
-
-
-SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors15AiletColorsIcon")
-@interface AiletColorsIcon : NSObject
-/// $icon-01
-@property (nonatomic, readonly, strong) UIColor * _Nonnull primary;
-/// $icon-02
-@property (nonatomic, readonly, strong) UIColor * _Nonnull secondary;
-/// $icon-04
-@property (nonatomic, readonly, strong) UIColor * _Nonnull onInteractiveColors;
-/// $icon-05
-@property (nonatomic, readonly, strong) UIColor * _Nonnull accent01;
-/// $icon-06
-@property (nonatomic, readonly, strong) UIColor * _Nonnull accent02;
-/// $icon-07
-@property (nonatomic, readonly, strong) UIColor * _Nonnull accent03;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-@interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
-@end
-
-
-SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors15AiletColorsText")
-@interface AiletColorsText : NSObject
-/// $text-01
-@property (nonatomic, readonly, strong) UIColor * _Nonnull primary;
-/// $text-02
-@property (nonatomic, readonly, strong) UIColor * _Nonnull secondary;
-/// $text-03
-@property (nonatomic, readonly, strong) UIColor * _Nonnull placeholder;
-/// $text-04
-@property (nonatomic, readonly, strong) UIColor * _Nonnull interactive;
-/// $text-error
-@property (nonatomic, readonly, strong) UIColor * _Nonnull error;
-/// $text-success
-@property (nonatomic, readonly, strong) UIColor * _Nonnull success;
-/// $link-01
-@property (nonatomic, readonly, strong) UIColor * _Nonnull links;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-@interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
-@end
-
-@class AiletGradientColor;
-
-SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors19AiletColorsGradient")
-@interface AiletColorsGradient : NSObject
-/// $gradient-01, blue
-@property (nonatomic, readonly, strong) AiletGradientColor * _Nonnull gradient01;
-/// $gradient-02, red
-@property (nonatomic, readonly, strong) AiletGradientColor * _Nonnull gradient02;
-/// $gradient-03, violet
-@property (nonatomic, readonly, strong) AiletGradientColor * _Nonnull gradient03;
-/// $gradient-04, gray
-@property (nonatomic, readonly, strong) AiletGradientColor * _Nonnull gradient04;
-/// $gradient-06, green
-@property (nonatomic, readonly, strong) AiletGradientColor * _Nonnull gradient06;
-/// $gradient-07, mavi
-@property (nonatomic, readonly, strong) AiletGradientColor * _Nonnull gradient07;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -708,7 +708,6 @@ SWIFT_CLASS("_TtC10IrLibSwift30AuthServiceInteractionProvider")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
-
 
 @class NSError;
 
