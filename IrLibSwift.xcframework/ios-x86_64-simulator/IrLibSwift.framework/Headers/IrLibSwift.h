@@ -12,4 +12,3 @@
 #import <IrLibSwift/OpenCVImageBlurAnalyzer.h>
 #import <IrLibSwift/OpenCVImageOverwhiteAnalyzer.h>
 #import <IrLibSwift/OpenCVPanoramaStitcher.h>
-

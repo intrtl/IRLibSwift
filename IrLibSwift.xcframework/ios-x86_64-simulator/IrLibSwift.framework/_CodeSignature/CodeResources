@@ -10,7 +10,7 @@
 		</data>
 		<key>ActiveVisitView.nib</key>
 		<data>
-		jiL5BhBuRyfcuv6T6S6hwliWIpU=
+		bUQxoSJ844myrPttKEsllJ4qL1w=
 		</data>
 		<key>AppDocs.storyboardc/AppDocsViewController.nib</key>
 		<data>
@@ -18,7 +18,7 @@
 		</data>
 		<key>AppDocs.storyboardc/AyY-Nc-I4C-view-7c2-rF-wro.nib</key>
 		<data>
-		P8SpAoef4qmTHhvuVvvc58t2DMA=
+		ubxP1hg2hzRy183Bp2PyIg6y7FI=
 		</data>
 		<key>AppDocs.storyboardc/Info.plist</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		Uydx7eNikUR/FUc4QSUAJdSBxS4=
+		r5b66sGfiQ8GYDKe25Q2KTsdp5Y=
 		</data>
 		<key>BottomActionSheet.storyboardc/Info.plist</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Camera.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
 		<data>
-		sAR36Wj4jMjVEoC9yzGHbeotr2Q=
+		/XlboMCz7Jhbrt0FyxqZsOEsxyA=
 		</data>
 		<key>Camera.storyboardc/CameraViewController.nib</key>
 		<data>
@@ -95,6 +95,26 @@
 		<key>CropPreview.storyboardc/Info.plist</key>
 		<data>
 		4U/bKsYXUKAiOlhL0yet3qUD/6Q=
+		</data>
+		<key>DebugActionCell.nib</key>
+		<data>
+		UZveU5UFZonVBrXn2cmhovBoAho=
+		</data>
+		<key>DebugFeatureCell.nib</key>
+		<data>
+		s6AF7zmc2TedPXBAbnfnPF21fXE=
+		</data>
+		<key>DebugFeaturesSettings.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
+		<data>
+		+mfAqXWr8Vq5xLdutrsRcoYtyc0=
+		</data>
+		<key>DebugFeaturesSettings.storyboardc/DebugFeaturesSettingsViewController.nib</key>
+		<data>
+		xL1HEVpWvd0ZEXgyn0ZhiyrNbjM=
+		</data>
+		<key>DebugFeaturesSettings.storyboardc/Info.plist</key>
+		<data>
+		oJ0q85h8TLYmzHkKcugo6zdKNmY=
 		</data>
 		<key>DiagramReportCollectionViewCell.nib/objects-12.3+.nib</key>
 		<data>
@@ -162,11 +182,11 @@
 		</data>
 		<key>Headers/IrLibSwift-Swift.h</key>
 		<data>
-		zYtd7seXf8FN9KA3DhU37zos/Ts=
+		j12Q4h87ZQElJIW6P9A6eIVEXQE=
 		</data>
 		<key>Headers/IrLibSwift.h</key>
 		<data>
-		oliKKQh7dgkNq7yXVy3Fli8iboY=
+		LN4mNAvKVsSrJzQIsJvPvRtKrOw=
 		</data>
 		<key>Headers/OpenCVImageBlurAnalyzer.h</key>
 		<data>
@@ -182,7 +202,7 @@
 		</data>
 		<key>Headers/OpenCVPanoramaStitcher.h</key>
 		<data>
-		lpAWLtWhj8VFHwobJBKMyawAIno=
+		iIlAL2YksCkqbOzJ0FXvE+lZK9E=
 		</data>
 		<key>Headers/RecognitionResultsCoordinatesTransformer.h</key>
 		<data>
@@ -206,7 +226,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		LGVTXhY9XV55M4XSQJRodnOEtbc=
+		mmngpWjeXUuSaet7oBbrbQJjRIw=
 		</data>
 		<key>ManageAppData.storyboardc/8kb-G1-a3M-view-8aQ-Li-1kn.nib</key>
 		<data>
@@ -234,23 +254,23 @@
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		Y1reXg5Pi+kh+P3L1ChWpDCL8h4=
+		ZaKad2cta2i8JPVqxqpCW0oxjzQ=
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		tPbSATS7eg9LIVJF7NqxMnFOtTg=
+		Okrsg05+a76WHRJcrmX7up6FiM0=
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		sZw1AEcH+0k/N6lz92UZFX+8dQI=
+		WFdFzomOR+1fWJ+0kZ085oMu6Ag=
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		tPbSATS7eg9LIVJF7NqxMnFOtTg=
+		Okrsg05+a76WHRJcrmX7up6FiM0=
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		3VBat4wOHdBIBVxlkT4DSDa9g8g=
+		AbhLxhcAaRQ6zA0dyGahOnLytz8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -258,7 +278,7 @@
 		</data>
 		<key>OOSAbsence.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
 		<data>
-		bjTyvBrUevrGihhyCeZU3BZiO2I=
+		+hqWMzoP6UEXfi6vIGtaCO9eeME=
 		</data>
 		<key>OOSAbsence.storyboardc/Info.plist</key>
 		<data>
@@ -274,11 +294,11 @@
 		</data>
 		<key>OOSProductTableViewCell.nib</key>
 		<data>
-		9AZh9HobnLGDCyecxAfhzeb0LCc=
+		Byk5dBnRCT6W8N1Vpl42UeXhuqM=
 		</data>
 		<key>OOSReport.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
 		<data>
-		53GQpMIt0X10c5pRQGmd9wPEjqI=
+		Lk0tJuPN6SSPjQtMrxWMeLNOUoo=
 		</data>
 		<key>OOSReport.storyboardc/Info.plist</key>
 		<data>
@@ -318,7 +338,7 @@
 		</data>
 		<key>PadCamera.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
 		<data>
-		FLrguS6YUO64HOKP68fmeboxbzI=
+		7nKZxtXaLdaJGEFiTUflcWoH00Y=
 		</data>
 		<key>PadCamera.storyboardc/Info.plist</key>
 		<data>
@@ -328,9 +348,21 @@
 		<data>
 		mZTHGpx2HE81ab92Eov+0FTymkg=
 		</data>
+		<key>PadReshootCamera.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
+		<data>
+		52VxR53fA6N20cS6Bkn/zQ6utIE=
+		</data>
+		<key>PadReshootCamera.storyboardc/Info.plist</key>
+		<data>
+		r76SRW+fmfgKs25G62SUbi2/mKo=
+		</data>
+		<key>PadReshootCamera.storyboardc/PadReshootCameraViewController.nib</key>
+		<data>
+		ueNnsV7qoO4tO+P6WYRjirGH5LU=
+		</data>
 		<key>PanoramaPreview.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
 		<data>
-		yi9dEWeJbciEjlXxPKBX1yxs/Y0=
+		1jst2oV/nZpDjcZEOXTcanpMA3w=
 		</data>
 		<key>PanoramaPreview.storyboardc/Info.plist</key>
 		<data>
@@ -354,7 +386,7 @@
 		</data>
 		<key>PhotoBrowseCrop.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
 		<data>
-		pbGFJeuHI/Mt7jJDGG/HfNlcfcU=
+		GSx0rdYY+HWCxYP2t9fjTSdxLls=
 		</data>
 		<key>PhotoBrowseCrop.storyboardc/Info.plist</key>
 		<data>
@@ -442,7 +474,7 @@
 		</data>
 		<key>ProductViewer.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
 		<data>
-		EXyFOloWN1xhWRaF6kClKGAcP1g=
+		jCAsFubE+YPj290TuYSx0lO+Hl4=
 		</data>
 		<key>ProductViewer.storyboardc/Info.plist</key>
 		<data>
@@ -454,7 +486,7 @@
 		</data>
 		<key>PuzzleCapture.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
 		<data>
-		dpKxOP412MHKG0nfk9eRhvSQzsU=
+		uH2h2nlICsg3Bhuku+XLttNp0TA=
 		</data>
 		<key>PuzzleCapture.storyboardc/Info.plist</key>
 		<data>
@@ -530,11 +562,11 @@
 		</data>
 		<key>ReportFilterSelectCollectionViewCell.nib/objects-12.3+.nib</key>
 		<data>
-		Rl36LwkB0YqT1CN4hkJbZH9Nd9Y=
+		3LPHfKpxVt5oxSbfD3e5WvCKo0Y=
 		</data>
 		<key>ReportFilterSelectCollectionViewCell.nib/runtime.nib</key>
 		<data>
-		foZ3a492k1EhKjxEpY6SeJaIl2E=
+		Ey8SzkL5XEFv7Ee9nKzJovZHVB4=
 		</data>
 		<key>ReportFilterValues.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
 		<data>
@@ -594,7 +626,7 @@
 		</data>
 		<key>ReshootCamera.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
 		<data>
-		NkCDgwm1IIVtRgZfd2jyGlg/glY=
+		Wkspc3PQnXfzJUUhTtwfZA0c264=
 		</data>
 		<key>ReshootCamera.storyboardc/Info.plist</key>
 		<data>
@@ -710,7 +742,7 @@
 		</data>
 		<key>RouteInfoTableViewCell.nib</key>
 		<data>
-		fUpnfqhc2hyn5Yc9PZHeOmBh8tQ=
+		ROrFpLyw2SI5As/5EFeOdeh5Jm8=
 		</data>
 		<key>RouteStoreTableViewCell.nib</key>
 		<data>
@@ -914,7 +946,7 @@
 		</data>
 		<key>Stores.storyboardc/zWD-uu-9Xa-view-K9h-re-kAp.nib</key>
 		<data>
-		Et2842i6Zmh8fW87ccbqwuzJCXk=
+		VlflfWK4PSntlmc4gtVvcINl7lY=
 		</data>
 		<key>TabCollectionViewCell.nib/objects-12.3+.nib</key>
 		<data>
@@ -934,15 +966,15 @@
 		</data>
 		<key>TaskDetailsSelectOptionCell.nib</key>
 		<data>
-		IwGZ4TqGX5VHTSldmrTN7DclWS8=
+		XUxlBJrcL8YQo12fEkgjJW/9eRM=
 		</data>
 		<key>TaskDetailsTaskTitleCell.nib</key>
 		<data>
-		njhNJypajEdUvi3lag/rBUq/e2c=
+		A2qCipS9PS8FtnkenSJXS9Mh4ys=
 		</data>
 		<key>Tasks.storyboardc/99F-5u-bHX-view-xSR-jH-PZ9.nib</key>
 		<data>
-		BVqOG87IDJErY7JMVLCg28n29HQ=
+		GgzAX33cWM5Of+oKrP99CqmEiMs=
 		</data>
 		<key>Tasks.storyboardc/Info.plist</key>
 		<data>
@@ -950,11 +982,11 @@
 		</data>
 		<key>Tasks.storyboardc/TaskDetailsViewController.nib</key>
 		<data>
-		wva5BI/gjBMuBrDIrlxnpCo8eHo=
+		4RWYnofeQtJHwikCJgAGtPDqAU8=
 		</data>
 		<key>VideoPanoramaPreview.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
 		<data>
-		rLvMUXHr7AlsLXZO3IlK12vjBp8=
+		HGWBuCfuHzvWK5Wl8P6Dw6njpXE=
 		</data>
 		<key>VideoPanoramaPreview.storyboardc/Info.plist</key>
 		<data>
@@ -992,7 +1024,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			9+isJ2WtvIJUFqw5SRdjKZiaErI=
+			DbsW+suxIiXsKt2pwtm2UDdETTo=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1010,7 +1042,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			zXUOsLVCTgEXjrVDnc6UDzZv/h8=
+			2k/M7f8bdtrTQi6VGnZ+4z4m5tU=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1028,7 +1060,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			AeUjv8y3+CleE/FXvs8XpEy7mfw=
+			3Cwn+UR0daDMeGpGzagLYhXRLnY=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1046,7 +1078,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ntMiFfeZQvM7263s29bFU4RLlqQ=
+			0Ns9CztghPuoPfqggkMisnslM6Y=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1064,7 +1096,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			7exOobAJ0gqUhszliHHsiMAbm0o=
+			voG+DrsSrR4d1IK3wF5sgNTM++4=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1082,7 +1114,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			6O7RZubzw5j5Wi2JuoMkwt/tGHk=
+			d4WIq0DWo7bME5RX9ZDamPaSb8Q=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1110,7 +1142,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			QMSNYuRYcWPlZPuzp9GNGgX697yYInViTL5WiEteQjE=
+			CHWGv/vGlAiLsSafnLgOxtJe4MBa3X6OZJ/GsF6JESw=
 			</data>
 		</dict>
 		<key>AppDocs.storyboardc/AppDocsViewController.nib</key>
@@ -1124,7 +1156,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			/K/BEPPJ2AT27ckz3BHsNetts+weRyJvpVu/K5Gbjhw=
+			BwYvg+8baD7JPMj8vmu1WK/c6Smo23se1V3qpqNgTM4=
 			</data>
 		</dict>
 		<key>AppDocs.storyboardc/Info.plist</key>
@@ -1145,7 +1177,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			EIGkcw82dO6wJCqhQKaF1to4E8LoljS8xddaiiL7s6Q=
+			OHFzeIxFo21rltn+5sT2cK3cl5DMyWdYIWdGhwaj+wU=
 			</data>
 		</dict>
 		<key>BottomActionSheet.storyboardc/Info.plist</key>
@@ -1187,7 +1219,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			aufEukkXF/OkTynj7L2w6ZGZC6QvkqECKK5/RjfepkM=
+			CmW6dwljDrthEd9xpXWS8aWFM0ARkUdQGXh3GeXl/Ao=
 			</data>
 		</dict>
 		<key>Camera.storyboardc/CameraViewController.nib</key>
@@ -1258,6 +1290,41 @@
 			<key>hash2</key>
 			<data>
 			EnqzS6OaCcmoqmYZGwV4UzYVvC2vM5BRC4/bg7GFjuE=
+			</data>
+		</dict>
+		<key>DebugActionCell.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			7nlj3vv1E1Bb5QTrNxHs46GkXe39+caqdmbWNNAXto8=
+			</data>
+		</dict>
+		<key>DebugFeatureCell.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			1/JfeWyIA/1vsIU0lj9lpWgZEe4l3zP8PqCb8FmRpuQ=
+			</data>
+		</dict>
+		<key>DebugFeaturesSettings.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			cl15SKgbDQ5JmcfusOMHaxWsMtTUa1Z+zudqnW1C1OA=
+			</data>
+		</dict>
+		<key>DebugFeaturesSettings.storyboardc/DebugFeaturesSettingsViewController.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			H5l537h3IzCOxhMq45Zr66MnYc0Wxvi+u5bx/Ksqbnw=
+			</data>
+		</dict>
+		<key>DebugFeaturesSettings.storyboardc/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			AtDHoEP4c9mIHfE/jXpzOJWhsvC6LClw60VcZwmeBV8=
 			</data>
 		</dict>
 		<key>DiagramReportCollectionViewCell.nib/objects-12.3+.nib</key>
@@ -1376,14 +1443,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			y7406yyc8derlqBuIwYhWtL+OIzzdj9mCS+D6GahJA0=
+			+qX24Omy2z7frKJGnA9cU2B7BEAq5IkVhdff6IFy7RA=
 			</data>
 		</dict>
 		<key>Headers/IrLibSwift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			53r19BZ0CbAyM5YfKC2C2fzfNKONMYppDs6zFRyW9bs=
+			VhetQOZ7SEtvDNK6bSb0iB2ubzF/Lw/66j8UcdXDBZI=
 			</data>
 		</dict>
 		<key>Headers/OpenCVImageBlurAnalyzer.h</key>
@@ -1411,7 +1478,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Hqsk4en0IEbzXduuO9iTUhmoTbbpqK6bAe8rt7YITg4=
+			pAckZ/vGXpRKGgCnMSzJ9d9q1YSGN48FRWSRKvI1jP8=
 			</data>
 		</dict>
 		<key>Headers/RecognitionResultsCoordinatesTransformer.h</key>
@@ -1495,35 +1562,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Q+qSXSujiyZIS9aBpgJ/5MhJ48MMc0WyjQU7KPvKcSs=
+			CFc9177aEUji+vV3fN9DrHmegG2f9wjAh/BYE63qgXs=
 			</data>
 		</dict>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			dOZwK7wvmpCSD9W+bF8FeLPPfrpeEX05egNYYBTwMF4=
+			sDP99rMinWzppUJEWhiHV6L1f5XqzzWVA6X6Cc2YpQs=
 			</data>
 		</dict>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Rb3fNzHHdsy5kOZB9vlkTd4E7PLS0K4aT9VknEX5+aQ=
+			SZNVcrjNN8kQYpTt6qPvVY3QF2cBLvm0YAsTCTP26Fc=
 			</data>
 		</dict>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			dOZwK7wvmpCSD9W+bF8FeLPPfrpeEX05egNYYBTwMF4=
+			sDP99rMinWzppUJEWhiHV6L1f5XqzzWVA6X6Cc2YpQs=
 			</data>
 		</dict>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ASBVvv/6U68u86OIp9ypwGTVvTEFt+AeXq0p5fO6+H4=
+			zLOO7LCDToEcgUFbXNpOPZ/vTFAUGAgToSecTjuyqyQ=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -1537,7 +1604,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			fYtJuJZVJJHZ/1QbiknBPOb8gAnLMfC4k9FQTwg8BGA=
+			DZwO92QV0nfxUgYKjIlzKW4gKiYPF9XNIEU/imrxtVs=
 			</data>
 		</dict>
 		<key>OOSAbsence.storyboardc/Info.plist</key>
@@ -1565,14 +1632,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			uiOtcxaEyi89awSxSwf/6PUDfnYAfPITi5stUbRMyaA=
+			rdbhoy1pellllLcDwKWfRCSWRrA6sR1d0/UEdaeMfaI=
 			</data>
 		</dict>
 		<key>OOSReport.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			T3vccQ+9UTePf84I2Sht3bEfxczZalnoeIC0uPPgYTU=
+			MrIdHxMm9/83O1FBoEi4hlj0WT9lad4LE408YrPi12M=
 			</data>
 		</dict>
 		<key>OOSReport.storyboardc/Info.plist</key>
@@ -1642,7 +1709,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			EY3h9EwvAB90oUpxQRGegtq0IGGpTyAm0hlsagcltvA=
+			v+BS8JSXYLdKWIc0LVGhIj2SjX+nB3lLLA6M62jWna4=
 			</data>
 		</dict>
 		<key>PadCamera.storyboardc/Info.plist</key>
@@ -1659,11 +1726,32 @@
 			rMY/Q7s2baqEEuHnJkQQEmLrT0xSRf/FG6Wu4KVPoeE=
 			</data>
 		</dict>
+		<key>PadReshootCamera.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			NubT8r4gaCvtBriycc4MaXih+ubgvHTamE7Y/WByq3U=
+			</data>
+		</dict>
+		<key>PadReshootCamera.storyboardc/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			DDXgRjfFSiXzKqEr3QflE+sjeRjUb0fSu2aA6/EujOU=
+			</data>
+		</dict>
+		<key>PadReshootCamera.storyboardc/PadReshootCameraViewController.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			XBdnOq+pFsmFYrlBTm1+CqfBm7d/boI3Qk1qK/oQoCc=
+			</data>
+		</dict>
 		<key>PanoramaPreview.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			oDsAId9lWq7lk69ZTpTfv3VWzTy29X67DrQFOK5xUaM=
+			Yf2b1EihUKtJMhEts7LK4XLnSrgb5sslJ0lsJBLWLyo=
 			</data>
 		</dict>
 		<key>PanoramaPreview.storyboardc/Info.plist</key>
@@ -1705,7 +1793,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			rb8kURw3blxAxG/jBttAsXJEfUHwzr4giW6u6I8UhXk=
+			9FBnrbpzjg5maNIZ2rzoYDupbCoAB281i1nc9Vy+dws=
 			</data>
 		</dict>
 		<key>PhotoBrowseCrop.storyboardc/Info.plist</key>
@@ -1859,7 +1947,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			iRLqku1OEVJoI08rJYI7nD9nkLo7zWzCPgz/C2joEKo=
+			t6u2wTunwja97kbetRCw0rMQeUk+MAPZbqeYL6NKNuY=
 			</data>
 		</dict>
 		<key>ProductViewer.storyboardc/Info.plist</key>
@@ -1880,7 +1968,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			AgEEY+0RSvASwSQ7MjkEoFQk2yqNDDjaMBu0sFOZGuE=
+			TwrSo241/3eQEeCjiid950l6r422yfhCM/+q8l+3Ecc=
 			</data>
 		</dict>
 		<key>PuzzleCapture.storyboardc/Info.plist</key>
@@ -2013,14 +2101,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			2oGI93R0NFRBqLwxjqprS6SjB1foxFxLENEBPj/W26A=
+			5LTQNTQeBpOidL5JFVgxYCzffdLA7xU8gCUdOzaXgqY=
 			</data>
 		</dict>
 		<key>ReportFilterSelectCollectionViewCell.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			b2NTal6YOMZW/7U1ExBtaqBpQNQ9AZZwBYzFKfauOks=
+			3Ot2R3vkjGFA9LJGD1LbkZRZ9bA1IvmsNt71LwuL+FQ=
 			</data>
 		</dict>
 		<key>ReportFilterValues.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
@@ -2125,7 +2213,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			uer6BMVTanRwd0zqdNUNv3WVgOVv/cZJZlK4jj4T+mc=
+			NF5DUkIAEBoik9njYM57WkMSVm35upfekAplvZ46Wg8=
 			</data>
 		</dict>
 		<key>ReshootCamera.storyboardc/Info.plist</key>
@@ -2328,7 +2416,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			2DCd9Ak8abIqrHbwi6Mf9L6q2luLreDF/urnckbaLh4=
+			4ZKFon9ulebjLfKXfOQ+op3qcAnECn+8Yc+HQpIpIys=
 			</data>
 		</dict>
 		<key>RouteStoreTableViewCell.nib</key>
@@ -2685,7 +2773,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			79P9O+BjjhXYoXmNG0irQbNroD6R+5Io2FsX6aPPiHA=
+			Ytgp46dgg+varSg0Wwfz96amlV6iEpb/RIes/HN/HNk=
 			</data>
 		</dict>
 		<key>TabCollectionViewCell.nib/objects-12.3+.nib</key>
@@ -2720,21 +2808,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			CKrGtVKTglN6QjJSugHiScPcgAtX2dc+TxzIMinVDFQ=
+			cmgO0diStRB/BKcRaXRZAIVW1Lio75k8OAJrJ0zLk24=
 			</data>
 		</dict>
 		<key>TaskDetailsTaskTitleCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jdxVkiOw4PmqdhV2gCjXIjPV7zbScqimDlhvEekj5iU=
+			zSjz1cJXUqzwivEL3n0vk90UTk0b6cNSKp0OukCdn90=
 			</data>
 		</dict>
 		<key>Tasks.storyboardc/99F-5u-bHX-view-xSR-jH-PZ9.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5G7OA2mG7MQcFGZmfaZhS5ZAQeOIbdxfxPqYCLU6nMs=
+			KaL4ehjkam4YKDfAdwbSOcywzH1Cq1KW3Px/SY7SU74=
 			</data>
 		</dict>
 		<key>Tasks.storyboardc/Info.plist</key>
@@ -2748,14 +2836,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Vgu8ITBthBEXdgyufYNp9rhAoUQzJe/bxqRBblXxs2k=
+			+1jT0NDdna9is/UKqpvg7TruzbZtUQSlbpv6x/rgzi0=
 			</data>
 		</dict>
 		<key>VideoPanoramaPreview.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			a4D+UnsrNOohgn6dnjLIdEflasmo19dOcghLGFv7Cyk=
+			+k6e+gPlxoXEYFski6EZR7aKoqoRmlWdl5Max84pkPs=
 			</data>
 		</dict>
 		<key>VideoPanoramaPreview.storyboardc/Info.plist</key>
@@ -2818,7 +2906,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ijVybKPxPf/T/di0ufsQTSPn9lPcmI/Wf0/W+eeEmxs=
+			iMMgbgYms8j1i8uEU+MhO6Oz3g5CyswhXrGncGq2zFc=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2836,7 +2924,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			olaht50YJSy1jr/QpShXN4TR4ZjRJYTb0eIzkhg1Cdg=
+			mgnXAGlZE5cboP+Bs61xwmd1wjfR0iz1GPxagDezm38=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2854,7 +2942,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			KMV3butKn7ylIOc5GLdT2aoc7vdUDDMYUV6cd0KydNM=
+			iyj8G3kEtqYjhtHKz8DKcmilt1o5LlygVPvGQtVCtzs=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2872,7 +2960,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			y1SrROEury9/xtPsPhG2xfomKxcCwvqymSPIMs9vtY4=
+			Z+in+E7MH/6Qu4Tu7IA1CAOLfG2msvS2QGTMo9KdhDg=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2890,7 +2978,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			re1UHzbQOw5yyVJcz1gLS/119G3cinq36GcQMYHL8NM=
+			IsVlp6rDgpqQEjdKn7CYJ+XpPO7jfZVhdJh4x+ubrns=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2908,7 +2996,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			TagkHItFbzYDsLpOYL9wwSJxvUL29nx2273Ikpax22E=
+			wGMG4pzqr9lzBG2SuyP+IYyc49hfvxnAqE8uQmi6Ytc=
 			</data>
 			<key>optional</key>
 			<true/>

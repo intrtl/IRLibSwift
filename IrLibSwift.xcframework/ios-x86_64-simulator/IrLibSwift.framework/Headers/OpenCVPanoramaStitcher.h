@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface OpenCVPanoramaStitcher: NSObject
 
 - (instancetype)init;
-- (nullable UIImage *)stitchedPanoramaWithNewPhoto: (UIImage *)image;
+- (nullable UIImage *)stitchedPanoramaWithNewPhoto:(UIImage *)image;
 - (void)reset;
 
 @end
