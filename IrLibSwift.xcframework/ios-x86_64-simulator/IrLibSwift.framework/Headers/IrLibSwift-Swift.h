@@ -721,6 +721,7 @@ SWIFT_CLASS("_TtC10IrLibSwift30AuthServiceInteractionProvider")
 - (BOOL)isAuthTokenValid SWIFT_WARN_UNUSED_RESULT;
 - (void)updateWithShouldUseDevAuthServer:(BOOL)shouldUseDevAuthServer;
 - (void)updateWithGuestToken:(NSString * _Nonnull)guestToken;
+- (void)updateWithFcmToken:(NSString * _Nullable)fcmToken;
 - (BOOL)shouldReauthorizeWithLogin:(NSString * _Nonnull)login password:(NSString * _Nonnull)password externalUserId:(NSString * _Nullable)externalUserId SWIFT_WARN_UNUSED_RESULT;
 - (void)resetAccess;
 @end
@@ -894,7 +895,6 @@ SWIFT_PROTOCOL("_TtP10IrLibSwift21IRDataManagerProtocol_")
 - (void)stopReportTimeTracking;
 - (void)startReportTimeTracking;
 - (void)restartLocationService;
-- (void)changePasswordWithLogin:(NSString * _Nonnull)login oldPassword:(NSString * _Nonnull)oldPassword newPassword:(NSString * _Nonnull)newPassword completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 - (NSSet<NSString *> * _Nonnull)visitsWithPhotosIds SWIFT_WARN_UNUSED_RESULT;
 - (void)clearVisitsWithoutPhotos;
 - (void)clearVisitsWithoutPhotosAndFilledAnswers;
@@ -981,7 +981,6 @@ SWIFT_CLASS("_TtC10IrLibSwift13IRDataManager")
 - (id <ImageResizer> _Nonnull)imageResizerWith:(CGFloat)compressionQuality SWIFT_WARN_UNUSED_RESULT;
 - (NSDictionary<NSString *, id> * _Nullable)reportFor:(NSString * _Nonnull)visitId internalTaskId:(NSString * _Nullable)internalTaskId SWIFT_WARN_UNUSED_RESULT;
 - (AiletUnsentDataCheckResult * _Nonnull)unsentData SWIFT_WARN_UNUSED_RESULT;
-- (void)changePasswordWithLogin:(NSString * _Nonnull)login oldPassword:(NSString * _Nonnull)oldPassword newPassword:(NSString * _Nonnull)newPassword completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 - (AiletUnsentDataCheckResult * _Nonnull)unsentDataFor:(NSString * _Nullable)visitId SWIFT_WARN_UNUSED_RESULT;
 - (NSInteger)photosCountFor:(NSString * _Nonnull)visitId SWIFT_WARN_UNUSED_RESULT;
 - (NSInteger)notFilledOosReasonsCountFor:(NSString * _Nonnull)externalVisitId SWIFT_WARN_UNUSED_RESULT;
