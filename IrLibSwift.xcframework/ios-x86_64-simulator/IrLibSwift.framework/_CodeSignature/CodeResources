@@ -30,7 +30,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		r5b66sGfiQ8GYDKe25Q2KTsdp5Y=
+		PxWbuhxCw5beKeb4w+egrqU50fA=
 		</data>
 		<key>BottomActionSheet.storyboardc/Info.plist</key>
 		<data>
@@ -182,7 +182,7 @@
 		</data>
 		<key>Headers/IrLibSwift-Swift.h</key>
 		<data>
-		Klfxm1R4bfg/2TwbJ7IcR6FByRQ=
+		AuNdbUjExVSuIHh2MH+FOJgTLII=
 		</data>
 		<key>Headers/IrLibSwift.h</key>
 		<data>
@@ -202,7 +202,7 @@
 		</data>
 		<key>Headers/OpenCVPanoramaStitcher.h</key>
 		<data>
-		iIlAL2YksCkqbOzJ0FXvE+lZK9E=
+		FWdXDPuRqEAR5b/etrNTKwIgVSo=
 		</data>
 		<key>Headers/RecognitionResultsCoordinatesTransformer.h</key>
 		<data>
@@ -226,7 +226,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		KSkaZj8Nvlb5/FIwBTAiuOZBQ4E=
+		4GbhSBqUAmbLT5UPGsWJhchXHQ8=
 		</data>
 		<key>ManageAppData.storyboardc/8kb-G1-a3M-view-8aQ-Li-1kn.nib</key>
 		<data>
@@ -254,23 +254,23 @@
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		BBvZWKv/3s+zmuu4BSxGye2spQA=
+		Um5muKcLlheVZldNYqLTYdhu0GU=
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		8tdwUydrkg8ywsP/F2r6iBKuGjQ=
+		Vw8tVUDIc5G5j5QHfCYIPA9ZZcc=
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		WFdFzomOR+1fWJ+0kZ085oMu6Ag=
+		zWrY/4qI65UwQj6pLZ9c1OWuN9g=
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		8tdwUydrkg8ywsP/F2r6iBKuGjQ=
+		Vw8tVUDIc5G5j5QHfCYIPA9ZZcc=
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		GxlUh+7Flx4RIPQnR1VTebod1k0=
+		rhlUiuB2jM6Qe5wD+q9eKaBLbWo=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -298,7 +298,7 @@
 		</data>
 		<key>OOSReport.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
 		<data>
-		Lk0tJuPN6SSPjQtMrxWMeLNOUoo=
+		V4yOOdjhWQqEQB7hYPQdDPCYAms=
 		</data>
 		<key>OOSReport.storyboardc/Info.plist</key>
 		<data>
@@ -602,7 +602,7 @@
 		</data>
 		<key>ReportSwitchHeader.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
 		<data>
-		ruqmYlR0C9T4qmZqixdaAaC5b/k=
+		dfSxh96NrXgDtHikcijEgEPUHCA=
 		</data>
 		<key>ReportSwitchHeader.storyboardc/Info.plist</key>
 		<data>
@@ -782,11 +782,11 @@
 		</data>
 		<key>SOSReportListCollectionViewCell.nib/objects-12.3+.nib</key>
 		<data>
-		51k0biIM+DzZ79hUutJpg9l8fXI=
+		oqnkqsr9KODcGWsBjbNajrNW77I=
 		</data>
 		<key>SOSReportListCollectionViewCell.nib/runtime.nib</key>
 		<data>
-		0Hdxqb8rlD/lGZ4t9OsdZAjwYm8=
+		UdUwIoCPFbF9IQQ+HUWwyfCf5dw=
 		</data>
 		<key>SceneActionSheet.storyboardc/Info.plist</key>
 		<data>
@@ -948,6 +948,30 @@
 		<data>
 		VlflfWK4PSntlmc4gtVvcINl7lY=
 		</data>
+		<key>SummaryReport.storyboardc/AyY-Nc-I4C-view-sOP-YQ-3In.nib</key>
+		<data>
+		wFJ9MFzCawhVHfMc/TFYl6Je/8E=
+		</data>
+		<key>SummaryReport.storyboardc/Info.plist</key>
+		<data>
+		rKwrre69niRM1jU49vEVmPZZwUs=
+		</data>
+		<key>SummaryReport.storyboardc/SummaryReportViewController.nib</key>
+		<data>
+		YcfxXSLLlDV+ZaDqKo0UkjGjB/0=
+		</data>
+		<key>SummaryReportTotalValueCell.nib/objects-12.3+.nib</key>
+		<data>
+		BhpWl4slHs93ZoDisaakNRNf+4s=
+		</data>
+		<key>SummaryReportTotalValueCell.nib/runtime.nib</key>
+		<data>
+		LLKhkyT9yLgmnBaQzPeJmlacsjE=
+		</data>
+		<key>SummaryReportVisitInfoCell.nib</key>
+		<data>
+		qxBQ/w0fXQ8sM9GNz5hOU4bCagk=
+		</data>
 		<key>TabCollectionViewCell.nib/objects-12.3+.nib</key>
 		<data>
 		1g0QXRnya2anN4luukcwpdJiU0E=
@@ -1024,7 +1048,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			UyR+ycguXfJ5ysSNGHxYjzNYmt8=
+			bl9Q7+/7F2L5Dx3PCcqBblSVOfc=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1042,7 +1066,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			2k/M7f8bdtrTQi6VGnZ+4z4m5tU=
+			Waws1zwDcr6EqDBlj/YMrdgvN9E=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1051,7 +1075,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			unVQKBGLnX64Me5r/3+NdH2MnVw=
+			Sd+hsTD350Oj0znfdJ7Jip4DyWs=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1060,7 +1084,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			3Cwn+UR0daDMeGpGzagLYhXRLnY=
+			yStPY+su8FlfXyTNZMe8aAhPWbc=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1069,7 +1093,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			JKydGYzNxJTKI0KwFQ48NmGpDSk=
+			BicqLDgAz00uxyl5JY+jbIFiMmE=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1078,7 +1102,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			0Ns9CztghPuoPfqggkMisnslM6Y=
+			gTduat6e10mrXz7RP1b2NvboIAU=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1087,7 +1111,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			xL9/qQQ3yseEmjuSQcjE7lORrSU=
+			SWnPJcEjUqbxt2DTVRhCifhK/Mc=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1096,7 +1120,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			voG+DrsSrR4d1IK3wF5sgNTM++4=
+			cwlTF+FXMdv70N0H6id1FSrqPlg=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1114,7 +1138,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			d4WIq0DWo7bME5RX9ZDamPaSb8Q=
+			/Gt1cP38nkuTUwzFOr70QRLGoz4=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1123,7 +1147,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			CswkPPUGzgO4KWWu0bv15PJBAZU=
+			h9qwRCXUuA7GIHX/PEA/7Bavr6M=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1177,7 +1201,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			OHFzeIxFo21rltn+5sT2cK3cl5DMyWdYIWdGhwaj+wU=
+			y0r/VQKNz6/7JdmfA/S45BZTX1lGzTMjbSHM/z86iWQ=
 			</data>
 		</dict>
 		<key>BottomActionSheet.storyboardc/Info.plist</key>
@@ -1443,7 +1467,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			IX2ZrRtEQXFkS1pk6bixlnPUt2k/fLx0IfK/DVTZp30=
+			utIMXqoKg1zRtsk3RHEKmvM4C5kFrPr6hbupW1FE3pg=
 			</data>
 		</dict>
 		<key>Headers/IrLibSwift.h</key>
@@ -1478,7 +1502,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pAckZ/vGXpRKGgCnMSzJ9d9q1YSGN48FRWSRKvI1jP8=
+			mEa5I1rSIrBhi7RFzuUERENIRPYRftPIfFTZ0VkuOIw=
 			</data>
 		</dict>
 		<key>Headers/RecognitionResultsCoordinatesTransformer.h</key>
@@ -1562,35 +1586,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			cyM64b/k1CcztJ+rpPxvrPv9j9EOuLwfVWaSCXRL8uI=
+			lAklKX/zT6BKPA91U1aGX+ZJ6JPxi8nZxf6uSP5lTWA=
 			</data>
 		</dict>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9fcbLnPLLnmBPrPCxEF6qlO4TXNdXZj7MjZhUN2LSKI=
+			XdBSbI7RgbParhPQJ6tEOowb7lk1clm7rOvqW9cmMo8=
 			</data>
 		</dict>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SZNVcrjNN8kQYpTt6qPvVY3QF2cBLvm0YAsTCTP26Fc=
+			c9ZL4pLmB0aBIF9q++qY9lMITSiBVO2tj4wx3ETZqQ4=
 			</data>
 		</dict>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9fcbLnPLLnmBPrPCxEF6qlO4TXNdXZj7MjZhUN2LSKI=
+			XdBSbI7RgbParhPQJ6tEOowb7lk1clm7rOvqW9cmMo8=
 			</data>
 		</dict>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			rOLYLCIJQDjdAO3ba50HR0Z9VE2TW3/pZYUGe9PByMA=
+			W4GbOi8+afYkgqpXZDotTvL9xJEuLoQZ6tTGJoKWYHU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -1639,7 +1663,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			MrIdHxMm9/83O1FBoEi4hlj0WT9lad4LE408YrPi12M=
+			ikUMDPyM/FgKUc9c89e1/6WRt+hv8+ivxFXMktDL/0c=
 			</data>
 		</dict>
 		<key>OOSReport.storyboardc/Info.plist</key>
@@ -2171,7 +2195,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			xkKnsm89dRsnT7lKXGartrydp7Sh+gsCrGXbQvIuOC8=
+			yQVgBYuEhiRxQaSkJLDP2sDGk+wV2LHFMg1Pc6GwOAY=
 			</data>
 		</dict>
 		<key>ReportSwitchHeader.storyboardc/Info.plist</key>
@@ -2486,14 +2510,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			uxK8lrc2GQinakiTArt/2f3ocr/rWIao4WrDUlmaJCA=
+			jj75ZpI9AcQf4alQWfsmGRelrYWupvYnKCPtWskgHJU=
 			</data>
 		</dict>
 		<key>SOSReportListCollectionViewCell.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			cZnm+vTcaO4lAipQKB0dDucxfhOk9vO6opygXc7vS+0=
+			uWFWDGg60Nx2VG09MBnZjINbljhkygGpQZNW93TwVCI=
 			</data>
 		</dict>
 		<key>SceneActionSheet.storyboardc/Info.plist</key>
@@ -2776,6 +2800,48 @@
 			Ytgp46dgg+varSg0Wwfz96amlV6iEpb/RIes/HN/HNk=
 			</data>
 		</dict>
+		<key>SummaryReport.storyboardc/AyY-Nc-I4C-view-sOP-YQ-3In.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			zomLuYy4bg+5OPTIdo6IBWkZQmZCN7qCgyvy2dXmaK4=
+			</data>
+		</dict>
+		<key>SummaryReport.storyboardc/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			+O91QztmpDLTtyYyq/NggLLk64are6iWjoLUSgDF7Dc=
+			</data>
+		</dict>
+		<key>SummaryReport.storyboardc/SummaryReportViewController.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			6WhLFFVDdUp9bcSkwVY1VMW6tYMMKf4huhSJ+C6Xv/U=
+			</data>
+		</dict>
+		<key>SummaryReportTotalValueCell.nib/objects-12.3+.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			2pSuatV8vZwCbcLEqxAaFkUOexN4hPmFIPqN/M5gtNE=
+			</data>
+		</dict>
+		<key>SummaryReportTotalValueCell.nib/runtime.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			+zAN5e0N7kab0uhgAyyaLXZ4GvfMFqUPqkCzJzJlU4g=
+			</data>
+		</dict>
+		<key>SummaryReportVisitInfoCell.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			SCj2X5LG73OGiQCvJ6512lu0rajLP3V3tWKBFM1yhUg=
+			</data>
+		</dict>
 		<key>TabCollectionViewCell.nib/objects-12.3+.nib</key>
 		<dict>
 			<key>hash2</key>
@@ -2906,7 +2972,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			7BGp4zA3QTeqw9k5rEBGbHshGDPJwxhuzZuSiOSfUbg=
+			/QcMEAseBr2mH6g5MTRC76g9+rTzc11QxvsgNNji14w=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2924,7 +2990,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			mgnXAGlZE5cboP+Bs61xwmd1wjfR0iz1GPxagDezm38=
+			0EISaS+7dfd+rSsy24lE8SDKYsIF6hClgPLlofe7zNI=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2933,7 +2999,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			lmVnoslcCKToHlKeH8vtZfhc1WF8a950kZeMbKT73gs=
+			59uxUxDzGwbhsAHJbPQuSuWkKpkhk3M+mgJZRSTvvpM=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2942,7 +3008,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			iyj8G3kEtqYjhtHKz8DKcmilt1o5LlygVPvGQtVCtzs=
+			+eomxUqPt5KhGnO+Vgr0SqviCfMqZAXGHFQphv8CBwc=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2951,7 +3017,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			SECKnUbwW+jTlUEBNzXERwzLMfSZbxiAFspzcrWeyJ4=
+			1z5OrwWdpUA9PxhiT9OKlRBASaBC2UCsOJQjTM8GO5A=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2960,7 +3026,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Z+in+E7MH/6Qu4Tu7IA1CAOLfG2msvS2QGTMo9KdhDg=
+			LSuqRJXrS9ZGn2yBxv2IeqiPepgKRjiXpv2pQEM3BPw=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2969,7 +3035,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			v4uccnJggM73qaCb2ynrsse3ozTsmzQ6DW9C2kaRb5g=
+			y8SJIZn6Q4i8fR3kAMt7cMNsESc287qVA+9jFXb/Nhc=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2978,7 +3044,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			IsVlp6rDgpqQEjdKn7CYJ+XpPO7jfZVhdJh4x+ubrns=
+			9MZQZs0ycRkEumTLJAO79b+3iOg1m27uQ+wxA8G1ra8=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2996,7 +3062,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			wGMG4pzqr9lzBG2SuyP+IYyc49hfvxnAqE8uQmi6Ytc=
+			nsnjjkAxUzHISQ/k0cwTCe+9qHB7a17WNcqrXQ7VyUY=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3005,7 +3071,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			yMWMoguM/EEp38I2FjOujZCeKcQf/yHTWmsTTiq84dk=
+			skgIniBbhHeAluNu3FasuYEWP4EQ6eNsMGEHRB3AhMU=
 			</data>
 			<key>optional</key>
 			<true/>

@@ -20,6 +20,7 @@ import MapKit
 import MediaPlayer
 import QuartzCore
 import Realm
+import RealmSwift
 import Swift
 import SystemConfiguration
 import UIKit
@@ -34,17 +35,6 @@ import simd
   @objc dynamic public var shelfNumber: Swift.String
   @objc dynamic public var a: Swift.Double
   @objc dynamic public var b: Swift.Double
-  @objc override dynamic public init()
-  @objc deinit
-}
-@_inheritsConvenienceInitializers @objc public class LackOfAssortmentReasons : Realm.RLMObject {
-  @objc dynamic public var id: Swift.String
-  @objc dynamic public var visit_id: Swift.String
-  @objc dynamic public var reason_id: Swift.Int
-  @objc dynamic public var comment: Swift.String
-  @objc dynamic public var is_sended: Swift.Int
-  @objc dynamic public var is_filled: Swift.Int
-  @objc dynamic public var is_sending: Swift.Int
   @objc override dynamic public init()
   @objc deinit
 }
@@ -73,7 +63,7 @@ import simd
   @objc func didTriggerOpenPriceExecutionReportForTaskWithId(_ taskId: Swift.String?)
   @objc func didTriggerOpenSummaryReportForStoreWithId(_ storeId: Swift.Int)
   @objc func didStartVisitForStoreWithId(_ storeId: Swift.Int)
-  @objc func didFinishVisitForStoreWithId(_ storeId: Swift.Int, readyToFinishHandler: @escaping (Swift.Bool) -> Swift.Void)
+  @objc func didFinishVisit(storeId: Swift.Int)
   @objc func didTriggerOpenSupport()
   @objc func didTriggerOpenAssortmentMatrixForStoreWithId(_ storeId: Swift.Int)
 }
@@ -241,10 +231,9 @@ public typealias DefaultAiletDataManager = IrLibSwift.IRDataManager
   @objc public func createVisit(storeId: Swift.Int, externalStoreId: Swift.String?) throws -> Swift.String
   @available(*, deprecated, message: "To be deleted soon. Use fetching realograms instead of photoResult")
   @objc public func fetchRecognitionResult(photoId: Swift.String, completion: @escaping (Foundation.NSError?) -> Swift.Void)
-  @objc public func restartSendPhotoSequence(resetAttemptIntervals: Swift.Bool, completion: @escaping (Swift.String?, Foundation.NSError?) -> Swift.Void)
+  @objc public func restartSendingNotSentData(resetAttemptIntervals: Swift.Bool, completion: @escaping (Swift.String?, Foundation.NSError?) -> Swift.Void)
   @objc public func updateRecognitionOperationsSequence(completion: @escaping (Foundation.NSError?) -> Swift.Void)
   @objc public func sendPhoto(photoId: Swift.String, completion: @escaping (Foundation.NSError?) -> Swift.Void)
-  @objc public func recognitionResultRecivedCompletelyForPhoto(id: Swift.String) -> Swift.Bool
   @objc public func canDoRecognitionResult(photoId: Swift.String) -> Swift.Bool
   @objc public func updateCurrentStore(storeId: Swift.Int, externalStoreId: Swift.String?)
   @objc public func updateExternalData(visitId: Swift.String)
@@ -258,7 +247,6 @@ public typealias DefaultAiletDataManager = IrLibSwift.IRDataManager
   @objc public func widgetMacroCategoriesForVisit(visitId: Swift.String, widgetType: Swift.String, matrixType: Swift.String?, taskId: Swift.String?) -> [IrLibSwift.VisitWidgetMacroCategory]
   @objc public func widgetReportsForVisit(visitId: Swift.String, widgetType: Swift.String, taskId: Swift.String?) -> [IrLibSwift.VisitWidgetReportDataEntity]
   @objc public func widgetReportForVisit(visitId: Swift.String, widgetType: Swift.String, matrixType: Swift.String, taskId: Swift.String?) -> IrLibSwift.VisitWidgetReportDataEntity?
-  @objc public func updateProductForVisit(visitId: Swift.String, widgetType: Swift.String, matrixType: Swift.String, taskId: Swift.String?, macroCategoryId: Swift.String, productId: Swift.String, reasonId: Swift.Int, comment: Swift.String?)
   @objc public func fetchSegments(completion: @escaping (Foundation.NSError?) -> Swift.Void)
   @objc public func fetchTasks(completion: @escaping (Foundation.NSError?) -> Swift.Void)
   @objc public func cachedTasksCount() -> Swift.Int
@@ -283,6 +271,7 @@ public typealias DefaultAiletDataManager = IrLibSwift.IRDataManager
   @objc public func clearVisitsWithoutPhotosAndFilledAnswers()
   @objc public func imageResizer(with compressionQuality: CoreFoundation.CGFloat) -> any IrLibSwift.ImageResizer
   @objc public func report(for visitId: Swift.String, internalTaskId: Swift.String?) -> [Swift.String : Any]?
+  @objc public func additionalStats(for externalVisitId: Swift.String, internalTaskId: Swift.String?) -> [Swift.String : Any]
   @objc public func unsentData() -> IrLibSwift.AiletUnsentDataCheckResult
   @objc public func unsentData(for visitId: Swift.String?) -> IrLibSwift.AiletUnsentDataCheckResult
   @objc public func photosCount(for visitId: Swift.String) -> Swift.Int
@@ -332,15 +321,6 @@ public enum GradientDirection {
   @objc override dynamic public init()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class AnswersIR : Realm.RLMObject {
-  @objc dynamic public var id: Swift.Int
-  @objc dynamic public var question_id: Swift.Int
-  @objc dynamic public var name: Swift.String
-  @objc dynamic public var type: Swift.String
-  @objc dynamic public var store_id: Swift.Int
-  @objc override dynamic public init()
-  @objc deinit
-}
 public struct Shadow {
 }
 public struct AnketDataEntity {
@@ -378,16 +358,6 @@ extension IrLibSwift.GradientColor {
   public static let blueToOrange: IrLibSwift.GradientColor
   public static let orangeToBlue: IrLibSwift.GradientColor
   public static let lightRedToRed: IrLibSwift.GradientColor
-}
-public protocol SettableCell {
-  associatedtype Model
-  func setup(with model: Self.Model)
-}
-@_inheritsConvenienceInitializers @objc public class RecognitionResultTotal : Realm.RLMObject {
-  @objc dynamic public var value: Swift.Int
-  @objc dynamic public var previousValue: Swift.Int
-  @objc override dynamic public init()
-  @objc deinit
 }
 @_inheritsConvenienceInitializers @objc public class Scene : Realm.RLMObject {
   @objc dynamic public var visitId: Swift.String
@@ -565,7 +535,15 @@ public enum Workflow : Swift.String, Swift.Codable {
 @objc extension IrLibSwift.CustomImageCheckbox {
   @objc @_Concurrency.MainActor(unsafe) dynamic public func setIsSelected(_ isSelected: Swift.Bool)
 }
+extension Swift.Array where Element : UIKit.UIView {
+  public func decorate(with font: UIKit.UIFont)
+}
 public enum Fonts {
+  public enum LargeTitle {
+    public static let normal: UIKit.UIFont
+    public static let bold: UIKit.UIFont
+    public static let semibold: UIKit.UIFont
+  }
   public enum Title1 {
     public static let normal: UIKit.UIFont
     public static let bold: UIKit.UIFont
@@ -799,12 +777,6 @@ extension IrLibSwift.NetworkReachability {
   @objc override dynamic public init()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class RecognitionResultLack : Realm.RLMObject {
-  @objc dynamic public var total: IrLibSwift.RecognitionResultTotal?
-  @objc dynamic public var values: Realm.RLMArray<IrLibSwift.RecognitionResultValue>
-  @objc override dynamic public init()
-  @objc deinit
-}
 extension UIKit.UIColor {
   convenience public init(hex: Swift.String)
 }
@@ -912,7 +884,6 @@ extension UIKit.UIImage {
   @objc func didTriggerOpenSosReportForTaskWithId(_ taskId: Swift.String?)
   @objc func didTriggerOpenPriceExecutionReportForTaskWithId(_ taskId: Swift.String?)
   @objc func didStartVisitForStoreWithId(_ storeId: Swift.Int)
-  @objc func didFinishVisitForStoreWithId(_ storeId: Swift.Int, readyToFinishHandler: @escaping (Swift.Bool) -> Swift.Void)
   @objc func didTriggerOpenAssortmentMatrixForStoreWithId(_ storeId: Swift.Int)
   @objc func didTriggerOpenSummaryReportForStoreWithId(_ storeId: Swift.Int)
   @objc func didTriggerOpenSupport()
@@ -967,6 +938,22 @@ extension UIKit.UIImage {
       get
     }
   }
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class VisitWidgetTask : Realm.RLMObject {
+  @objc dynamic public var taskId: Swift.String
+  @objc dynamic public var planBySku: Swift.Int
+  @objc dynamic public var osaBySku: Swift.Int
+  @objc dynamic public var osaBySkuPercentage: Swift.Double
+  @objc dynamic public var planByShelf: Swift.Int
+  @objc dynamic public var osaByShelf: Swift.Int
+  @objc dynamic public var osaByShelfPercentage: Swift.Double
+  @objc dynamic public var planByFacing: Swift.Int
+  @objc dynamic public var osaByFacing: Swift.Int
+  @objc dynamic public var osaByFacingPercentage: Swift.Double
+  @objc dynamic public var products: Realm.RLMArray<IrLibSwift.VisitWidgetProduct>
+  @objc dynamic public var macroCategories: Realm.RLMArray<IrLibSwift.VisitWidgetMacroCategory>
   @objc override dynamic public init()
   @objc deinit
 }
@@ -1392,19 +1379,11 @@ public struct RLMIterator<T> : Swift.IteratorProtocol {
   public mutating func next() -> T?
   public typealias Element = T
 }
-extension Realm.RLMArray : Swift.Sequence {
-  public typealias Element = Realm.RLMObject
-  public typealias Iterator = IrLibSwift.RLMIterator<Realm.RLMObject>
-}
-extension Realm.RLMResults : Swift.Sequence {
-  public typealias Element = Realm.RLMObject
-  public typealias Iterator = IrLibSwift.RLMIterator<Realm.RLMObject>
-}
 extension Realm.RLMCollection {
   public func makeIterator() -> IrLibSwift.RLMIterator<Realm.RLMObject>
 }
 extension Realm.RLMCollection {
-  public func indexOfObject(where predicateFormat: Swift.String, _ args: any Swift.CVarArg...) -> Swift.UInt
+  public func indexOfObject(where predicateFormat: Swift.String, _ args: any Swift.CVarArg...) -> Swift.UInt?
   public func objects(where predicateFormat: Swift.String, _ args: any Swift.CVarArg...) -> Realm.RLMResults<ObjectiveC.NSObject>
 }
 @_inheritsConvenienceInitializers @objc public class VisitWidgetMacroCategory : Realm.RLMObject {
@@ -1434,6 +1413,10 @@ extension Realm.RLMCollection {
   @objc dynamic public var total: IrLibSwift.VisitWidgetMacroCategoryTotal?
   @objc override dynamic public init()
   @objc deinit
+}
+extension Swift.Array where Element : UIKit.UIView {
+  public func decorateText(with color: UIKit.UIColor)
+  public func decorateBackground(with color: UIKit.UIColor)
 }
 public enum Colors {
   public enum Background {
@@ -1566,7 +1549,6 @@ public enum Colors {
   @objc dynamic public var isConfirmedWithReceivedReports: Swift.Bool
   @objc dynamic public var durationInSeconds: Swift.Int
   @objc dynamic public var hadPhotos: Swift.Bool
-  @objc dynamic public var resultTasks: Realm.RLMArray<IrLibSwift.RecognitionResultTask>
   @objc @available(*, deprecated, message: "To be deleted very soon")
   dynamic public var resultOldAssortment: IrLibSwift.RecognitionResultOldAssortment?
   @objc dynamic public var widgets: Realm.RLMArray<IrLibSwift.VisitWidget>
@@ -1729,13 +1711,6 @@ public struct Gradient {
   @objc override dynamic public init()
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers public class UserAnkets : Realm.RLMObject {
-  @objc dynamic public var visit_id: Swift.String
-  @objc dynamic public var anket_id: Swift.Int
-  @objc dynamic public var is_sended: Swift.Int
-  @objc override dynamic public init()
-  @objc deinit
-}
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class ShadowView : UIKit.UIView {
   @_Concurrency.MainActor(unsafe) @objc override dynamic public var backgroundColor: UIKit.UIColor? {
     @objc get
@@ -1765,6 +1740,7 @@ public struct Gradient {
   @objc dynamic public var brands: Realm.RLMArray<IrLibSwift.VisitWidgetBrand>
   @objc dynamic public var photos: Realm.RLMArray<IrLibSwift.VisitWidgetPhoto>
   @objc dynamic public var planogram: IrLibSwift.VisitWidgetPlanogram?
+  @objc dynamic public var tasks: Realm.RLMArray<IrLibSwift.VisitWidgetTask>
   @objc dynamic public var id: Swift.String
   @objc dynamic public var name: Swift.String
   @objc dynamic public var main: Swift.Bool
@@ -1845,18 +1821,6 @@ public struct PortalEntity : Swift.Decodable {
   @objc dynamic public var selectedAnswers: Realm.RLMArray<IrLibSwift.RealmInt>
   @objc dynamic public var enteredAnswer: Swift.String?
   @objc override dynamic public class func linkingObjectsProperties() -> [Swift.String : Realm.RLMPropertyDescriptor]
-  @objc override dynamic public init()
-  @objc deinit
-}
-@_inheritsConvenienceInitializers @objc public class RecognitionResultTask : Realm.RLMObject {
-  @objc dynamic public var taskId: Swift.String
-  @objc dynamic public var visitId: Swift.String
-  @objc dynamic public var sourceId: Swift.String?
-  @objc dynamic public var totalScore: Swift.Double
-  @objc dynamic public var percentage: Swift.Double
-  @objc dynamic public var averagePercentage: Swift.Double
-  @objc dynamic public var kpis: Realm.RLMArray<IrLibSwift.TaskKpi>
-  @objc override dynamic public class func primaryKey() -> Swift.String?
   @objc override dynamic public init()
   @objc deinit
 }
@@ -1944,7 +1908,6 @@ public typealias AiletDataManager = IrLibSwift.IRDataManagerProtocol
   @objc @available(*, deprecated, message: "To be deleted soon. Use fetching realograms instead of photoResult")
   func fetchRecognitionResult(photoId: Swift.String, completion: @escaping (Foundation.NSError?) -> Swift.Void)
   @objc func sendPhoto(photoId: Swift.String, completion: @escaping (Foundation.NSError?) -> Swift.Void)
-  @objc func recognitionResultRecivedCompletelyForPhoto(id: Swift.String) -> Swift.Bool
   @objc func canDoRecognitionResult(photoId: Swift.String) -> Swift.Bool
   @objc func updateCurrentStore(storeId: Swift.Int, externalStoreId: Swift.String?)
   @objc func updateExternalData(visitId: Swift.String)
@@ -1957,14 +1920,13 @@ public typealias AiletDataManager = IrLibSwift.IRDataManagerProtocol
   @objc func visitsWithWidgets() -> [IrLibSwift.Visit]
   @objc func defaultReportForVisit(visitId: Swift.String, widgetType: Swift.String, taskId: Swift.String?) -> IrLibSwift.VisitWidgetReport?
   @objc func widgetMacroCategoriesForVisit(visitId: Swift.String, widgetType: Swift.String, matrixType: Swift.String?, taskId: Swift.String?) -> [IrLibSwift.VisitWidgetMacroCategory]
-  @objc func updateProductForVisit(visitId: Swift.String, widgetType: Swift.String, matrixType: Swift.String, taskId: Swift.String?, macroCategoryId: Swift.String, productId: Swift.String, reasonId: Swift.Int, comment: Swift.String?)
   @objc func fetchSegments(completion: @escaping (Foundation.NSError?) -> Swift.Void)
   @objc func fetchTasks(completion: @escaping (Foundation.NSError?) -> Swift.Void)
   @objc func fetchVisitsPlansAndFacts(completion: @escaping (Foundation.NSError?) -> Swift.Void)
   @objc func fetchPreviousVisits(limit: Swift.Int, completion: @escaping (Foundation.NSError?) -> Swift.Void)
   @objc func downloadPhotosForPreviousVisits(visitId: Swift.String?, limit: Swift.Int, completion: @escaping (Foundation.NSError?) -> Swift.Void)
   @objc func updatePhotoResultIntervals(_ intervals: [Swift.Int])
-  @objc func restartSendPhotoSequence(resetAttemptIntervals: Swift.Bool, completion: @escaping (Swift.String?, Foundation.NSError?) -> Swift.Void)
+  @objc func restartSendingNotSentData(resetAttemptIntervals: Swift.Bool, completion: @escaping (Swift.String?, Foundation.NSError?) -> Swift.Void)
   @objc func cancelRequests()
   @objc func internalTaskId(externalVisitId: Swift.String, taskId: Swift.String?) -> Swift.String?
   @objc func updateRecognitionOperationsSequence(completion: @escaping (Foundation.NSError?) -> Swift.Void)
@@ -1976,6 +1938,7 @@ public typealias AiletDataManager = IrLibSwift.IRDataManagerProtocol
   @objc func clearVisitsWithoutPhotos()
   @objc func clearVisitsWithoutPhotosAndFilledAnswers()
   @objc func report(for visitId: Swift.String, internalTaskId: Swift.String?) -> [Swift.String : Any]?
+  @objc func additionalStats(for externalVisitId: Swift.String, internalTaskId: Swift.String?) -> [Swift.String : Any]
   @objc func unsentData() -> IrLibSwift.AiletUnsentDataCheckResult
   @objc func unsentData(for visitId: Swift.String?) -> IrLibSwift.AiletUnsentDataCheckResult
   @objc func photosCount(for visitId: Swift.String) -> Swift.Int
@@ -2028,9 +1991,7 @@ extension IrLibSwift.ShadowShowing where Self : UIKit.UIView {
 @_inheritsConvenienceInitializers @available(*, deprecated, message: "To be deleted very soon")
 @objc public class RecognitionResultOldAssortment : Realm.RLMObject {
   @objc dynamic public var assortmentAchievement: Realm.RLMArray<IrLibSwift.RecognitionResultAssortmentAchievement>
-  @objc dynamic public var lackOfAssortment: IrLibSwift.RecognitionResultLack?
   @objc dynamic public var performanceAssortment: Swift.Int
-  @objc dynamic public var lackOfAssortmentDelta: Swift.Int
   @objc dynamic public var performanceAssortmentDelta: Swift.Double
   @objc override dynamic public init()
   @objc deinit
@@ -2041,14 +2002,6 @@ extension IrLibSwift.ShadowShowing where Self : UIKit.UIView {
   @objc dynamic public var shelf_number: Swift.String
   @objc dynamic public var a: Swift.Double
   @objc dynamic public var b: Swift.Double
-  @objc override dynamic public init()
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers public class Ankets : Realm.RLMObject {
-  @objc dynamic public var default_: Swift.String
-  @objc dynamic public var id: Swift.Int
-  @objc dynamic public var name: Swift.String
-  @objc dynamic public var store_id: Swift.Int
   @objc override dynamic public init()
   @objc deinit
 }
@@ -2112,19 +2065,6 @@ extension IrLibSwift.Perspective : Swift.CustomDebugStringConvertible {
   @objc final public let rootDomain: Swift.String?
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class AssortmentCorrect : Realm.RLMObject {
-  @objc dynamic public var id: Swift.Int
-  @objc dynamic public var visit_id: Swift.String
-  @objc dynamic public var external_id: Swift.String
-  @objc dynamic public var facing: Swift.Int
-  @objc dynamic public var price: Swift.Double
-  @objc dynamic public var promo: Swift.Int
-  @objc dynamic public var reason_id: Swift.String
-  @objc dynamic public var reason_name: Swift.String
-  @objc dynamic public var is_sended: Swift.Int
-  @objc override dynamic public init()
-  @objc deinit
-}
 public typealias SceneTypeId = Swift.Int
 @_inheritsConvenienceInitializers @objc public class ShareShelfCustomBrands : Realm.RLMObject {
   @objc dynamic public var visit_id: Swift.String
@@ -2142,35 +2082,11 @@ public typealias SceneTypeId = Swift.Int
   @objc override dynamic public init()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class UserAnswersImages : Realm.RLMObject {
-  @objc dynamic public var visit_id: Swift.String
-  @objc dynamic public var anket_id: Swift.Int
-  @objc dynamic public var question_id: Swift.Int
-  @objc dynamic public var name: Swift.String
-  @objc dynamic public var path: Swift.String
-  @objc dynamic public var is_sended: Swift.Int
-  @objc dynamic public var is_tmp: Swift.Int
-  @objc dynamic public var is_deleted: Swift.Int
-  @objc dynamic public var upload_file_id: Swift.String
-  @objc dynamic public var product_id: Swift.String
-  @objc override dynamic public init()
-  @objc deinit
-}
 @_inheritsConvenienceInitializers @objc public class VisitWidgetTaskReportQuestionAnswer : Realm.RLMObject {
   @objc dynamic public var index: Swift.Int
   @objc dynamic public var name: Swift.String
   @objc dynamic public var type: Swift.String
   @objc dynamic public var point: Swift.Int
-  @objc override dynamic public init()
-  @objc deinit
-}
-@_inheritsConvenienceInitializers @objc public class Questions : Realm.RLMObject {
-  @objc dynamic public var id: Swift.Int
-  @objc dynamic public var anket_id: Swift.Int
-  @objc dynamic public var name: Swift.String
-  @objc dynamic public var type: Swift.Int
-  @objc dynamic public var required: Swift.Int
-  @objc dynamic public var store_id: Swift.Int
   @objc override dynamic public init()
   @objc deinit
 }
