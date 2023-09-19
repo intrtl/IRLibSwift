@@ -324,7 +324,108 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) AiletColorsG
 @interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
 @end
 
+@class AiletGradientColor;
+
+SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors19AiletColorsGradient")
+@interface AiletColorsGradient : NSObject
+/// $gradient-01, blue
+@property (nonatomic, readonly, strong) AiletGradientColor * _Nonnull gradient01;
+/// $gradient-02, red
+@property (nonatomic, readonly, strong) AiletGradientColor * _Nonnull gradient02;
+/// $gradient-03, violet
+@property (nonatomic, readonly, strong) AiletGradientColor * _Nonnull gradient03;
+/// $gradient-04, gray
+@property (nonatomic, readonly, strong) AiletGradientColor * _Nonnull gradient04;
+/// $gradient-06, green
+@property (nonatomic, readonly, strong) AiletGradientColor * _Nonnull gradient06;
+/// $gradient-07, mavi
+@property (nonatomic, readonly, strong) AiletGradientColor * _Nonnull gradient07;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
+@end
+
 @class UIColor;
+
+SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors21AiletColorsBackground")
+@interface AiletColorsBackground : NSObject
+/// $ui-bg, wihte
+@property (nonatomic, readonly, strong) UIColor * _Nonnull primary;
+/// $ui-01, gray10
+@property (nonatomic, readonly, strong) UIColor * _Nonnull background01;
+/// $ui-02, gray20
+@property (nonatomic, readonly, strong) UIColor * _Nonnull background02;
+/// $ui-03, gray30
+@property (nonatomic, readonly, strong) UIColor * _Nonnull background03;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
+@end
+
+
+SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors22AiletColorsInteractive")
+@interface AiletColorsInteractive : NSObject
+/// $interactive-01
+@property (nonatomic, readonly, strong) UIColor * _Nonnull primary;
+/// $interactive-02
+@property (nonatomic, readonly, strong) UIColor * _Nonnull secondary;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
+@end
+
+
+SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors15AiletColorsText")
+@interface AiletColorsText : NSObject
+/// $text-01
+@property (nonatomic, readonly, strong) UIColor * _Nonnull primary;
+/// $text-02
+@property (nonatomic, readonly, strong) UIColor * _Nonnull secondary;
+/// $text-03
+@property (nonatomic, readonly, strong) UIColor * _Nonnull placeholder;
+/// $text-04
+@property (nonatomic, readonly, strong) UIColor * _Nonnull interactive;
+/// $text-error
+@property (nonatomic, readonly, strong) UIColor * _Nonnull error;
+/// $text-success
+@property (nonatomic, readonly, strong) UIColor * _Nonnull success;
+/// $link-01
+@property (nonatomic, readonly, strong) UIColor * _Nonnull links;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
+@end
+
+
+SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors15AiletColorsIcon")
+@interface AiletColorsIcon : NSObject
+/// $icon-01
+@property (nonatomic, readonly, strong) UIColor * _Nonnull primary;
+/// $icon-02
+@property (nonatomic, readonly, strong) UIColor * _Nonnull secondary;
+/// $icon-04
+@property (nonatomic, readonly, strong) UIColor * _Nonnull onInteractiveColors;
+/// $icon-05
+@property (nonatomic, readonly, strong) UIColor * _Nonnull accent01;
+/// $icon-06
+@property (nonatomic, readonly, strong) UIColor * _Nonnull accent02;
+/// $icon-07
+@property (nonatomic, readonly, strong) UIColor * _Nonnull accent03;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
+@end
+
 
 SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors16AiletColorsInput")
 @interface AiletColorsInput : NSObject
@@ -380,107 +481,6 @@ SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors17AiletColorsAccent")
 @property (nonatomic, readonly, strong) UIColor * _Nonnull accent04;
 /// $accent-05
 @property (nonatomic, readonly, strong) UIColor * _Nonnull accent05;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-@interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
-@end
-
-@class AiletGradientColor;
-
-SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors19AiletColorsGradient")
-@interface AiletColorsGradient : NSObject
-/// $gradient-01, blue
-@property (nonatomic, readonly, strong) AiletGradientColor * _Nonnull gradient01;
-/// $gradient-02, red
-@property (nonatomic, readonly, strong) AiletGradientColor * _Nonnull gradient02;
-/// $gradient-03, violet
-@property (nonatomic, readonly, strong) AiletGradientColor * _Nonnull gradient03;
-/// $gradient-04, gray
-@property (nonatomic, readonly, strong) AiletGradientColor * _Nonnull gradient04;
-/// $gradient-06, green
-@property (nonatomic, readonly, strong) AiletGradientColor * _Nonnull gradient06;
-/// $gradient-07, mavi
-@property (nonatomic, readonly, strong) AiletGradientColor * _Nonnull gradient07;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-@interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
-@end
-
-
-SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors15AiletColorsText")
-@interface AiletColorsText : NSObject
-/// $text-01
-@property (nonatomic, readonly, strong) UIColor * _Nonnull primary;
-/// $text-02
-@property (nonatomic, readonly, strong) UIColor * _Nonnull secondary;
-/// $text-03
-@property (nonatomic, readonly, strong) UIColor * _Nonnull placeholder;
-/// $text-04
-@property (nonatomic, readonly, strong) UIColor * _Nonnull interactive;
-/// $text-error
-@property (nonatomic, readonly, strong) UIColor * _Nonnull error;
-/// $text-success
-@property (nonatomic, readonly, strong) UIColor * _Nonnull success;
-/// $link-01
-@property (nonatomic, readonly, strong) UIColor * _Nonnull links;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-@interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
-@end
-
-
-SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors15AiletColorsIcon")
-@interface AiletColorsIcon : NSObject
-/// $icon-01
-@property (nonatomic, readonly, strong) UIColor * _Nonnull primary;
-/// $icon-02
-@property (nonatomic, readonly, strong) UIColor * _Nonnull secondary;
-/// $icon-04
-@property (nonatomic, readonly, strong) UIColor * _Nonnull onInteractiveColors;
-/// $icon-05
-@property (nonatomic, readonly, strong) UIColor * _Nonnull accent01;
-/// $icon-06
-@property (nonatomic, readonly, strong) UIColor * _Nonnull accent02;
-/// $icon-07
-@property (nonatomic, readonly, strong) UIColor * _Nonnull accent03;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-@interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
-@end
-
-
-SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors21AiletColorsBackground")
-@interface AiletColorsBackground : NSObject
-/// $ui-bg, wihte
-@property (nonatomic, readonly, strong) UIColor * _Nonnull primary;
-/// $ui-01, gray10
-@property (nonatomic, readonly, strong) UIColor * _Nonnull background01;
-/// $ui-02, gray20
-@property (nonatomic, readonly, strong) UIColor * _Nonnull background02;
-/// $ui-03, gray30
-@property (nonatomic, readonly, strong) UIColor * _Nonnull background03;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-@interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
-@end
-
-
-SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors22AiletColorsInteractive")
-@interface AiletColorsInteractive : NSObject
-/// $interactive-01
-@property (nonatomic, readonly, strong) UIColor * _Nonnull primary;
-/// $interactive-02
-@property (nonatomic, readonly, strong) UIColor * _Nonnull secondary;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -614,7 +614,7 @@ SWIFT_CLASS("_TtC10IrLibSwift38AiletScreensBuilderInteractionProvider")
 - (id <WidgetsModuleInput> _Nullable)widgetsController SWIFT_WARN_UNUSED_RESULT;
 - (UIViewController * _Nonnull)storeDetailScreenWithOutput:(id <StoreDetailsOutput> _Nonnull)output storeId:(NSInteger)storeId SWIFT_WARN_UNUSED_RESULT;
 - (UIViewController * _Nonnull)visitStatsScreenWithVisitId:(NSString * _Nonnull)visitId SWIFT_WARN_UNUSED_RESULT;
-- (UIViewController * _Nonnull)reportFiltersScreenWithOutput:(id <LegacyReportFiltersModuleOutput> _Nonnull)output storeId:(NSInteger)storeId visitId:(NSString * _Nonnull)visitId taskId:(NSString * _Nullable)taskId productGroupCode:(NSString * _Nullable)productGroupCode productGroupName:(NSString * _Nullable)productGroupName currentReportType:(NSString * _Nullable)currentReportType SWIFT_WARN_UNUSED_RESULT;
+- (UIViewController * _Nonnull)reportFiltersScreenWithOutput:(id <LegacyReportFiltersModuleOutput> _Nonnull)output storeId:(NSInteger)storeId visitId:(NSString * _Nonnull)visitId taskId:(NSString * _Nullable)taskId matrixId:(NSString * _Nullable)matrixId currentReportType:(NSString * _Nullable)currentReportType SWIFT_WARN_UNUSED_RESULT;
 - (UIViewController * _Nonnull)appDocsScreen SWIFT_WARN_UNUSED_RESULT;
 - (UIViewController * _Nonnull)retailTasksViewController SWIFT_WARN_UNUSED_RESULT;
 /// Возвращает UIViewController для воркфлоу сохраненного в настройках
@@ -658,6 +658,21 @@ SWIFT_CLASS("_TtC10IrLibSwift15AiletSharedUser")
 @end
 
 
+SWIFT_CLASS("_TtC10IrLibSwift35AiletTechSupportInteractionProvider")
+@interface AiletTechSupportInteractionProvider : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+@class NSData;
+
+@interface AiletTechSupportInteractionProvider (SWIFT_EXTENSION(IrLibSwift))
+- (void)logoutWithCompletion:(void (^ _Nullable)(NSError * _Nullable))completion;
+- (void)show;
+- (void)updateDeviceToken:(NSData * _Nonnull)deviceToken;
+@end
+
+
 SWIFT_CLASS("_TtC10IrLibSwift26AiletUnsentDataCheckResult")
 @interface AiletUnsentDataCheckResult : NSObject
 @property (nonatomic, readonly) BOOL hasUnsentData;
@@ -667,13 +682,42 @@ SWIFT_CLASS("_TtC10IrLibSwift26AiletUnsentDataCheckResult")
 @end
 
 
+SWIFT_CLASS("_TtC10IrLibSwift36AiletVisitServiceInteractionProvider")
+@interface AiletVisitServiceInteractionProvider : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+@class Visit;
+@class NSError;
+
+@interface AiletVisitServiceInteractionProvider (SWIFT_EXTENSION(IrLibSwift))
+- (NSString * _Nullable)createVisitWithStoreId:(NSInteger)storeId externalStoreId:(NSString * _Nullable)externalStoreId error:(NSError * _Nullable * _Nullable)error;
+- (NSArray<Visit *> * _Nonnull)visitsWithoutWidgets SWIFT_WARN_UNUSED_RESULT;
+- (NSArray<Visit *> * _Nonnull)visitsWithWidgets SWIFT_WARN_UNUSED_RESULT;
+- (void)fetchPreviousVisitsWithLimit:(NSInteger)limit completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
+- (void)fetchPreviousVisitWithVisitId:(NSString * _Nonnull)visitId completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
+- (void)downloadPhotosForPreviousVisitsWithVisitId:(NSString * _Nullable)visitId limit:(NSInteger)limit completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
+- (void)finishCurrentVisit;
+/// Возвращает идентификаторы визитов в которых есть фото
+- (NSSet<NSString *> * _Nonnull)visitsWithPhotosIds SWIFT_WARN_UNUSED_RESULT;
+/// Очищает базу от визитов в которых нет фото
+- (void)clearVisitsWithoutPhotos;
+- (void)clearVisitsWithoutPhotosAndFilledAnswers;
+- (void)sendVisitIsClosedWithVisitId:(NSString * _Nonnull)visitId completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
+/// Проверяет был ли визит скачан
+/// \param visitId внутренний id визита
+///
+- (BOOL)isVisitDownloadedWithVisitId:(NSString * _Nonnull)visitId SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
 SWIFT_CLASS("_TtC10IrLibSwift30AuthServiceInteractionProvider")
 @interface AuthServiceInteractionProvider : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-@class NSError;
 
 @interface AuthServiceInteractionProvider (SWIFT_EXTENSION(IrLibSwift))
 @property (nonatomic, readonly, copy) NSString * _Nonnull authToken;
@@ -807,27 +851,23 @@ SWIFT_CLASS("_TtC10IrLibSwift22IRCameraSharedSettings")
 @end
 
 @protocol MultiportalAuthServiceInteractionProvider;
-@protocol TechSupportInteractionProvider;
 @class IRStoredStateSettings;
 @class IRDataManagerSettings;
-@class Visit;
 @class VisitWidgetReport;
 @class VisitWidgetMacroCategory;
+@class VisitWidgetReportMatrixDataEntity;
 
 SWIFT_PROTOCOL("_TtP10IrLibSwift21IRDataManagerProtocol_")
 @protocol IRDataManagerProtocol
 @property (nonatomic, readonly, strong) AuthServiceInteractionProvider * _Nonnull auth;
 @property (nonatomic, readonly, strong) id <MultiportalAuthServiceInteractionProvider> _Nonnull multiportalAuth;
 @property (nonatomic, readonly, strong) id <AiletDbConfigProvider> _Nonnull database;
-@property (nonatomic, readonly, strong) id <TechSupportInteractionProvider> _Nonnull techSupport;
+@property (nonatomic, readonly, strong) AiletTechSupportInteractionProvider * _Nonnull techSupport;
+@property (nonatomic, readonly, strong) AiletVisitServiceInteractionProvider * _Nonnull visits;
 @property (nonatomic, readonly, strong) AiletScreensBuilderInteractionProvider * _Nonnull screens;
 @property (nonatomic, readonly, strong) IRStoredStateSettings * _Nonnull storedStateSettings;
 - (void)fetchSettingsAndRoutesWithCompletion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 - (void)fetchStoresWithCompletion:(void (^ _Nonnull)(NSError * _Nullable))completion;
-- (void)fetchProductsWithCompletion:(void (^ _Nonnull)(NSError * _Nullable))completion;
-- (void)fetchMissReasonsWithCompletion:(void (^ _Nonnull)(NSError * _Nullable))completion;
-- (void)fetchMetricsPlansWithCompletion:(void (^ _Nonnull)(NSError * _Nullable))completion;
-- (NSString * _Nullable)createVisitWithStoreId:(NSInteger)storeId externalStoreId:(NSString * _Nullable)externalStoreId error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 /// Получение результатов распознавания фото.
 /// ВАЖНО! Не участвует в основной цепочке распознавания фото. Нужен только для oldAssortment, запрашивается вместе с виджетами в легаси-коде и для получения данных по историческому визиту
 - (void)fetchRecognitionResultWithPhotoId:(NSString * _Nonnull)photoId completion:(void (^ _Nonnull)(NSError * _Nullable))completion SWIFT_DEPRECATED_MSG("To be deleted soon. Use fetching realograms instead of photoResult");
@@ -837,18 +877,14 @@ SWIFT_PROTOCOL("_TtP10IrLibSwift21IRDataManagerProtocol_")
 - (void)updateExternalDataWithVisitId:(NSString * _Nonnull)visitId;
 + (void)updateExternalDataWithVisitId:(NSString * _Nonnull)visitId;
 + (void)clearExternalData;
-- (void)finishCurrentVisit;
 - (void)updateSettingsFrom:(IRDataManagerSettings * _Nonnull)settings;
 - (void)fetchWidgetsWithVisitId:(NSString * _Nonnull)visitId completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
-- (NSArray<Visit *> * _Nonnull)visitsWithoutWidgets SWIFT_WARN_UNUSED_RESULT;
-- (NSArray<Visit *> * _Nonnull)visitsWithWidgets SWIFT_WARN_UNUSED_RESULT;
 - (VisitWidgetReport * _Nullable)defaultReportForVisitWithVisitId:(NSString * _Nonnull)visitId widgetType:(NSString * _Nonnull)widgetType taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
 - (NSArray<VisitWidgetMacroCategory *> * _Nonnull)widgetMacroCategoriesForVisitWithVisitId:(NSString * _Nonnull)visitId widgetType:(NSString * _Nonnull)widgetType matrixType:(NSString * _Nullable)matrixType taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
+- (VisitWidgetReportMatrixDataEntity * _Nullable)defaultReportMatrixWithVisitId:(NSString * _Nonnull)visitId taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
 - (void)fetchSegmentsWithCompletion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 - (void)fetchTasksWithCompletion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 - (void)fetchVisitsPlansAndFactsWithCompletion:(void (^ _Nonnull)(NSError * _Nullable))completion;
-- (void)fetchPreviousVisitsWithLimit:(NSInteger)limit completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
-- (void)downloadPhotosForPreviousVisitsWithVisitId:(NSString * _Nullable)visitId limit:(NSInteger)limit completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 - (void)updatePhotoResultIntervals:(NSArray<NSNumber *> * _Nonnull)intervals;
 - (void)restartSendingNotSentDataWithResetAttemptIntervals:(BOOL)resetAttemptIntervals completion:(void (^ _Nonnull)(NSString * _Nullable, NSError * _Nullable))completion;
 - (void)cancelRequests;
@@ -858,21 +894,18 @@ SWIFT_PROTOCOL("_TtP10IrLibSwift21IRDataManagerProtocol_")
 - (void)stopReportTimeTracking;
 - (void)startReportTimeTracking;
 - (void)restartLocationService;
-- (NSSet<NSString *> * _Nonnull)visitsWithPhotosIds SWIFT_WARN_UNUSED_RESULT;
-- (void)clearVisitsWithoutPhotos;
-- (void)clearVisitsWithoutPhotosAndFilledAnswers;
 - (NSDictionary<NSString *, id> * _Nullable)reportFor:(NSString * _Nonnull)visitId internalTaskId:(NSString * _Nullable)internalTaskId SWIFT_WARN_UNUSED_RESULT;
 - (NSDictionary<NSString *, id> * _Nonnull)additionalStatsFor:(NSString * _Nonnull)externalVisitId internalTaskId:(NSString * _Nullable)internalTaskId SWIFT_WARN_UNUSED_RESULT;
 - (AiletUnsentDataCheckResult * _Nonnull)unsentData SWIFT_WARN_UNUSED_RESULT;
 - (AiletUnsentDataCheckResult * _Nonnull)unsentDataFor:(NSString * _Nullable)visitId SWIFT_WARN_UNUSED_RESULT;
 - (NSInteger)photosCountFor:(NSString * _Nonnull)visitId SWIFT_WARN_UNUSED_RESULT;
-- (NSInteger)notFilledOosReasonsCountFor:(NSString * _Nonnull)externalVisitId SWIFT_WARN_UNUSED_RESULT;
 - (void)showFillReasonsAlertOn:(UIViewController * _Nonnull)vc onAgree:(void (^ _Nullable)(void))onAgree;
 - (BOOL)isConnectionAvailable SWIFT_WARN_UNUSED_RESULT;
 - (void)sendOfflineAbsenceReasonsWith:(NSString * _Nonnull)visitId;
-- (void)sendVisitIsClosedWithVisitId:(NSString * _Nonnull)visitId completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 - (BOOL)shouldShowDebugFeatures SWIFT_WARN_UNUSED_RESULT;
 - (void)updateShowDebugFeaturesTo:(BOOL)shouldShow;
+- (void)fetchCatalogsWithCompletion:(void (^ _Nullable)(NSError * _Nullable))completion;
+- (BOOL)shouldFillAbsenceReasonsWithExternalVisitId:(NSString * _Nonnull)externalVisitId SWIFT_WARN_UNUSED_RESULT;
 @end
 
 @class VisitWidgetReportDataEntity;
@@ -880,7 +913,8 @@ SWIFT_PROTOCOL("_TtP10IrLibSwift21IRDataManagerProtocol_")
 
 SWIFT_CLASS("_TtC10IrLibSwift13IRDataManager")
 @interface IRDataManager : NSObject <IRDataManagerProtocol>
-@property (nonatomic, readonly, strong) id <TechSupportInteractionProvider> _Nonnull techSupport;
+@property (nonatomic, readonly, strong) AiletTechSupportInteractionProvider * _Nonnull techSupport;
+@property (nonatomic, readonly, strong) AiletVisitServiceInteractionProvider * _Nonnull visits;
 @property (nonatomic, readonly, strong) IRStoredStateSettings * _Nonnull storedStateSettings;
 @property (nonatomic, readonly, strong) AuthServiceInteractionProvider * _Nonnull auth;
 @property (nonatomic, readonly, strong) id <MultiportalAuthServiceInteractionProvider> _Nonnull multiportalAuth;
@@ -890,11 +924,7 @@ SWIFT_CLASS("_TtC10IrLibSwift13IRDataManager")
 + (void)updateAppInfoWithIsApp:(BOOL)isApp;
 + (void)updateDeeplinkInfoWithIsStartedViaDeeplink:(BOOL)isStartedViaDeeplink;
 - (void)fetchStoresWithCompletion:(void (^ _Nonnull)(NSError * _Nullable))completion;
-- (void)fetchProductsWithCompletion:(void (^ _Nonnull)(NSError * _Nullable))completion;
-- (void)fetchMissReasonsWithCompletion:(void (^ _Nonnull)(NSError * _Nullable))completion;
-- (void)fetchMetricsPlansWithCompletion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 - (void)fetchSettingsAndRoutesWithCompletion:(void (^ _Nonnull)(NSError * _Nullable))completion;
-- (NSString * _Nullable)createVisitWithStoreId:(NSInteger)storeId externalStoreId:(NSString * _Nullable)externalStoreId error:(NSError * _Nullable * _Nullable)error;
 /// Получение результатов распознавания фото.
 /// ВАЖНО! Не участвует в основной цепочке распознавания фото. Нужен только для oldAssortment, запрашивается вместе с виджетами в легаси-коде и для получения данных по историческому визиту
 - (void)fetchRecognitionResultWithPhotoId:(NSString * _Nonnull)photoId completion:(void (^ _Nonnull)(NSError * _Nullable))completion SWIFT_DEPRECATED_MSG("To be deleted soon. Use fetching realograms instead of photoResult");
@@ -911,25 +941,20 @@ SWIFT_CLASS("_TtC10IrLibSwift13IRDataManager")
 + (void)clearExternalData;
 - (void)updateSettingsFrom:(IRDataManagerSettings * _Nonnull)settings;
 - (void)fetchWidgetsWithVisitId:(NSString * _Nonnull)visitId completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
-- (NSArray<Visit *> * _Nonnull)visitsWithoutWidgets SWIFT_WARN_UNUSED_RESULT;
-- (NSArray<Visit *> * _Nonnull)visitsWithWidgets SWIFT_WARN_UNUSED_RESULT;
 - (VisitWidgetReport * _Nullable)defaultReportForVisitWithVisitId:(NSString * _Nonnull)visitId widgetType:(NSString * _Nonnull)widgetType taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
 - (NSArray<VisitWidgetMacroCategory *> * _Nonnull)widgetMacroCategoriesForVisitWithVisitId:(NSString * _Nonnull)visitId widgetType:(NSString * _Nonnull)widgetType matrixType:(NSString * _Nullable)matrixType taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
 - (NSArray<VisitWidgetReportDataEntity *> * _Nonnull)widgetReportsForVisitWithVisitId:(NSString * _Nonnull)visitId widgetType:(NSString * _Nonnull)widgetType taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
 - (VisitWidgetReportDataEntity * _Nullable)widgetReportForVisitWithVisitId:(NSString * _Nonnull)visitId widgetType:(NSString * _Nonnull)widgetType matrixType:(NSString * _Nonnull)matrixType taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
+- (VisitWidgetReportMatrixDataEntity * _Nullable)defaultReportMatrixWithVisitId:(NSString * _Nonnull)visitId taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
 - (void)fetchSegmentsWithCompletion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 - (void)fetchTasksWithCompletion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 - (NSInteger)cachedTasksCount SWIFT_WARN_UNUSED_RESULT;
 - (NSInteger)storesCount SWIFT_WARN_UNUSED_RESULT;
 - (void)fetchVisitsPlansAndFactsWithCompletion:(void (^ _Nonnull)(NSError * _Nullable))completion;
-- (void)fetchPreviousVisitsWithLimit:(NSInteger)limit completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
-- (void)fetchPreviousVisitWithVisitId:(NSString * _Nonnull)visitId completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
-- (void)downloadPhotosForPreviousVisitsWithVisitId:(NSString * _Nullable)visitId limit:(NSInteger)limit completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 - (void)updatePhotoResultIntervals:(NSArray<NSNumber *> * _Nonnull)intervals;
 - (void)addSendSceneBlockToSequenceWithSceneId:(NSString * _Nonnull)sceneId block:(void (^ _Nonnull)(void))block;
 - (void)cancelRequests;
 - (NSInteger)saveStoreWithExternalId:(NSString * _Nonnull)externalId SWIFT_WARN_UNUSED_RESULT;
-- (void)finishCurrentVisit;
 - (NSString * _Nullable)internalTaskIdWithExternalVisitId:(NSString * _Nonnull)externalVisitId taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
 - (void)logScreenTimeEventWithId:(NSString * _Nonnull)id name:(NSString * _Nonnull)name duration:(NSInteger)duration;
 - (void)startReportTimeTracking;
@@ -937,22 +962,19 @@ SWIFT_CLASS("_TtC10IrLibSwift13IRDataManager")
 - (NSDictionary<NSString *, id> * _Nonnull)visitStatsWithVisitId:(NSString * _Nonnull)visitId photoId:(NSString * _Nullable)photoId SWIFT_WARN_UNUSED_RESULT;
 /// Перезапуск сервиса получения геопопозиции (для выхода из фона)
 - (void)restartLocationService;
-- (NSSet<NSString *> * _Nonnull)visitsWithPhotosIds SWIFT_WARN_UNUSED_RESULT;
-- (void)clearVisitsWithoutPhotos;
-- (void)clearVisitsWithoutPhotosAndFilledAnswers;
 - (id <ImageResizer> _Nonnull)imageResizerWith:(CGFloat)compressionQuality SWIFT_WARN_UNUSED_RESULT;
 - (NSDictionary<NSString *, id> * _Nullable)reportFor:(NSString * _Nonnull)visitId internalTaskId:(NSString * _Nullable)internalTaskId SWIFT_WARN_UNUSED_RESULT;
 - (NSDictionary<NSString *, id> * _Nonnull)additionalStatsFor:(NSString * _Nonnull)externalVisitId internalTaskId:(NSString * _Nullable)internalTaskId SWIFT_WARN_UNUSED_RESULT;
 - (AiletUnsentDataCheckResult * _Nonnull)unsentData SWIFT_WARN_UNUSED_RESULT;
 - (AiletUnsentDataCheckResult * _Nonnull)unsentDataFor:(NSString * _Nullable)visitId SWIFT_WARN_UNUSED_RESULT;
 - (NSInteger)photosCountFor:(NSString * _Nonnull)visitId SWIFT_WARN_UNUSED_RESULT;
-- (NSInteger)notFilledOosReasonsCountFor:(NSString * _Nonnull)externalVisitId SWIFT_WARN_UNUSED_RESULT;
 - (void)showFillReasonsAlertOn:(UIViewController * _Nonnull)vc onAgree:(void (^ _Nullable)(void))agreeHandler;
 - (BOOL)isConnectionAvailable SWIFT_WARN_UNUSED_RESULT;
 - (void)sendOfflineAbsenceReasonsWith:(NSString * _Nonnull)visitId;
-- (void)sendVisitIsClosedWithVisitId:(NSString * _Nonnull)visitId completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 - (BOOL)shouldShowDebugFeatures SWIFT_WARN_UNUSED_RESULT;
 - (void)updateShowDebugFeaturesTo:(BOOL)shouldShow;
+- (void)fetchCatalogsWithCompletion:(void (^ _Nullable)(NSError * _Nullable))completion;
+- (BOOL)shouldFillAbsenceReasonsWithExternalVisitId:(NSString * _Nonnull)externalVisitId SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -1060,8 +1082,8 @@ SWIFT_CLASS("_TtC10IrLibSwift15IRReportFilters")
 @property (nonatomic, readonly) NSInteger storeId;
 @property (nonatomic, readonly, copy) NSString * _Nonnull storeName;
 @property (nonatomic, readonly, copy) NSString * _Nullable taskId;
-@property (nonatomic, readonly, copy) NSString * _Nullable productGroupId;
-@property (nonatomic, readonly, copy) NSString * _Nullable productGroupName;
+@property (nonatomic, readonly, copy) NSString * _Nullable matrixId;
+@property (nonatomic, readonly, copy) NSString * _Nullable matrixName;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -1167,7 +1189,6 @@ SWIFT_CLASS("_TtC10IrLibSwift21IRVisitSharedSettings")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-@class NSData;
 
 SWIFT_PROTOCOL("_TtP10IrLibSwift12ImageResizer_")
 @protocol ImageResizer
@@ -1880,14 +1901,6 @@ SWIFT_CLASS("_TtC10IrLibSwift12TaskQuestion")
 
 
 
-SWIFT_PROTOCOL("_TtP10IrLibSwift30TechSupportInteractionProvider_")
-@protocol TechSupportInteractionProvider
-- (void)logoutWithCompletion:(void (^ _Nullable)(NSError * _Nullable))completion;
-- (void)show;
-- (void)updateDeviceToken:(NSData * _Nonnull)deviceToken;
-@end
-
-
 SWIFT_CLASS("_TtC10IrLibSwift6Thumbs")
 @interface Thumbs : RLMObject
 @property (nonatomic) NSInteger id_;
@@ -2290,6 +2303,15 @@ SWIFT_CLASS("_TtC10IrLibSwift32VisitWidgetReportDataEntityTotal")
 @end
 
 
+SWIFT_CLASS("_TtC10IrLibSwift33VisitWidgetReportMatrixDataEntity")
+@interface VisitWidgetReportMatrixDataEntity : NSObject
+@property (nonatomic, readonly, copy) NSString * _Nonnull id;
+@property (nonatomic, readonly, copy) NSString * _Nonnull name;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
 SWIFT_CLASS("_TtC10IrLibSwift15VisitWidgetTask")
 @interface VisitWidgetTask : RLMObject
 @property (nonatomic, copy) NSString * _Nonnull taskId;
@@ -2322,6 +2344,7 @@ SWIFT_CLASS("_TtC10IrLibSwift21VisitWidgetTaskReport")
 @property (nonatomic, strong) RLMArray<VisitWidgetTaskReportQuestion *> * _Nonnull questions;
 @property (nonatomic) double totalScore;
 @property (nonatomic) double percentage;
+@property (nonatomic) double averagePercentage;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
