@@ -32,7 +32,7 @@ import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
 import simd
-@_inheritsConvenienceInitializers @objc public class Shelf : Realm.RLMObject {
+@_inheritsConvenienceInitializers @objc public class Shelf : RLMObject {
   @objc dynamic public var sceneId: Swift.String
   @objc dynamic public var photoId: Swift.String
   @objc dynamic public var shelfNumber: Swift.String
@@ -41,7 +41,7 @@ import simd
   @objc override dynamic public init()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class ScreenTimeEvent : Realm.RLMObject {
+@_inheritsConvenienceInitializers @objc public class ScreenTimeEvent : RLMObject {
   @objc dynamic public var id: Swift.String
   @objc dynamic public var name: Swift.String
   @objc dynamic public var duration: Swift.Int
@@ -50,7 +50,7 @@ import simd
   @objc override dynamic public init()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class RecognitionResultActualAssortment : Realm.RLMObject {
+@_inheritsConvenienceInitializers @objc public class RecognitionResultActualAssortment : RLMObject {
   @objc dynamic public var productId: Swift.String
   @objc dynamic public var externalId: Swift.String?
   @objc dynamic public var categoryId: Swift.String?
@@ -70,18 +70,18 @@ import simd
   @objc func didTriggerOpenSupport()
   @objc func didTriggerOpenAssortmentMatrixForStoreWithId(_ storeId: Swift.Int)
 }
-@_inheritsConvenienceInitializers @objc public class Route : Realm.RLMObject {
+@_inheritsConvenienceInitializers @objc public class Route : RLMObject {
   @objc dynamic public var id: Swift.String
   @objc dynamic public var beginDate: Swift.String
   @objc dynamic public var endDate: Swift.String
   @objc dynamic public var status: Swift.Int
   @objc dynamic public var comment: Swift.String
-  @objc dynamic public var routePoints: Realm.RLMArray<IrLibSwift.RoutePoint>
+  @objc dynamic public var routePoints: RLMArray<IrLibSwift.RoutePoint>
   @objc override dynamic public class func primaryKey() -> Swift.String?
   @objc override dynamic public init()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class RoutePoint : Realm.RLMObject {
+@_inheritsConvenienceInitializers @objc public class RoutePoint : RLMObject {
   @objc dynamic public var storeId: Swift.Int
   @objc dynamic public var duration: Swift.Int
   @objc dynamic public var startTime: Swift.String
@@ -91,7 +91,7 @@ import simd
   @objc override dynamic public init()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class RecognitionResultRealogram : Realm.RLMObject {
+@_inheritsConvenienceInitializers @objc public class RecognitionResultRealogram : RLMObject {
   @objc dynamic public var id: Swift.String
   @objc dynamic public var productId: Swift.String
   @objc dynamic public var productName: Swift.String?
@@ -156,7 +156,7 @@ public class GradientNavigationBarCustomizer : IrLibSwift.NavigationBarCustomize
   public func updateToCustom()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class Fix_scenes : Realm.RLMObject {
+@_inheritsConvenienceInitializers @objc public class Fix_scenes : RLMObject {
   @objc dynamic public var visit_id: Swift.String
   @objc dynamic public var scene_id: Swift.String
   @objc dynamic public var taskId: Swift.String
@@ -184,7 +184,7 @@ extension UIKit.UICollectionView {
   @_Concurrency.MainActor(unsafe) public func register<T>(headerViewWithXib: T.Type) where T : UIKit.UICollectionReusableView
   @_Concurrency.MainActor(unsafe) public func register<T>(footerViewWithXib: T.Type) where T : UIKit.UICollectionReusableView
 }
-@_inheritsConvenienceInitializers @objc public class ShareShelfCustomCategories : Realm.RLMObject {
+@_inheritsConvenienceInitializers @objc public class ShareShelfCustomCategories : RLMObject {
   @objc dynamic public var visit_id: Swift.String
   @objc dynamic public var expression_name: Swift.String
   @objc dynamic public var expression_id: Swift.String
@@ -197,7 +197,7 @@ extension UIKit.UICollectionView {
   @objc dynamic public var total_width_value: Swift.Int
   @objc dynamic public var relevant_facing: Swift.Int
   @objc dynamic public var relevant_width: Swift.Int
-  @objc dynamic public var brands: Realm.RLMArray<IrLibSwift.ShareShelfCustomBrands>
+  @objc dynamic public var brands: RLMArray<IrLibSwift.ShareShelfCustomBrands>
   @objc override dynamic public init()
   @objc deinit
 }
@@ -228,7 +228,7 @@ public protocol NavigationBarCustomizer {
   func updateToDefault()
   func updateToCustom()
 }
-@_inheritsConvenienceInitializers @objc public class TaskAttachment : Realm.RLMObject {
+@_inheritsConvenienceInitializers @objc public class TaskAttachment : RLMObject {
   @objc override dynamic public init()
   @objc deinit
 }
@@ -315,7 +315,7 @@ public enum GradientDirection {
   @objc override dynamic public init()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class Thumbs : Realm.RLMObject {
+@_inheritsConvenienceInitializers @objc public class Thumbs : RLMObject {
   @objc dynamic public var id_: Swift.Int
   @objc dynamic public var product_id: Swift.String
   @objc dynamic public var url: Swift.String
@@ -323,10 +323,10 @@ public enum GradientDirection {
   @objc override dynamic public init()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class VisitWidget : Realm.RLMObject {
+@_inheritsConvenienceInitializers @objc public class VisitWidget : RLMObject {
   @objc dynamic public var type: Swift.String
-  @objc dynamic public var data: Realm.RLMArray<IrLibSwift.VisitWidgetReport>
-  @objc dynamic public var tasksData: Realm.RLMArray<IrLibSwift.VisitWidgetTaskReport>
+  @objc dynamic public var data: RLMArray<IrLibSwift.VisitWidgetReport>
+  @objc dynamic public var tasksData: RLMArray<IrLibSwift.VisitWidgetTaskReport>
   @objc override dynamic public init()
   @objc deinit
 }
@@ -342,7 +342,7 @@ extension IrLibSwift.AnketDataEntity.Question {
   public struct Answer {
   }
 }
-@_inheritsConvenienceInitializers @objc public class ShareshelfByParentCategories : Realm.RLMObject {
+@_inheritsConvenienceInitializers @objc public class ShareshelfByParentCategories : RLMObject {
   @objc dynamic public var visitId: Swift.String
   @objc dynamic public var productMacrocatId: Swift.String
   @objc dynamic public var productMacrocatName: Swift.String
@@ -368,7 +368,7 @@ extension IrLibSwift.GradientColor {
   public static let orangeToBlue: IrLibSwift.GradientColor
   public static let lightRedToRed: IrLibSwift.GradientColor
 }
-@_inheritsConvenienceInitializers @objc public class Scene : Realm.RLMObject {
+@_inheritsConvenienceInitializers @objc public class Scene : RLMObject {
   @objc dynamic public var visitId: Swift.String
   @objc dynamic public var sceneId: Swift.String
   @objc dynamic public var taskId: Swift.String?
@@ -400,7 +400,7 @@ extension QuartzCore.CAGradientLayer {
   @discardableResult
   public func changeColor(to gradient: IrLibSwift.Gradient) -> QuartzCore.CAGradientLayer
 }
-@_inheritsConvenienceInitializers @objc public class RecognitionResultSceneGroup : Realm.RLMObject {
+@_inheritsConvenienceInitializers @objc public class RecognitionResultSceneGroup : RLMObject {
   @objc dynamic public var id: Swift.Int
   @objc dynamic public var facingFact: Swift.Int
   @objc override dynamic public init()
@@ -494,12 +494,12 @@ extension QuartzCore.CAGradientLayer {
     get
   }
 }
-@_inheritsConvenienceInitializers @objc public class VisitWidgetTaskReportQuestion : Realm.RLMObject {
+@_inheritsConvenienceInitializers @objc public class VisitWidgetTaskReportQuestion : RLMObject {
   @objc dynamic public var questionIndex: Swift.Int
   @objc dynamic public var type: Swift.String
   @objc dynamic public var name: Swift.String
   @objc dynamic public var required: Swift.Bool
-  @objc dynamic public var answers: Realm.RLMArray<IrLibSwift.VisitWidgetTaskReportQuestionAnswer>
+  @objc dynamic public var answers: RLMArray<IrLibSwift.VisitWidgetTaskReportQuestionAnswer>
   @objc override dynamic public init()
   @objc deinit
 }
@@ -643,7 +643,7 @@ extension Swift.String {
     get
   }
 }
-@_inheritsConvenienceInitializers @objc public class VisitWidgetTotal : Realm.RLMObject {
+@_inheritsConvenienceInitializers @objc public class VisitWidgetTotal : RLMObject {
   @objc dynamic public var value: Swift.Double
   @objc dynamic public var diff: Swift.Double
   @objc dynamic public var numerator: Swift.Double
@@ -653,7 +653,7 @@ extension Swift.String {
   @objc override dynamic public init()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class VisitWidgetMacroCategoryTotal : Realm.RLMObject {
+@_inheritsConvenienceInitializers @objc public class VisitWidgetMacroCategoryTotal : RLMObject {
   @objc dynamic public var value: Swift.Double
   @objc dynamic public var percent: Swift.Double
   @objc dynamic public var matched: Swift.Double
@@ -741,12 +741,12 @@ extension IrLibSwift.NetworkReachability {
     get
   }
 }
-@_inheritsConvenienceInitializers @objc public class RecognitionResultWidth : Realm.RLMObject {
+@_inheritsConvenienceInitializers @objc public class RecognitionResultWidth : RLMObject {
   @objc dynamic public var cm: Swift.Double
   @objc override dynamic public init()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class VisitWidgetAssortmentGroup : Realm.RLMObject {
+@_inheritsConvenienceInitializers @objc public class VisitWidgetAssortmentGroup : RLMObject {
   @objc dynamic public var planBySku: Swift.Int
   @objc dynamic public var osaBySku: Swift.Int
   @objc dynamic public var osaBySkuPercentage: Swift.Double
@@ -756,7 +756,7 @@ extension IrLibSwift.NetworkReachability {
   @objc dynamic public var planByFacing: Swift.Int
   @objc dynamic public var osaByFacing: Swift.Int
   @objc dynamic public var osaByFacingPercentage: Swift.Double
-  @objc dynamic public var products: Realm.RLMArray<IrLibSwift.VisitWidgetProduct>
+  @objc dynamic public var products: RLMArray<IrLibSwift.VisitWidgetProduct>
   @objc dynamic public var assortmentGroupName: Swift.String?
   @objc override dynamic public init()
   @objc deinit
@@ -769,7 +769,7 @@ extension IrLibSwift.NetworkReachability {
   @objc func authorizeOnAllAvailablePortals(login: Swift.String, password: Swift.String, externalUserId: Swift.String, completion: @escaping (Foundation.NSError?) -> Swift.Void)
   @objc func updateActivePortal(rootDomain: Swift.String) throws
 }
-@_inheritsConvenienceInitializers @objc public class Scene_types : Realm.RLMObject {
+@_inheritsConvenienceInitializers @objc public class Scene_types : RLMObject {
   @objc dynamic public var id_: Swift.Int
   @objc dynamic public var name: Swift.String
   @objc dynamic public var short_name: Swift.String
@@ -784,7 +784,7 @@ extension IrLibSwift.NetworkReachability {
 extension UIKit.UIColor {
   convenience public init(hex: Swift.String)
 }
-@_inheritsConvenienceInitializers @objc public class ShareShelfCustom : Realm.RLMObject {
+@_inheritsConvenienceInitializers @objc public class ShareShelfCustom : RLMObject {
   @objc dynamic public var visit_id: Swift.String
   @objc dynamic public var expression_name: Swift.String
   @objc dynamic public var expression_id: Swift.String
@@ -794,7 +794,7 @@ extension UIKit.UIColor {
   @objc dynamic public var relevant_width: Swift.Int
   @objc dynamic public var total_facing_value: Swift.Int
   @objc dynamic public var total_width_value: Swift.Int
-  @objc dynamic public var categories: Realm.RLMArray<IrLibSwift.ShareShelfCustomCategories>
+  @objc dynamic public var categories: RLMArray<IrLibSwift.ShareShelfCustomCategories>
   @objc override dynamic public init()
   @objc deinit
 }
@@ -810,7 +810,7 @@ public class TransparentNavigationBarCustomizer : IrLibSwift.NavigationBarCustom
   public func updateToCustom()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class VisitTask : Realm.RLMObject {
+@_inheritsConvenienceInitializers @objc public class VisitTask : RLMObject {
   @objc dynamic public var taskId: Swift.String
   @objc dynamic public var taskPk: Swift.Int
   @objc dynamic public var internalId: Swift.String
@@ -820,12 +820,12 @@ public class TransparentNavigationBarCustomizer : IrLibSwift.NavigationBarCustom
   @objc dynamic public var isRequired: Swift.Bool
   @objc dynamic public var shouldUseAllVisitPhotos: Swift.Bool
   @objc dynamic public var isPhotoRequired: Swift.Bool
-  @objc dynamic public var sceneTypeIds: Realm.RLMArray<IrLibSwift.RealmString>
+  @objc dynamic public var sceneTypeIds: RLMArray<IrLibSwift.RealmString>
   @objc dynamic public var order: Swift.Int
   @objc dynamic public var visitImage: Swift.String?
-  @objc dynamic public var attachments: Realm.RLMArray<IrLibSwift.TaskAttachment>
-  @objc dynamic public var kpis: Realm.RLMArray<IrLibSwift.TaskKpi>
-  @objc dynamic public var questions: Realm.RLMArray<IrLibSwift.TaskQuestion>
+  @objc dynamic public var attachments: RLMArray<IrLibSwift.TaskAttachment>
+  @objc dynamic public var kpis: RLMArray<IrLibSwift.TaskKpi>
+  @objc dynamic public var questions: RLMArray<IrLibSwift.TaskQuestion>
   @objc dynamic public var matrixType: Swift.String
   @objc dynamic public var totalScoreCountType: Swift.String
   @objc dynamic public var isExistScoreFormula: Swift.Bool
@@ -833,7 +833,7 @@ public class TransparentNavigationBarCustomizer : IrLibSwift.NavigationBarCustom
   @objc override dynamic public init()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class Store : Realm.RLMObject {
+@_inheritsConvenienceInitializers @objc public class Store : RLMObject {
   @objc dynamic public var storeId: Swift.Int
   @objc dynamic public var storeIdString: Swift.String
   @objc dynamic public var externalId: Swift.String?
@@ -866,7 +866,7 @@ public struct ReportFilter {
 }
 @objc public protocol AiletDbConfigProvider {
   @objc var dbVersion: Swift.Int { get }
-  @objc func realmConfig(shouldUseCommonCopy: Swift.Bool) -> Realm.RLMRealmConfiguration
+  @objc func realmConfig(shouldUseCommonCopy: Swift.Bool) -> RLMRealmConfiguration
 }
 @_inheritsConvenienceInitializers @objc @_Concurrency.MainActor(unsafe) public class SOSReportListCollectionViewCell : UIKit.UICollectionViewCell {
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
@@ -892,13 +892,13 @@ extension UIKit.UIImage {
   @objc func didTriggerOpenSummaryReportForStoreWithId(_ storeId: Swift.Int)
   @objc func didTriggerOpenSupport()
 }
-@_inheritsConvenienceInitializers @objc public class RecognitionResultScene : Realm.RLMObject {
+@_inheritsConvenienceInitializers @objc public class RecognitionResultScene : RLMObject {
   @objc dynamic public var id: Swift.String
   @objc dynamic public var facingFact: Swift.Int
   @objc override dynamic public init()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class VisitWidgetProduct : Realm.RLMObject {
+@_inheritsConvenienceInitializers @objc public class VisitWidgetProduct : RLMObject {
   @objc dynamic public var plan: Swift.Int
   @objc dynamic public var facingFact: Swift.Int
   @objc dynamic public var osaByFacing: Swift.Int
@@ -945,7 +945,7 @@ extension UIKit.UIImage {
   @objc override dynamic public init()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class VisitWidgetTask : Realm.RLMObject {
+@_inheritsConvenienceInitializers @objc public class VisitWidgetTask : RLMObject {
   @objc dynamic public var taskId: Swift.String
   @objc dynamic public var planBySku: Swift.Int
   @objc dynamic public var osaBySku: Swift.Int
@@ -956,8 +956,8 @@ extension UIKit.UIImage {
   @objc dynamic public var planByFacing: Swift.Int
   @objc dynamic public var osaByFacing: Swift.Int
   @objc dynamic public var osaByFacingPercentage: Swift.Double
-  @objc dynamic public var products: Realm.RLMArray<IrLibSwift.VisitWidgetProduct>
-  @objc dynamic public var macroCategories: Realm.RLMArray<IrLibSwift.VisitWidgetMacroCategory>
+  @objc dynamic public var products: RLMArray<IrLibSwift.VisitWidgetProduct>
+  @objc dynamic public var macroCategories: RLMArray<IrLibSwift.VisitWidgetMacroCategory>
   @objc override dynamic public init()
   @objc deinit
 }
@@ -967,23 +967,23 @@ extension CoreGraphics.CGContext {
 extension CoreGraphics.CGImage {
   public func hasAlpha() -> Swift.Bool
 }
-@_inheritsConvenienceInitializers @objc public class VisitWidgetPlanogram : Realm.RLMObject {
+@_inheritsConvenienceInitializers @objc public class VisitWidgetPlanogram : RLMObject {
   @objc override dynamic public init()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class VisitWidgetPlanogramProduct : Realm.RLMObject {
+@_inheritsConvenienceInitializers @objc public class VisitWidgetPlanogramProduct : RLMObject {
   @objc override dynamic public init()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class VisitWidgetPlanogramMetricError : Realm.RLMObject {
+@_inheritsConvenienceInitializers @objc public class VisitWidgetPlanogramMetricError : RLMObject {
   @objc override dynamic public init()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class VisitWidgetPlanogramItem : Realm.RLMObject {
+@_inheritsConvenienceInitializers @objc public class VisitWidgetPlanogramItem : RLMObject {
   @objc override dynamic public init()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class VisitWidgetPlanogramMetricErrorItem : Realm.RLMObject {
+@_inheritsConvenienceInitializers @objc public class VisitWidgetPlanogramMetricErrorItem : RLMObject {
   @objc override dynamic public init()
   @objc deinit
 }
@@ -1033,7 +1033,7 @@ public struct PhotosResultOldAssortmentEntity : Swift.Decodable {
   @objc final public let diff: Swift.Double
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers @objcMembers public class Photo : Realm.RLMObject {
+@objc @_inheritsConvenienceInitializers @objcMembers public class Photo : RLMObject {
   @objc dynamic public var photoId: Swift.String
   @objc dynamic public var storeId: Swift.Int
   @objc dynamic public var externalStoreId: Swift.String?
@@ -1076,8 +1076,8 @@ public struct PhotosResultOldAssortmentEntity : Swift.Decodable {
   @objc dynamic public var timeNextAttemptToSendPhoto: Swift.Int
   @objc dynamic public var recognitionResultAttemptsCounter: Swift.Int
   @objc dynamic public var timeNextAttemptToRecognitionResult: Swift.Int
-  @objc dynamic public var realogram: Realm.RLMArray<IrLibSwift.RecognitionResultRealogram>
-  @objc dynamic public var actualAssortment: Realm.RLMArray<IrLibSwift.RecognitionResultActualAssortment>
+  @objc dynamic public var realogram: RLMArray<IrLibSwift.RecognitionResultRealogram>
+  @objc dynamic public var actualAssortment: RLMArray<IrLibSwift.RecognitionResultActualAssortment>
   @objc dynamic public var domain: Swift.String?
   @objc dynamic public var isRecognizedOffline: Swift.Bool
   @objc dynamic public var isPuzzle: Swift.Bool
@@ -1153,7 +1153,7 @@ extension IrLibSwift.AiletFonts {
     @objc deinit
   }
 }
-@objc @_inheritsConvenienceInitializers public class TaskKpi : Realm.RLMObject {
+@objc @_inheritsConvenienceInitializers public class TaskKpi : RLMObject {
   @objc dynamic public var name: Swift.String
   @objc override dynamic public init()
   @objc deinit
@@ -1193,7 +1193,7 @@ public enum Shadows {
   public static let elevation200: IrLibSwift.ComplexShadow
   public static let elevation300: IrLibSwift.ComplexShadow
 }
-@_inheritsConvenienceInitializers @objc public class DeletedPhoto : Realm.RLMObject {
+@_inheritsConvenienceInitializers @objc public class DeletedPhoto : RLMObject {
   @objc dynamic public var photoId: Swift.String
   @objc dynamic public var visitId: Swift.String
   @objc dynamic public var state: Swift.Int
@@ -1319,7 +1319,7 @@ public struct CGLine : Swift.Equatable {
   public let to: CoreFoundation.CGPoint
   public static func == (a: IrLibSwift.CGLine, b: IrLibSwift.CGLine) -> Swift.Bool
 }
-@_inheritsConvenienceInitializers @objc public class Shareshelf_by_brands : Realm.RLMObject {
+@_inheritsConvenienceInitializers @objc public class Shareshelf_by_brands : RLMObject {
   @objc dynamic public var visit_id: Swift.String
   @objc dynamic public var is_own: Swift.Int
   @objc dynamic public var brand_id: Swift.String
@@ -1340,7 +1340,7 @@ public struct CGLine : Swift.Equatable {
   @objc final public let username: Swift.String
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class VisitWidgetCategory : Realm.RLMObject {
+@_inheritsConvenienceInitializers @objc public class VisitWidgetCategory : RLMObject {
   @objc dynamic public var productCategoryId: Swift.String
   @objc dynamic public var productCategoryName: Swift.String
   @objc dynamic public var facingCount: Swift.Double
@@ -1355,7 +1355,7 @@ public struct CGLine : Swift.Equatable {
   @objc dynamic public var facingTotalWigth: Swift.Double
   @objc dynamic public var groupTotalCount: Swift.Double
   @objc dynamic public var groupTotalWidth: Swift.Double
-  @objc dynamic public var brands: Realm.RLMArray<IrLibSwift.VisitWidgetBrand>
+  @objc dynamic public var brands: RLMArray<IrLibSwift.VisitWidgetBrand>
   @objc dynamic public var total: IrLibSwift.VisitWidgetMacroCategoryTotal?
   @objc override dynamic public init()
   @objc deinit
@@ -1371,26 +1371,26 @@ public class LegacyGradientNavigationBarCustomizer : IrLibSwift.NavigationBarCus
   public func updateToCustom()
   @objc deinit
 }
-extension Realm.RLMRealm {
+extension RLMRealm {
   @nonobjc public class func schemaVersion(at url: Foundation.URL, usingEncryptionKey key: Foundation.Data? = nil) throws -> Swift.UInt64
-  @nonobjc public func resolve<Confined>(reference: Realm.RLMThreadSafeReference<Confined>) -> Confined? where Confined : Realm.RLMThreadConfined
+  @nonobjc public func resolve<Confined>(reference: RLMThreadSafeReference<Confined>) -> Confined? where Confined : RLMThreadConfined
 }
-extension Realm.RLMObject {
-  public class func objects(where predicateFormat: Swift.String, _ args: any Swift.CVarArg...) -> Realm.RLMResults<Realm.RLMObject>
-  public class func objects(in realm: Realm.RLMRealm, where predicateFormat: Swift.String, _ args: any Swift.CVarArg...) -> Realm.RLMResults<Realm.RLMObject>
+extension RLMObject {
+  public class func objects(where predicateFormat: Swift.String, _ args: any Swift.CVarArg...) -> RLMResults<RLMObject>
+  public class func objects(in realm: RLMRealm, where predicateFormat: Swift.String, _ args: any Swift.CVarArg...) -> RLMResults<RLMObject>
 }
 public struct RLMIterator<T> : Swift.IteratorProtocol {
   public mutating func next() -> T?
   public typealias Element = T
 }
-extension Realm.RLMCollection {
-  public func makeIterator() -> IrLibSwift.RLMIterator<Realm.RLMObject>
+extension RLMCollection {
+  public func makeIterator() -> IrLibSwift.RLMIterator<RLMObject>
 }
-extension Realm.RLMCollection {
+extension RLMCollection {
   public func indexOfObject(where predicateFormat: Swift.String, _ args: any Swift.CVarArg...) -> Swift.UInt?
-  public func objects(where predicateFormat: Swift.String, _ args: any Swift.CVarArg...) -> Realm.RLMResults<ObjectiveC.NSObject>
+  public func objects(where predicateFormat: Swift.String, _ args: any Swift.CVarArg...) -> RLMResults<ObjectiveC.NSObject>
 }
-@_inheritsConvenienceInitializers @objc public class VisitWidgetMacroCategory : Realm.RLMObject {
+@_inheritsConvenienceInitializers @objc public class VisitWidgetMacroCategory : RLMObject {
   @objc dynamic public var planBySku: Swift.Int
   @objc dynamic public var osaBySku: Swift.Int
   @objc dynamic public var osaBySkuPercentage: Swift.Double
@@ -1400,10 +1400,10 @@ extension Realm.RLMCollection {
   @objc dynamic public var planByFacing: Swift.Int
   @objc dynamic public var osaByFacing: Swift.Int
   @objc dynamic public var osaByFacingPercentage: Swift.Double
-  @objc dynamic public var products: Realm.RLMArray<IrLibSwift.VisitWidgetProduct>
+  @objc dynamic public var products: RLMArray<IrLibSwift.VisitWidgetProduct>
   @objc dynamic public var macroCategoryId: Swift.String
   @objc dynamic public var macroCategoryName: Swift.String
-  @objc dynamic public var assortmentGroups: Realm.RLMArray<IrLibSwift.VisitWidgetAssortmentGroup>
+  @objc dynamic public var assortmentGroups: RLMArray<IrLibSwift.VisitWidgetAssortmentGroup>
   @objc dynamic public var value: Swift.Int
   @objc dynamic public var facingTotalCount: Swift.Double
   @objc dynamic public var facingMatchedCount: Swift.Double
@@ -1413,7 +1413,7 @@ extension Realm.RLMCollection {
   @objc dynamic public var facingPercentageWidth: Swift.Double
   @objc dynamic public var groupTotalCount: Swift.Double
   @objc dynamic public var groupMatchedWidth: Swift.Double
-  @objc dynamic public var categories: Realm.RLMArray<IrLibSwift.VisitWidgetCategory>
+  @objc dynamic public var categories: RLMArray<IrLibSwift.VisitWidgetCategory>
   @objc dynamic public var total: IrLibSwift.VisitWidgetMacroCategoryTotal?
   @objc override dynamic public init()
   @objc deinit
@@ -1493,7 +1493,7 @@ public enum Colors {
     public static let oos: IrLibSwift.Gradient
   }
 }
-@_inheritsConvenienceInitializers @objc public class VisitWidgetBrand : Realm.RLMObject {
+@_inheritsConvenienceInitializers @objc public class VisitWidgetBrand : RLMObject {
   @objc dynamic public var planBySku: Swift.Int
   @objc dynamic public var osaBySku: Swift.Int
   @objc dynamic public var osaBySkuPercentage: Swift.Double
@@ -1503,10 +1503,10 @@ public enum Colors {
   @objc dynamic public var planByFacing: Swift.Int
   @objc dynamic public var osaByFacing: Swift.Int
   @objc dynamic public var osaByFacingPercentage: Swift.Double
-  @objc dynamic public var products: Realm.RLMArray<IrLibSwift.VisitWidgetProduct>
+  @objc dynamic public var products: RLMArray<IrLibSwift.VisitWidgetProduct>
   @objc dynamic public var brandId: Swift.String
   @objc dynamic public var brandName: Swift.String
-  @objc dynamic public var assortmentGroups: Realm.RLMArray<IrLibSwift.VisitWidgetAssortmentGroup>
+  @objc dynamic public var assortmentGroups: RLMArray<IrLibSwift.VisitWidgetAssortmentGroup>
   @objc dynamic public var isOwn: Swift.Bool
   @objc dynamic public var facingCount: Swift.Double
   @objc dynamic public var facingPercentageCount: Swift.Double
@@ -1526,7 +1526,7 @@ public enum Colors {
   @objc func didOpenScreenWithInactiveVisit()
   @objc func didLeaveVisitRelatedScreen()
 }
-@objc @_inheritsConvenienceInitializers @objcMembers public class Visit : Realm.RLMObject {
+@objc @_inheritsConvenienceInitializers @objcMembers public class Visit : RLMObject {
   @objc dynamic public var visitId: Swift.String
   @objc dynamic public var retailTaskId: Swift.String?
   @objc dynamic public var retailTaskIterationId: Swift.String?
@@ -1555,11 +1555,11 @@ public enum Colors {
   @objc dynamic public var hadPhotos: Swift.Bool
   @objc @available(*, deprecated, message: "To be deleted very soon")
   dynamic public var resultOldAssortment: IrLibSwift.RecognitionResultOldAssortment?
-  @objc dynamic public var widgets: Realm.RLMArray<IrLibSwift.VisitWidget>
+  @objc dynamic public var widgets: RLMArray<IrLibSwift.VisitWidget>
   @objc dynamic public var latitude: Swift.Double
   @objc dynamic public var longitude: Swift.Double
   @objc dynamic public var isDownloaded: Swift.Bool
-  @objc dynamic public var tasks: Realm.RLMArray<IrLibSwift.VisitTask>
+  @objc dynamic public var tasks: RLMArray<IrLibSwift.VisitTask>
   @objc dynamic public var wasFinished: Swift.Bool
   @objc dynamic public var routeId: Swift.String
   @objc override dynamic public class func primaryKey() -> Swift.String?
@@ -1569,7 +1569,7 @@ public enum Colors {
   @objc override dynamic public init()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class TaskAnswer : Realm.RLMObject {
+@_inheritsConvenienceInitializers @objc public class TaskAnswer : RLMObject {
   @objc dynamic public var index: Swift.Int
   @objc dynamic public var type: Swift.String
   @objc dynamic public var name: Swift.String
@@ -1577,7 +1577,7 @@ public enum Colors {
   @objc override dynamic public init()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class Segment : Realm.RLMObject {
+@_inheritsConvenienceInitializers @objc public class Segment : RLMObject {
   @objc dynamic public var segmentId: Swift.String
   @objc dynamic public var segmentPk: Swift.Int
   @objc dynamic public var name: Swift.String
@@ -1591,14 +1591,14 @@ extension Swift.KeyedDecodingContainer {
   public func decodeDoubleFromIntOrDouble(forKey key: K) throws -> Swift.Double?
   public func decodeIntFromDoubleOrInt(forKey key: K) throws -> Swift.Int?
 }
-@_inheritsConvenienceInitializers @objc public class VisitWidgetTaskReport : Realm.RLMObject {
+@_inheritsConvenienceInitializers @objc public class VisitWidgetTaskReport : RLMObject {
   @objc dynamic public var taskId: Swift.String?
   @objc dynamic public var name: Swift.String?
   @objc dynamic public var total: IrLibSwift.VisitWidgetTotal?
-  @objc dynamic public var products: Realm.RLMArray<IrLibSwift.VisitWidgetProduct>
-  @objc dynamic public var matrices: Realm.RLMArray<IrLibSwift.VisitWidgetReport>
-  @objc dynamic public var kpis: Realm.RLMArray<IrLibSwift.VisitWidgetTaskReportKPI>
-  @objc dynamic public var questions: Realm.RLMArray<IrLibSwift.VisitWidgetTaskReportQuestion>
+  @objc dynamic public var products: RLMArray<IrLibSwift.VisitWidgetProduct>
+  @objc dynamic public var matrices: RLMArray<IrLibSwift.VisitWidgetReport>
+  @objc dynamic public var kpis: RLMArray<IrLibSwift.VisitWidgetTaskReportKPI>
+  @objc dynamic public var questions: RLMArray<IrLibSwift.VisitWidgetTaskReportQuestion>
   @objc dynamic public var totalScore: Swift.Double
   @objc dynamic public var percentage: Swift.Double
   @objc dynamic public var averagePercentage: Swift.Double
@@ -1640,7 +1640,7 @@ public struct Gradient {
   public let direction: IrLibSwift.GradientDirection
   public init(color: IrLibSwift.GradientColor, locations: [Foundation.NSNumber], direction: IrLibSwift.GradientDirection)
 }
-@_inheritsConvenienceInitializers @objc public class RealmString : Realm.RLMObject {
+@_inheritsConvenienceInitializers @objc public class RealmString : RLMObject {
   @objc dynamic public var stringValue: Swift.String
   @objc override dynamic public init()
   @objc deinit
@@ -1681,7 +1681,7 @@ public struct Gradient {
   @objc public func debugFeaturesViewController() -> UIKit.UIViewController
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class Shareshelf : Realm.RLMObject {
+@_inheritsConvenienceInitializers @objc public class Shareshelf : RLMObject {
   @objc dynamic public var visit_id: Swift.String
   @objc dynamic public var value: Swift.Int
   @objc dynamic public var value_previous: Swift.Int
@@ -1690,7 +1690,7 @@ public struct Gradient {
   @objc override dynamic public init()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class RecognitionResultAssortmentAchievement : Realm.RLMObject {
+@_inheritsConvenienceInitializers @objc public class RecognitionResultAssortmentAchievement : RLMObject {
   @objc dynamic public var primaryKey: Swift.String
   @objc dynamic public var id: Swift.String
   @objc dynamic public var facingPlan: Swift.Int
@@ -1707,9 +1707,9 @@ public struct Gradient {
   @objc dynamic public var categoryId: Swift.String?
   @objc dynamic public var isKey: Swift.Bool
   @objc dynamic public var facingReal: Swift.Int
-  @objc dynamic public var productGroup: Realm.RLMArray<IrLibSwift.RecognitionResultProductGroup>
-  @objc dynamic public var scene: Realm.RLMArray<IrLibSwift.RecognitionResultScene>
-  @objc dynamic public var sceneGroup: Realm.RLMArray<IrLibSwift.RecognitionResultSceneGroup>
+  @objc dynamic public var productGroup: RLMArray<IrLibSwift.RecognitionResultProductGroup>
+  @objc dynamic public var scene: RLMArray<IrLibSwift.RecognitionResultScene>
+  @objc dynamic public var sceneGroup: RLMArray<IrLibSwift.RecognitionResultSceneGroup>
   @objc dynamic public var price: Swift.String?
   @objc dynamic public var isYellowPrice: Swift.Bool
   @objc override dynamic public class func primaryKey() -> Swift.String?
@@ -1725,7 +1725,7 @@ public struct Gradient {
   @_Concurrency.MainActor(unsafe) public func setupShadow(_ complexShadow: IrLibSwift.ComplexShadow, radius: CoreFoundation.CGFloat)
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class VisitWidgetReport : Realm.RLMObject {
+@_inheritsConvenienceInitializers @objc public class VisitWidgetReport : RLMObject {
   @objc dynamic public var total: IrLibSwift.VisitWidgetTotal?
   @objc dynamic public var matrixType: Swift.String
   @objc dynamic public var matrixTypeName: Swift.String
@@ -1738,14 +1738,14 @@ public struct Gradient {
   @objc dynamic public var planByFacing: Swift.Int
   @objc dynamic public var osaByFacing: Swift.Int
   @objc dynamic public var osaByFacingPercentage: Swift.Double
-  @objc dynamic public var products: Realm.RLMArray<IrLibSwift.VisitWidgetProduct>
-  @objc dynamic public var assortmentGroups: Realm.RLMArray<IrLibSwift.VisitWidgetAssortmentGroup>
-  @objc dynamic public var macroCategories: Realm.RLMArray<IrLibSwift.VisitWidgetMacroCategory>
-  @objc dynamic public var brandOwners: Realm.RLMArray<IrLibSwift.VisitWidgetBrandOwner>
-  @objc dynamic public var brands: Realm.RLMArray<IrLibSwift.VisitWidgetBrand>
-  @objc dynamic public var photos: Realm.RLMArray<IrLibSwift.VisitWidgetPhoto>
+  @objc dynamic public var products: RLMArray<IrLibSwift.VisitWidgetProduct>
+  @objc dynamic public var assortmentGroups: RLMArray<IrLibSwift.VisitWidgetAssortmentGroup>
+  @objc dynamic public var macroCategories: RLMArray<IrLibSwift.VisitWidgetMacroCategory>
+  @objc dynamic public var brandOwners: RLMArray<IrLibSwift.VisitWidgetBrandOwner>
+  @objc dynamic public var brands: RLMArray<IrLibSwift.VisitWidgetBrand>
+  @objc dynamic public var photos: RLMArray<IrLibSwift.VisitWidgetPhoto>
   @objc dynamic public var planogram: IrLibSwift.VisitWidgetPlanogram?
-  @objc dynamic public var tasks: Realm.RLMArray<IrLibSwift.VisitWidgetTask>
+  @objc dynamic public var tasks: RLMArray<IrLibSwift.VisitWidgetTask>
   @objc dynamic public var id: Swift.String
   @objc dynamic public var name: Swift.String
   @objc dynamic public var main: Swift.Bool
@@ -1761,7 +1761,7 @@ public struct Gradient {
   public static func showVideoTutorialCarousel()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class Shareshelf_by_categories : Realm.RLMObject {
+@_inheritsConvenienceInitializers @objc public class Shareshelf_by_categories : RLMObject {
   @objc dynamic public var visit_id: Swift.String
   @objc dynamic public var product_category_id: Swift.String
   @objc dynamic public var product_category_name: Swift.String
@@ -1774,7 +1774,7 @@ public struct Gradient {
   @objc override dynamic public init()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class SceneType : Realm.RLMObject {
+@_inheritsConvenienceInitializers @objc public class SceneType : RLMObject {
   @objc dynamic public var id: Swift.Int
   @objc dynamic public var name: Swift.String
   @objc dynamic public var shortName: Swift.String
@@ -1817,19 +1817,19 @@ public struct PortalEntity : Swift.Decodable {
   public let type: Swift.String
   public init(from decoder: any Swift.Decoder) throws
 }
-@_inheritsConvenienceInitializers @objc public class TaskQuestion : Realm.RLMObject {
+@_inheritsConvenienceInitializers @objc public class TaskQuestion : RLMObject {
   @objc dynamic public var index: Swift.Int
   @objc dynamic public var type: Swift.String
   @objc dynamic public var name: Swift.String
   @objc dynamic public var isRequired: Swift.Bool
-  @objc dynamic public var answers: Realm.RLMArray<IrLibSwift.TaskAnswer>
-  @objc dynamic public var selectedAnswers: Realm.RLMArray<IrLibSwift.RealmInt>
+  @objc dynamic public var answers: RLMArray<IrLibSwift.TaskAnswer>
+  @objc dynamic public var selectedAnswers: RLMArray<IrLibSwift.RealmInt>
   @objc dynamic public var enteredAnswer: Swift.String?
-  @objc override dynamic public class func linkingObjectsProperties() -> [Swift.String : Realm.RLMPropertyDescriptor]
+  @objc override dynamic public class func linkingObjectsProperties() -> [Swift.String : RLMPropertyDescriptor]
   @objc override dynamic public init()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class VisitWidgetBrandOwner : Realm.RLMObject {
+@_inheritsConvenienceInitializers @objc public class VisitWidgetBrandOwner : RLMObject {
   @objc dynamic public var planBySku: Swift.Int
   @objc dynamic public var osaBySku: Swift.Int
   @objc dynamic public var osaBySkuPercentage: Swift.Double
@@ -1839,10 +1839,10 @@ public struct PortalEntity : Swift.Decodable {
   @objc dynamic public var planByFacing: Swift.Int
   @objc dynamic public var osaByFacing: Swift.Int
   @objc dynamic public var osaByFacingPercentage: Swift.Double
-  @objc dynamic public var products: Realm.RLMArray<IrLibSwift.VisitWidgetProduct>
+  @objc dynamic public var products: RLMArray<IrLibSwift.VisitWidgetProduct>
   @objc dynamic public var brandOwnerId: Swift.String
   @objc dynamic public var brandOwnerName: Swift.String
-  @objc dynamic public var assortmentGroups: Realm.RLMArray<IrLibSwift.VisitWidgetAssortmentGroup>
+  @objc dynamic public var assortmentGroups: RLMArray<IrLibSwift.VisitWidgetAssortmentGroup>
   @objc override dynamic public init()
   @objc deinit
 }
@@ -1851,7 +1851,7 @@ public struct PortalEntity : Swift.Decodable {
   @objc final public let name: Swift.String
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers public class RealmInt : Realm.RLMObject {
+@objc @_inheritsConvenienceInitializers public class RealmInt : RLMObject {
   @objc dynamic public var integerValue: Swift.Int
   @objc override dynamic public init()
   @objc deinit
@@ -1865,7 +1865,7 @@ extension UIKit.UITableView {
   @objc override dynamic public init()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class RecognitionResultProductGroup : Realm.RLMObject {
+@_inheritsConvenienceInitializers @objc public class RecognitionResultProductGroup : RLMObject {
   @objc dynamic public var name: Swift.String
   @objc dynamic public var code: Swift.String
   @objc dynamic public var value: Swift.Int
@@ -1887,7 +1887,7 @@ public struct ComplexShadow {
   @objc override dynamic public init()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class RecognitionResultValue : Realm.RLMObject {
+@_inheritsConvenienceInitializers @objc public class RecognitionResultValue : RLMObject {
   @objc dynamic public var id: Swift.String
   @objc dynamic public var name: Swift.String?
   @objc dynamic public var plan: Swift.Int
@@ -1968,7 +1968,7 @@ extension IrLibSwift.ShadowShowing where Self : UIKit.UIView {
   @available(*, deprecated, message: "Please use ShadowView class instead of this method")
   public func showShadows()
 }
-@_inheritsConvenienceInitializers @objc public class MetricsPlan : Realm.RLMObject {
+@_inheritsConvenienceInitializers @objc public class MetricsPlan : RLMObject {
   @objc dynamic public var metricId: Swift.Int
   @objc dynamic public var plan: Swift.Double
   @objc dynamic public var storeId: Swift.Int
@@ -1979,7 +1979,7 @@ extension IrLibSwift.ShadowShowing where Self : UIKit.UIView {
   @objc override dynamic public init()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class ProductGroup : Realm.RLMObject {
+@_inheritsConvenienceInitializers @objc public class ProductGroup : RLMObject {
   @objc dynamic public var visit_id: Swift.String
   @objc dynamic public var store_id: Swift.Int
   @objc dynamic public var product_group_code: Swift.String
@@ -1989,14 +1989,14 @@ extension IrLibSwift.ShadowShowing where Self : UIKit.UIView {
   @objc deinit
 }
 @_inheritsConvenienceInitializers @available(*, deprecated, message: "To be deleted very soon")
-@objc public class RecognitionResultOldAssortment : Realm.RLMObject {
-  @objc dynamic public var assortmentAchievement: Realm.RLMArray<IrLibSwift.RecognitionResultAssortmentAchievement>
+@objc public class RecognitionResultOldAssortment : RLMObject {
+  @objc dynamic public var assortmentAchievement: RLMArray<IrLibSwift.RecognitionResultAssortmentAchievement>
   @objc dynamic public var performanceAssortment: Swift.Int
   @objc dynamic public var performanceAssortmentDelta: Swift.Double
   @objc override dynamic public init()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class Shelves : Realm.RLMObject {
+@_inheritsConvenienceInitializers @objc public class Shelves : RLMObject {
   @objc dynamic public var scene_id: Swift.String
   @objc dynamic public var photo_id: Swift.String
   @objc dynamic public var shelf_number: Swift.String
@@ -2021,7 +2021,7 @@ extension UIKit.UITableView {
 @objc public protocol CameraModuleOutput {
   @objc func didCompleteCapture()
 }
-@_inheritsConvenienceInitializers @objc public class VisitWidgetTaskReportKPI : Realm.RLMObject {
+@_inheritsConvenienceInitializers @objc public class VisitWidgetTaskReportKPI : RLMObject {
   @objc dynamic public var name: Swift.String
   @objc dynamic public var metricType: Swift.String
   @objc dynamic public var matrixType: Swift.String
@@ -2056,7 +2056,7 @@ extension IrLibSwift.Perspective : Swift.CustomDebugStringConvertible {
     get
   }
 }
-@objc @_inheritsConvenienceInitializers public class VisitWidgetPhoto : Realm.RLMObject {
+@objc @_inheritsConvenienceInitializers public class VisitWidgetPhoto : RLMObject {
   @objc override dynamic public init()
   @objc deinit
 }
@@ -2074,7 +2074,7 @@ extension IrLibSwift.Perspective : Swift.CustomDebugStringConvertible {
   @objc dynamic public func updateDeviceToken(_ deviceToken: Foundation.Data)
 }
 public typealias SceneTypeId = Swift.Int
-@_inheritsConvenienceInitializers @objc public class ShareShelfCustomBrands : Realm.RLMObject {
+@_inheritsConvenienceInitializers @objc public class ShareShelfCustomBrands : RLMObject {
   @objc dynamic public var visit_id: Swift.String
   @objc dynamic public var expression_name: Swift.String
   @objc dynamic public var expression_id: Swift.String
@@ -2090,7 +2090,7 @@ public typealias SceneTypeId = Swift.Int
   @objc override dynamic public init()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class VisitWidgetTaskReportQuestionAnswer : Realm.RLMObject {
+@_inheritsConvenienceInitializers @objc public class VisitWidgetTaskReportQuestionAnswer : RLMObject {
   @objc dynamic public var index: Swift.Int
   @objc dynamic public var name: Swift.String
   @objc dynamic public var type: Swift.String
