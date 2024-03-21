@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "IrLibSwift"
-  spec.version      = "5.5.4.6"
+  spec.version      = "5.9.2"
   spec.summary      = "Framework with Ailet functionality written on Swift" 
   spec.static_framework = true;
   spec.description  = <<-DESC
@@ -12,11 +12,10 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, "12.0"
   spec.source       = { :git => "https://github.com/intrtl/IRLibSwift.git", :tag => "#{spec.version}" }
   spec.ios.vendored_frameworks = 'IrLibSwift.xcframework'
-  spec.dependency "Realm", "10.41.0"
-  spec.dependency "RealmSwift", "10.41.0"
   spec.dependency "YandexMobileMetrica/Dynamic", "4.5.0"
-  spec.dependency "BugfenderSDK", "1.8.0"
-  spec.dependency "OpenCV2", "4.3.0"
+  spec.dependency "BugfenderSDK", "1.13.2"
   spec.dependency "Intercom", "10.4.0"
   spec.dependency "Amplitude", "~> 8.8.0"
+  spec.dependency "Realm", "10.48.1-xcframework"
+  spec.dependency "RealmSwift", "10.48.1-xcframework"
 end
