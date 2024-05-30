@@ -198,16 +198,16 @@ extension UIKit.UICollectionView {
   @_Concurrency.MainActor(unsafe) public func register<T>(headerViewWithXib: T.Type) where T : UIKit.UICollectionReusableView
   @_Concurrency.MainActor(unsafe) public func register<T>(footerViewWithXib: T.Type) where T : UIKit.UICollectionReusableView
 }
-@_hasMissingDesignatedInitializers @objc public class AiletVisitServiceInteractionProvider : ObjectiveC.NSObject {
+@_hasMissingDesignatedInitializers @objc public class IRVisitServiceInteractionProvider : ObjectiveC.NSObject {
   @objc deinit
 }
-@objc extension IrLibSwift.AiletVisitServiceInteractionProvider {
+@objc extension IrLibSwift.IRVisitServiceInteractionProvider {
   @objc @discardableResult
   dynamic public func createVisit(storeId: Swift.Int, externalStoreId: Swift.String?) throws -> Swift.String
   @objc dynamic public func visitsWithoutWidgets() -> [IrLibSwift.Visit]
   @objc dynamic public func visitsWithWidgets() -> [IrLibSwift.Visit]
   @objc dynamic public func fetchPreviousVisits(limit: Swift.Int, completion: @escaping (Foundation.NSError?) -> Swift.Void)
-  @objc dynamic public func fetchPreviousVisit(visitId: Swift.String, completion: @escaping (Foundation.NSError?) -> Swift.Void)
+  @objc dynamic public func fetchPreviousVisit(visitId: Swift.String, completion: @escaping (Swift.String?, Foundation.NSError?) -> Swift.Void)
   @objc dynamic public func downloadPhotosForPreviousVisits(limit: Swift.Int, completion: @escaping (Foundation.NSError?) -> Swift.Void)
   @objc dynamic public func visitsWithPhotosIds() -> Swift.Set<Swift.String>
   @objc dynamic public func clearVisitsWithoutPhotos()
@@ -229,13 +229,14 @@ public protocol NavigationBarCustomizer {
 }
 public typealias DefaultAiletDataManager = IrLibSwift.IRDataManager
 @_hasMissingDesignatedInitializers @objc public class IRDataManager : ObjectiveC.NSObject, IrLibSwift.IRDataManagerProtocol {
-  @objc final public let techSupport: IrLibSwift.AiletTechSupportInteractionProvider
-  @objc final public let visits: IrLibSwift.AiletVisitServiceInteractionProvider
+  @objc final public let techSupport: IrLibSwift.IRTechSupportInteractionProvider
+  @objc final public let visits: IrLibSwift.IRVisitServiceInteractionProvider
   @objc final public let storedStateSettings: IrLibSwift.IRStoredStateSettings
-  @objc final public let auth: IrLibSwift.AuthServiceInteractionProvider
-  @objc final public let multiportalAuth: any IrLibSwift.MultiportalAuthServiceInteractionProvider
-  @objc final public let database: any IrLibSwift.AiletDbConfigProvider
-  @objc final public let screens: IrLibSwift.AiletScreensBuilderInteractionProvider
+  @objc final public let auth: IrLibSwift.IRAuthServiceInteractionProvider
+  @objc final public let multiportalAuth: any IrLibSwift.IRMultiportalAuthServiceInteractionProvider
+  @objc final public let database: any IrLibSwift.IRDbConfigProvider
+  @objc final public let screens: IrLibSwift.IRScreensBuilderInteractionProvider
+  @objc final public let featureToggles: IrLibSwift.IRFeatureToggles
   @objc public init(settings: IrLibSwift.IRDataManagerSettings)
   @objc public static func updateAppInfo(isApp: Swift.Bool)
   @objc public static func updateDeeplinkInfo(isStartedViaDeeplink: Swift.Bool)
@@ -279,7 +280,7 @@ public typealias DefaultAiletDataManager = IrLibSwift.IRDataManager
   @objc public func updateShowDebugFeatures(to shouldShow: Swift.Bool)
   @objc public func fetchCatalogs(completion: ((Foundation.NSError?) -> Swift.Void)?)
   @objc public func shouldFillAbsenceReasons(externalVisitId: Swift.String) -> Swift.Bool
-  @objc public func workflow() -> IrLibSwift.AiletWorkFlow
+  @objc public func workflow() -> IrLibSwift.IRWorkFlow
   @objc deinit
 }
 @_hasMissingDesignatedInitializers @objc public class AiletUnsentDataCheckResult : ObjectiveC.NSObject {
@@ -565,15 +566,7 @@ public enum Fonts {
     public static let italic: UIKit.UIFont
   }
 }
-@objc public class IRSharedPortal : ObjectiveC.NSObject, Swift.Codable {
-  @objc public var domain: Swift.String
-  @objc public var url: Swift.String
-  @objc public init(domain: Swift.String, url: Swift.String)
-  @objc deinit
-  public func encode(to encoder: any Swift.Encoder) throws
-  required public init(from decoder: any Swift.Decoder) throws
-}
-@objc @_hasMissingDesignatedInitializers @objcMembers public class AiletSharedPortal : ObjectiveC.NSObject {
+@objc @_hasMissingDesignatedInitializers @objcMembers public class IRSharedPortal : ObjectiveC.NSObject {
   @objc final public let id: Swift.Int
   @objc final public let name: Swift.String
   @objc final public let url: Swift.String
@@ -725,11 +718,11 @@ extension IrLibSwift.NetworkReachability {
   @objc override dynamic public init()
   @objc deinit
 }
-@objc public protocol MultiportalAuthServiceInteractionProvider {
+@objc public protocol IRMultiportalAuthServiceInteractionProvider {
   @objc var isMultiportal: Swift.Bool { get }
   @objc var activeRootDomain: Swift.String { get }
   @objc func update(isMultiportal: Swift.Bool)
-  @objc func authorizedPortals() -> [IrLibSwift.AiletSharedAuthorizedPortal]
+  @objc func authorizedPortals() -> [IrLibSwift.IRSharedAuthorizedPortal]
   @objc func authorizeOnAllAvailablePortals(login: Swift.String, password: Swift.String, externalUserId: Swift.String, completion: @escaping (Foundation.NSError?) -> Swift.Void)
   @objc func updateActivePortal(rootDomain: Swift.String) throws
 }
@@ -814,7 +807,7 @@ public class LegacyTransparentNavigationBarCustomizer : IrLibSwift.NavigationBar
 }
 public struct ReportFilter {
 }
-@objc public protocol AiletDbConfigProvider {
+@objc public protocol IRDbConfigProvider {
   @objc var dbVersion: Swift.Int { get }
   @objc func realmConfig(shouldUseCommonCopy: Swift.Bool) -> RLMRealmConfiguration
 }
@@ -1271,7 +1264,7 @@ public struct CGLine : Swift.Equatable {
   public let to: CoreFoundation.CGPoint
   public static func == (a: IrLibSwift.CGLine, b: IrLibSwift.CGLine) -> Swift.Bool
 }
-@objc @_hasMissingDesignatedInitializers @objcMembers public class AiletSharedUser : ObjectiveC.NSObject {
+@objc @_hasMissingDesignatedInitializers @objcMembers public class IRSharedUser : ObjectiveC.NSObject {
   @objc final public let id: Swift.String
   @objc final public let externalId: Swift.String?
   @objc final public let username: Swift.String
@@ -1460,7 +1453,7 @@ public enum Colors {
   @objc func didOpenScreenWithInactiveVisit()
   @objc func didLeaveVisitRelatedScreen()
 }
-@objc public enum AiletWorkFlow : Swift.Int {
+@objc public enum IRWorkFlow : Swift.Int {
   case retailExecution
   case retailTasks
   case sfa
@@ -1604,7 +1597,7 @@ public struct Gradient {
   @objc final public let matrixName: Swift.String?
   @objc deinit
 }
-@_hasMissingDesignatedInitializers @objc public class AiletScreensBuilderInteractionProvider : ObjectiveC.NSObject {
+@_hasMissingDesignatedInitializers @objc public class IRScreensBuilderInteractionProvider : ObjectiveC.NSObject {
   @objc public func cameraViewController(output: (any IrLibSwift.CameraModuleOutput)?, externalVisitId: Swift.String, taskId: Swift.String?, externalStoreId: Swift.String, isOpenedViaDeeplinks: Swift.Bool) -> UIKit.UIViewController?
   @objc public func sosReportListController(visitId: Swift.String, taskId: Swift.String?) -> UIKit.UIViewController?
   @objc public func sosReportDetailController(visitId: Swift.String, taskId: Swift.String) -> UIKit.UIViewController?
@@ -1627,6 +1620,7 @@ public struct Gradient {
   @objc public func workflowBasedStartViewController(storesOutput: any IrLibSwift.StoresModuleOutput) -> UIKit.UIViewController
   @objc public func manageAppDataViewController(moduleOutput: any IrLibSwift.ManageAppDataModuleOutput) -> UIKit.UIViewController
   @objc public func debugFeaturesViewController() -> UIKit.UIViewController
+  @objc public func summaryReportViewController(visitId: Swift.String, storeId: Swift.Int) -> UIKit.UIViewController
   @objc deinit
 }
 @_inheritsConvenienceInitializers @objc public class RecognitionResultAssortmentAchievement : RLMObject {
@@ -1705,24 +1699,25 @@ public struct Gradient {
   @objc dynamic public var name: Swift.String
   @objc dynamic public var imageUrlString: Swift.String?
   @objc dynamic public var colorString: Swift.String?
+  @objc dynamic public var isActive: Swift.Bool
   @objc override dynamic public class func primaryKey() -> Swift.String?
   @objc override dynamic public init()
   @objc deinit
 }
-@_hasMissingDesignatedInitializers @objc public class AuthServiceInteractionProvider : ObjectiveC.NSObject {
+@_hasMissingDesignatedInitializers @objc public class IRAuthServiceInteractionProvider : ObjectiveC.NSObject {
   @objc deinit
 }
-@objc extension IrLibSwift.AuthServiceInteractionProvider {
+@objc extension IrLibSwift.IRAuthServiceInteractionProvider {
   @objc dynamic public var authToken: Swift.String {
     @objc get
   }
   @objc dynamic public var domain: Swift.String? {
     @objc get
   }
-  @objc dynamic public var user: IrLibSwift.AiletSharedUser? {
+  @objc dynamic public var user: IrLibSwift.IRSharedUser? {
     @objc get
   }
-  @objc dynamic public func fetchUserPortals(login: Swift.String, password: Swift.String, completion: @escaping ([IrLibSwift.AiletSharedPortal], Foundation.NSError?) -> Swift.Void)
+  @objc dynamic public func fetchUserPortals(login: Swift.String, password: Swift.String, completion: @escaping ([IrLibSwift.IRSharedPortal], Foundation.NSError?) -> Swift.Void)
   @objc dynamic public func authorize(on domain: Swift.String, login: Swift.String, password: Swift.String, externalUserId: Swift.String?, completion: @escaping (Swift.String, Foundation.NSError?) -> Swift.Void)
   @objc dynamic public func isAuthTokenValid() -> Swift.Bool
   @objc dynamic public func update(shouldUseDevAuthServer: Swift.Bool)
@@ -1824,12 +1819,13 @@ public struct ComplexShadow {
 }
 public typealias AiletDataManager = IrLibSwift.IRDataManagerProtocol
 @objc public protocol IRDataManagerProtocol {
-  @objc var auth: IrLibSwift.AuthServiceInteractionProvider { get }
-  @objc var multiportalAuth: any IrLibSwift.MultiportalAuthServiceInteractionProvider { get }
-  @objc var database: any IrLibSwift.AiletDbConfigProvider { get }
-  @objc var techSupport: IrLibSwift.AiletTechSupportInteractionProvider { get }
-  @objc var visits: IrLibSwift.AiletVisitServiceInteractionProvider { get }
-  @objc var screens: IrLibSwift.AiletScreensBuilderInteractionProvider { get }
+  @objc var auth: IrLibSwift.IRAuthServiceInteractionProvider { get }
+  @objc var multiportalAuth: any IrLibSwift.IRMultiportalAuthServiceInteractionProvider { get }
+  @objc var database: any IrLibSwift.IRDbConfigProvider { get }
+  @objc var techSupport: IrLibSwift.IRTechSupportInteractionProvider { get }
+  @objc var visits: IrLibSwift.IRVisitServiceInteractionProvider { get }
+  @objc var screens: IrLibSwift.IRScreensBuilderInteractionProvider { get }
+  @objc var featureToggles: IrLibSwift.IRFeatureToggles { get }
   @objc var storedStateSettings: IrLibSwift.IRStoredStateSettings { get }
   @objc func fetchSettingsAndRoutes(completion: @escaping (Foundation.NSError?) -> Swift.Void)
   @objc func fetchStores(completion: @escaping (Foundation.NSError?) -> Swift.Void)
@@ -1864,7 +1860,7 @@ public typealias AiletDataManager = IrLibSwift.IRDataManagerProtocol
   @objc func updateShowDebugFeatures(to shouldShow: Swift.Bool)
   @objc func fetchCatalogs(completion: ((Foundation.NSError?) -> Swift.Void)?)
   @objc func shouldFillAbsenceReasons(externalVisitId: Swift.String) -> Swift.Bool
-  @objc func workflow() -> IrLibSwift.AiletWorkFlow
+  @objc func workflow() -> IrLibSwift.IRWorkFlow
 }
 @available(*, deprecated, message: "Please use ShadowView class instead of this protocol and its default implementations")
 public protocol ShadowShowing {
@@ -1976,15 +1972,15 @@ extension IrLibSwift.Perspective : Swift.CustomDebugStringConvertible {
   @objc override dynamic public init()
   @objc deinit
 }
-@objc @_hasMissingDesignatedInitializers @objcMembers public class AiletSharedAuthorizedPortal : ObjectiveC.NSObject {
+@objc @_hasMissingDesignatedInitializers @objcMembers public class IRSharedAuthorizedPortal : ObjectiveC.NSObject {
   @objc final public let url: Swift.String
   @objc final public let rootDomain: Swift.String?
   @objc deinit
 }
-@_hasMissingDesignatedInitializers @objc public class AiletTechSupportInteractionProvider : ObjectiveC.NSObject {
+@_hasMissingDesignatedInitializers @objc public class IRTechSupportInteractionProvider : ObjectiveC.NSObject {
   @objc deinit
 }
-@objc extension IrLibSwift.AiletTechSupportInteractionProvider {
+@objc extension IrLibSwift.IRTechSupportInteractionProvider {
   @objc dynamic public func logout(completion: (((any Swift.Error)?) -> Swift.Void)?)
   @objc dynamic public func show()
   @objc dynamic public func updateDeviceToken(_ deviceToken: Foundation.Data)
@@ -1999,6 +1995,11 @@ public typealias SceneTypeId = Swift.Int
   @objc deinit
 }
 @_hasMissingDesignatedInitializers open class AppDocsConfigurator {
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class IRFeatureToggles : ObjectiveC.NSObject {
+  public var isOpenIDAuthEnabled: Swift.Bool
+  @objc override dynamic public init()
   @objc deinit
 }
 extension Swift.Array where Element : UIKit.UIView {
@@ -2047,6 +2048,6 @@ extension IrLibSwift.AiletNetworkError : Swift.RawRepresentable {}
 extension IrLibSwift.DeletedPhoto.IRDeletedPhotoState : Swift.Equatable {}
 extension IrLibSwift.DeletedPhoto.IRDeletedPhotoState : Swift.Hashable {}
 extension IrLibSwift.DeletedPhoto.IRDeletedPhotoState : Swift.RawRepresentable {}
-extension IrLibSwift.AiletWorkFlow : Swift.Equatable {}
-extension IrLibSwift.AiletWorkFlow : Swift.Hashable {}
-extension IrLibSwift.AiletWorkFlow : Swift.RawRepresentable {}
+extension IrLibSwift.IRWorkFlow : Swift.Equatable {}
+extension IrLibSwift.IRWorkFlow : Swift.Hashable {}
+extension IrLibSwift.IRWorkFlow : Swift.RawRepresentable {}
