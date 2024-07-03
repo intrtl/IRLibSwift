@@ -101,6 +101,7 @@ public enum VisitError : Foundation.LocalizedError {
 }
 @_inheritsConvenienceInitializers @objc public class RecognitionResultRealogram : RLMObject {
   @objc dynamic public var id: Swift.String
+  @objc dynamic public var photoId: Swift.String
   @objc dynamic public var productId: Swift.String
   @objc dynamic public var productName: Swift.String?
   @objc dynamic public var tinyName: Swift.String?
@@ -285,7 +286,7 @@ public typealias DefaultAiletDataManager = IrLibSwift.IRDataManager
 }
 @_hasMissingDesignatedInitializers @objc public class AiletUnsentDataCheckResult : ObjectiveC.NSObject {
   @objc final public let hasUnsentData: Swift.Bool
-  @objc final public let errorLog: Swift.String
+  @objc final public let errorLog: Swift.String?
   @objc deinit
 }
 public enum GradientDirection {

@@ -42,7 +42,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		fqkTjxkoldb5XfZLKpRN2Cp1o9A=
+		f+4BVDHR7rn2YlB+GxSRZVUcasQ=
 		</data>
 		<key>AssortmentMatrixDetails.storyboardc/AssortmentMatrixDetailsViewController.nib</key>
 		<data>
@@ -250,7 +250,7 @@
 		</data>
 		<key>Headers/IrLibSwift-Swift.h</key>
 		<data>
-		+uuSKKwMJT//w077sGm7pwFAuQg=
+		WkfUbJc6LS+jE8h3W54J8lVhgoY=
 		</data>
 		<key>Headers/IrLibSwift.h</key>
 		<data>
@@ -274,7 +274,7 @@
 		</data>
 		<key>Headers/RecognitionResultsCoordinatesTransformer.h</key>
 		<data>
-		tWSArbFRwRANlqIRt3JAXeVqvtY=
+		vqy/6L4gTXQF59JiAsqKghYqfec=
 		</data>
 		<key>Headers/UIImage+OpenCV.h</key>
 		<data>
@@ -294,7 +294,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		29wOdRKbLfy1lduyGncOl5F/q4M=
+		VFgjCEdeglO9E6Aw29sZCpd72Ls=
 		</data>
 		<key>LocationGpsCheckActionCell.nib</key>
 		<data>
@@ -326,11 +326,11 @@
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		Xtfvh1FGidQgi47h2wF7lelVeKQ=
+		iq+mCCuHMrjxs5bxVjZJrqJly7w=
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		iU1GjBH3pSrqgYY4FNf+Kfw0YfU=
+		ClIyTwQH5SXltBp2hEk/Uj6Wmv0=
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -338,19 +338,19 @@
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		iU1GjBH3pSrqgYY4FNf+Kfw0YfU=
+		ClIyTwQH5SXltBp2hEk/Uj6Wmv0=
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		qHt8YGOGlVrz4v0+KM6AhwdnceY=
+		KB/dFl9zo7y3isBCQd+f5OdxOBc=
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		Xtfvh1FGidQgi47h2wF7lelVeKQ=
+		iq+mCCuHMrjxs5bxVjZJrqJly7w=
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		g+Thbrrtus5vIolG5Txfzssb0+A=
+		ShqNmaseEQ/nQ9hpI5zzwBYyyMs=
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -358,11 +358,11 @@
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		g+Thbrrtus5vIolG5Txfzssb0+A=
+		ShqNmaseEQ/nQ9hpI5zzwBYyyMs=
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		yTIAqKGzAVS8JirTPZhIXUCMckQ=
+		Y/9bJxpmCvORhY4QdkJ61dVww4Q=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -1014,7 +1014,7 @@
 		</data>
 		<key>StitchingPhotoPreview.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
 		<data>
-		ub//QMyHuB0NvA9p33wjou+MtoI=
+		kogH8o6jmNedZHtbLZ2jdwt9fuw=
 		</data>
 		<key>StitchingPhotoPreview.storyboardc/Info.plist</key>
 		<data>
@@ -1228,7 +1228,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			hE1NiRcPRNlBN6JVy2oY/GbXfEM=
+			jCTkbwfK/ApxGce18zTQEGKpkOY=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1246,7 +1246,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			sHetZtIk1x2QZdoysO97Y9ogv+s=
+			O0kApCSqcaGQfep3+pWK2uAUZbo=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1264,7 +1264,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			3l3GEW2pWPzF9ubFFf89SuabgKE=
+			jk1A3qJPWH6E8qshQgFYztjqN0I=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1282,7 +1282,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			x5z6tFufO5RoVW3PXMib2pNTU30=
+			S1EuVN8wA5fsB6mLcrjzTaRF7Lk=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1296,15 +1296,11 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>realm_swift_privacy.bundle/Info.plist</key>
-		<data>
-		Au00Q2oWA6Ak/rWEfDGNXWn8wpw=
-		</data>
 		<key>ru.lproj/Localized.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ShS6QLrn3Y+zsjoClwOKm5I6iMo=
+			OzceTxaNlpz+angxTvQRzuG8Vf4=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1322,7 +1318,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			HvDepu8hagP3eokxa1kouD1AIT8=
+			CwMTr1c+B3v1YiIg07C1WwDzIn8=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1406,7 +1402,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			PvrWDyGIZYKAUtZZRRQdv3ncrMPeJEdMgKgqNhNZHVc=
+			W5eZEFlheflrxTHnKYSfFCULZi1Lx6lsw2x2VVouOVc=
 			</data>
 		</dict>
 		<key>AssortmentMatrixDetails.storyboardc/AssortmentMatrixDetailsViewController.nib</key>
@@ -1770,7 +1766,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			unkNJY25b9YBFiErf4biMwcKILgAA9/f6asgo9j/iKw=
+			57xV1g7R5rGVtOGQ3UlNhzVHvuHYCgbzOy6ohSZbqzA=
 			</data>
 		</dict>
 		<key>Headers/IrLibSwift.h</key>
@@ -1812,7 +1808,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Y0ASSa6MlUA7BM8e+SmLC3a3VrF2V9EVDGaV3xifjFU=
+			Gfo4xLewK9eCMdaS3nq1ayGcXql+O9/4VC/dTywg/gs=
 			</data>
 		</dict>
 		<key>Headers/UIImage+OpenCV.h</key>
@@ -1896,14 +1892,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			uO8jtmmuZeoGnsDoPUDZrpTNGnj947DLgA2Iz2d2l7E=
+			T5F1zsJiswz4x5qOwkGpBCYhMT4iCaPXjjgzkXHGoso=
 			</data>
 		</dict>
 		<key>Modules/IrLibSwift.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			kZPxxaB1A/uyvOgA8cI2wPdyyScSoulGo7T3KG98BKM=
+			UtuUpQHcn0/ZZzfFPTt5jsWu07DFgSUOoS5+hKyGGAw=
 			</data>
 		</dict>
 		<key>Modules/IrLibSwift.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -1917,28 +1913,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			kZPxxaB1A/uyvOgA8cI2wPdyyScSoulGo7T3KG98BKM=
+			UtuUpQHcn0/ZZzfFPTt5jsWu07DFgSUOoS5+hKyGGAw=
 			</data>
 		</dict>
 		<key>Modules/IrLibSwift.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			NJPPh2GwH2V8SuUyQS8wDx/cMtRImG8XFdMyC0FrD2Y=
+			kZGoK7PAfKX4JGoaA7YrQBq0ZuWVPQV6+wD/rShtANk=
 			</data>
 		</dict>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			uO8jtmmuZeoGnsDoPUDZrpTNGnj947DLgA2Iz2d2l7E=
+			T5F1zsJiswz4x5qOwkGpBCYhMT4iCaPXjjgzkXHGoso=
 			</data>
 		</dict>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gewfcDxruJrDMf58rJHj3tcVC9Ysd3hhyAsvZkAYyoY=
+			OSe6mY2knIQJOLBr5rcdb6MtfO/oIhn7EdJ4mnzmKfY=
 			</data>
 		</dict>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -1952,14 +1948,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			gewfcDxruJrDMf58rJHj3tcVC9Ysd3hhyAsvZkAYyoY=
+			OSe6mY2knIQJOLBr5rcdb6MtfO/oIhn7EdJ4mnzmKfY=
 			</data>
 		</dict>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5VC+U6PpvulYI2FlsRJaJJEqUBJMxSCBu58iCUV5iM8=
+			hMPmx2DrRu4k9Ns5NoatHCoLNWiGBE9QiDK4L3uzwO4=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -3100,7 +3096,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			W5r3GQ2e/UnvSkJ8j55ACoX6AmnMlxRJX0lHVIJaSN0=
+			/VnoG1LMsbPJOmCZ99ibWB9f74xubtUqYkg3lx/JRSw=
 			</data>
 		</dict>
 		<key>StitchingPhotoPreview.storyboardc/Info.plist</key>
@@ -3471,7 +3467,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			wtGOaPOLg0TJUXW2msWIs/OfCJKCd7AJxC/pQsbr2c4=
+			GFrGlB+AHYFwXcfAkc6pTMpnpKpWk60Bw5LaSvaf0UI=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3489,7 +3485,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			tv/mZjSIuIAK0EpUaZWfwQ3AbAiyxANZlhKOj0B0pNw=
+			OjbHNhPhf5oZysJIJTO4s3IS+C1RQ5v55cVimN7+7PE=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3507,7 +3503,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			nyF1ugH+L37mlAYUKfpKZGnRDWkF7BSR8f4xrx+Wfoo=
+			Y2M5YR18dQsj2rjoS/FNxfmMcXkBkvVUPFhLBszk/hU=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3525,7 +3521,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			BDEZweeGG7IPkgYlc8AkSQpW2gLTKu6LvhsmNYryjQI=
+			Mc6uA2y3ZpCzyaplJU5mMVCbPL96ecX8uSfx2T2AkCk=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3539,18 +3535,11 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>realm_swift_privacy.bundle/Info.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			sR0wbANiOmG49apYNzjEmqn8h/EmIywH4MtvBE4S+OA=
-			</data>
-		</dict>
 		<key>ru.lproj/Localized.strings</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			NHEmxemTR7bNpyhAk4tdQybm2isYXkT1Pqmvf+SlcZw=
+			zh8hnJi5hDg8cwmForFK+8+YuTF4UeB5qZ20xeVOVtE=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3568,7 +3557,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0g2mBe52BcLalnX3dFI+fAMjDB8wtj4AVtfAK17QwBs=
+			eipfA17HUGh9uCmJDVgExVDo0B58Ii+oscZM7mNdROI=
 			</data>
 			<key>optional</key>
 			<true/>

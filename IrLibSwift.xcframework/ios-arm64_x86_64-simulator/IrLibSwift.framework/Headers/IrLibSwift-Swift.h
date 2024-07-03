@@ -601,7 +601,7 @@ static NSString * _Nonnull const AiletNetworkErrorDomain = @"IrLibSwift.AiletNet
 SWIFT_CLASS("_TtC10IrLibSwift26AiletUnsentDataCheckResult")
 @interface AiletUnsentDataCheckResult : NSObject
 @property (nonatomic, readonly) BOOL hasUnsentData;
-@property (nonatomic, readonly, copy) NSString * _Nonnull errorLog;
+@property (nonatomic, readonly, copy) NSString * _Nullable errorLog;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -1528,6 +1528,7 @@ SWIFT_CLASS("_TtC10IrLibSwift29RecognitionResultProductGroup")
 SWIFT_CLASS("_TtC10IrLibSwift26RecognitionResultRealogram")
 @interface RecognitionResultRealogram : RLMObject
 @property (nonatomic, copy) NSString * _Nonnull id;
+@property (nonatomic, copy) NSString * _Nonnull photoId;
 @property (nonatomic, copy) NSString * _Nonnull productId;
 @property (nonatomic, copy) NSString * _Nullable productName;
 @property (nonatomic, copy) NSString * _Nullable tinyName;
@@ -2960,7 +2961,7 @@ static NSString * _Nonnull const AiletNetworkErrorDomain = @"IrLibSwift.AiletNet
 SWIFT_CLASS("_TtC10IrLibSwift26AiletUnsentDataCheckResult")
 @interface AiletUnsentDataCheckResult : NSObject
 @property (nonatomic, readonly) BOOL hasUnsentData;
-@property (nonatomic, readonly, copy) NSString * _Nonnull errorLog;
+@property (nonatomic, readonly, copy) NSString * _Nullable errorLog;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -3887,6 +3888,7 @@ SWIFT_CLASS("_TtC10IrLibSwift29RecognitionResultProductGroup")
 SWIFT_CLASS("_TtC10IrLibSwift26RecognitionResultRealogram")
 @interface RecognitionResultRealogram : RLMObject
 @property (nonatomic, copy) NSString * _Nonnull id;
+@property (nonatomic, copy) NSString * _Nonnull photoId;
 @property (nonatomic, copy) NSString * _Nonnull productId;
 @property (nonatomic, copy) NSString * _Nullable productName;
 @property (nonatomic, copy) NSString * _Nullable tinyName;
