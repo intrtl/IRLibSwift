@@ -342,7 +342,7 @@
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		KB/dFl9zo7y3isBCQd+f5OdxOBc=
+		U8phOlZAlT3yWqrwFNEQSTxyVS8=
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -362,7 +362,7 @@
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		Y/9bJxpmCvORhY4QdkJ61dVww4Q=
+		y8Fhdm7CA6HcMhYgZAvUBU8qAQA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -1296,6 +1296,10 @@
 			<key>optional</key>
 			<true/>
 		</dict>
+		<key>realm_swift_privacy.bundle/Info.plist</key>
+		<data>
+		Au00Q2oWA6Ak/rWEfDGNXWn8wpw=
+		</data>
 		<key>ru.lproj/Localized.strings</key>
 		<dict>
 			<key>hash</key>
@@ -1920,7 +1924,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			kZGoK7PAfKX4JGoaA7YrQBq0ZuWVPQV6+wD/rShtANk=
+			p67DF01JZBwkzzU5xZWJuwmeuad6JC9fM7okBJMkiYg=
 			</data>
 		</dict>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -1955,7 +1959,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			hMPmx2DrRu4k9Ns5NoatHCoLNWiGBE9QiDK4L3uzwO4=
+			yhJKTrSLDqBI+P1iV0685b66JHo/DMICfhpxzgM/pvw=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -3534,6 +3538,13 @@
 			</data>
 			<key>optional</key>
 			<true/>
+		</dict>
+		<key>realm_swift_privacy.bundle/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			sR0wbANiOmG49apYNzjEmqn8h/EmIywH4MtvBE4S+OA=
+			</data>
 		</dict>
 		<key>ru.lproj/Localized.strings</key>
 		<dict>
