@@ -343,6 +343,28 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) AiletColorsG
 
 @class UIColor;
 
+SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors15AiletColorsIcon")
+@interface AiletColorsIcon : NSObject
+/// $icon-01
+@property (nonatomic, readonly, strong) UIColor * _Nonnull primary;
+/// $icon-02
+@property (nonatomic, readonly, strong) UIColor * _Nonnull secondary;
+/// $icon-04
+@property (nonatomic, readonly, strong) UIColor * _Nonnull onInteractiveColors;
+/// $icon-05
+@property (nonatomic, readonly, strong) UIColor * _Nonnull accent01;
+/// $icon-06
+@property (nonatomic, readonly, strong) UIColor * _Nonnull accent02;
+/// $icon-07
+@property (nonatomic, readonly, strong) UIColor * _Nonnull accent03;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
+@end
+
+
 SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors15AiletColorsText")
 @interface AiletColorsText : NSObject
 /// $text-01
@@ -414,22 +436,11 @@ SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors18AiletColorsSupport")
 @interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
 @end
 
-@class AiletGradientColor;
 
-SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors19AiletColorsGradient")
-@interface AiletColorsGradient : NSObject
-/// $gradient-01, blue
-@property (nonatomic, readonly, strong) AiletGradientColor * _Nonnull gradient01;
-/// $gradient-02, red
-@property (nonatomic, readonly, strong) AiletGradientColor * _Nonnull gradient02;
-/// $gradient-03, violet
-@property (nonatomic, readonly, strong) AiletGradientColor * _Nonnull gradient03;
-/// $gradient-04, gray
-@property (nonatomic, readonly, strong) AiletGradientColor * _Nonnull gradient04;
-/// $gradient-06, green
-@property (nonatomic, readonly, strong) AiletGradientColor * _Nonnull gradient06;
-/// $gradient-07, mavi
-@property (nonatomic, readonly, strong) AiletGradientColor * _Nonnull gradient07;
+SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors17AiletColorsBorder")
+@interface AiletColorsBorder : NSObject
+/// $border-01
+@property (nonatomic, readonly, strong) UIColor * _Nonnull primary;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -457,11 +468,22 @@ SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors17AiletColorsAccent")
 @interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
 @end
 
+@class AiletGradientColor;
 
-SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors17AiletColorsBorder")
-@interface AiletColorsBorder : NSObject
-/// $border-01
-@property (nonatomic, readonly, strong) UIColor * _Nonnull primary;
+SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors19AiletColorsGradient")
+@interface AiletColorsGradient : NSObject
+/// $gradient-01, blue
+@property (nonatomic, readonly, strong) AiletGradientColor * _Nonnull gradient01;
+/// $gradient-02, red
+@property (nonatomic, readonly, strong) AiletGradientColor * _Nonnull gradient02;
+/// $gradient-03, violet
+@property (nonatomic, readonly, strong) AiletGradientColor * _Nonnull gradient03;
+/// $gradient-04, gray
+@property (nonatomic, readonly, strong) AiletGradientColor * _Nonnull gradient04;
+/// $gradient-06, green
+@property (nonatomic, readonly, strong) AiletGradientColor * _Nonnull gradient06;
+/// $gradient-07, mavi
+@property (nonatomic, readonly, strong) AiletGradientColor * _Nonnull gradient07;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -476,28 +498,6 @@ SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors16AiletColorsInput")
 @property (nonatomic, readonly, strong) UIColor * _Nonnull primary;
 /// $field-02
 @property (nonatomic, readonly, strong) UIColor * _Nonnull secondary;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-@interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
-@end
-
-
-SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors15AiletColorsIcon")
-@interface AiletColorsIcon : NSObject
-/// $icon-01
-@property (nonatomic, readonly, strong) UIColor * _Nonnull primary;
-/// $icon-02
-@property (nonatomic, readonly, strong) UIColor * _Nonnull secondary;
-/// $icon-04
-@property (nonatomic, readonly, strong) UIColor * _Nonnull onInteractiveColors;
-/// $icon-05
-@property (nonatomic, readonly, strong) UIColor * _Nonnull accent01;
-/// $icon-06
-@property (nonatomic, readonly, strong) UIColor * _Nonnull accent02;
-/// $icon-07
-@property (nonatomic, readonly, strong) UIColor * _Nonnull accent03;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -660,6 +660,7 @@ SWIFT_CLASS("_TtC10IrLibSwift12DeletedPhoto")
 @interface DeletedPhoto : RLMObject
 @property (nonatomic, copy) NSString * _Nonnull photoId;
 @property (nonatomic, copy) NSString * _Nonnull visitId;
+@property (nonatomic, copy) NSString * _Nonnull path;
 @property (nonatomic) NSInteger state;
 @property (nonatomic, copy) NSString * _Nullable domain;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -718,6 +719,7 @@ SWIFT_CLASS("_TtC10IrLibSwift32IRAuthServiceInteractionProvider")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+
 @class IRSharedUser;
 @class IRSharedPortal;
 @class NSError;
@@ -737,25 +739,14 @@ SWIFT_CLASS("_TtC10IrLibSwift32IRAuthServiceInteractionProvider")
 - (void)subscribeToAuthTokenIsInvalid:(void (^ _Nullable)(void))handler;
 @end
 
-
-SWIFT_CLASS("_TtC10IrLibSwift22IRCameraSharedSettings")
-@interface IRCameraSharedSettings : NSObject
-@property (nonatomic) BOOL shouldShowGridAndFrame;
-- (nonnull instancetype)initWithShouldShowGridAndFrame:(BOOL)shouldShowGridAndFrame OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-@protocol IRMultiportalAuthServiceInteractionProvider;
+@class IRMultiportalAuthServiceInteractionProvider;
 @protocol IRDbConfigProvider;
 @class IRTechSupportInteractionProvider;
 @class IRVisitServiceInteractionProvider;
+@class IRReportsInteractionProvider;
 @class IRScreensBuilderInteractionProvider;
 @class IRFeatureToggles;
 @class IRStoredStateSettings;
-@class IRDataManagerSettings;
-@class VisitWidgetReport;
-@class VisitWidgetMacroCategory;
 @class VisitWidgetReportMatrixDataEntity;
 @class UIViewController;
 enum IRWorkFlow : NSInteger;
@@ -763,10 +754,11 @@ enum IRWorkFlow : NSInteger;
 SWIFT_PROTOCOL("_TtP10IrLibSwift21IRDataManagerProtocol_")
 @protocol IRDataManagerProtocol
 @property (nonatomic, readonly, strong) IRAuthServiceInteractionProvider * _Nonnull auth;
-@property (nonatomic, readonly, strong) id <IRMultiportalAuthServiceInteractionProvider> _Nonnull multiportalAuth;
+@property (nonatomic, readonly, strong) IRMultiportalAuthServiceInteractionProvider * _Nonnull multiportalAuth;
 @property (nonatomic, readonly, strong) id <IRDbConfigProvider> _Nonnull database;
 @property (nonatomic, readonly, strong) IRTechSupportInteractionProvider * _Nonnull techSupport;
 @property (nonatomic, readonly, strong) IRVisitServiceInteractionProvider * _Nonnull visits;
+@property (nonatomic, readonly, strong) IRReportsInteractionProvider * _Nonnull reports;
 @property (nonatomic, readonly, strong) IRScreensBuilderInteractionProvider * _Nonnull screens;
 @property (nonatomic, readonly, strong) IRFeatureToggles * _Nonnull featureToggles;
 @property (nonatomic, readonly, strong) IRStoredStateSettings * _Nonnull storedStateSettings;
@@ -777,26 +769,16 @@ SWIFT_PROTOCOL("_TtP10IrLibSwift21IRDataManagerProtocol_")
 - (void)updateExternalDataWithVisitId:(NSString * _Nonnull)visitId;
 + (void)updateExternalDataWithVisitId:(NSString * _Nonnull)visitId;
 + (void)clearExternalData;
-- (void)updateSettingsFrom:(IRDataManagerSettings * _Nonnull)settings;
 - (void)fetchWidgetsWithVisitId:(NSString * _Nonnull)visitId completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
-- (VisitWidgetReport * _Nullable)defaultReportForVisitWithVisitId:(NSString * _Nonnull)visitId widgetType:(NSString * _Nonnull)widgetType taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
-- (NSArray<VisitWidgetMacroCategory *> * _Nonnull)widgetMacroCategoriesForVisitWithVisitId:(NSString * _Nonnull)visitId widgetType:(NSString * _Nonnull)widgetType matrixType:(NSString * _Nullable)matrixType taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
 - (VisitWidgetReportMatrixDataEntity * _Nullable)defaultReportMatrixWithVisitId:(NSString * _Nonnull)visitId taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
 - (void)fetchSegmentsWithCompletion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 - (void)fetchTasksWithCompletion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 - (void)fetchVisitsPlansAndFactsWithCompletion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 - (void)updatePhotoResultIntervals:(NSArray<NSNumber *> * _Nonnull)intervals;
-- (void)restartSendingNotSentDataWithResetAttemptIntervals:(BOOL)resetAttemptIntervals completion:(void (^ _Nonnull)(NSString * _Nullable, NSError * _Nullable))completion;
+- (void)restartSendingNotSentDataOnUpdate:(void (^ _Nullable)(NSError * _Nullable))onUpdate;
 - (NSString * _Nullable)internalTaskIdWithExternalVisitId:(NSString * _Nonnull)externalVisitId taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
 - (void)logScreenTimeEventWithId:(NSString * _Nonnull)id name:(NSString * _Nonnull)name duration:(NSInteger)duration;
-- (void)stopReportTimeTracking;
-- (void)startReportTimeTracking;
 - (void)restartLocationService;
-- (NSDictionary<NSString *, id> * _Nullable)reportFor:(NSString * _Nonnull)visitId internalTaskId:(NSString * _Nullable)internalTaskId SWIFT_WARN_UNUSED_RESULT;
-- (NSDictionary<NSString *, id> * _Nonnull)additionalStatsFor:(NSString * _Nonnull)externalVisitId internalTaskId:(NSString * _Nullable)internalTaskId SWIFT_WARN_UNUSED_RESULT;
-- (AiletUnsentDataCheckResult * _Nonnull)unsentData SWIFT_WARN_UNUSED_RESULT;
-- (AiletUnsentDataCheckResult * _Nonnull)unsentDataFor:(NSString * _Nullable)visitId SWIFT_WARN_UNUSED_RESULT;
-- (NSInteger)photosCountFor:(NSString * _Nonnull)visitId SWIFT_WARN_UNUSED_RESULT;
 - (void)showFillReasonsAlertOn:(UIViewController * _Nonnull)vc onAgree:(void (^ _Nullable)(void))onAgree;
 - (BOOL)isConnectionAvailable SWIFT_WARN_UNUSED_RESULT;
 - (BOOL)shouldShowDebugFeatures SWIFT_WARN_UNUSED_RESULT;
@@ -811,20 +793,25 @@ SWIFT_PROTOCOL("_TtP10IrLibSwift21IRDataManagerProtocol_")
 
 SWIFT_CLASS("_TtC10IrLibSwift13IRDataManager")
 @interface IRDataManager : NSObject <IRDataManagerProtocol>
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) IRDataManager * _Nonnull shared;)
++ (IRDataManager * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
++ (void)setShared:(IRDataManager * _Nonnull)value;
 @property (nonatomic, readonly, strong) IRTechSupportInteractionProvider * _Nonnull techSupport;
 @property (nonatomic, readonly, strong) IRVisitServiceInteractionProvider * _Nonnull visits;
+@property (nonatomic, readonly, strong) IRReportsInteractionProvider * _Nonnull reports;
 @property (nonatomic, readonly, strong) IRStoredStateSettings * _Nonnull storedStateSettings;
 @property (nonatomic, readonly, strong) IRAuthServiceInteractionProvider * _Nonnull auth;
-@property (nonatomic, readonly, strong) id <IRMultiportalAuthServiceInteractionProvider> _Nonnull multiportalAuth;
+@property (nonatomic, readonly, strong) IRMultiportalAuthServiceInteractionProvider * _Nonnull multiportalAuth;
 @property (nonatomic, readonly, strong) id <IRDbConfigProvider> _Nonnull database;
 @property (nonatomic, readonly, strong) IRScreensBuilderInteractionProvider * _Nonnull screens;
 @property (nonatomic, readonly, strong) IRFeatureToggles * _Nonnull featureToggles;
-- (nonnull instancetype)initWithSettings:(IRDataManagerSettings * _Nonnull)settings OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 + (void)updateAppInfoWithIsApp:(BOOL)isApp;
 + (void)updateDeeplinkInfoWithIsStartedViaDeeplink:(BOOL)isStartedViaDeeplink;
 - (void)fetchStoresWithCompletion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 - (void)fetchSettingsAndRoutesWithCompletion:(void (^ _Nonnull)(NSError * _Nullable))completion;
-- (void)restartSendingNotSentDataWithResetAttemptIntervals:(BOOL)resetAttemptIntervals completion:(void (^ _Nonnull)(NSString * _Nullable, NSError * _Nullable))completion;
+- (void)restartSendingNotSentDataOnUpdate:(void (^ _Nullable)(NSError * _Nullable))onUpdate;
 - (BOOL)canDoRecognitionResultWithPhotoId:(NSString * _Nonnull)photoId SWIFT_WARN_UNUSED_RESULT;
 /// Обновление выбранной торговой точки. Используется в случае работы с либой / через диплинки.
 /// \param storeId идентификатор торговой точки
@@ -833,10 +820,7 @@ SWIFT_CLASS("_TtC10IrLibSwift13IRDataManager")
 - (void)updateExternalDataWithVisitId:(NSString * _Nonnull)visitId;
 + (void)updateExternalDataWithVisitId:(NSString * _Nonnull)visitId;
 + (void)clearExternalData;
-- (void)updateSettingsFrom:(IRDataManagerSettings * _Nonnull)settings;
 - (void)fetchWidgetsWithVisitId:(NSString * _Nonnull)visitId completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
-- (VisitWidgetReport * _Nullable)defaultReportForVisitWithVisitId:(NSString * _Nonnull)visitId widgetType:(NSString * _Nonnull)widgetType taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
-- (NSArray<VisitWidgetMacroCategory *> * _Nonnull)widgetMacroCategoriesForVisitWithVisitId:(NSString * _Nonnull)visitId widgetType:(NSString * _Nonnull)widgetType matrixType:(NSString * _Nullable)matrixType taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
 - (NSArray<VisitWidgetReportDataEntity *> * _Nonnull)widgetReportsForVisitWithVisitId:(NSString * _Nonnull)visitId widgetType:(NSString * _Nonnull)widgetType taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
 - (VisitWidgetReportDataEntity * _Nullable)widgetReportForVisitWithVisitId:(NSString * _Nonnull)visitId widgetType:(NSString * _Nonnull)widgetType matrixType:(NSString * _Nonnull)matrixType taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
 - (VisitWidgetReportMatrixDataEntity * _Nullable)defaultReportMatrixWithVisitId:(NSString * _Nonnull)visitId taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
@@ -846,20 +830,12 @@ SWIFT_CLASS("_TtC10IrLibSwift13IRDataManager")
 - (NSInteger)storesCount SWIFT_WARN_UNUSED_RESULT;
 - (void)fetchVisitsPlansAndFactsWithCompletion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 - (void)updatePhotoResultIntervals:(NSArray<NSNumber *> * _Nonnull)intervals;
-- (NSInteger)saveStoreWithExternalId:(NSString * _Nonnull)externalId SWIFT_WARN_UNUSED_RESULT;
 - (NSString * _Nullable)internalTaskIdWithExternalVisitId:(NSString * _Nonnull)externalVisitId taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
 - (void)logScreenTimeEventWithId:(NSString * _Nonnull)id name:(NSString * _Nonnull)name duration:(NSInteger)duration;
-- (void)startReportTimeTracking;
-- (void)stopReportTimeTracking;
 - (NSDictionary<NSString *, id> * _Nonnull)visitStatsWithVisitId:(NSString * _Nonnull)visitId photoId:(NSString * _Nullable)photoId SWIFT_WARN_UNUSED_RESULT;
 /// Перезапуск сервиса получения геопопозиции (для выхода из фона)
 - (void)restartLocationService;
 - (id <ImageResizer> _Nonnull)imageResizerWith:(CGFloat)compressionQuality SWIFT_WARN_UNUSED_RESULT;
-- (NSDictionary<NSString *, id> * _Nullable)reportFor:(NSString * _Nonnull)visitId internalTaskId:(NSString * _Nullable)internalTaskId SWIFT_WARN_UNUSED_RESULT;
-- (NSDictionary<NSString *, id> * _Nonnull)additionalStatsFor:(NSString * _Nonnull)externalVisitId internalTaskId:(NSString * _Nullable)internalTaskId SWIFT_WARN_UNUSED_RESULT;
-- (AiletUnsentDataCheckResult * _Nonnull)unsentData SWIFT_WARN_UNUSED_RESULT;
-- (AiletUnsentDataCheckResult * _Nonnull)unsentDataFor:(NSString * _Nullable)visitId SWIFT_WARN_UNUSED_RESULT;
-- (NSInteger)photosCountFor:(NSString * _Nonnull)visitId SWIFT_WARN_UNUSED_RESULT;
 - (void)showFillReasonsAlertOn:(UIViewController * _Nonnull)vc onAgree:(void (^ _Nullable)(void))agreeHandler;
 - (BOOL)isConnectionAvailable SWIFT_WARN_UNUSED_RESULT;
 - (BOOL)shouldShowDebugFeatures SWIFT_WARN_UNUSED_RESULT;
@@ -867,21 +843,9 @@ SWIFT_CLASS("_TtC10IrLibSwift13IRDataManager")
 - (void)fetchCatalogsWithCompletion:(void (^ _Nullable)(NSError * _Nullable))completion;
 - (BOOL)shouldFillAbsenceReasonsWithExternalVisitId:(NSString * _Nonnull)externalVisitId SWIFT_WARN_UNUSED_RESULT;
 - (enum IRWorkFlow)workflow SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 
-
-@class IRSharedSettings;
-
-/// Класс для настройки IRDataManager.
-SWIFT_CLASS("_TtC10IrLibSwift21IRDataManagerSettings")
-@interface IRDataManagerSettings : NSObject
-- (nonnull instancetype)initWithSharedSettings:(IRSharedSettings * _Nonnull)sharedSettings installId:(NSString * _Nonnull)installId notificationPrefix:(NSString * _Nullable)notificationPrefix legacyDBClasses:(NSArray * _Nonnull)legacyDBClasses OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
 
 @class RLMRealmConfiguration;
 
@@ -890,6 +854,58 @@ SWIFT_PROTOCOL("_TtP10IrLibSwift18IRDbConfigProvider_")
 @property (nonatomic, readonly) NSInteger dbVersion;
 - (RLMRealmConfiguration * _Nonnull)realmConfigWithShouldUseCommonCopy:(BOOL)shouldUseCommonCopy SWIFT_WARN_UNUSED_RESULT;
 @end
+
+/// Error thrown by IRInteractManager.
+typedef SWIFT_ENUM(NSInteger, IRError, open) {
+/// IrLibSwift is in the process of downloading or uploading critical data.
+/// Try to repeat the method call later.
+/// Code: 0
+  IRErrorBusy = 0,
+/// An unknown error occurred.
+/// Code: 5
+  IRErrorUnknown = 5,
+/// IrLibSwift detected a lack of internet connection and couldn’t process data.
+/// Handle the internet connection and call the method again once it is available.
+/// Code: 6
+  IRErrorNoConnection = 6,
+/// IrLibSwift couldn’t download critically important catalogs.
+/// Try to call the <code>setup</code> method with the same data again to trigger catalogs download again.
+/// Code: 9
+  IRErrorCatalogsError = 9,
+/// The authorization token is invalid.
+/// Try to call the <code>setup</code> method with the same data again.
+/// Code: 7
+  IRErrorTokenError = 7,
+/// IrLibSwift couldn’t find the input store ID in the local database.
+/// Make sure you pass a correct parameter.
+/// Code: 10
+  IRErrorIncorrectStoreId = 10,
+/// IrLibSwift couldn’t find the input visit ID in the local database.
+/// Make sure you pass a correct parameter.
+/// Code: 12
+  IRErrorIncorrectVisitId = 12,
+/// IrLibSwift could not authorize for a project.
+/// Make sure you pass correct parameters and call the <code>setup</code> method again.
+/// Code: 13
+  IRErrorAuthError = 13,
+/// An operation is already in progress.
+/// Code: 16
+  IRErrorInProgress = 16,
+/// You tried to call a method meant for multiportal mode only without activating it in the setup method.
+/// Code: 23
+  IRErrorNotMultiportalMode = 23,
+/// While in multiportal mode, you passed a non-existent portal to IrLibSwift.
+/// Code: 24
+  IRErrorIncorrectPortal = 24,
+/// While in multiportal mode, you didn’t pass any portal to use.
+/// Use the method <code>updatePortal</code> to set the active portal.
+/// Code: 25
+  IRErrorEmptyPortal = 25,
+/// IrLibSwift received a server error.
+/// Code: 20
+  IRErrorServerError = 20,
+};
+static NSString * _Nonnull const IRErrorDomain = @"IrLibSwift.IRError";
 
 
 SWIFT_CLASS("_TtC10IrLibSwift16IRFeatureToggles")
@@ -927,12 +943,94 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) IRGradientDi
 @end
 
 
-SWIFT_CLASS("_TtC10IrLibSwift25IRLegacyApiSharedSettings")
-@interface IRLegacyApiSharedSettings : NSObject
-@property (nonatomic) BOOL shouldUseSosLegacyApi;
-- (nonnull instancetype)initWithShouldUseSosLegacyApi:(BOOL)shouldUseSosLegacyApi OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+SWIFT_CLASS("_TtC10IrLibSwift17IRInteractManager")
+@interface IRInteractManager : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+
+@class IRVisitReport;
+@class IRReport;
+
+@interface IRInteractManager (SWIFT_EXTENSION(IrLibSwift))
+/// This method authorizes user and downloads all initial data required for futher work with IrLibSwift.
+/// \param username login (required for authorization)
+///
+/// \param password password (required for authorization)
+///
+/// \param guestToken guestToken (required, must be received from company support manager)
+///
+/// \param externalUserId additional user id, if there are multiple users under one login (optional). Pass nil if you don’t need to use externalUserId.
+///
+/// \param notification prefix for receiving notifications on photo recognitions updates. Currently this parameter exists only for backward compatibility with legacy classes. Pass <code>nil</code> and use <code>IRNotification</code> class instead for subscption on photo update
+///
+/// \param domainName if user has multiple projects to log in, you can use this parameter to login on specific project. This doesn’t work with multiportal mode on. Pass <code>nil</code> if you don’t need to use it.
+///
+/// \param isMultiportal pass <code>true</code> to activate multiportal mode, when IrLibSwift authorizes for every project available for user. Pass <code>false</code> in case you don’t need it.
+///
+/// \param completion callback function, the method asynchronously returns <code>NSError</code> if authorization or catalogs loading failed, if the methods finishes with success callback will be called with <code>nil</code> error.
+///
++ (void)setupWithUsername:(NSString * _Nonnull)username password:(NSString * _Nonnull)password guestToken:(NSString * _Nonnull)guestToken externalUserId:(NSString * _Nullable)externalUserId notification:(NSString * _Nullable)notification domainName:(NSString * _Nullable)domainName isMultiportal:(BOOL)isMultiportal completion:(void (^ _Nullable)(NSError * _Nullable))completion;
+/// Presents IrLibSwift camera from passed viewController.
+/// \param presentingVC UIViewController to present Camera from
+///
+/// \param externalStoreId id of store to make shooting for
+///
+/// \param externalVisitId id of visit to make shooting for. Visit id must be unique for every store and every day of shooting.
+///
+///
+/// throws:
+/// throws an error (IRError in Swift, NSError in Obj-c) if something went wrong.
++ (BOOL)startShootingIn:(UIViewController * _Nonnull)presentingVC externalStoreId:(NSString * _Nonnull)externalStoreId externalVisitId:(NSString * _Nonnull)externalVisitId error:(NSError * _Nullable * _Nullable)error;
+/// Asynchronously downloads all the data required for summary report and presents UIViewController with the report
+/// \param presentingViewController viewController where will be summary report viewController presented on
+///
+/// \param visitId id of a visit to generate summary report for
+///
+/// \param completion callback function, the method asynchronously returns <code>NSError</code> if data loading or presentation of viewController was  failed, if the methods finishes with success callback will be called with <code>nil</code> error.
+///
++ (void)showSummaryReportIn:(UIViewController * _Nonnull)presentingViewController visitId:(NSString * _Nonnull)visitId completion:(void (^ _Nullable)(NSError * _Nullable))completion;
+/// Returns array with report for every visit existing locally in IrLibSwift.
+///
+/// returns:
+/// array of <code>IRVisitReport</code>
++ (NSArray<IRVisitReport *> * _Nullable)reportsAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
+/// Returns report for specific visit existing locally in IrLibSwift.
+/// \param visitId id of visit to generate report for
+///
+///
+/// returns:
+/// IRReport
++ (IRReport * _Nullable)reportWithVisitId:(NSString * _Nonnull)visitId error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
+/// Returns array with report for every visit existing locally in IrLibSwift in array of dictionaries format.
+/// important:
+/// this method was made for backward compatibility with legacy classes. Using method returning IRReport is prefered.
+///
+/// returns:
+/// Array of dictionaries with reports.
++ (NSArray<NSDictionary<NSString *, id> *> * _Nonnull)reportsDictionary SWIFT_WARN_UNUSED_RESULT;
+/// Checks if any data is not uploaded or downloaded and forces to restart all requests.
+/// Asynchronously returns error <code>nil</code> when data is finished to sync (if there were no data to sync it also returns nil). Returns NSError if there any errors during synchronization occured.
+/// important:
+/// this method was made for objc-compatibility. Use the method with Result<Void, IRError> type if use write in Swift.
+/// \param completion callback function, the method asynchronously returns <code>Result<Void, IRError></code>.
+///
++ (void)syncDataWithCompletion:(void (^ _Nullable)(NSError * _Nullable))completion;
+/// Sets active project to work with.
+/// important:
+/// Only for multiportal mode. IrLibSwift will throw an error if this method is called without activating multiportal mode in <code>setup</code> method.
+/// \param portalId root domain. Don’t pass ‘dairy.intrtl.com’, pass ‘dairy’
+///
+///
+/// throws:
+/// throws and IRError (or NSError in objC) if portalId is in incorrect format or project with such portalId has not been authorized during <code>setup</code> method.
++ (BOOL)updateActivePortal:(NSString * _Nonnull)portalId error:(NSError * _Nullable * _Nullable)error;
+/// Returns IrLibSwift version number
+///
+/// returns:
+/// String with version number
++ (NSString * _Nonnull)frameworkVersion SWIFT_WARN_UNUSED_RESULT;
 @end
 
 typedef SWIFT_ENUM(NSInteger, IRLocationErrorBlockType, open) {
@@ -942,38 +1040,30 @@ typedef SWIFT_ENUM(NSInteger, IRLocationErrorBlockType, open) {
 };
 
 
-SWIFT_CLASS("_TtC10IrLibSwift22IRMemorySharedSettings")
-@interface IRMemorySharedSettings : NSObject
-@property (nonatomic) NSInteger storedVisitsAmount;
-@property (nonatomic) NSInteger freeSize;
-- (nonnull instancetype)initWithStoredVisitsAmount:(NSInteger)storedVisitsAmount freeSize:(NSInteger)freeSize OBJC_DESIGNATED_INITIALIZER;
+SWIFT_CLASS("_TtC10IrLibSwift43IRMultiportalAuthServiceInteractionProvider")
+@interface IRMultiportalAuthServiceInteractionProvider : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 @class IRSharedAuthorizedPortal;
 
-SWIFT_PROTOCOL("_TtP10IrLibSwift43IRMultiportalAuthServiceInteractionProvider_")
-@protocol IRMultiportalAuthServiceInteractionProvider
+@interface IRMultiportalAuthServiceInteractionProvider (SWIFT_EXTENSION(IrLibSwift))
 @property (nonatomic, readonly) BOOL isMultiportal;
 @property (nonatomic, readonly, copy) NSString * _Nonnull activeRootDomain;
 - (void)updateWithIsMultiportal:(BOOL)isMultiportal;
 - (NSArray<IRSharedAuthorizedPortal *> * _Nonnull)authorizedPortals SWIFT_WARN_UNUSED_RESULT;
-- (void)authorizeOnAllAvailablePortalsWithLogin:(NSString * _Nonnull)login password:(NSString * _Nonnull)password externalUserId:(NSString * _Nonnull)externalUserId completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 - (BOOL)updateActivePortalWithRootDomain:(NSString * _Nonnull)rootDomain error:(NSError * _Nullable * _Nullable)error;
+- (void)authorizeOnAllAvailablePortalsWithLogin:(NSString * _Nonnull)login password:(NSString * _Nonnull)password externalUserId:(NSString * _Nullable)externalUserId completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 @end
 
 
 SWIFT_CLASS("_TtC10IrLibSwift14IRNotification")
 @interface IRNotification : NSObject
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSNotificationName _Nonnull photoRecognizedNotification;)
++ (NSNotificationName _Nonnull)photoRecognizedNotification SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSNotificationName _Nonnull authErrorNotification;)
 + (NSNotificationName _Nonnull)authErrorNotification SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSNotificationName _Nonnull photoSyncUpdateNotification;)
-+ (NSNotificationName _Nonnull)photoSyncUpdateNotification SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSNotificationName _Nonnull showSyncStatsScreenNotification;)
-+ (NSNotificationName _Nonnull)showSyncStatsScreenNotification SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSNotificationName _Nonnull showSummaryReportScreenNotification;)
-+ (NSNotificationName _Nonnull)showSummaryReportScreenNotification SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -983,13 +1073,9 @@ typedef SWIFT_ENUM(NSInteger, IRPhotoApproveMode, open) {
 };
 
 
-SWIFT_CLASS("_TtC10IrLibSwift21IRPhotoSharedSettings")
-@interface IRPhotoSharedSettings : NSObject
-@property (nonatomic) float quality;
-@property (nonatomic) BOOL shouldDoubleCompression;
-@property (nonatomic) float maxSize;
-@property (nonatomic) BOOL isAutoApproveEnabled;
-- (nonnull instancetype)initWithQuality:(float)quality shouldDoubleCompression:(BOOL)shouldDoubleCompression maxSize:(float)maxSize isAutoApproveEnabled:(BOOL)isAutoApproveEnabled OBJC_DESIGNATED_INITIALIZER;
+/// A class representing a detailed report for a visit, containing various statistics, specific reports metrics (SOS, OSA), and results.
+SWIFT_CLASS("_TtC10IrLibSwift8IRReport")
+@interface IRReport : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -1008,28 +1094,207 @@ SWIFT_CLASS("_TtC10IrLibSwift15IRReportFilters")
 @end
 
 
-SWIFT_CLASS("_TtC10IrLibSwift23IRReportsSharedSettings")
-@interface IRReportsSharedSettings : NSObject
-@property (nonatomic) BOOL byPhoto;
-@property (nonatomic) BOOL byVisit;
-- (nonnull instancetype)initByPhoto:(BOOL)byPhoto byVisit:(BOOL)byVisit OBJC_DESIGNATED_INITIALIZER;
+/// OSA metric detailed data
+SWIFT_CLASS("_TtC10IrLibSwift18IRReportOSADetails")
+@interface IRReportOSADetails : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+
+/// A class representing the perfect store metric details within a report.
+SWIFT_CLASS("_TtC10IrLibSwift20IRReportPerfectStore")
+@interface IRReportPerfectStore : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+/// A class representing a task within the perfect store metric in a report.
+SWIFT_CLASS("_TtC10IrLibSwift24IRReportPerfectStoreTask")
+@interface IRReportPerfectStoreTask : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+/// A class representing a KPI within a perfect store task in a report.
+SWIFT_CLASS("_TtC10IrLibSwift27IRReportPerfectStoreTaskKPI")
+@interface IRReportPerfectStoreTaskKPI : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+/// A class representing a question within a perfect store task in a report.
+SWIFT_CLASS("_TtC10IrLibSwift32IRReportPerfectStoreTaskQuestion")
+@interface IRReportPerfectStoreTaskQuestion : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+/// A class representing an answer to a question within a perfect store task in a report.
+SWIFT_CLASS("_TtC10IrLibSwift38IRReportPerfectStoreTaskQuestionAnswer")
+@interface IRReportPerfectStoreTaskQuestionAnswer : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+/// A class representing the photo details within a report.
+SWIFT_CLASS("_TtC10IrLibSwift13IRReportPhoto")
+@interface IRReportPhoto : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+/// A class representing the error details associated with a photo in the report.
+SWIFT_CLASS("_TtC10IrLibSwift18IRReportPhotoError")
+@interface IRReportPhotoError : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+/// A class representing the details of product found within a photo in the report.
+SWIFT_CLASS("_TtC10IrLibSwift20IRReportPhotoProduct")
+@interface IRReportPhotoProduct : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+/// A class representing the width of a product.
+SWIFT_CLASS("_TtC10IrLibSwift25IRReportPhotoProductWidth")
+@interface IRReportPhotoProductWidth : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+/// Price type
+typedef SWIFT_ENUM(NSInteger, IRReportPriceType, open) {
+  IRReportPriceTypeNormal = 0,
+  IRReportPriceTypePromo = 1,
+};
+
+
+/// A class representing summary of a report.
+SWIFT_CLASS("_TtC10IrLibSwift14IRReportResult")
+@interface IRReportResult : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+/// SOS metric detailed data
+SWIFT_CLASS("_TtC10IrLibSwift18IRReportShareShelf")
+@interface IRReportShareShelf : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+/// A class representing the brand details within an SOS report.
+SWIFT_CLASS("_TtC10IrLibSwift23IRReportShareShelfBrand")
+@interface IRReportShareShelfBrand : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+/// A class representing the category details within an SOS report.
+SWIFT_CLASS("_TtC10IrLibSwift26IRReportShareShelfCategory")
+@interface IRReportShareShelfCategory : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+/// A class representing the macro category details within an SOS report.
+SWIFT_CLASS("_TtC10IrLibSwift31IRReportShareShelfMacroCategory")
+@interface IRReportShareShelfMacroCategory : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+/// A class representing the visit details within an SOS report.
+SWIFT_CLASS("_TtC10IrLibSwift23IRReportShareShelfVisit")
+@interface IRReportShareShelfVisit : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+/// A class representing the photo statistics within a visit report, including counts for various photo states.
+SWIFT_CLASS("_TtC10IrLibSwift23IRReportVisitPhotoStats")
+@interface IRReportVisitPhotoStats : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+/// A class representing the visit statistics within a report, including photo statistics and various photo ID lists.
+SWIFT_CLASS("_TtC10IrLibSwift18IRReportVisitStats")
+@interface IRReportVisitStats : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+/// A class representing the statistics of needed to be uploaded/downloaded
+SWIFT_CLASS("_TtC10IrLibSwift26IRReportVisitStatsNeedSend")
+@interface IRReportVisitStatsNeedSend : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC10IrLibSwift28IRReportsInteractionProvider")
+@interface IRReportsInteractionProvider : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+
+@interface IRReportsInteractionProvider (SWIFT_EXTENSION(IrLibSwift))
+- (NSArray<NSDictionary<NSString *, id> *> * _Nonnull)reportsForAllVisits SWIFT_WARN_UNUSED_RESULT;
+- (NSDictionary<NSString *, id> * _Nullable)reportWithExternalVisitId:(NSString * _Nonnull)externalVisitId internalTaskId:(NSString * _Nullable)internalTaskId SWIFT_WARN_UNUSED_RESULT;
+- (NSDictionary<NSString *, id> * _Nonnull)additionalStatsFor:(NSString * _Nonnull)externalVisitId internalTaskId:(NSString * _Nullable)internalTaskId SWIFT_WARN_UNUSED_RESULT;
+- (AiletUnsentDataCheckResult * _Nonnull)unsentData SWIFT_WARN_UNUSED_RESULT;
+- (AiletUnsentDataCheckResult * _Nonnull)unsentDataFor:(NSString * _Nullable)visitId SWIFT_WARN_UNUSED_RESULT;
+- (NSInteger)photosCountFor:(NSString * _Nonnull)visitId SWIFT_WARN_UNUSED_RESULT;
+@end
+
+@protocol StoreDetailsOutput;
 @protocol TaskDetailsModuleOutput;
 @protocol StoresModuleOutput;
 @protocol WidgetsModuleInput;
-@protocol StoreDetailsOutput;
 @protocol LegacyReportFiltersModuleOutput;
-@protocol ManageAppDataModuleOutput;
 
 SWIFT_CLASS("_TtC10IrLibSwift35IRScreensBuilderInteractionProvider")
 @interface IRScreensBuilderInteractionProvider : NSObject
-- (UIViewController * _Nullable)cameraViewControllerWithOutput:(id <CameraModuleOutput> _Nullable)output externalVisitId:(NSString * _Nonnull)externalVisitId taskId:(NSString * _Nullable)taskId externalStoreId:(NSString * _Nonnull)externalStoreId isOpenedViaDeeplinks:(BOOL)isOpenedViaDeeplinks SWIFT_WARN_UNUSED_RESULT;
+/// Method returns UIViewController depending on input parameteres and values persisted in local DB.
+/// <ul>
+///   <li>
+///     If input <code>taskId</code> is not nil and visit with input <code>externalVisitId</code> exists with such task, the method returns Task Details viewController
+///   </li>
+///   <li>
+///     If input <code>taskId</code> is nil and store with input <code>externalStoreId</code> has tasks, the method returns Store details viewController.
+///   </li>
+///   <li>
+///     In any other cases the method returns Camera viewController
+///   </li>
+/// </ul>
+- (UIViewController * _Nullable)startViewControllerWithExternalStoreId:(NSString * _Nonnull)externalStoreId externalVisitId:(NSString * _Nonnull)externalVisitId taskId:(NSString * _Nullable)taskId cameraOutput:(id <CameraModuleOutput> _Nonnull)cameraOutput storeDetailsOutput:(id <StoreDetailsOutput> _Nonnull)storeDetailsOutput error:(NSError * _Nullable * _Nullable)error backButtonHandler:(void (^ _Nullable)(void))backButtonHandler SWIFT_WARN_UNUSED_RESULT;
+- (UIViewController * _Nullable)cameraViewControllerWithOutput:(id <CameraModuleOutput> _Nullable)output externalVisitId:(NSString * _Nonnull)externalVisitId taskId:(NSString * _Nullable)taskId externalStoreId:(NSString * _Nonnull)externalStoreId isOpenedViaDeeplinks:(BOOL)isOpenedViaDeeplinks error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 - (UIViewController * _Nullable)sosReportListControllerWithVisitId:(NSString * _Nonnull)visitId taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
 - (UIViewController * _Nullable)sosReportDetailControllerWithVisitId:(NSString * _Nonnull)visitId taskId:(NSString * _Nonnull)taskId SWIFT_WARN_UNUSED_RESULT;
-- (UIViewController * _Nullable)taskDetailsViewControllerWithOutput:(id <TaskDetailsModuleOutput> _Nonnull)output externalVisitId:(NSString * _Nonnull)externalVisitId externalStoreId:(NSString * _Nonnull)externalStoreId taskId:(NSString * _Nonnull)taskId SWIFT_WARN_UNUSED_RESULT;
+- (UIViewController * _Nullable)taskDetailsViewControllerWithOutput:(id <TaskDetailsModuleOutput> _Nullable)output externalVisitId:(NSString * _Nonnull)externalVisitId externalStoreId:(NSString * _Nonnull)externalStoreId visitTaskId:(NSString * _Nonnull)visitTaskId error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
+- (UIViewController * _Nullable)summaryReportViewControllerWithExternalVisitId:(NSString * _Nonnull)externalVisitId error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 - (UIViewController * _Nullable)reportPhotoBrowseViewControllerWithVisitId:(NSString * _Nonnull)visitId taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
 - (UIViewController * _Nullable)summaryReportOOSReportViewControllerWithVisitId:(NSString * _Nonnull)visitId taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
 - (UIViewController * _Nullable)standaloneOOSReportViewControllerWithVisitId:(NSString * _Nonnull)visitId taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
@@ -1037,22 +1302,19 @@ SWIFT_CLASS("_TtC10IrLibSwift35IRScreensBuilderInteractionProvider")
 - (UIViewController * _Nullable)searchControllerWithResultsOutput:(id <StoresModuleOutput> _Nonnull)resultsOutput SWIFT_WARN_UNUSED_RESULT;
 - (UIViewController * _Nonnull)retailExecutionStoresScreenWithOutput:(id <StoresModuleOutput> _Nonnull)output SWIFT_WARN_UNUSED_RESULT;
 - (UIViewController * _Nonnull)sfaStoresScreenWithOutput:(id <StoresModuleOutput> _Nonnull)output SWIFT_WARN_UNUSED_RESULT;
-- (UIViewController * _Nonnull)cameraScreenWithVisitId:(NSString * _Nonnull)visitId storeId:(NSInteger)storeId taskId:(NSString * _Nullable)taskId externalVisitId:(NSString * _Nullable)externalVisitId externalStoreId:(NSString * _Nullable)externalStoreId isOpenedViaDeeplinks:(BOOL)isOpenedViaDeeplinks SWIFT_WARN_UNUSED_RESULT;
 - (UIViewController * _Nonnull)filterScreenResultsWithResultsOutput:(id <StoresModuleOutput> _Nonnull)resultsOutput SWIFT_WARN_UNUSED_RESULT;
 - (id <WidgetsModuleInput> _Nullable)widgetsController SWIFT_WARN_UNUSED_RESULT;
-- (UIViewController * _Nonnull)storeDetailScreenWithOutput:(id <StoreDetailsOutput> _Nonnull)output storeId:(NSInteger)storeId SWIFT_WARN_UNUSED_RESULT;
+- (UIViewController * _Nonnull)storeDetailScreenWithOutput:(id <StoreDetailsOutput> _Nonnull)output storeId:(NSInteger)storeId externalVisitId:(NSString * _Nullable)externalVisitId SWIFT_WARN_UNUSED_RESULT;
 - (UIViewController * _Nonnull)visitStatsScreenWithVisitId:(NSString * _Nonnull)visitId SWIFT_WARN_UNUSED_RESULT;
 - (UIViewController * _Nonnull)reportFiltersScreenWithOutput:(id <LegacyReportFiltersModuleOutput> _Nonnull)output storeId:(NSInteger)storeId visitId:(NSString * _Nonnull)visitId taskId:(NSString * _Nullable)taskId matrixId:(NSString * _Nullable)matrixId currentReportType:(NSString * _Nullable)currentReportType SWIFT_WARN_UNUSED_RESULT;
 - (UIViewController * _Nonnull)appDocsScreen SWIFT_WARN_UNUSED_RESULT;
 - (UIViewController * _Nonnull)retailTasksViewController SWIFT_WARN_UNUSED_RESULT;
-/// Возвращает UIViewController для воркфлоу сохраненного в настройках
+/// Returns UIViewController for workflow stored in settings
 /// retailExecution - storesViewController
 /// retailTasks - retailsTasksViewController
 - (UIViewController * _Nonnull)workflowBasedStartViewControllerWithStoresOutput:(id <StoresModuleOutput> _Nonnull)storesOutput SWIFT_WARN_UNUSED_RESULT;
-- (UIViewController * _Nonnull)manageAppDataViewControllerWithModuleOutput:(id <ManageAppDataModuleOutput> _Nonnull)moduleOutput SWIFT_WARN_UNUSED_RESULT;
+- (UIViewController * _Nonnull)manageAppDataViewController SWIFT_WARN_UNUSED_RESULT;
 - (UIViewController * _Nonnull)debugFeaturesViewController SWIFT_WARN_UNUSED_RESULT;
-/// This must be deleted in 5.10
-- (UIViewController * _Nonnull)summaryReportViewControllerWithVisitId:(NSString * _Nonnull)visitId storeId:(NSInteger)storeId SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -1073,29 +1335,6 @@ SWIFT_CLASS("_TtC10IrLibSwift14IRSharedPortal")
 @property (nonatomic, readonly, copy) NSString * _Nonnull name;
 @property (nonatomic, readonly, copy) NSString * _Nonnull url;
 @property (nonatomic, readonly, copy) NSString * _Nonnull type;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-@class IRStoresSharedSettings;
-@class IRVisitSharedSettings;
-
-/// Группа классов ответственная за общие настройки библиотеки, получаемые с сервера в запросе getSettings.
-/// Временное решение для передачи необходимых настроек из старой либы в новую. Позже запрос на getSettings будет вынесен в эту либу.
-SWIFT_CLASS("_TtC10IrLibSwift16IRSharedSettings")
-@interface IRSharedSettings : NSObject
-@property (nonatomic, readonly, strong) IRStoresSharedSettings * _Nullable stores;
-@property (nonatomic, readonly, strong) IRPhotoSharedSettings * _Nullable photo;
-@property (nonatomic, readonly, strong) IRCameraSharedSettings * _Nonnull camera;
-@property (nonatomic, readonly, strong) IRVisitSharedSettings * _Nonnull visit;
-@property (nonatomic, readonly, strong) IRGeolocationErrorSharedSettings * _Nonnull locationError;
-@property (nonatomic, readonly, strong) IRMemorySharedSettings * _Nonnull memory;
-@property (nonatomic, readonly) BOOL shouldSyncManually;
-@property (nonatomic, readonly) BOOL LOAReasonRequired;
-@property (nonatomic, readonly, strong) IRLegacyApiSharedSettings * _Nonnull legacyApiSettings;
-@property (nonatomic, readonly) BOOL isSupportEnabled;
-@property (nonatomic, readonly, strong) IRReportsSharedSettings * _Nonnull reports;
-- (nonnull instancetype)initWithStores:(IRStoresSharedSettings * _Nonnull)storesSettings photo:(IRPhotoSharedSettings * _Nonnull)photoSettings camera:(IRCameraSharedSettings * _Nonnull)cameraSettings visit:(IRVisitSharedSettings * _Nonnull)visitSettings locationError:(IRGeolocationErrorSharedSettings * _Nonnull)locationError memory:(IRMemorySharedSettings * _Nonnull)memory legacyApiSettings:(IRLegacyApiSharedSettings * _Nonnull)legacyApiSettings photoApproveMode:(enum IRPhotoApproveMode)photoApproveMode shouldSyncManually:(BOOL)shouldSyncManually LOAReasonRequired:(BOOL)LOAReasonRequired isSupportEnabled:(BOOL)isSupportEnabled reports:(IRReportsSharedSettings * _Nonnull)reports OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -1149,16 +1388,6 @@ SWIFT_CLASS("_TtC10IrLibSwift26IRStoredStateSettingsVisit")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-@class NSNumber;
-
-SWIFT_CLASS("_TtC10IrLibSwift22IRStoresSharedSettings")
-@interface IRStoresSharedSettings : NSObject
-@property (nonatomic, strong) NSNumber * _Nullable forceUpdateInterval;
-- (nonnull instancetype)initWithForceUpdateInterval:(NSNumber * _Nullable)forceUpdateInterval OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
 
 SWIFT_CLASS("_TtC10IrLibSwift32IRTechSupportInteractionProvider")
 @interface IRTechSupportInteractionProvider : NSObject
@@ -1175,40 +1404,26 @@ SWIFT_CLASS("_TtC10IrLibSwift32IRTechSupportInteractionProvider")
 @end
 
 
+/// A class representing a visit report, containing the visit ID and the associated report.
+SWIFT_CLASS("_TtC10IrLibSwift13IRVisitReport")
+@interface IRVisitReport : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
 SWIFT_CLASS("_TtC10IrLibSwift33IRVisitServiceInteractionProvider")
 @interface IRVisitServiceInteractionProvider : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-@class Visit;
 
 @interface IRVisitServiceInteractionProvider (SWIFT_EXTENSION(IrLibSwift))
-- (NSString * _Nullable)createVisitWithStoreId:(NSInteger)storeId externalStoreId:(NSString * _Nullable)externalStoreId error:(NSError * _Nullable * _Nullable)error;
-- (NSArray<Visit *> * _Nonnull)visitsWithoutWidgets SWIFT_WARN_UNUSED_RESULT;
-- (NSArray<Visit *> * _Nonnull)visitsWithWidgets SWIFT_WARN_UNUSED_RESULT;
-- (void)fetchPreviousVisitsWithLimit:(NSInteger)limit completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
-- (void)fetchPreviousVisitWithVisitId:(NSString * _Nonnull)visitId completion:(void (^ _Nonnull)(NSString * _Nullable, NSError * _Nullable))completion;
-- (void)downloadPhotosForPreviousVisitsWithLimit:(NSInteger)limit completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
-/// Возвращает идентификаторы визитов в которых есть фото
-- (NSSet<NSString *> * _Nonnull)visitsWithPhotosIds SWIFT_WARN_UNUSED_RESULT;
-/// Очищает базу от визитов в которых нет фото
-- (void)clearVisitsWithoutPhotos;
-- (void)clearVisitsWithoutPhotosAndFilledAnswers;
-/// Проверяет был ли визит скачан
-/// \param visitId внутренний id визита
-///
-- (BOOL)isVisitDownloadedWithVisitId:(NSString * _Nonnull)visitId SWIFT_WARN_UNUSED_RESULT;
+- (void)fetchPreviousVisitIfNeededWithExternalVisitId:(NSString * _Nonnull)externalVisitId completion:(void (^ _Nullable)(NSError * _Nullable))completion;
 @end
 
 
-SWIFT_CLASS("_TtC10IrLibSwift21IRVisitSharedSettings")
-@interface IRVisitSharedSettings : NSObject
-@property (nonatomic) BOOL shouldBlockIfErrorPhotosExist;
-- (nonnull instancetype)initWithShouldBlockIfErrorPhotosExist:(BOOL)shouldBlockIfErrorPhotosExist OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
 
 typedef SWIFT_ENUM(NSInteger, IRWorkFlow, open) {
   IRWorkFlowRetailExecution = 0,
@@ -1226,12 +1441,6 @@ SWIFT_PROTOCOL("_TtP10IrLibSwift12ImageResizer_")
 SWIFT_PROTOCOL("_TtP10IrLibSwift31LegacyReportFiltersModuleOutput_")
 @protocol LegacyReportFiltersModuleOutput
 - (void)didUpdateFilters:(IRReportFilters * _Nonnull)filters;
-@end
-
-
-SWIFT_PROTOCOL("_TtP10IrLibSwift25ManageAppDataModuleOutput_")
-@protocol ManageAppDataModuleOutput
-- (void)showSyncModule;
 @end
 
 
@@ -1320,13 +1529,6 @@ SWIFT_CLASS("_TtC10IrLibSwift5Photo")
 /// Для мультипортальности: домен портала в рамках которого было сделано фото.
 @property (nonatomic, copy) NSString * _Nullable domain;
 @property (nonatomic) BOOL isRecognizedOffline;
-/// Флаг что фото являеся частью пазла
-@property (nonatomic) BOOL isPuzzle;
-@property (nonatomic, copy) NSString * _Nonnull puzzleId;
-/// Расположение фото в пазле сторока
-@property (nonatomic) NSInteger row;
-/// Расположение фото в пазле колонка
-@property (nonatomic) NSInteger col;
 + (NSString * _Nonnull)stateStringFromLegacyState:(NSInteger)legacyStateInt SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -1351,6 +1553,7 @@ typedef SWIFT_ENUM(NSInteger, IRPhotoErrorState, open) {
   IRPhotoErrorStateStitcherError = 3,
   IRPhotoErrorStateSentError = 4,
   IRPhotoErrorStateRecognitionResultError = 5,
+  IRPhotoErrorStateCanNotDelete = 6,
 };
 
 
@@ -1365,8 +1568,6 @@ SWIFT_CLASS("_TtC10IrLibSwift12ProductGroup")
 @property (nonatomic) NSInteger main;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
-
-
 
 
 
@@ -1661,19 +1862,6 @@ SWIFT_CLASS("_TtC10IrLibSwift5Scene")
 
 
 
-SWIFT_CLASS("_TtC10IrLibSwift9SceneType")
-@interface SceneType : RLMObject
-@property (nonatomic) NSInteger id;
-@property (nonatomic, copy) NSString * _Nonnull name;
-@property (nonatomic, copy) NSString * _Nullable imageUrlString;
-@property (nonatomic, copy) NSString * _Nullable colorString;
-@property (nonatomic) BOOL isActive;
-+ (NSString * _Nullable)primaryKey SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-
 SWIFT_CLASS("_TtC10IrLibSwift11Scene_types")
 @interface Scene_types : RLMObject
 @property (nonatomic) NSInteger id_;
@@ -1742,45 +1930,29 @@ SWIFT_CLASS("_TtC10IrLibSwift7Shelves")
 @end
 
 
-SWIFT_CLASS("_TtC10IrLibSwift5Store")
-@interface Store : RLMObject
-@property (nonatomic) NSInteger storeId;
-@property (nonatomic, copy) NSString * _Nonnull storeIdString;
-@property (nonatomic, copy) NSString * _Nullable externalId;
-@property (nonatomic, copy) NSString * _Nonnull name;
-@property (nonatomic, copy) NSString * _Nullable retailerName;
-@property (nonatomic, copy) NSString * _Nonnull address;
-@property (nonatomic, copy) NSString * _Nullable segmentId;
-@property (nonatomic, copy) NSString * _Nullable segmentName;
-@property (nonatomic, copy) NSString * _Nullable storeTypeName;
-@property (nonatomic) double lat;
-@property (nonatomic) double lon;
-@property (nonatomic) double distance;
-@property (nonatomic, copy) NSString * _Nullable cityName;
-+ (NSString * _Nullable)primaryKey SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-
-
 SWIFT_PROTOCOL("_TtP10IrLibSwift18StoreDetailsOutput_")
 @protocol StoreDetailsOutput
-- (void)didTriggerOpenPriceExecutionReportForTaskWithId:(NSString * _Nullable)taskId;
-- (void)didTriggerOpenSummaryReportForStoreWithId:(NSInteger)storeId;
 - (void)didStartVisitForStoreWithId:(NSInteger)storeId;
 - (void)didFinishVisitWithStoreId:(NSInteger)storeId;
 - (void)didTriggerOpenSupport;
 @end
 
 
+SWIFT_CLASS("_TtC10IrLibSwift14StoreSceneType")
+@interface StoreSceneType : RLMObject
+@property (nonatomic) NSInteger id;
+@property (nonatomic, copy) NSString * _Nonnull name;
+@property (nonatomic, copy) NSString * _Nullable imageUrlString;
+@property (nonatomic, copy) NSString * _Nullable colorString;
+@property (nonatomic) BOOL isActive;
++ (NSString * _Nullable)primaryKey SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+
 SWIFT_PROTOCOL("_TtP10IrLibSwift18StoresModuleOutput_")
 @protocol StoresModuleOutput
-- (void)didFinishLoadingCatalogs;
-- (void)didTriggerOpenSosReportForTaskWithId:(NSString * _Nullable)taskId;
-- (void)didTriggerOpenPriceExecutionReportForTaskWithId:(NSString * _Nullable)taskId;
-- (void)didStartVisitForStoreWithId:(NSInteger)storeId;
-- (void)didTriggerOpenSummaryReportForStoreWithId:(NSInteger)storeId;
 - (void)didTriggerOpenSupport;
 @end
 
@@ -1831,6 +2003,7 @@ SWIFT_CLASS("_TtC10IrLibSwift12TaskQuestion")
 + (NSDictionary<NSString *, RLMPropertyDescriptor *> * _Nonnull)linkingObjectsProperties SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
+
 
 
 
@@ -1949,11 +2122,13 @@ SWIFT_CLASS("_TtC10IrLibSwift9VisitTask")
 @property (nonatomic, copy) NSString * _Nonnull matrixType;
 @property (nonatomic, copy) NSString * _Nonnull totalScoreCountType;
 @property (nonatomic) BOOL isExistScoreFormula;
+@property (nonatomic) BOOL isEachAnswerSent;
 + (NSString * _Nullable)primaryKey SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
+@class VisitWidgetReport;
 @class VisitWidgetTaskReport;
 
 SWIFT_CLASS("_TtC10IrLibSwift11VisitWidget")
