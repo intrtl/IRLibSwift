@@ -26,11 +26,6 @@
                              translationX:(CGFloat)translationX
                              translationY:(CGFloat)translationY;
 
-- (void)updateMatrixInQueue:(dispatch_queue_t)countQueue
-                  viewWidth:(CGFloat)viewWidth
-                 viewHeight:(CGFloat)viewHeight
-                afterUpdate:(void (^)())updateHandler;
-
 - (CGRect)transformedLineCoordinatesFromX1:(CGFloat)x1 y1:(CGFloat)y1 x2:(CGFloat)x2 y2:(CGFloat)y2;
 - (CGRect)transformedCoordinatesFromRect:(CGRect)rect;
 

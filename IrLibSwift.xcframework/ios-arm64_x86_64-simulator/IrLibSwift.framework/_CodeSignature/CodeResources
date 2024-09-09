@@ -24,6 +24,30 @@
 		<data>
 		LZkt7RzDSqK8g519bdsTdrsLH8o=
 		</data>
+		<key>AppCenter.bundle/Info.plist</key>
+		<data>
+		7cqmUsu6U6EoZi0DGkP64S8PW8Q=
+		</data>
+		<key>AppCenter.bundle/PrivacyInfo.xcprivacy</key>
+		<data>
+		RGatnKWrZPnLawe1gWCHbu0IT/8=
+		</data>
+		<key>AppCenterAnalytics.bundle/Info.plist</key>
+		<data>
+		GH8bvWM4zOxi65Rgeb0nJPLX6ZY=
+		</data>
+		<key>AppCenterAnalytics.bundle/PrivacyInfo.xcprivacy</key>
+		<data>
+		fA8jpoJLS2JgoGqXOmGrIeycIcg=
+		</data>
+		<key>AppCenterCrashes.bundle/Info.plist</key>
+		<data>
+		emIMVqh17FORWQ96v7NTz0sjriA=
+		</data>
+		<key>AppCenterCrashes.bundle/PrivacyInfo.xcprivacy</key>
+		<data>
+		ZupvGMEVxL3kw1eYf28mEK40NMk=
+		</data>
 		<key>AppDocs.storyboardc/AppDocsViewController.nib</key>
 		<data>
 		6SelgGDNpG0tEV4dN7kVSe6VM7Q=
@@ -42,7 +66,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		uilCsAy4Jl14W9duemiBruaburE=
+		7HGRPQ4HV1OWdmUk8qRLYhymubY=
 		</data>
 		<key>AssortmentMatrixDetails.storyboardc/AssortmentMatrixDetailsViewController.nib</key>
 		<data>
@@ -230,7 +254,7 @@
 		</data>
 		<key>FullScreenGalleryPhotoCell.nib</key>
 		<data>
-		OkapYQAxcjSw5d3rQXQljVrgd+M=
+		yafgCbc2v2StLLhkcLNBL5sHuR0=
 		</data>
 		<key>FullScreenGallerySceneTypeView.nib</key>
 		<data>
@@ -243,6 +267,10 @@
 		<key>GallerySceneCell.nib</key>
 		<data>
 		mqpwwC5N4F2PiwLbHTWv2ptAkjA=
+		</data>
+		<key>GalleryStitchedPhotoCell.nib</key>
+		<data>
+		JClmNwc07tH/luzY2id4JxrrPJE=
 		</data>
 		<key>HeaderTitleCell.nib</key>
 		<data>
@@ -258,7 +286,7 @@
 		</data>
 		<key>Headers/IrLibSwift-Swift.h</key>
 		<data>
-		eWEM0Ui+IzWHUcAMbBYrAaVOfFE=
+		Ta7hFXm3uHUbV1+YMf50X2t5Gh4=
 		</data>
 		<key>Headers/IrLibSwift.h</key>
 		<data>
@@ -282,7 +310,7 @@
 		</data>
 		<key>Headers/RecognitionResultsCoordinatesTransformer.h</key>
 		<data>
-		vqy/6L4gTXQF59JiAsqKghYqfec=
+		uQ6Ovf4f0Y8KD3FCI32wfSj1dWk=
 		</data>
 		<key>Headers/UIImage+OpenCV.h</key>
 		<data>
@@ -302,7 +330,19 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		XE35wvN2+eRgdJV2aA3KSURVYxA=
+		+EIrtvBeZyGOJzJF5fsKu2G0kPE=
+		</data>
+		<key>InfoCarousel.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
+		<data>
+		JTuNNNVjx4GJK57EtT1xbDCc08o=
+		</data>
+		<key>InfoCarousel.storyboardc/Info.plist</key>
+		<data>
+		jfaBjRgVEMSBfru7dvfHIl+Ps/4=
+		</data>
+		<key>InfoCarousel.storyboardc/InfoCarouselViewController.nib</key>
+		<data>
+		njU+W/d2k7nc8bjvWCFCjxoWv+c=
 		</data>
 		<key>LocationGpsCheckActionCell.nib</key>
 		<data>
@@ -326,43 +366,43 @@
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		PiyWNBqA4UXEHywpfH7habyCffw=
+		+KTHCCKQbvDOZZI7HuQL00mmfGI=
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		W+xbt26S1lNE0B6+dBL7EF0YHys=
+		sscnKr0piGKBHQSuM3JoprH8YKw=
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		kt74O7/Q5KdsVGhjZWjt2bTHAfo=
+		PXQ2JzNZd31B/m1Em05iAw3a8BI=
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		W+xbt26S1lNE0B6+dBL7EF0YHys=
+		sscnKr0piGKBHQSuM3JoprH8YKw=
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		iqvtQxSVEIKQPKCfHpuMxJAOkfw=
+		x7/EZkmKJSHHlZJ6efk3LssCr2c=
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		PiyWNBqA4UXEHywpfH7habyCffw=
+		+KTHCCKQbvDOZZI7HuQL00mmfGI=
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		/7MNzKmAr0oXuW7Ii7y0wm537sQ=
+		RF+PG6Qcfq3/wmBEMbAVvBSLuwo=
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		XnL2KyHuKRJiogEjEMYZ0547i7w=
+		tezuqlcgfmp/d7EzvZjhfI9Tn0Q=
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		/7MNzKmAr0oXuW7Ii7y0wm537sQ=
+		RF+PG6Qcfq3/wmBEMbAVvBSLuwo=
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		bgE3CiZSWRq56fcV0e14geNucIc=
+		cKay8s2cwmh1wJTp7osqfcTE8xs=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -370,7 +410,7 @@
 		</data>
 		<key>OOSCategoryTableHeaderView.nib</key>
 		<data>
-		C/EAy4FQM38C786YF1wnZghpsgM=
+		T6yNASafXV1tJ9O26jVqhC0KrKE=
 		</data>
 		<key>OOSProductTableViewCell.nib</key>
 		<data>
@@ -394,7 +434,7 @@
 		</data>
 		<key>OSACategoryTableHeaderView.nib</key>
 		<data>
-		0m6tRv2YQxgwjGtaHPOIs/nqOn4=
+		x1LTmS5eYFzQd5HrqemIT/4T3a8=
 		</data>
 		<key>OSAHeadersTableViewCell.nib</key>
 		<data>
@@ -415,6 +455,50 @@
 		<key>OSAReport.storyboardc/OSAReportViewController.nib</key>
 		<data>
 		5WczpbdY5UNM81CjQ4l/Y7HyfPg=
+		</data>
+		<key>POSMItemViewer.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
+		<data>
+		GDRxD8xJnZtB18WgxeHbgtGlQ3A=
+		</data>
+		<key>POSMItemViewer.storyboardc/Info.plist</key>
+		<data>
+		JnuYmkUKazpI735u2lPgeRsRDd4=
+		</data>
+		<key>POSMItemViewer.storyboardc/POSMItemViewerViewController.nib</key>
+		<data>
+		DcjqvPz1pJBmFRyfDnWDmp49iTU=
+		</data>
+		<key>POSMMetricSelect.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
+		<data>
+		GDRxD8xJnZtB18WgxeHbgtGlQ3A=
+		</data>
+		<key>POSMMetricSelect.storyboardc/Info.plist</key>
+		<data>
+		H0MtveTSrTUb4F2bLxwYJrJDH+k=
+		</data>
+		<key>POSMMetricSelect.storyboardc/POSMMetricSelectViewController.nib</key>
+		<data>
+		F1m5FyBkVba4WqBrqnIDxhYWQl4=
+		</data>
+		<key>POSMMetricSelectTableViewCell.nib</key>
+		<data>
+		roBIfmZF1cJIEq07Dr+h3eKRTQ0=
+		</data>
+		<key>POSMReport.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
+		<data>
+		3/FQ7hS0dnkEWCfXG0JO8egAas0=
+		</data>
+		<key>POSMReport.storyboardc/Info.plist</key>
+		<data>
+		s4FgYaR6wv/70LZWRlQl3ASSzz0=
+		</data>
+		<key>POSMReport.storyboardc/POSMReportViewController.nib</key>
+		<data>
+		wFfbsghH7azGF25y8tt8Z7PyfaQ=
+		</data>
+		<key>POSMReportProductTableViewCell.nib</key>
+		<data>
+		MLMeWOJO8VHGA3P6+gFWVfYSToc=
 		</data>
 		<key>PadCamera.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
 		<data>
@@ -442,7 +526,7 @@
 		</data>
 		<key>PhotoBrowse.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
 		<data>
-		KY55O5SUnxs3Sh7/FT7Xr7aabRQ=
+		eiGfqsoIFmAfX12w/zzETC++F6Q=
 		</data>
 		<key>PhotoBrowse.storyboardc/Info.plist</key>
 		<data>
@@ -548,6 +632,10 @@
 		<data>
 		dCF2U5ToUe/PZL0AItwktefwDQs=
 		</data>
+		<key>PrivacyInfo.xcprivacy</key>
+		<data>
+		1etaN61uwFswb9DrGHU5WqnV08k=
+		</data>
 		<key>Product.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
 		<data>
 		LLARaozHh+e1HQr8sNlfNcAOOtY=
@@ -566,11 +654,15 @@
 		</data>
 		<key>ProductControlsCell.nib</key>
 		<data>
-		o/T88BeWREeDHyKT2Aj3uTgoZ+0=
+		YG63BrGQU5jD+aDuKDoIRwd4kO8=
+		</data>
+		<key>ProductFactCell.nib</key>
+		<data>
+		VukXHmwAk1fx4PS4/wTIV0eQ/eg=
 		</data>
 		<key>ProductImageCell.nib</key>
 		<data>
-		6F9aQJvTIuvmbiNL3/G4al/6wco=
+		sI340vaZUSLMCIQnJqOzFnLa3fw=
 		</data>
 		<key>ProductImageViewer.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
 		<data>
@@ -598,7 +690,7 @@
 		</data>
 		<key>ProductTitleCell.nib</key>
 		<data>
-		uZtHKLtu5EuxtMFwTk+DfX6I3Aw=
+		5eIJFGsffOLVytvp9jVeFYL2vC4=
 		</data>
 		<key>ProductViewer.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
 		<data>
@@ -630,7 +722,7 @@
 		</data>
 		<key>ReasonCell.nib</key>
 		<data>
-		ACEh8Q74D5cX1zqPnu+U+bceHvg=
+		uyLEbpApxxKakqA+kREs2QfDLlU=
 		</data>
 		<key>ReportBrandTableViewCell.nib</key>
 		<data>
@@ -650,7 +742,7 @@
 		</data>
 		<key>ReportFilterSelectCollectionViewCell.nib</key>
 		<data>
-		7W+aeMQAm+k1J9I1gf3yeG+Jf+0=
+		PirCSXRfMxlLcobwwBVHbYvr/Gs=
 		</data>
 		<key>ReportFilterValues.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
 		<data>
@@ -1048,6 +1140,10 @@
 		<data>
 		R7SqyJ1BSSo5HMf73Kn8Ccj1vaM=
 		</data>
+		<key>SummaryReportPOSMCollectionViewCell.nib</key>
+		<data>
+		6BYiETVTouEJCfFqZ04klGciUNM=
+		</data>
 		<key>SummaryReportTotalValueCell.nib</key>
 		<data>
 		Lm7BvO6FU550SAXzQKLWwIw2WAs=
@@ -1055,6 +1151,18 @@
 		<key>SummaryReportVisitInfoCell.nib</key>
 		<data>
 		Uaply1cQ9l8L28XCumS/Cwq+O7Y=
+		</data>
+		<key>Support.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
+		<data>
+		iO6FhGbm7YVpaWc2NBA/7vQahXU=
+		</data>
+		<key>Support.storyboardc/Info.plist</key>
+		<data>
+		Cuss1id2IJOm7nYcNDGEnzc5KOc=
+		</data>
+		<key>Support.storyboardc/SupportViewController.nib</key>
+		<data>
+		4HzGHwRzBmyeh6KG9+xfbtowGFs=
 		</data>
 		<key>TabCollectionViewCell.nib</key>
 		<data>
@@ -1070,7 +1178,7 @@
 		</data>
 		<key>TaskDetailsScoreCell.nib</key>
 		<data>
-		tJ/iE2ZhNsj3xCG7tOPLOx5CsIs=
+		8oN+wpah3hEoN9fqqkKQwt+PK6s=
 		</data>
 		<key>TaskDetailsSelectOptionCell.nib</key>
 		<data>
@@ -1160,7 +1268,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Dy8AciG0I+Xkz72d/p/xcDF9MBM=
+			SG2fiw/fTDBaMbs7XzZELHuAsDo=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1178,7 +1286,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			beRoa7SZB44Oyi/gK68/Q8glqG0=
+			vExiTx8sKwrBh59mhtOXWnYVc2w=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1196,7 +1304,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			vd/A77sAQkZAiMcmwTS2TiUK9Cg=
+			OuMC3j8+TRHa5bSaJagQLxc00eo=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1214,7 +1322,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			q4FE3JhHMpAko/g3H0JKJGAIx34=
+			xESYj7qo95At+1VvUNmhJd/hNYM=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1230,13 +1338,13 @@
 		</dict>
 		<key>realm_swift_privacy.bundle/Info.plist</key>
 		<data>
-		Au00Q2oWA6Ak/rWEfDGNXWn8wpw=
+		aArPhapF09EzclkKt6jxC4Gdz7M=
 		</data>
 		<key>ru.lproj/Localized.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			A90x415ugdk0E7cjtY7UjNzybtQ=
+			52ibSNnSYP3wdh1PWFBOUgpRNLo=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1254,7 +1362,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			0TnLU18iBOv7Ir5fyvq8MuFV8Xk=
+			O+0wioX+hUf/5+7Ysrbx3UJ4eu4=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1306,6 +1414,48 @@
 			iGe0I7zmZtjxP4nxZfomD0ewyZPqmZMja4LEF0jJBco=
 			</data>
 		</dict>
+		<key>AppCenter.bundle/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			4ZLDQBfvlZluVnmTPYFkQxE/gMLGJpjaH7eCRVWDa8M=
+			</data>
+		</dict>
+		<key>AppCenter.bundle/PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			dFgfSL94ASqWZdkX5gAD+RTvcK/u7kSgXEHLdo7zg/o=
+			</data>
+		</dict>
+		<key>AppCenterAnalytics.bundle/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			EdN/dXwXGnmmiJcLG1vSH3tdATYx6nbPyubC2Pka0Q0=
+			</data>
+		</dict>
+		<key>AppCenterAnalytics.bundle/PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			8WFD/hxz+Np3ZNS2JYaiVJPoxPOZXWhA38gatUV4J8s=
+			</data>
+		</dict>
+		<key>AppCenterCrashes.bundle/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			8gjX14tM+qXIMvh2VicV6B096wWbYWywxNkZrE3B6nw=
+			</data>
+		</dict>
+		<key>AppCenterCrashes.bundle/PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Mhvjuut9WN6SW2OMmPfASyCpHqEJmIEYUT1JqRqphnM=
+			</data>
+		</dict>
 		<key>AppDocs.storyboardc/AppDocsViewController.nib</key>
 		<dict>
 			<key>hash2</key>
@@ -1338,7 +1488,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			6yaIy43Hb7X05+bkcBT2EhH+wSBkKPRC4DNqGfFRm2M=
+			ZTPg/dQK2wRVbV6zoXXSZXyED0hpNff6/fBgnBR6zq8=
 			</data>
 		</dict>
 		<key>AssortmentMatrixDetails.storyboardc/AssortmentMatrixDetailsViewController.nib</key>
@@ -1667,7 +1817,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			HGTBTnULLL2xRauD2A6hzrnZvOB+90UeBCzDBLHvAdQ=
+			9uAt3w9R9pfvFzjkptp4Pj3OMeBlrtV9bbVfWR1BT3g=
 			</data>
 		</dict>
 		<key>FullScreenGallerySceneTypeView.nib</key>
@@ -1689,6 +1839,13 @@
 			<key>hash2</key>
 			<data>
 			qU04MA0joFGZ1xTqi6L5TN12xIuR/iCF/B2/IY9ktmg=
+			</data>
+		</dict>
+		<key>GalleryStitchedPhotoCell.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			RFep2KVZUjn3uzlLFRzWQ45HXZzZELkU2+XYSbDvA0w=
 			</data>
 		</dict>
 		<key>HeaderTitleCell.nib</key>
@@ -1716,7 +1873,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pDX3SRXy0p/+Exvn3VdQUV3ws4kF0ldWBoTcW4+X7P0=
+			0O9/uriU7OxY2CrLcbHlY/Afr27vydmPWFNLCcbAVlE=
 			</data>
 		</dict>
 		<key>Headers/IrLibSwift.h</key>
@@ -1758,7 +1915,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Gfo4xLewK9eCMdaS3nq1ayGcXql+O9/4VC/dTywg/gs=
+			EbdXKk5UvXsPhFMDNU+zoItQihtlwPOhXEvW5ihzzbs=
 			</data>
 		</dict>
 		<key>Headers/UIImage+OpenCV.h</key>
@@ -1787,6 +1944,27 @@
 			<key>hash2</key>
 			<data>
 			rclXuDmI/3JEQm0Ygthx6qIFvDYRMIVAkL6QwzBRfvM=
+			</data>
+		</dict>
+		<key>InfoCarousel.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Qsg7RexnQrJPzdxJsWch3oBCZ7MLCIP5d7ZtENCD5r4=
+			</data>
+		</dict>
+		<key>InfoCarousel.storyboardc/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			7BYfKrG8pkDZn5NIEqfr1OY8Ylt/weOp4H6CQbrUErI=
+			</data>
+		</dict>
+		<key>InfoCarousel.storyboardc/InfoCarouselViewController.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			XGndlRDWlr2QirRzWbpZMIXwpJlm+jhbHB1Y5SB7XfE=
 			</data>
 		</dict>
 		<key>LocationGpsCheckActionCell.nib</key>
@@ -1828,70 +2006,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			isvR18P+R2lWUlzrmI9HJ5xv3B1EJJhERToI7cT67ws=
+			AG6vdLauqZt4+h2C6+CuiM9PxOtoYYNn/+///KSi6G0=
 			</data>
 		</dict>
 		<key>Modules/IrLibSwift.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			eqXvFgvg2qo+3gBEykfRALFksEaSKIYx2ZNayBLJtOg=
+			e1OvW1K+1m4CduJJQuPuO90Lu2RmrU6hyorOv/pIC1U=
 			</data>
 		</dict>
 		<key>Modules/IrLibSwift.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			r+5WGd3gfeQ8EXajab5U9XzkaclWEtgBsKI4Injj1P0=
+			t4DHAiO4OSuPAlGdkrKwwXXpbVt3Hhm+CsdYphv2zxc=
 			</data>
 		</dict>
 		<key>Modules/IrLibSwift.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			eqXvFgvg2qo+3gBEykfRALFksEaSKIYx2ZNayBLJtOg=
+			e1OvW1K+1m4CduJJQuPuO90Lu2RmrU6hyorOv/pIC1U=
 			</data>
 		</dict>
 		<key>Modules/IrLibSwift.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8cE4v860nk/OdcxqkUXViuMmLZjH0zkVOOyg6Rr2n3s=
+			TvZgoWyau/+V1ysT2sisVBgf8wMv499h33XWutRaWsE=
 			</data>
 		</dict>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			isvR18P+R2lWUlzrmI9HJ5xv3B1EJJhERToI7cT67ws=
+			AG6vdLauqZt4+h2C6+CuiM9PxOtoYYNn/+///KSi6G0=
 			</data>
 		</dict>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			yZV+tPhfcI6tWeLI7dY/G7sv8WC4dZKzRvX3Kn8LjaI=
+			IMUE1sbPdBOF1+ZfLiAfLmdxZ0BYow06eCKK+jVUHbo=
 			</data>
 		</dict>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			qcb4v6WVUvM9D93KbihHKo//hwR4nTmHRYa1NVfGwwM=
+			memNk0El8BHEiarxoNoCnW3Dhhymp4su1KJL5lhGOGQ=
 			</data>
 		</dict>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			yZV+tPhfcI6tWeLI7dY/G7sv8WC4dZKzRvX3Kn8LjaI=
+			IMUE1sbPdBOF1+ZfLiAfLmdxZ0BYow06eCKK+jVUHbo=
 			</data>
 		</dict>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			h7gUKjKPWmH+H3+rsBVgfaLwua0M9s5wFNzt0fGkEN0=
+			mrbAzRVo9LY2O+muMdnzvf+tP2fLqiG0DQ49cuX8Wos=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -1905,7 +2083,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			8flROJnlRjvRp1slhfcFIHDxMzDoRcUi/bJx9S51Fww=
+			zQb5Lp/6BluyqEDAbEN3tA45bHKyCy4mtWhiTrvrfbE=
 			</data>
 		</dict>
 		<key>OOSProductTableViewCell.nib</key>
@@ -1947,7 +2125,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			08EGmh2o9lTG68k5k0/dd3/SfHxbK71tVmd3GNSGDD0=
+			wk182NU5Kl7STyVgKD/IzuLA489AaKprgEgRdfDgqlE=
 			</data>
 		</dict>
 		<key>OSAHeadersTableViewCell.nib</key>
@@ -1983,6 +2161,83 @@
 			<key>hash2</key>
 			<data>
 			Sc9WQ/dIDwAphM4K94yhBaicRtJwLKTrxSBq/FIwgs8=
+			</data>
+		</dict>
+		<key>POSMItemViewer.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			LtMHOk1IYPeszyjZH2U3UhuGenCyhTMrJgL4E84vv/E=
+			</data>
+		</dict>
+		<key>POSMItemViewer.storyboardc/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			GezN48z0pKa7K3gMLlAPuwpEiB3zizPNOuTHOOmSxgY=
+			</data>
+		</dict>
+		<key>POSMItemViewer.storyboardc/POSMItemViewerViewController.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			wR3hCykVoYa3goSEsQz54EQBaTxTgFGpVdMlQiSKatk=
+			</data>
+		</dict>
+		<key>POSMMetricSelect.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			LtMHOk1IYPeszyjZH2U3UhuGenCyhTMrJgL4E84vv/E=
+			</data>
+		</dict>
+		<key>POSMMetricSelect.storyboardc/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			wEM3oUptwbcQNlBxaiY4cQw/cJJo4zdOxVoh9wK/ZtE=
+			</data>
+		</dict>
+		<key>POSMMetricSelect.storyboardc/POSMMetricSelectViewController.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Ful69i1sEMqMpG0l8iVK4THvsgsfbrSVfWUpHQ0RMfM=
+			</data>
+		</dict>
+		<key>POSMMetricSelectTableViewCell.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			VyzOa5JfpCcO6kkrjFNVimoyRYzgBONTRmDkT0V5hFM=
+			</data>
+		</dict>
+		<key>POSMReport.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			0GRywBp2NwHZsyJ9Qp+9zeStnIfTNVZMiKb3PWXdMqw=
+			</data>
+		</dict>
+		<key>POSMReport.storyboardc/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			K25YASmKkhbY+iyb1WwD0MGioLqNf4hckZqdkJv6XZY=
+			</data>
+		</dict>
+		<key>POSMReport.storyboardc/POSMReportViewController.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			B3T33bP3ZJcw5eEqLWCKxTr/97LXAYCip9lgnPdTarQ=
+			</data>
+		</dict>
+		<key>POSMReportProductTableViewCell.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			opqQuWfY2N0GHpN6Q5adwfno1/7FdFLaynGeRJWWRdI=
 			</data>
 		</dict>
 		<key>PadCamera.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
@@ -2031,7 +2286,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			cKEXjNjB4/8s8SImLnMqc+ItSHLSALsJQsMXPaA6aBo=
+			YqShyn6gcLQEFMkdCNCJbpsOHaXyyT1S6YbzAiOvV1Q=
 			</data>
 		</dict>
 		<key>PhotoBrowse.storyboardc/Info.plist</key>
@@ -2216,6 +2471,13 @@
 			SxwsN8SQx75p2kbxy+Q+yxPwO+c7bs70F3H5WYZorZY=
 			</data>
 		</dict>
+		<key>PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			7aeZXJSqmb+d44d80yTlJNO0MB95xf0DvBrtLN1hrNc=
+			</data>
+		</dict>
 		<key>Product.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
 		<dict>
 			<key>hash2</key>
@@ -2248,14 +2510,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			orc/xtmrqInv7QY+qcUR9IqE2FZBX/4b/oLYIgnxFxo=
+			0u5JbEYdhOtg708Cdmo3Ojy7V2tR5YtpJcbZYWxIQpE=
+			</data>
+		</dict>
+		<key>ProductFactCell.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			NgLBppQ1Bc2cjw4Ea/06aPXLgF6O/l8G8kBgdnVfiYw=
 			</data>
 		</dict>
 		<key>ProductImageCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			O+0mhQU746hh6vGElvJAhryUY8XcV/bNDbISPup67YY=
+			z6SpKOXeyx8YDxZ1IK9fOpG0PMw/Bnxjb7rU5U2TVZE=
 			</data>
 		</dict>
 		<key>ProductImageViewer.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
@@ -2304,7 +2573,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			HCCB6z2Sym2FtXQHD9/B5uTCzhnm7VCr1arw03f/pys=
+			/8isKPnIASOMvYW7TuV7/Vp7OYsl6KLl2zxNG2fgtOg=
 			</data>
 		</dict>
 		<key>ProductViewer.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
@@ -2360,7 +2629,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			4MpZ2WDcx3uYo3HtQxhYbqAvPmcBsj+8g8CXHeDFJXQ=
+			Rs/tboLKhwwggfVMJmRHLwMa3bICw7bzKVN4ZnXUF2M=
 			</data>
 		</dict>
 		<key>ReportBrandTableViewCell.nib</key>
@@ -2395,7 +2664,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			GVcbyJ8SLeUaVpzT/ValfvqxvuFDHOilESfvp5z4IXs=
+			MSegXoEcHzqa8pe3tyyBVVfe9rNP0KbBjOqTKY3gCFg=
 			</data>
 		</dict>
 		<key>ReportFilterValues.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
@@ -3091,6 +3360,13 @@
 			saDcQZFC2xDmHpiq+OUGzFzYSZy/xizW3lW2F8sAxmM=
 			</data>
 		</dict>
+		<key>SummaryReportPOSMCollectionViewCell.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			pNXxi8nGvO5SbcJd/T0mCQypqclpwh5mvq5sd57Lxms=
+			</data>
+		</dict>
 		<key>SummaryReportTotalValueCell.nib</key>
 		<dict>
 			<key>hash2</key>
@@ -3103,6 +3379,27 @@
 			<key>hash2</key>
 			<data>
 			vrZC7Ym8ZNzeLmyyJ9CjNnMgC5BYZC3XSN0yXAuPolg=
+			</data>
+		</dict>
+		<key>Support.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			XNfu/B7sxEWXIpQQkGTvOFPkH0nBkl7G1NsbJuh3EZc=
+			</data>
+		</dict>
+		<key>Support.storyboardc/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			H4m7pVhb9w7ID/XtSth8YqSDSF5a4VrFNPmwnXdW958=
+			</data>
+		</dict>
+		<key>Support.storyboardc/SupportViewController.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			d2aWNjm735P/LRaB8Ju8kmiO5NbiGPl+5NCp6256Azs=
 			</data>
 		</dict>
 		<key>TabCollectionViewCell.nib</key>
@@ -3130,7 +3427,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			4Zt/hFN7sb/m3ReX0xTEgIw6a2h95vh+vVgS1ygycwA=
+			fLo/4VPjS1LEcwF7nOVbLK1MV8aOmGWNF5625OaBj7o=
 			</data>
 		</dict>
 		<key>TaskDetailsSelectOptionCell.nib</key>
@@ -3284,7 +3581,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			icKFLmp9BOciK6FrJOQOZsu7ewNnQEUr0QYbHm2Jo/Q=
+			DOuC95Pke4Xn/mLTqBQpjFxmeYleQiY0kmdLDWtywq4=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3302,7 +3599,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Y/QDUZwP6NCumEc7MQrT99tlHhvKserlsTR6QWvw+kA=
+			oPlEwg7hVqExmvpBBP+6yAG1d9+zltcRQg0rn4U+5N8=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3320,7 +3617,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+5BGD5+/NSPY4ym5X+LoWAwnsmBQ6RLgTQ34hwMFOyc=
+			ZvfcJR9rV17rZl/pjpZnV9KrrU6WemK0BymLb+4f/fM=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3338,7 +3635,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			wrufmv/XtrtxN8dOlBOGfibecolZMnOBBaV1ERZIJ3c=
+			TdTySsmKu+1xBErWNQTfQCk04CzcfreJ00Oi9ISZXAk=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3356,14 +3653,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			sR0wbANiOmG49apYNzjEmqn8h/EmIywH4MtvBE4S+OA=
+			udrMBaSpYSadS7drWYy+1+vSGfu6ZunI2PbPRwQID8s=
 			</data>
 		</dict>
 		<key>ru.lproj/Localized.strings</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			2RfliCDohkruQI9yvGkxmM9TCWSYskPoHA1c0yrVNWU=
+			/OlEhEAA+0O6+sj9UVn9R8XDD61A0fv2KOI03qhDr4U=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3381,7 +3678,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			YxxXISlW5NStjO2hdYx9xAjjD804sSPxT2rJDdgCem8=
+			MlSzURM+cDXN2pSAbeIV880kMnxeGXsUdZ/7tc0dGvA=
 			</data>
 			<key>optional</key>
 			<true/>

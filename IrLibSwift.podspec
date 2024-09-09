@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "IrLibSwift"
-  spec.version      = "5.10.1"
+  spec.version      = "5.12"
   spec.summary      = "Framework with IR functionality written on Swift" 
   spec.static_framework = true;
   spec.description  = <<-DESC
@@ -11,6 +11,7 @@ Pod::Spec.new do |spec|
   spec.author       = { "Intrtl" => "support@intrtl.com" }
   spec.platform     = :ios, "14.0"
   spec.source       = { :git => "https://github.com/intrtl/IRLibSwift.git", :tag => "#{spec.version}" }
+  spec.frameworks = "CoreMotion", "UserNotifications", "Combine"
   spec.ios.vendored_frameworks = 'IrLibSwift.xcframework'
   spec.dependency "YandexMobileMetrica/Dynamic", "4.5.0"
   spec.dependency "OpenCV2", "~> 4.3.0"
