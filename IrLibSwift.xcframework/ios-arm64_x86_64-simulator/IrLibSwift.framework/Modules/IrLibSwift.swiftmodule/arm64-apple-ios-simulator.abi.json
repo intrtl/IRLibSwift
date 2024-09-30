@@ -7853,6 +7853,34 @@
             "fixedbinaryorder": 12
           },
           {
+            "kind": "Function",
+            "name": "error",
+            "printedName": "error(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "IRError",
+                "printedName": "IrLibSwift.IRError",
+                "usr": "c:@M@IrLibSwift@E@IRError"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10IrLibSwift7IRErrorO5error4fromACSi_tFZ",
+            "mangledName": "$s10IrLibSwift7IRErrorO5error4fromACSi_tFZ",
+            "moduleName": "IrLibSwift",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
             "kind": "Var",
             "name": "errorDescription",
             "printedName": "errorDescription",
@@ -39575,6 +39603,16 @@
       },
       {
         "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "IrLibSwift",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -53300,6 +53338,16 @@
         "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "IrLibSwift",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "IrLibSwift",
         "declAttributes": [
@@ -67950,7 +67998,7 @@
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Public\/IRDataManager.swift",
       "kind": "StringLiteral",
-      "offset": 17340,
+      "offset": 17427,
       "length": 26,
       "value": "\"IrLibSwift.AiletUnsentDataCheckResult\""
     },
@@ -79136,322 +79184,336 @@
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "Dictionary",
-      "offset": 3876,
+      "offset": 3913,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "Dictionary",
-      "offset": 3968,
+      "offset": 4005,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "BooleanLiteral",
-      "offset": 4146,
+      "offset": 4183,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "Dictionary",
-      "offset": 4259,
+      "offset": 4296,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "Dictionary",
-      "offset": 4351,
+      "offset": 4388,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "Dictionary",
-      "offset": 4466,
+      "offset": 4503,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "BooleanLiteral",
-      "offset": 4575,
+      "offset": 4612,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
+      "kind": "Dictionary",
+      "offset": 4729,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
+      "kind": "Dictionary",
+      "offset": 4790,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "Array",
-      "offset": 4696,
+      "offset": 4910,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "FloatLiteral",
-      "offset": 4739,
+      "offset": 4953,
       "length": 3,
       "value": "0.6"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "BooleanLiteral",
-      "offset": 4787,
+      "offset": 5001,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "IntegerLiteral",
-      "offset": 4826,
+      "offset": 5040,
       "length": 4,
       "value": "3500"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "BooleanLiteral",
-      "offset": 4866,
+      "offset": 5080,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "Array",
-      "offset": 4929,
+      "offset": 5143,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "BooleanLiteral",
-      "offset": 4979,
+      "offset": 5193,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "BooleanLiteral",
-      "offset": 5182,
+      "offset": 5396,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "IntegerLiteral",
-      "offset": 5224,
+      "offset": 5438,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "BooleanLiteral",
-      "offset": 5300,
+      "offset": 5514,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "Array",
-      "offset": 5314,
+      "offset": 5528,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "StringLiteral",
-      "offset": 6785,
+      "offset": 6999,
       "length": 32,
       "value": "\"IrLibSwift.IRGeolocationErrorSharedSettings\""
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "IntegerLiteral",
-      "offset": 7163,
+      "offset": 7377,
       "length": 4,
       "value": "1"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "IntegerLiteral",
-      "offset": 7177,
+      "offset": 7391,
       "length": 7,
       "value": "2"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "IntegerLiteral",
-      "offset": 7163,
+      "offset": 7377,
       "length": 4,
       "value": "1"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "IntegerLiteral",
-      "offset": 7177,
+      "offset": 7391,
       "length": 7,
       "value": "2"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "IntegerLiteral",
-      "offset": 7266,
+      "offset": 7480,
       "length": 9,
       "value": "1"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "IntegerLiteral",
-      "offset": 7266,
+      "offset": 7480,
       "length": 9,
       "value": "1"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "BooleanLiteral",
-      "offset": 7373,
+      "offset": 7587,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "IntegerLiteral",
-      "offset": 7620,
+      "offset": 7834,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "BooleanLiteral",
-      "offset": 7676,
+      "offset": 7890,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "BooleanLiteral",
-      "offset": 7883,
+      "offset": 8097,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "IntegerLiteral",
-      "offset": 7987,
+      "offset": 8201,
       "length": 2,
       "value": "20"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "IntegerLiteral",
-      "offset": 8018,
+      "offset": 8232,
       "length": 3,
       "value": "200"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "BooleanLiteral",
-      "offset": 8149,
+      "offset": 8363,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "BooleanLiteral",
-      "offset": 8257,
+      "offset": 8471,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "BooleanLiteral",
-      "offset": 8304,
+      "offset": 8518,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "Dictionary",
-      "offset": 8642,
+      "offset": 8856,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "Array",
-      "offset": 8745,
+      "offset": 8959,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "BooleanLiteral",
-      "offset": 11150,
+      "offset": 11364,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "BooleanLiteral",
-      "offset": 11253,
+      "offset": 11467,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "BooleanLiteral",
-      "offset": 11298,
+      "offset": 11512,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "BooleanLiteral",
-      "offset": 11351,
+      "offset": 11565,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "BooleanLiteral",
-      "offset": 11398,
+      "offset": 11612,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "BooleanLiteral",
-      "offset": 11454,
+      "offset": 11668,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "BooleanLiteral",
-      "offset": 11577,
+      "offset": 11791,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "BooleanLiteral",
-      "offset": 11704,
+      "offset": 11918,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "BooleanLiteral",
-      "offset": 11785,
+      "offset": 11999,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "BooleanLiteral",
-      "offset": 11834,
+      "offset": 12048,
       "length": 5,
       "value": "false"
     },
@@ -79731,21 +79793,21 @@
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Userstories\/Stores\/StoreDetails\/SfaStoreDetails\/Interactor\/SfaStoreDetailsInteractor.swift",
       "kind": "BooleanLiteral",
-      "offset": 1148,
+      "offset": 1183,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Userstories\/Stores\/StoreDetails\/SfaStoreDetails\/Interactor\/SfaStoreDetailsInteractor.swift",
       "kind": "BooleanLiteral",
-      "offset": 20983,
+      "offset": 21936,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Userstories\/Stores\/StoreDetails\/SfaStoreDetails\/Interactor\/SfaStoreDetailsInteractor.swift",
       "kind": "BooleanLiteral",
-      "offset": 21024,
+      "offset": 21977,
       "length": 5,
       "value": "false"
     },
@@ -90985,6 +91047,13 @@
       "value": "1"
     },
     {
+      "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Entities\/Presentable\/VisitPresentableEntity.swift",
+      "kind": "BooleanLiteral",
+      "offset": 495,
+      "length": 5,
+      "value": "false"
+    },
+    {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Services\/Photo\/PhotoService\/Storage\/PhotoPredicatesBuilder.swift",
       "kind": "Array",
       "offset": 285,
@@ -96034,14 +96103,14 @@
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Userstories\/Stores\/StoreDetails\/Interactor\/StoreDetailsInteractor.swift",
       "kind": "BooleanLiteral",
-      "offset": 20559,
+      "offset": 20572,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Userstories\/Stores\/StoreDetails\/Interactor\/StoreDetailsInteractor.swift",
       "kind": "BooleanLiteral",
-      "offset": 20600,
+      "offset": 20613,
       "length": 5,
       "value": "false"
     },
@@ -99359,23 +99428,37 @@
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Managers\/CatalogsManager\/CatalogsManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 1743,
+      "offset": 1476,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Managers\/CatalogsManager\/CatalogsManager.swift",
       "kind": "Array",
-      "offset": 2246,
+      "offset": 1979,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Managers\/CatalogsManager\/CatalogsManager.swift",
       "kind": "Array",
-      "offset": 2283,
+      "offset": 2016,
       "length": 2,
       "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Managers\/CatalogsManager\/CatalogsManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2062,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Managers\/CatalogsManager\/CatalogsManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2116,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Userstories\/RetailTask\/RetailTaskActions\/AnketAction\/View\/RetailTaskAnketActionViewController.swift",
@@ -101186,56 +101269,56 @@
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Services\/RetailTaskService\/DefaultRetailTaskService.swift",
       "kind": "StringLiteral",
-      "offset": 3207,
+      "offset": 3293,
       "length": 109,
       "value": "\"✅ Retail task iteration was successful saved. Id: \""
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Services\/RetailTaskService\/DefaultRetailTaskService.swift",
       "kind": "StringLiteral",
-      "offset": 3274,
+      "offset": 3360,
       "length": 1,
       "value": "\". RetailTaskId: \""
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Services\/RetailTaskService\/DefaultRetailTaskService.swift",
       "kind": "StringLiteral",
-      "offset": 3314,
+      "offset": 3400,
       "length": 1,
       "value": "\".\""
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Services\/RetailTaskService\/DefaultRetailTaskService.swift",
       "kind": "IntegerLiteral",
-      "offset": 13186,
+      "offset": 13272,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Services\/RetailTaskService\/DefaultRetailTaskService.swift",
       "kind": "StringLiteral",
-      "offset": 13762,
+      "offset": 13848,
       "length": 117,
       "value": "\"❌ Не удалось найти итерацию для результатов по задаче \""
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Services\/RetailTaskService\/DefaultRetailTaskService.swift",
       "kind": "StringLiteral",
-      "offset": 13878,
+      "offset": 13964,
       "length": 29,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Services\/RetailTaskService\/DefaultRetailTaskService.swift",
       "kind": "StringLiteral",
-      "offset": 14101,
+      "offset": 14187,
       "length": 40,
       "value": "\"❌ Retail task update error: \""
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Services\/RetailTaskService\/DefaultRetailTaskService.swift",
       "kind": "StringLiteral",
-      "offset": 14140,
+      "offset": 14226,
       "length": 2,
       "value": "\"\""
     },
@@ -101961,6 +102044,20 @@
       "value": "22"
     },
     {
+      "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Helpers\/ThreadSafe.swift",
+      "kind": "StringLiteral",
+      "offset": 283,
+      "length": 43,
+      "value": "\"com.ailet.threadsafe-\""
+    },
+    {
+      "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Helpers\/ThreadSafe.swift",
+      "kind": "StringLiteral",
+      "offset": 325,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Entities\/Encodable\/OuterReport\/OuterReport + Result.swift",
       "kind": "StringLiteral",
       "offset": 575,
@@ -102566,6 +102663,13 @@
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Entities\/RealmObjects\/OfflineRecognition\/AiletOfflineRecognizedProductFacing.swift",
       "kind": "BooleanLiteral",
       "offset": 1668,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Userstories\/Reports\/ReportViewer\/ProductImageViewer\/View\/ProductImageViewerViewModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 551,
       "length": 5,
       "value": "false"
     },
@@ -103636,21 +103740,21 @@
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Userstories\/Product\/View\/ProductViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 793,
+      "offset": 853,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Userstories\/Product\/View\/DataDisplayManager\/ProductDataDisplayManager.swift",
       "kind": "Array",
-      "offset": 1010,
+      "offset": 1118,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Userstories\/Product\/View\/DataDisplayManager\/ProductDataDisplayManager.swift",
       "kind": "StringLiteral",
-      "offset": 627,
+      "offset": 687,
       "length": 32,
       "value": "\"IrLibSwift.DefaultProductDataDisplayManager\""
     },

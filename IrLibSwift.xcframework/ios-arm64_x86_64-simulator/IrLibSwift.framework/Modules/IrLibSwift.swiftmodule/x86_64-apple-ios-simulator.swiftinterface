@@ -223,6 +223,7 @@ public enum GradientDirection {
   case incorrectPortal = 24
   case emptyPortal = 25
   case serverError = 20
+  public static func error(from code: Swift.Int) -> IrLibSwift.IRError
   public var errorDescription: Swift.String? {
     get
   }
