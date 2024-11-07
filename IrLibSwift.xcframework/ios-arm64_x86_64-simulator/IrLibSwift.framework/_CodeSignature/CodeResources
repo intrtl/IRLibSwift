@@ -366,7 +366,7 @@
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		tl7JC2F9ybGwargQvTR9i5nYSdE=
+		mGWvMV2HreWXLVN4GAJG8sVRBOI=
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -382,11 +382,11 @@
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		qHvdzlXX/dUuFeH10E9VkdIjCgY=
+		kzuOir8QcZ1n9EsfOxQHOFcb9eE=
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		tl7JC2F9ybGwargQvTR9i5nYSdE=
+		mGWvMV2HreWXLVN4GAJG8sVRBOI=
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -402,7 +402,7 @@
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		+3Gpi9oviJBnCNmgR6SWGlbBy8k=
+		43Nq2XmNzsqAt0x5Q5r5mqJQlCk=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -1336,6 +1336,10 @@
 			<key>optional</key>
 			<true/>
 		</dict>
+		<key>realm_swift_privacy.bundle/Info.plist</key>
+		<data>
+		ryHhMD0r36l+WlDsaEpwc9BCUZI=
+		</data>
 		<key>ru.lproj/Localized.strings</key>
 		<dict>
 			<key>hash</key>
@@ -2002,7 +2006,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			d9KnVdm50q+M7hQsSwVyTX/zuwUcXya3ebi21oTORv0=
+			d3u/kqCmeXt3PsZbYAKOkgaqP7Lsc6lB8dUfYY2+kIE=
 			</data>
 		</dict>
 		<key>Modules/IrLibSwift.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -2030,14 +2034,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			rUV0Tiz9b9Dv7fVk2LKTnRJbQNzbCOOF8QHHJnWNUKE=
+			WvQXz8TGzgg4z715AVgfDVXLidHBFs+TQQYc+3Ei8N8=
 			</data>
 		</dict>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			d9KnVdm50q+M7hQsSwVyTX/zuwUcXya3ebi21oTORv0=
+			d3u/kqCmeXt3PsZbYAKOkgaqP7Lsc6lB8dUfYY2+kIE=
 			</data>
 		</dict>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -2065,7 +2069,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			rB2hFTzbLv26ZXSlXtXRsP/DBGl+UT+pux7FRSk3S8w=
+			RNCdzslgiOoXRoLXVdnKhGIZASYIwFDEJB6V1mfX3Og=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -3644,6 +3648,13 @@
 			</data>
 			<key>optional</key>
 			<true/>
+		</dict>
+		<key>realm_swift_privacy.bundle/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			nZYGWfFppG0q+/6zD3dhXm/OWhOzpwzfDMmqrXaQuUY=
+			</data>
 		</dict>
 		<key>ru.lproj/Localized.strings</key>
 		<dict>

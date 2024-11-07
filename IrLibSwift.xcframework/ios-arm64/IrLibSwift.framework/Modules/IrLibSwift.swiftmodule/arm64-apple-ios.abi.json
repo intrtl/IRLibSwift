@@ -62711,6 +62711,20 @@
           },
           {
             "kind": "Conformance",
+            "name": "BSON",
+            "printedName": "BSON",
+            "usr": "s:10RealmSwift4BSONP",
+            "mangledName": "$s10RealmSwift4BSONP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "PartitionValue",
+            "printedName": "PartitionValue",
+            "usr": "s:10RealmSwift14PartitionValueP",
+            "mangledName": "$s10RealmSwift14PartitionValueP"
+          },
+          {
+            "kind": "Conformance",
             "name": "_MapKey",
             "printedName": "_MapKey",
             "usr": "s:10RealmSwift7_MapKeyP",
@@ -63345,6 +63359,20 @@
             "printedName": "CVarArg",
             "usr": "s:s7CVarArgP",
             "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "BSON",
+            "printedName": "BSON",
+            "usr": "s:10RealmSwift4BSONP",
+            "mangledName": "$s10RealmSwift4BSONP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "PartitionValue",
+            "printedName": "PartitionValue",
+            "usr": "s:10RealmSwift14PartitionValueP",
+            "mangledName": "$s10RealmSwift14PartitionValueP"
           }
         ]
       },
@@ -63846,6 +63874,20 @@
             "printedName": "_ObjcBridgeable",
             "usr": "s:10RealmSwift15_ObjcBridgeableP",
             "mangledName": "$s10RealmSwift15_ObjcBridgeableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "BSON",
+            "printedName": "BSON",
+            "usr": "s:10RealmSwift4BSONP",
+            "mangledName": "$s10RealmSwift4BSONP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "PartitionValue",
+            "printedName": "PartitionValue",
+            "usr": "s:10RealmSwift14PartitionValueP",
+            "mangledName": "$s10RealmSwift14PartitionValueP"
           },
           {
             "kind": "Conformance",
@@ -64719,6 +64761,20 @@
             "printedName": "MutableDataProtocol",
             "usr": "s:10Foundation19MutableDataProtocolP",
             "mangledName": "$s10Foundation19MutableDataProtocolP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "BSON",
+            "printedName": "BSON",
+            "usr": "s:10RealmSwift4BSONP",
+            "mangledName": "$s10RealmSwift4BSONP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "PartitionValue",
+            "printedName": "PartitionValue",
+            "usr": "s:10RealmSwift14PartitionValueP",
+            "mangledName": "$s10RealmSwift14PartitionValueP"
           }
         ]
       },
