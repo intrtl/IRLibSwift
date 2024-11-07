@@ -1,0 +1,1478 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0.2 effective-5.10 (swiftlang-6.0.2.1.2 clang-1600.0.26.4)
+// swift-module-flags: -target arm64-apple-ios14.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name IrLibSwift
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+import AVFAudio
+import AVFoundation
+import AVKit
+import Amplitude
+import AppCenter
+import AppCenterAnalytics
+import AppCenterCrashes
+import BugfenderSDK
+import Combine
+import CoreFoundation
+import CoreGraphics
+import CoreImage
+import CoreLocation
+import CoreML
+import CoreMotion
+import CoreTelephony
+import DeveloperToolsSupport
+import Foundation
+import Intercom
+@_exported import IrLibSwift
+import MapKit
+import MediaPlayer
+import Realm
+import RealmSwift
+import Swift
+import SwiftUI
+import SystemConfiguration
+import UIKit
+import WebKit
+import YandexMobileMetrica
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@_inheritsConvenienceInitializers @objc public class Shelf : RLMObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class ScreenTimeEvent : RLMObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class RecognitionResultActualAssortment : RLMObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public protocol StoreDetailsOutput {
+  @objc func didStartVisitForStoreWithId(_ storeId: Swift.Int)
+  @objc func didFinishVisit(storeId: Swift.Int)
+  @objc func didTriggerOpenSupport()
+}
+@_inheritsConvenienceInitializers @objc public class Route : RLMObject {
+  @objc override dynamic public class func primaryKey() -> Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class RoutePoint : RLMObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+public enum VisitError : Foundation.LocalizedError {
+  case noVisitFound
+  case noStore
+  case noCurrentVisit
+  case noVisit(externalId: Swift.String)
+  case shootingForDownloadedVisit
+}
+@_inheritsConvenienceInitializers @objc public class RecognitionResultRealogram : RLMObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class RecognitionResultPriceBox : RLMObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class RecognitionResultPriceLink : RLMObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+public class ProfileInfoNavigationBarCustomizer {
+  public enum ProfileInfoPosition {
+    case right
+    case left
+    public static func == (a: IrLibSwift.ProfileInfoNavigationBarCustomizer.ProfileInfoPosition, b: IrLibSwift.ProfileInfoNavigationBarCustomizer.ProfileInfoPosition) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  final public let profileImageView: UIKit.UIImageView
+  public var userName: Swift.String {
+    get
+    set
+  }
+  public init()
+  public func setup(navigationItem: UIKit.UINavigationItem, navigationController: UIKit.UINavigationController?, profileInfoPosition: IrLibSwift.ProfileInfoNavigationBarCustomizer.ProfileInfoPosition, userName: Swift.String)
+  public func setupProfileInfo()
+  public func updateToCustom()
+  public func updateToDefault()
+  @objc deinit
+}
+public class GradientNavigationBarCustomizer : IrLibSwift.NavigationBarCustomizer {
+  final public let viewsToHide: [UIKit.UIView]
+  public var rightTapTarget: Any?
+  public var rightTapAction: ObjectiveC.Selector?
+  public init(gradient: IrLibSwift.Gradient, textColor: UIKit.UIColor)
+  public func setup(navigationItem: UIKit.UINavigationItem, navigationController: UIKit.UINavigationController?, buttonTapTarget: Any?, action: ObjectiveC.Selector?)
+  public func setupCustomNavigationBar()
+  public func updateToDefault()
+  public func updateToCustom()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class Fix_scenes : RLMObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension UIKit.UICollectionView {
+  @_Concurrency.MainActor @preconcurrency public func register<T>(cellWithXib: T.Type) where T : UIKit.UICollectionViewCell
+  @_Concurrency.MainActor @preconcurrency public func register<T>(headerViewWithXib: T.Type) where T : UIKit.UICollectionReusableView
+  @_Concurrency.MainActor @preconcurrency public func register<T>(footerViewWithXib: T.Type) where T : UIKit.UICollectionReusableView
+}
+@_hasMissingDesignatedInitializers @objc public class IRVisitServiceInteractionProvider : ObjectiveC.NSObject {
+  @objc deinit
+}
+@objc extension IrLibSwift.IRVisitServiceInteractionProvider {
+  @objc dynamic public func fetchPreviousVisitIfNeeded(externalVisitId: Swift.String, completion: ((Foundation.NSError?) -> Swift.Void)?)
+}
+public protocol NavigationBarCustomizer {
+  var viewsToHide: [UIKit.UIView] { get }
+  var rightTapTarget: Any? { get set }
+  var rightTapAction: ObjectiveC.Selector? { get set }
+  func setup(navigationItem: UIKit.UINavigationItem, navigationController: UIKit.UINavigationController?, buttonTapTarget: Any?, action: ObjectiveC.Selector?)
+  func setupCustomNavigationBar()
+  func updateToDefault()
+  func updateToCustom()
+}
+@_inheritsConvenienceInitializers @objc public class TaskAttachment : RLMObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+public typealias DefaultAiletDataManager = IrLibSwift.IRDataManager
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class IRDataManager : ObjectiveC.NSObject, IrLibSwift.IRDataManagerProtocol {
+  @objc public static var shared: IrLibSwift.IRDataManager
+  @objc final public let techSupport: IrLibSwift.IRTechSupportInteractionProvider
+  @objc final public let visits: IrLibSwift.IRVisitServiceInteractionProvider
+  @objc final public let reports: IrLibSwift.IRReportsInteractionProvider
+  @objc final public let storedStateSettings: IrLibSwift.IRStoredStateSettings
+  @objc final public let auth: IrLibSwift.IRAuthServiceInteractionProvider
+  @objc final public let multiportalAuth: IrLibSwift.IRMultiportalAuthServiceInteractionProvider
+  @objc final public let database: any IrLibSwift.IRDbConfigProvider
+  @objc final public let screens: IrLibSwift.IRScreensBuilderInteractionProvider
+  @objc final public let featureToggles: IrLibSwift.IRFeatureToggles
+  @objc public static func updateAppInfo(isApp: Swift.Bool)
+  @objc public static func updateDeeplinkInfo(isStartedViaDeeplink: Swift.Bool)
+  @objc public func startAnalytics()
+  @objc public func fetchStores(completion: @escaping (Foundation.NSError?) -> Swift.Void)
+  @objc public func fetchSettingsAndRoutes(completion: @escaping (Foundation.NSError?) -> Swift.Void)
+  @objc public func restartSendingNotSentData(onUpdate: ((Foundation.NSError?) -> Swift.Void)?)
+  @objc public func canDoRecognitionResult(photoId: Swift.String) -> Swift.Bool
+  @objc public func updateCurrentStore(storeId: Swift.Int, externalStoreId: Swift.String?)
+  @objc public func updateExternalData(visitId: Swift.String)
+  @objc public static func updateExternalData(visitId: Swift.String)
+  @objc public static func clearExternalData()
+  @objc public func fetchWidgets(visitId: Swift.String, completion: @escaping (Foundation.NSError?) -> Swift.Void)
+  @objc public func widgetReportsForVisit(visitId: Swift.String, widgetType: Swift.String, taskId: Swift.String?) -> [IrLibSwift.VisitWidgetReportDataEntity]
+  @objc public func widgetReportForVisit(visitId: Swift.String, widgetType: Swift.String, matrixType: Swift.String, taskId: Swift.String?) -> IrLibSwift.VisitWidgetReportDataEntity?
+  @objc public func defaultReportMatrix(visitId: Swift.String, taskId: Swift.String?) -> IrLibSwift.VisitWidgetReportMatrixDataEntity?
+  @objc public func fetchSegments(completion: @escaping (Foundation.NSError?) -> Swift.Void)
+  @objc public func fetchTasks(completion: @escaping (Foundation.NSError?) -> Swift.Void)
+  @objc public func cachedTasksCount() -> Swift.Int
+  @objc public func storesCount() -> Swift.Int
+  @objc public func fetchVisitsPlansAndFacts(completion: @escaping (Foundation.NSError?) -> Swift.Void)
+  @objc public func updatePhotoResultIntervals(_ intervals: [Swift.Int])
+  @objc public func internalTaskId(externalVisitId: Swift.String, taskId: Swift.String?) -> Swift.String?
+  @objc public func logScreenTimeEvent(id: Swift.String, name: Swift.String, duration: Swift.Int)
+  @objc public func visitStats(visitId: Swift.String, photoId: Swift.String?) -> [Swift.String : Any]
+  @objc public func restartLocationService()
+  @objc public func imageResizer(with compressionQuality: CoreFoundation.CGFloat) -> any IrLibSwift.ImageResizer
+  @objc public func showFillReasonsAlert(on vc: UIKit.UIViewController, onAgree agreeHandler: (() -> Swift.Void)?)
+  @objc public func isConnectionAvailable() -> Swift.Bool
+  @objc public func shouldShowDebugFeatures() -> Swift.Bool
+  @objc public func updateShowDebugFeatures(to shouldShow: Swift.Bool)
+  @objc public func fetchCatalogs(completion: ((Foundation.NSError?) -> Swift.Void)?)
+  @objc public func shouldFillAbsenceReasons(externalVisitId: Swift.String) -> Swift.Bool
+  @objc public func workflow() -> IrLibSwift.IRWorkFlow
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class AiletUnsentDataCheckResult : ObjectiveC.NSObject {
+  @objc final public let hasUnsentData: Swift.Bool
+  @objc final public let errorLog: Swift.String?
+  @objc deinit
+}
+public enum GradientDirection {
+  case topToBottom
+  case leftToRight
+  case leftTopToRightBottom
+  case leftBottomToRightTop
+  case custom(startPoint: CoreFoundation.CGPoint, endPoint: CoreFoundation.CGPoint)
+}
+@_hasMissingDesignatedInitializers @objc public class IRGradientDirection : ObjectiveC.NSObject {
+  @objc final public let startPoint: CoreFoundation.CGPoint
+  @objc final public let endPoint: CoreFoundation.CGPoint
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class IRGradientDirections : ObjectiveC.NSObject {
+  @objc public static let topToBottom: IrLibSwift.IRGradientDirection
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public enum IRError : Swift.Int, Foundation.LocalizedError {
+  case busy = 0
+  case unknown = 5
+  case noConnection = 6
+  case catalogsError = 9
+  case tokenError = 7
+  case incorrectStoreId = 10
+  case incorrectVisitId = 12
+  case authError = 13
+  case inProgress = 16
+  case notMultiportalMode = 23
+  case incorrectPortal = 24
+  case emptyPortal = 25
+  case serverError = 20
+  public static func error(from code: Swift.Int) -> IrLibSwift.IRError
+  public var errorDescription: Swift.String? {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public static var _nsErrorDomain: Swift.String {
+    get
+  }
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public struct Shadow {
+}
+public struct AnketDataEntity {
+}
+extension IrLibSwift.AnketDataEntity {
+  public struct Question {
+  }
+}
+extension IrLibSwift.AnketDataEntity.Question {
+  public struct Answer {
+  }
+}
+public struct GradientColor {
+  public let colors: [UIKit.UIColor]
+}
+extension IrLibSwift.GradientColor {
+  public static let blue: IrLibSwift.GradientColor
+  public static let red: IrLibSwift.GradientColor
+  public static let violet: IrLibSwift.GradientColor
+  public static let lightBlue: IrLibSwift.GradientColor
+  public static let gray: IrLibSwift.GradientColor
+  public static let green: IrLibSwift.GradientColor
+  public static let mavi: IrLibSwift.GradientColor
+  public static let blueToOrange: IrLibSwift.GradientColor
+  public static let orangeToBlue: IrLibSwift.GradientColor
+  public static let lightRedToRed: IrLibSwift.GradientColor
+}
+@_inheritsConvenienceInitializers @objc public class Scene : RLMObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension UIKit.UIView {
+  @available(*, deprecated, message: "Please use GradientView class instead of this method")
+  @discardableResult
+  @_Concurrency.MainActor @preconcurrency public func applyGradient(_ gradient: IrLibSwift.Gradient, mask: QuartzCore.CALayer? = nil, toBottom shouldApplyToBottom: Swift.Bool = false) -> QuartzCore.CAGradientLayer
+}
+extension QuartzCore.CAGradientLayer {
+  @discardableResult
+  public func changeColor(to gradient: IrLibSwift.Gradient) -> QuartzCore.CAGradientLayer
+}
+@_inheritsConvenienceInitializers @objc public class RecognitionResultSceneGroup : RLMObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class AiletGradientColor : ObjectiveC.NSObject {
+  @objc final public let colors: [UIKit.UIColor]
+  @objc final public let direction: IrLibSwift.IRGradientDirection
+  @objc deinit
+}
+@objc public protocol ImageResizer {
+  @objc func resize(photoData: Foundation.Data, downTo targetLargerSideSize: Swift.Float) -> Foundation.Data
+}
+public class PublicSettings {
+  public var workflow: IrLibSwift.Workflow {
+    get
+  }
+  public var isStartedViaDeeplink: Swift.Bool {
+    get
+  }
+  public init()
+  @objc deinit
+}
+public enum Workflow : Swift.String, Swift.Codable {
+  case retailExecution
+  case retailTasks
+  case sfa
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc public class IRGeolocationErrorSharedSettings : ObjectiveC.NSObject {
+  @objc public var type: IrLibSwift.IRLocationErrorBlockType
+  @objc public var threshold: Swift.Int
+  @objc public init(type: IrLibSwift.IRLocationErrorBlockType, threshold: Swift.Int)
+  @objc deinit
+}
+@objc public enum IRLocationErrorBlockType : Swift.Int, Swift.Codable {
+  case none
+  case full
+  case partial
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum IRPhotoApproveMode : Swift.Int, Swift.Codable {
+  case manual
+  case automatic
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc @_Concurrency.MainActor @preconcurrency public class CustomImageCheckbox : UIKit.UIButton {
+  @objc @_Concurrency.MainActor @preconcurrency public var selectedHandler: ((_ isSelected: Swift.Bool) -> Swift.Void)?
+  @_Concurrency.MainActor @preconcurrency public var selectedImage: UIKit.UIImage?
+  @_Concurrency.MainActor @preconcurrency public var deselectedImage: UIKit.UIImage?
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public var isSelected: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func touchesEnded(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @objc deinit
+}
+@objc extension IrLibSwift.CustomImageCheckbox {
+  @objc @_Concurrency.MainActor @preconcurrency dynamic public func setIsSelected(_ isSelected: Swift.Bool)
+}
+public enum Fonts {
+  public enum LargeTitle {
+    public static let normal: UIKit.UIFont
+    public static let bold: UIKit.UIFont
+    public static let semibold: UIKit.UIFont
+  }
+  public enum Title1 {
+    public static let normal: UIKit.UIFont
+    public static let bold: UIKit.UIFont
+  }
+  public enum Title2 {
+    public static let normal: UIKit.UIFont
+    public static let semibold: UIKit.UIFont
+    public static let bold: UIKit.UIFont
+  }
+  public enum Title3 {
+    public static let normal: UIKit.UIFont
+    public static let bold: UIKit.UIFont
+    public static let semibold: UIKit.UIFont
+  }
+  public enum Headline {
+    public static let normal: UIKit.UIFont
+    public static let semibold: UIKit.UIFont
+    public static let italic: UIKit.UIFont
+  }
+  public enum Body {
+    public static let normal: UIKit.UIFont
+    public static let semibold: UIKit.UIFont
+    public static let italic: UIKit.UIFont
+  }
+  public enum CallOut {
+    public static let normal: UIKit.UIFont
+    public static let semibold: UIKit.UIFont
+    public static let italic: UIKit.UIFont
+  }
+  public enum Subheadline {
+    public static let normal: UIKit.UIFont
+    public static let semibold: UIKit.UIFont
+    public static let italic: UIKit.UIFont
+  }
+  public enum Footnote {
+    public static let normal: UIKit.UIFont
+    public static let medium: UIKit.UIFont
+    public static let semibold: UIKit.UIFont
+    public static let italic: UIKit.UIFont
+  }
+  public enum Caption {
+    public static let normal: UIKit.UIFont
+    public static let medium: UIKit.UIFont
+    public static let semibold: UIKit.UIFont
+    public static let italic: UIKit.UIFont
+  }
+  public enum SmallCaption {
+    public static let normal: UIKit.UIFont
+    public static let semibold: UIKit.UIFont
+    public static let medium: UIKit.UIFont
+    public static let italic: UIKit.UIFont
+  }
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers public class IRSharedPortal : ObjectiveC.NSObject {
+  @objc final public let id: Swift.Int
+  @objc final public let name: Swift.String
+  @objc final public let url: Swift.String
+  @objc final public let type: Swift.String
+  @objc deinit
+}
+extension Swift.String {
+  public subscript(value: Swift.Int) -> Swift.Character {
+    get
+  }
+}
+extension Swift.String {
+  public subscript(value: Foundation.NSRange) -> Swift.Substring {
+    get
+  }
+}
+extension Swift.String {
+  public subscript(value: Swift.CountableClosedRange<Swift.Int>) -> Swift.Substring {
+    get
+  }
+  public subscript(value: Swift.CountableRange<Swift.Int>) -> Swift.Substring {
+    get
+  }
+  public subscript(value: Swift.PartialRangeUpTo<Swift.Int>) -> Swift.Substring {
+    get
+  }
+  public subscript(value: Swift.PartialRangeThrough<Swift.Int>) -> Swift.Substring {
+    get
+  }
+  public subscript(value: Swift.PartialRangeFrom<Swift.Int>) -> Swift.Substring {
+    get
+  }
+}
+public protocol ReflectedStringConvertible : Swift.CustomStringConvertible {
+}
+extension IrLibSwift.ReflectedStringConvertible {
+  public var allPropertiesDescription: Swift.String {
+    get
+  }
+}
+extension Swift.Array where Element == any IrLibSwift.ReflectedStringConvertible {
+  public var allPropertiesDescription: Swift.String {
+    get
+  }
+}
+extension Swift.Dictionary where Value == any IrLibSwift.ReflectedStringConvertible {
+  public var allPropertiesDescription: Swift.String {
+    get
+  }
+}
+public enum ReachabilityError : Swift.Error {
+  case failedToCreateWithAddress(Darwin.sockaddr, Swift.Int32)
+  case failedToCreateWithHostname(Swift.String, Swift.Int32)
+  case unableToSetCallback(Swift.Int32)
+  case unableToSetDispatchQueue(Swift.Int32)
+  case unableToGetFlags(Swift.Int32)
+}
+@available(*, unavailable, renamed: "Notification.Name.reachabilityChanged")
+public let ReachabilityChangedNotification: Foundation.NSNotification.Name
+extension Foundation.NSNotification.Name {
+  public static let reachabilityChanged: Foundation.Notification.Name
+}
+public class NetworkReachability {
+  public typealias NetworkReachable = (IrLibSwift.NetworkReachability) -> ()
+  public typealias NetworkUnreachable = (IrLibSwift.NetworkReachability) -> ()
+  @available(*, unavailable, renamed: "Connection")
+  public enum NetworkStatus : Swift.CustomStringConvertible {
+    case notReachable, reachableViaWiFi, reachableViaWWAN
+    public var description: Swift.String {
+      get
+    }
+    public static func == (a: IrLibSwift.NetworkReachability.NetworkStatus, b: IrLibSwift.NetworkReachability.NetworkStatus) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum Connection : Swift.CustomStringConvertible {
+    case unavailable, wifi, cellular
+    public var description: Swift.String {
+      get
+    }
+    @available(*, deprecated, renamed: "unavailable")
+    public static let none: IrLibSwift.NetworkReachability.Connection
+    public static func == (a: IrLibSwift.NetworkReachability.Connection, b: IrLibSwift.NetworkReachability.Connection) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public var whenReachable: IrLibSwift.NetworkReachability.NetworkReachable?
+  public var whenUnreachable: IrLibSwift.NetworkReachability.NetworkUnreachable?
+  @available(*, deprecated, renamed: "allowsCellularConnection")
+  final public let reachableOnWWAN: Swift.Bool
+  public var allowsCellularConnection: Swift.Bool
+  public var notificationCenter: Foundation.NotificationCenter
+  @available(*, deprecated, renamed: "connection.description")
+  public var currentReachabilityString: Swift.String {
+    get
+  }
+  @available(*, unavailable, renamed: "connection")
+  public var currentReachabilityStatus: IrLibSwift.NetworkReachability.Connection {
+    get
+  }
+  public var connection: IrLibSwift.NetworkReachability.Connection {
+    get
+  }
+  required public init(reachabilityRef: SystemConfiguration.SCNetworkReachability, queueQoS: Dispatch.DispatchQoS = .default, targetQueue: Dispatch.DispatchQueue? = nil, notificationQueue: Dispatch.DispatchQueue? = .main)
+  convenience public init(hostname: Swift.String, queueQoS: Dispatch.DispatchQoS = .default, targetQueue: Dispatch.DispatchQueue? = nil, notificationQueue: Dispatch.DispatchQueue? = .main) throws
+  convenience public init(queueQoS: Dispatch.DispatchQoS = .default, targetQueue: Dispatch.DispatchQueue? = nil, notificationQueue: Dispatch.DispatchQueue? = .main) throws
+  @objc deinit
+}
+extension IrLibSwift.NetworkReachability {
+  public func startNotifier() throws
+  public func stopNotifier()
+  @available(*, deprecated, message: "Please use `connection != .none`")
+  public var isReachable: Swift.Bool {
+    get
+  }
+  @available(*, deprecated, message: "Please use `connection == .cellular`")
+  public var isReachableViaWWAN: Swift.Bool {
+    get
+  }
+  @available(*, deprecated, message: "Please use `connection == .wifi`")
+  public var isReachableViaWiFi: Swift.Bool {
+    get
+  }
+  public var description: Swift.String {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc public class RecognitionResultWidth : RLMObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc final public class IRMultiportalAuthServiceInteractionProvider : ObjectiveC.NSObject {
+  @objc deinit
+}
+@objc extension IrLibSwift.IRMultiportalAuthServiceInteractionProvider {
+  @objc final public var isMultiportal: Swift.Bool {
+    @objc get
+  }
+  @objc final public var activeRootDomain: Swift.String {
+    @objc get
+  }
+  @objc final public func update(isMultiportal: Swift.Bool)
+  @objc final public func authorizedPortals() -> [IrLibSwift.IRSharedAuthorizedPortal]
+  @objc final public func updateActivePortal(rootDomain: Swift.String) throws
+  @objc final public func authorizeOnAllAvailablePortals(login: Swift.String, password: Swift.String, externalUserId: Swift.String?, completion: @escaping (Foundation.NSError?) -> Swift.Void)
+}
+@_inheritsConvenienceInitializers @objc public class Scene_types : RLMObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension UIKit.UIColor {
+  convenience public init(hex: Swift.String)
+}
+public class TransparentNavigationBarCustomizer : IrLibSwift.NavigationBarCustomizer {
+  final public let viewsToHide: [UIKit.UIView]
+  public var rightTapTarget: Any?
+  public var rightTapAction: ObjectiveC.Selector?
+  public init(titleColor: UIKit.UIColor, backButtonColor: UIKit.UIColor? = nil, shouldUpdateNavbar: Swift.Bool = false)
+  public func setup(navigationItem: UIKit.UINavigationItem, navigationController: UIKit.UINavigationController?, buttonTapTarget: Any?, action: ObjectiveC.Selector?)
+  public func setupCustomNavigationBar()
+  public func updateToDefault()
+  public func updateToCustom()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class VisitTask : RLMObject {
+  @objc override dynamic public class func primaryKey() -> Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+}
+public struct ReportFilter {
+}
+@objc public protocol IRDbConfigProvider {
+  @objc var dbVersion: Swift.Int { get }
+  @objc func realmConfig(shouldUseCommonCopy: Swift.Bool) -> RLMRealmConfiguration
+}
+@_inheritsConvenienceInitializers @objc @_Concurrency.MainActor @preconcurrency public class SOSReportListCollectionViewCell : UIKit.UICollectionViewCell {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func layoutSubviews()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func draw(_ rect: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func awakeFromNib()
+  @objc @_Concurrency.MainActor @preconcurrency public func setup(metricData: IrLibSwift.VisitWidgetReportDataEntity?)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension UIKit.UIImage {
+  convenience public init?(color: UIKit.UIColor, size: CoreFoundation.CGSize = CGSize(width: 1, height: 1))
+}
+@objc public protocol BarButtonShowing {
+  @objc func addBarButton(_ button: UIKit.UIBarButtonItem, onTap: (() -> Swift.Void)?)
+}
+@_inheritsConvenienceInitializers @objc public class RecognitionResultScene : RLMObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension CoreGraphics.CGContext {
+  public class func ARGBBitmapContext(width: Swift.Int, height: Swift.Int, withAlpha: Swift.Bool) -> CoreGraphics.CGContext?
+}
+extension CoreGraphics.CGImage {
+  public func hasAlpha() -> Swift.Bool
+}
+public struct PhotosResultOldAssortmentEntity : Swift.Decodable {
+  public struct RealogramAssortment : Swift.Decodable {
+    public let id: Swift.String
+    public let visitId: Swift.String?
+    public let sceneId: Swift.String?
+    public let photoId: Swift.String?
+    public let productId: Swift.String?
+    public let productName: Swift.String?
+    public let tinyName: Swift.String?
+    public let statusId: Swift.Int?
+    public let x1: Swift.Int?
+    public let y1: Swift.Int?
+    public let x2: Swift.Int?
+    public let y2: Swift.Int?
+    public let x01: Swift.Int?
+    public let y01: Swift.Int?
+    public let x02: Swift.Int?
+    public let y02: Swift.Int?
+    public let isOther: Swift.String?
+    public var isOffline: Swift.Bool
+    public var shelfId: Swift.String?
+    public var line: Swift.Int?
+    public var lineFromBottom: Swift.Int?
+    public var facingPositionOnShelf: Swift.Int?
+    public var groupPositionOnShelf: Swift.Int?
+    public var isHook: Swift.Bool?
+    public var isDuplicate: Swift.Bool
+    public var classId: Swift.String?
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public init(from decoder: any Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers @objc public class VisitWidgetReportDataEntity : ObjectiveC.NSObject {
+  @objc public var main: Swift.Bool {
+    @objc get
+  }
+  @objc public var total: IrLibSwift.VisitWidgetReportDataEntityTotal? {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers public class VisitWidgetReportDataEntityTotal : ObjectiveC.NSObject {
+  @objc final public let value: Swift.Double
+  @objc final public let diff: Swift.Double
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class AiletFonts : ObjectiveC.NSObject {
+  @objc public static let caption: IrLibSwift.AiletFonts.AiletFontsCaption
+  @objc public static let subheadline: IrLibSwift.AiletFonts.AiletFontsSubheadline
+  @objc public static let callout: IrLibSwift.AiletFonts.AiletFontsSubheadline
+  @objc public static let headline: IrLibSwift.AiletFonts.AiletFontsHeadline
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension IrLibSwift.AiletFonts {
+  @_inheritsConvenienceInitializers @objc public class AiletFontsCaption : ObjectiveC.NSObject {
+    @objc final public let normal: UIKit.UIFont
+    @objc final public let semibold: UIKit.UIFont
+    @objc final public let italic: UIKit.UIFont
+    @objc override dynamic public init()
+    @objc deinit
+  }
+  @_inheritsConvenienceInitializers @objc public class AiletFontsSubheadline : ObjectiveC.NSObject {
+    @objc final public let normal: UIKit.UIFont
+    @objc final public let semibold: UIKit.UIFont
+    @objc final public let italic: UIKit.UIFont
+    @objc override dynamic public init()
+    @objc deinit
+  }
+  @_inheritsConvenienceInitializers @objc public class AiletFontsCallout : ObjectiveC.NSObject {
+    @objc final public let normal: UIKit.UIFont
+    @objc final public let semibold: UIKit.UIFont
+    @objc final public let italic: UIKit.UIFont
+    @objc override dynamic public init()
+    @objc deinit
+  }
+  @_inheritsConvenienceInitializers @objc public class AiletFontsHeadline : ObjectiveC.NSObject {
+    @objc final public let normal: UIKit.UIFont
+    @objc final public let semibold: UIKit.UIFont
+    @objc final public let italic: UIKit.UIFont
+    @objc override dynamic public init()
+    @objc deinit
+  }
+}
+@objc @_inheritsConvenienceInitializers public class TaskKpi : RLMObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public enum AiletNetworkError : Swift.Int, Swift.Error {
+  case noConnection = 503
+  case notFound = 404
+  case conflict = 409
+  case authError = 403
+  case processing = 202
+  case serverError = 500
+  case decodeError = 901
+  case encodeError = 902
+  case incorrectUrl = -998
+  case emptyResponseError = 903
+  case retryError = 904
+  case noContent = 204
+  case unknown = -1
+  case cancelled = -999
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public static var _nsErrorDomain: Swift.String {
+    get
+  }
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum Shadows {
+  public static let elevation100: IrLibSwift.ComplexShadow
+  public static let elevation200: IrLibSwift.ComplexShadow
+  public static let elevation300: IrLibSwift.ComplexShadow
+}
+@_inheritsConvenienceInitializers @objc public class DeletedPhoto : RLMObject {
+  @objc public enum IRDeletedPhotoState : Swift.Int {
+    case readyToSend = 1
+    case sent = 2
+    case finished = 3
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc override dynamic public init()
+  @objc deinit
+}
+public enum TabBarModel {
+  case storesList
+  case storesSearch
+  case search
+  case support
+  case route
+  case tasks
+  case settings
+  public static func == (a: IrLibSwift.TabBarModel, b: IrLibSwift.TabBarModel) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension UIKit.UIViewController {
+  @discardableResult
+  @_Concurrency.MainActor @preconcurrency public func setupTabBarItem(model: IrLibSwift.TabBarModel) -> UIKit.UIViewController
+}
+@_inheritsConvenienceInitializers @objc public class AiletColors : ObjectiveC.NSObject {
+  @objc public static let background: IrLibSwift.AiletColors.AiletColorsBackground
+  @objc public static let interactive: IrLibSwift.AiletColors.AiletColorsInteractive
+  @objc public static let text: IrLibSwift.AiletColors.AiletColorsText
+  @objc public static let icon: IrLibSwift.AiletColors.AiletColorsIcon
+  @objc public static let input: IrLibSwift.AiletColors.AiletColorsInput
+  @objc public static let support: IrLibSwift.AiletColors.AiletColorsSupport
+  @objc public static let border: IrLibSwift.AiletColors.AiletColorsBorder
+  @objc public static let accent: IrLibSwift.AiletColors.AiletColorsAccent
+  @objc public static let gradient: IrLibSwift.AiletColors.AiletColorsGradient
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension IrLibSwift.AiletColors {
+  @_inheritsConvenienceInitializers @objc public class AiletColorsBackground : ObjectiveC.NSObject {
+    @objc final public let primary: UIKit.UIColor
+    @objc final public let background01: UIKit.UIColor
+    @objc final public let background02: UIKit.UIColor
+    @objc final public let background03: UIKit.UIColor
+    @objc override dynamic public init()
+    @objc deinit
+  }
+}
+extension IrLibSwift.AiletColors {
+  @_inheritsConvenienceInitializers @objc public class AiletColorsInteractive : ObjectiveC.NSObject {
+    @objc final public let primary: UIKit.UIColor
+    @objc final public let secondary: UIKit.UIColor
+    @objc override dynamic public init()
+    @objc deinit
+  }
+}
+extension IrLibSwift.AiletColors {
+  @_inheritsConvenienceInitializers @objc public class AiletColorsText : ObjectiveC.NSObject {
+    @objc final public let primary: UIKit.UIColor
+    @objc final public let secondary: UIKit.UIColor
+    @objc final public let placeholder: UIKit.UIColor
+    @objc final public let interactive: UIKit.UIColor
+    @objc final public let error: UIKit.UIColor
+    @objc final public let success: UIKit.UIColor
+    @objc final public let links: UIKit.UIColor
+    @objc override dynamic public init()
+    @objc deinit
+  }
+}
+extension IrLibSwift.AiletColors {
+  @_inheritsConvenienceInitializers @objc public class AiletColorsIcon : ObjectiveC.NSObject {
+    @objc final public let primary: UIKit.UIColor
+    @objc final public let secondary: UIKit.UIColor
+    @objc final public let onInteractiveColors: UIKit.UIColor
+    @objc final public let accent01: UIKit.UIColor
+    @objc final public let accent02: UIKit.UIColor
+    @objc final public let accent03: UIKit.UIColor
+    @objc override dynamic public init()
+    @objc deinit
+  }
+}
+extension IrLibSwift.AiletColors {
+  @_inheritsConvenienceInitializers @objc public class AiletColorsInput : ObjectiveC.NSObject {
+    @objc final public let primary: UIKit.UIColor
+    @objc final public let secondary: UIKit.UIColor
+    @objc override dynamic public init()
+    @objc deinit
+  }
+}
+extension IrLibSwift.AiletColors {
+  @_inheritsConvenienceInitializers @objc public class AiletColorsSupport : ObjectiveC.NSObject {
+    @objc final public let error: UIKit.UIColor
+    @objc final public let success: UIKit.UIColor
+    @objc final public let warning: UIKit.UIColor
+    @objc override dynamic public init()
+    @objc deinit
+  }
+}
+extension IrLibSwift.AiletColors {
+  @_inheritsConvenienceInitializers @objc public class AiletColorsBorder : ObjectiveC.NSObject {
+    @objc final public let primary: UIKit.UIColor
+    @objc override dynamic public init()
+    @objc deinit
+  }
+}
+extension IrLibSwift.AiletColors {
+  @_inheritsConvenienceInitializers @objc public class AiletColorsAccent : ObjectiveC.NSObject {
+    @objc final public let accent01: UIKit.UIColor
+    @objc final public let accent02: UIKit.UIColor
+    @objc final public let accent03: UIKit.UIColor
+    @objc final public let accent04: UIKit.UIColor
+    @objc final public let accent05: UIKit.UIColor
+    @objc override dynamic public init()
+    @objc deinit
+  }
+}
+extension IrLibSwift.AiletColors {
+  @_inheritsConvenienceInitializers @objc public class AiletColorsGradient : ObjectiveC.NSObject {
+    @objc final public let gradient01: IrLibSwift.AiletGradientColor
+    @objc final public let gradient02: IrLibSwift.AiletGradientColor
+    @objc final public let gradient03: IrLibSwift.AiletGradientColor
+    @objc final public let gradient04: IrLibSwift.AiletGradientColor
+    @objc final public let gradient06: IrLibSwift.AiletGradientColor
+    @objc final public let gradient07: IrLibSwift.AiletGradientColor
+    @objc override dynamic public init()
+    @objc deinit
+  }
+}
+public struct CGLine : Swift.Equatable {
+  public let from: CoreFoundation.CGPoint
+  public let to: CoreFoundation.CGPoint
+  public static func == (a: IrLibSwift.CGLine, b: IrLibSwift.CGLine) -> Swift.Bool
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers public class IRSharedUser : ObjectiveC.NSObject {
+  @objc final public let id: Swift.String
+  @objc final public let externalId: Swift.String?
+  @objc final public let username: Swift.String
+  @objc deinit
+}
+extension RLMRealm {
+  @nonobjc public class func schemaVersion(at url: Foundation.URL, usingEncryptionKey key: Foundation.Data? = nil) throws -> Swift.UInt64
+  @nonobjc public func resolve<Confined>(reference: RLMThreadSafeReference<Confined>) -> Confined? where Confined : RLMThreadConfined
+}
+extension RLMObject {
+  public class func objects(where predicateFormat: Swift.String, _ args: any Swift.CVarArg...) -> RLMResults<RLMObject>
+  public class func objects(in realm: RLMRealm, where predicateFormat: Swift.String, _ args: any Swift.CVarArg...) -> RLMResults<RLMObject>
+}
+public struct RLMIterator<T> : Swift.IteratorProtocol {
+  public mutating func next() -> T?
+  public typealias Element = T
+}
+extension RLMCollection {
+  public func makeIterator() -> IrLibSwift.RLMIterator<RLMObject>
+}
+extension RLMCollection {
+  public func indexOfObject(where predicateFormat: Swift.String, _ args: any Swift.CVarArg...) -> Swift.UInt?
+  public func objects(where predicateFormat: Swift.String, _ args: any Swift.CVarArg...) -> RLMResults<ObjectiveC.NSObject>
+}
+@objc extension IrLibSwift.IRInteractManager {
+  @available(swift, obsoleted: 1.0)
+  @objc(setupWithUsername:password:guestToken:externalUserId:notification:domainName:isMultiportal:completion:) final public class func setup(username: Swift.String, password: Swift.String, guestToken: Swift.String, externalUserId: Swift.String?, notification: Swift.String? = nil, domainName: Swift.String? = nil, isMultiportal: Swift.Bool = false, completion: IrLibSwift.IRResultObjcCompletion?)
+  @objc final public class func startShooting(in presentingVC: UIKit.UIViewController, externalStoreId: Swift.String, externalVisitId: Swift.String) throws
+  @available(swift, obsoleted: 1.0)
+  @objc(showSummaryReportIn:visitId:completion:) final public class func showSummaryReport(in presentingViewController: UIKit.UIViewController, visitId: Swift.String, completion: (IrLibSwift.IRResultObjcCompletion)?)
+  @objc final public class func reports() throws -> [IrLibSwift.IRVisitReport]
+  @objc final public class func report(visitId: Swift.String) throws -> IrLibSwift.IRReport
+  @objc final public class func reportsDictionary() -> [[Swift.String : Any]]
+  @available(swift, obsoleted: 1.0)
+  @objc(syncDataWithCompletion:) final public class func syncData(completion: ((Foundation.NSError?) -> Swift.Void)?)
+  @objc final public class func updateActivePortal(_ portalId: Swift.String) throws
+  @objc final public class func frameworkVersion() -> Swift.String
+}
+public enum Colors {
+  public enum Background {
+    public static let primary: UIKit.UIColor
+    public static let black: UIKit.UIColor
+    public static let background01: UIKit.UIColor
+    public static let background02: UIKit.UIColor
+    public static let background03: UIKit.UIColor
+    public static let dark: UIKit.UIColor
+  }
+  public enum Interactive {
+    public static let primary: UIKit.UIColor
+    public static let secondary: UIKit.UIColor
+  }
+  public enum Text {
+    public static let primary: UIKit.UIColor
+    public static let secondary: UIKit.UIColor
+    public static let placeholder: UIKit.UIColor
+    public static let interactive: UIKit.UIColor
+    public static let error: UIKit.UIColor
+    public static let success: UIKit.UIColor
+    public static let links: UIKit.UIColor
+    public static let invisible: UIKit.UIColor
+  }
+  public enum Icon {
+    public static let primary: UIKit.UIColor
+    public static let secondary: UIKit.UIColor
+    public static let onInteractiveColors: UIKit.UIColor
+    public static let accent01: UIKit.UIColor
+    public static let accent02: UIKit.UIColor
+    public static let accent03: UIKit.UIColor
+    public static let error: UIKit.UIColor
+    public static let success: UIKit.UIColor
+    public static let invisible: UIKit.UIColor
+    public static let active: UIKit.UIColor
+  }
+  public enum Input {
+    public static let primary: UIKit.UIColor
+    public static let secondary: UIKit.UIColor
+  }
+  public enum Support {
+    public static let error: UIKit.UIColor
+    public static let success: UIKit.UIColor
+    public static let warning: UIKit.UIColor
+  }
+  public enum Border {
+    public static let primary: UIKit.UIColor
+  }
+  public enum Accent {
+    public static let accent01: UIKit.UIColor
+    public static let accent02: UIKit.UIColor
+    public static let accent03: UIKit.UIColor
+    public static let accent04: UIKit.UIColor
+    public static let accent05: UIKit.UIColor
+  }
+  public enum Gradients {
+    public static let gradient01: IrLibSwift.Gradient
+    public static let gradient02: IrLibSwift.Gradient
+    public static let gradient03: IrLibSwift.Gradient
+    public static let gradient04: IrLibSwift.Gradient
+    public static let gradient06: IrLibSwift.Gradient
+    public static let gradient07: IrLibSwift.Gradient
+    public static let error: IrLibSwift.Gradient
+  }
+  public enum Tag {
+    public static let inProgress: UIKit.UIColor
+  }
+  public enum Buttons {
+    public enum Secondary {
+      public static let title: UIKit.UIColor
+      public static let background: UIKit.UIColor
+      public static let text: UIKit.UIColor
+    }
+    public enum Primary {
+      public static let text: UIKit.UIColor
+      public static let background: UIKit.UIColor
+    }
+  }
+  public enum Reports {
+    public static let osa: IrLibSwift.Gradient
+    public static let oos: IrLibSwift.Gradient
+    public static let posm: IrLibSwift.Gradient
+    public static let priceExecution: IrLibSwift.Gradient
+  }
+}
+@objc public protocol WidgetsModuleInput {
+  @objc func load()
+  @objc func didOpenScreenWithActiveVisit()
+  @objc func didOpenScreenWithInactiveVisit()
+  @objc func didLeaveVisitRelatedScreen()
+}
+@objc public enum IRWorkFlow : Swift.Int {
+  case retailExecution
+  case retailTasks
+  case sfa
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc public class TaskAnswer : RLMObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class Segment : RLMObject {
+  @objc override dynamic public class func primaryKey() -> Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension Swift.KeyedDecodingContainer {
+  public func decodeInt(forKey key: K) throws -> Swift.Int?
+  public func decodeString(forKey key: K) throws -> Swift.String?
+  public func decodeDoubleFromIntOrDouble(forKey key: K) throws -> Swift.Double?
+  public func decodeIntFromDoubleOrInt(forKey key: K) throws -> Swift.Int?
+  public func decodeStringFromStringOrIntIfPresent(forKey key: K) -> Swift.String?
+  public func decodeDoubleFromStringOrDoubleIfPresent(forKey key: K) -> Swift.Double?
+}
+@_hasMissingDesignatedInitializers @objc public class IRStoredStateSettings : ObjectiveC.NSObject {
+  @objc public var currentVisit: IrLibSwift.IRStoredStateSettingsVisit? {
+    @objc get
+  }
+  @objc public var currentStore: IrLibSwift.IRStoredStateSettingsStore? {
+    @objc get
+  }
+  @objc public func clearCurrentVisit()
+  @objc public var isOfflineModeActive: Swift.Bool {
+    @objc get
+  }
+  @objc public func updateCurrentStoreId(_ storeId: ObjectiveC.NSInteger)
+  @objc public func updateCurrentExternalStoreId(_ externalStoreId: Swift.String)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class IRStoredStateSettingsVisit : ObjectiveC.NSObject {
+  @objc final public let visitId: Swift.String
+  @objc final public let externalVisitId: Swift.String?
+  @objc final public let userName: Swift.String
+  @objc final public let externalUserId: Swift.String?
+  @objc final public let startTimestamp: Swift.String
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class IRStoredStateSettingsStore : ObjectiveC.NSObject {
+  @objc final public let storeId: ObjectiveC.NSInteger
+  @objc final public let externalStoreId: Swift.String?
+  @objc final public let name: Swift.String?
+  @objc deinit
+}
+public struct Gradient {
+  public let color: IrLibSwift.GradientColor
+  public let locations: [Foundation.NSNumber]
+  public let direction: IrLibSwift.GradientDirection
+  public init(color: IrLibSwift.GradientColor, locations: [Foundation.NSNumber], direction: IrLibSwift.GradientDirection)
+}
+@_inheritsConvenienceInitializers @objc public class RealmString : RLMObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public protocol LegacyReportFiltersModuleOutput {
+  @objc func didUpdateFilters(_ filters: IrLibSwift.IRReportFilters)
+}
+@_hasMissingDesignatedInitializers @objc public class IRReportFilters : ObjectiveC.NSObject {
+  @objc final public let visitId: Swift.String
+  @objc final public let storeId: Swift.Int
+  @objc final public let storeName: Swift.String
+  @objc final public let taskId: Swift.String?
+  @objc final public let matrixId: Swift.String?
+  @objc final public let matrixName: Swift.String?
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class IRScreensBuilderInteractionProvider : ObjectiveC.NSObject {
+  @objc public func startViewController(externalStoreId: Swift.String, externalVisitId: Swift.String, taskId: Swift.String?, cameraOutput: any IrLibSwift.CameraModuleOutput, storeDetailsOutput: any IrLibSwift.StoreDetailsOutput, backButtonHandler: (() -> Swift.Void)?) throws -> UIKit.UIViewController
+  @objc public func cameraViewController(output: (any IrLibSwift.CameraModuleOutput)?, externalVisitId: Swift.String, taskId: Swift.String?, externalStoreId: Swift.String, isOpenedViaDeeplinks: Swift.Bool) throws -> UIKit.UIViewController
+  @objc public func sosReportListController(visitId: Swift.String, taskId: Swift.String?) -> UIKit.UIViewController?
+  @objc public func sosReportDetailController(visitId: Swift.String, taskId: Swift.String) -> UIKit.UIViewController?
+  @objc public func taskDetailsViewController(output: (any IrLibSwift.TaskDetailsModuleOutput)?, externalVisitId: Swift.String, externalStoreId: Swift.String, visitTaskId: Swift.String) throws -> UIKit.UIViewController
+  public func showSummaryReportViewController(shouldLoadPreviousVisit: Swift.Bool, externalVisitId: Swift.String, completion: ((Swift.Result<UIKit.UIViewController, any Swift.Error>) -> Swift.Void)?)
+  @objc public func summaryReportViewController(externalVisitId: Swift.String) throws -> UIKit.UIViewController
+  @objc public func reportPhotoBrowseViewController(visitId: Swift.String, taskId: Swift.String?) -> UIKit.UIViewController?
+  @objc public func summaryReportOOSReportViewController(visitId: Swift.String, taskId: Swift.String?) -> UIKit.UIViewController?
+  @objc public func standaloneOOSReportViewController(visitId: Swift.String, taskId: Swift.String?) -> UIKit.UIViewController?
+  @objc public func OSAReportViewController(visitId: Swift.String, taskId: Swift.String?) -> UIKit.UIViewController?
+  @objc public func searchController() -> UIKit.UIViewController?
+  @objc public func retailExecutionStoresScreen() -> UIKit.UIViewController
+  @objc public func sfaStoresScreen() -> UIKit.UIViewController
+  @objc public func filterScreenResults() -> UIKit.UIViewController
+  @objc public func widgetsController() -> (any IrLibSwift.WidgetsModuleInput)?
+  @objc public func storeDetailScreen(output: any IrLibSwift.StoreDetailsOutput, storeId: Swift.Int, externalVisitId: Swift.String?) -> UIKit.UIViewController
+  @objc public func visitStatsScreen(visitId: Swift.String) -> UIKit.UIViewController
+  @objc public func reportFiltersScreen(output: any IrLibSwift.LegacyReportFiltersModuleOutput, storeId: Swift.Int, visitId: Swift.String, taskId: Swift.String?, matrixId: Swift.String?, currentReportType: Swift.String?) -> UIKit.UIViewController
+  @objc public func appDocsScreen() -> UIKit.UIViewController
+  @objc public func retailTasksViewController() -> UIKit.UIViewController
+  @objc public func tabBarController(settingsController: UIKit.UIViewController) -> UIKit.UITabBarController
+  @objc public func workflowBasedStartViewController() -> UIKit.UIViewController
+  @objc public func manageAppDataViewController() -> UIKit.UIViewController
+  @objc public func debugFeaturesViewController() -> UIKit.UIViewController
+  @objc public func supportTabViewController() -> UIKit.UIViewController
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class RecognitionResultAssortmentAchievement : RLMObject {
+  @objc override dynamic public class func primaryKey() -> Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class ShadowView : UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public var backgroundColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func layoutSubviews()
+  @_Concurrency.MainActor @preconcurrency public func setupShadow(_ complexShadow: IrLibSwift.ComplexShadow, radius: CoreFoundation.CGFloat)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class CarouselManager {
+  public static func showVideoTutorialCarousel()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class StoreSceneType : RLMObject {
+  @objc override dynamic public class func primaryKey() -> Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class IRAuthServiceInteractionProvider : ObjectiveC.NSObject {
+  @objc deinit
+}
+extension IrLibSwift.IRAuthServiceInteractionProvider {
+  public func fetchUserPortals(login: Swift.String, password: Swift.String, completion: @escaping (Swift.Result<[IrLibSwift.IRSharedPortal], IrLibSwift.AiletNetworkError>) -> Swift.Void)
+  public func authorize(on domain: Swift.String, login: Swift.String, password: Swift.String, externalUserId: Swift.String?, completion: @escaping (Swift.Result<Swift.String, IrLibSwift.AiletNetworkError>) -> Swift.Void)
+  public func authorizeOnFirstAvailablePortal(orDomain domain: Swift.String?, login: Swift.String, password: Swift.String, externalUserId: Swift.String?, completion: ((Swift.Result<Swift.Void, IrLibSwift.IRError>) -> Swift.Void)?)
+  public func changePassword(domainName: Swift.String, login: Swift.String, oldPassword: Swift.String, newPassword: Swift.String, completion: @escaping (Swift.Result<Swift.Void?, IrLibSwift.AiletNetworkError>) -> Swift.Void)
+  public func logout()
+}
+@objc extension IrLibSwift.IRAuthServiceInteractionProvider {
+  @objc dynamic public var authToken: Swift.String {
+    @objc get
+  }
+  @objc dynamic public var domain: Swift.String? {
+    @objc get
+  }
+  @objc dynamic public var user: IrLibSwift.IRSharedUser? {
+    @objc get
+  }
+  @objc dynamic public func fetchUserPortals(login: Swift.String, password: Swift.String, completion: @escaping ([IrLibSwift.IRSharedPortal], Foundation.NSError?) -> Swift.Void)
+  @objc dynamic public func authorize(on domain: Swift.String, login: Swift.String, password: Swift.String, externalUserId: Swift.String?, completion: @escaping (Swift.String, Foundation.NSError?) -> Swift.Void)
+  @objc dynamic public func isAuthTokenValid() -> Swift.Bool
+  @objc dynamic public func update(shouldUseDevAuthServer: Swift.Bool)
+  @objc dynamic public func update(guestToken: Swift.String)
+  @objc dynamic public func update(fcmToken: Swift.String?)
+  @objc dynamic public func shouldReauthorize(login: Swift.String, password: Swift.String, externalUserId: Swift.String?) -> Swift.Bool
+  @objc dynamic public func resetAccess()
+  @objc dynamic public func subscribeToAuthTokenIsInvalid(_ handler: (() -> Swift.Void)?)
+}
+public struct PortalEntity : Swift.Decodable {
+  public let id: Swift.Int
+  public let name: Swift.String
+  public let url: Swift.String
+  public let type: Swift.String
+  public init(from decoder: any Swift.Decoder) throws
+}
+@_inheritsConvenienceInitializers @objc public class TaskQuestion : RLMObject {
+  @objc override dynamic public class func linkingObjectsProperties() -> [Swift.String : RLMPropertyDescriptor]
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class VisitWidgetReportMatrixDataEntity : ObjectiveC.NSObject {
+  @objc final public let id: Swift.String
+  @objc final public let name: Swift.String
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class RealmInt : RLMObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension UIKit.UITableView {
+  @_Concurrency.MainActor @preconcurrency public func register<T>(cellWithXib cell: T.Type) where T : UIKit.UITableViewCell
+  @_Concurrency.MainActor @preconcurrency public func registerClass<T>(cell: T.Type) where T : UIKit.UITableViewCell
+  @_Concurrency.MainActor @preconcurrency public func register<T>(view: T.Type) where T : UIKit.UITableViewHeaderFooterView
+}
+@_inheritsConvenienceInitializers @objc public class WidgetsControlManager : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class RecognitionResultProductGroup : RLMObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public protocol TaskDetailsModuleOutput {
+  @objc func didTriggerOpenPriceExecutionReportForTaskWithId(_ taskId: Swift.String?)
+  @objc func didTriggerFetchedPerfectStoreShortWidget()
+}
+public struct ComplexShadow {
+}
+@_inheritsConvenienceInitializers @objc public class IRNotification : ObjectiveC.NSObject {
+  @objc public static let photoRecognizedNotification: Foundation.Notification.Name
+  @objc public static let authErrorNotification: Foundation.Notification.Name
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class RecognitionResultValue : RLMObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+public typealias AiletDataManager = IrLibSwift.IRDataManagerProtocol
+@objc public protocol IRDataManagerProtocol {
+  @objc var auth: IrLibSwift.IRAuthServiceInteractionProvider { get }
+  @objc var multiportalAuth: IrLibSwift.IRMultiportalAuthServiceInteractionProvider { get }
+  @objc var database: any IrLibSwift.IRDbConfigProvider { get }
+  @objc var techSupport: IrLibSwift.IRTechSupportInteractionProvider { get }
+  @objc var visits: IrLibSwift.IRVisitServiceInteractionProvider { get }
+  @objc var reports: IrLibSwift.IRReportsInteractionProvider { get }
+  @objc var screens: IrLibSwift.IRScreensBuilderInteractionProvider { get }
+  @objc var featureToggles: IrLibSwift.IRFeatureToggles { get }
+  @objc var storedStateSettings: IrLibSwift.IRStoredStateSettings { get }
+  @objc func startAnalytics()
+  @objc func fetchSettingsAndRoutes(completion: @escaping (Foundation.NSError?) -> Swift.Void)
+  @objc func fetchStores(completion: @escaping (Foundation.NSError?) -> Swift.Void)
+  @objc func canDoRecognitionResult(photoId: Swift.String) -> Swift.Bool
+  @objc func updateCurrentStore(storeId: Swift.Int, externalStoreId: Swift.String?)
+  @objc func updateExternalData(visitId: Swift.String)
+  @objc static func updateExternalData(visitId: Swift.String)
+  @objc static func clearExternalData()
+  @objc func fetchWidgets(visitId: Swift.String, completion: @escaping (Foundation.NSError?) -> Swift.Void)
+  @objc func defaultReportMatrix(visitId: Swift.String, taskId: Swift.String?) -> IrLibSwift.VisitWidgetReportMatrixDataEntity?
+  @objc func fetchSegments(completion: @escaping (Foundation.NSError?) -> Swift.Void)
+  @objc func fetchTasks(completion: @escaping (Foundation.NSError?) -> Swift.Void)
+  @objc func fetchVisitsPlansAndFacts(completion: @escaping (Foundation.NSError?) -> Swift.Void)
+  @objc func updatePhotoResultIntervals(_ intervals: [Swift.Int])
+  @objc func restartSendingNotSentData(onUpdate: ((Foundation.NSError?) -> Swift.Void)?)
+  @objc func internalTaskId(externalVisitId: Swift.String, taskId: Swift.String?) -> Swift.String?
+  @objc func logScreenTimeEvent(id: Swift.String, name: Swift.String, duration: Swift.Int)
+  @objc func restartLocationService()
+  @objc func showFillReasonsAlert(on vc: UIKit.UIViewController, onAgree: (() -> Swift.Void)?)
+  @objc func isConnectionAvailable() -> Swift.Bool
+  @objc func shouldShowDebugFeatures() -> Swift.Bool
+  @objc func updateShowDebugFeatures(to shouldShow: Swift.Bool)
+  @objc func fetchCatalogs(completion: ((Foundation.NSError?) -> Swift.Void)?)
+  @objc func shouldFillAbsenceReasons(externalVisitId: Swift.String) -> Swift.Bool
+  @objc func workflow() -> IrLibSwift.IRWorkFlow
+}
+@available(*, deprecated, message: "Please use ShadowView class instead of this protocol and its default implementations")
+public protocol ShadowShowing {
+  var view: UIKit.UIView! { get }
+  var backShadowView: UIKit.UIView! { get }
+  var frontShadowView: UIKit.UIView! { get }
+  func setupShadow(_ complexShadow: IrLibSwift.ComplexShadow, radius: CoreFoundation.CGFloat)
+  func updateShadows(radius: CoreFoundation.CGFloat)
+}
+extension IrLibSwift.ShadowShowing where Self : UIKit.UIView {
+  @available(*, deprecated, message: "Please use ShadowView class instead of this method")
+  public func setupShadow(_ complexShadow: IrLibSwift.ComplexShadow, radius: CoreFoundation.CGFloat = 10)
+  @available(*, deprecated, message: "Please use ShadowView class instead of this method")
+  public func updateShadows(radius: CoreFoundation.CGFloat = 10)
+  @available(*, deprecated, message: "Please use ShadowView class instead of this method")
+  public func hideShadows()
+  @available(*, deprecated, message: "Please use ShadowView class instead of this method")
+  public func showShadows()
+}
+@_hasMissingDesignatedInitializers @objc public class IRReportsInteractionProvider : ObjectiveC.NSObject {
+  @objc deinit
+}
+@objc extension IrLibSwift.IRReportsInteractionProvider {
+  @objc dynamic public func reportsForAllVisits() -> [[Swift.String : Any]]
+  @objc dynamic public func report(externalVisitId: Swift.String, internalTaskId: Swift.String?) -> [Swift.String : Any]?
+  @objc dynamic public func additionalStats(for externalVisitId: Swift.String, internalTaskId: Swift.String?) -> [Swift.String : Any]
+  @objc dynamic public func unsentData() -> IrLibSwift.AiletUnsentDataCheckResult
+  @objc dynamic public func unsentData(for visitId: Swift.String?) -> IrLibSwift.AiletUnsentDataCheckResult
+  @objc dynamic public func photosCount(for visitId: Swift.String) -> Swift.Int
+}
+@_inheritsConvenienceInitializers @objc public class MetricsPlan : RLMObject {
+  @objc override dynamic public class func primaryKey() -> Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class ProductGroup : RLMObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @available(*, deprecated, message: "To be deleted very soon")
+@objc public class RecognitionResultOldAssortment : RLMObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class Shelves : RLMObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public protocol WidgetsViewController {
+  @objc func load()
+}
+@objc @_inheritsConvenienceInitializers public class DefaultWidgetsViewController : ObjectiveC.NSObject, IrLibSwift.WidgetsViewController {
+  @objc public func load()
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension UIKit.UITableView {
+  @_Concurrency.MainActor @preconcurrency public func cellWithClass<CellType>(className: CellType.Type, indexPath: Foundation.IndexPath, reuseId: Swift.String? = nil) -> CellType where CellType : UIKit.UITableViewCell
+  @_Concurrency.MainActor @preconcurrency public func dequeueReusableCell<T>(withClass: T.Type, indexPath: Foundation.IndexPath) -> T where T : UIKit.UITableViewCell
+  @_Concurrency.MainActor @preconcurrency public func dequeueReusableView<T>(withClass: T.Type) -> T where T : UIKit.UITableViewHeaderFooterView
+}
+@objc public protocol CameraModuleOutput {
+  @objc func didCompleteCapture()
+}
+@_inheritsConvenienceInitializers @objc @_Concurrency.MainActor @preconcurrency final public class DiagramReportCollectionViewCell : UIKit.UICollectionViewCell {
+  @objc @_Concurrency.MainActor @preconcurrency final public var titleTapHandler: (() -> Swift.Void)?
+  @objc @_Concurrency.MainActor @preconcurrency final public var reportTapHandler: (() -> Swift.Void)?
+  @objc @_Concurrency.MainActor @preconcurrency public static var nibName: Swift.String {
+    @objc get
+  }
+  @objc @_Concurrency.MainActor @preconcurrency public static var reuseId: Swift.String {
+    @objc get
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override final public func awakeFromNib()
+  @objc @_Concurrency.MainActor @preconcurrency final public func configure(with title: Swift.String?, subtitle: Swift.String?, activeReportValue: Swift.Int, shouldHideOffset: Swift.Bool, activeReportOffset: Swift.Int, cellGradient: IrLibSwift.AiletGradientColor)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers public class IRSharedAuthorizedPortal : ObjectiveC.NSObject {
+  @objc final public let url: Swift.String
+  @objc final public let rootDomain: Swift.String?
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class IRTechSupportInteractionProvider : ObjectiveC.NSObject {
+  @objc deinit
+}
+@objc extension IrLibSwift.IRTechSupportInteractionProvider {
+  @objc dynamic public func logout(completion: (((any Swift.Error)?) -> Swift.Void)?)
+  @objc dynamic public func show()
+  @objc dynamic public func updateDeviceToken(_ deviceToken: Foundation.Data)
+}
+public typealias StoreSceneTypeId = Swift.Int
+public typealias IRResultCompletion = (Swift.Result<Swift.Void, IrLibSwift.IRError>) -> Swift.Void
+public typealias IRResultObjcCompletion = (Foundation.NSError?) -> Swift.Void
+@_inheritsConvenienceInitializers @objc final public class IRInteractManager : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension IrLibSwift.IRInteractManager {
+  final public class func setup(username: Swift.String, password: Swift.String, guestToken: Swift.String, externalUserId: Swift.String? = nil, notification: Swift.String? = nil, domainName: Swift.String? = nil, isMultiportal: Swift.Bool = false, completion: IrLibSwift.IRResultCompletion?)
+  final public class func showSummaryReport(in presentingViewController: UIKit.UIViewController, visitId: Swift.String, completion: IrLibSwift.IRResultCompletion?)
+  final public class func syncData(completion: IrLibSwift.IRResultCompletion?)
+}
+@_hasMissingDesignatedInitializers open class AppDocsConfigurator {
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class IRFeatureToggles : ObjectiveC.NSObject {
+  public var isOpenIDAuthEnabled: Swift.Bool
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class IRVisitReport : ObjectiveC.NSObject, IrLibSwift.ReflectedStringConvertible {
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class IRReport : ObjectiveC.NSObject, IrLibSwift.ReflectedStringConvertible {
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class IRReportVisitStats : ObjectiveC.NSObject, IrLibSwift.ReflectedStringConvertible {
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class IRReportVisitPhotoStats : ObjectiveC.NSObject, IrLibSwift.ReflectedStringConvertible {
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class IRReportVisitStatsNeedSend : ObjectiveC.NSObject, IrLibSwift.ReflectedStringConvertible {
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class IRReportOSADetails : ObjectiveC.NSObject, IrLibSwift.ReflectedStringConvertible {
+  @objc deinit
+}
+@objc public enum IRReportPriceType : Swift.Int {
+  case normal = 0
+  case promo = 1
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers @objc public class IRReportShareShelf : ObjectiveC.NSObject, IrLibSwift.ReflectedStringConvertible {
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class IRReportShareShelfBrand : ObjectiveC.NSObject, IrLibSwift.ReflectedStringConvertible {
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class IRReportShareShelfCategory : ObjectiveC.NSObject, IrLibSwift.ReflectedStringConvertible {
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class IRReportShareShelfMacroCategory : ObjectiveC.NSObject, IrLibSwift.ReflectedStringConvertible {
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class IRReportShareShelfVisit : ObjectiveC.NSObject, IrLibSwift.ReflectedStringConvertible {
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class IRReportPhoto : ObjectiveC.NSObject, IrLibSwift.ReflectedStringConvertible {
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class IRReportPhotoError : ObjectiveC.NSObject, IrLibSwift.ReflectedStringConvertible {
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class IRReportPhotoProduct : ObjectiveC.NSObject, IrLibSwift.ReflectedStringConvertible {
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class IRReportPhotoProductWidth : ObjectiveC.NSObject, IrLibSwift.ReflectedStringConvertible {
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class IRReportPerfectStore : ObjectiveC.NSObject, IrLibSwift.ReflectedStringConvertible {
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class IRReportPerfectStoreTask : ObjectiveC.NSObject, IrLibSwift.ReflectedStringConvertible {
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class IRReportPerfectStoreTaskKPI : ObjectiveC.NSObject, IrLibSwift.ReflectedStringConvertible {
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class IRReportPerfectStoreTaskQuestion : ObjectiveC.NSObject, IrLibSwift.ReflectedStringConvertible {
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class IRReportPerfectStoreTaskQuestionAnswer : ObjectiveC.NSObject, IrLibSwift.ReflectedStringConvertible {
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class IRReportResult : ObjectiveC.NSObject, IrLibSwift.ReflectedStringConvertible {
+  @objc deinit
+}
+extension Swift.Array where Element : UIKit.UIView {
+  @discardableResult
+  public func decorateFont(with font: UIKit.UIFont) -> [UIKit.UIView]
+  @discardableResult
+  public func decorateText(with color: UIKit.UIColor) -> [UIKit.UIView]
+  @discardableResult
+  public func decorateBackground(with color: UIKit.UIColor) -> [UIKit.UIView]
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency public func decorateText(with color: UIKit.UIColor)
+  @_Concurrency.MainActor @preconcurrency public func decorateFont(with font: UIKit.UIFont)
+}
+extension IrLibSwift.ProfileInfoNavigationBarCustomizer.ProfileInfoPosition : Swift.Equatable {}
+extension IrLibSwift.ProfileInfoNavigationBarCustomizer.ProfileInfoPosition : Swift.Hashable {}
+extension IrLibSwift.IRError : Swift.Equatable {}
+extension IrLibSwift.IRError : Swift.Hashable {}
+extension IrLibSwift.IRError : Swift.RawRepresentable {}
+extension IrLibSwift.Workflow : Swift.Equatable {}
+extension IrLibSwift.Workflow : Swift.Hashable {}
+extension IrLibSwift.Workflow : Swift.RawRepresentable {}
+extension IrLibSwift.IRLocationErrorBlockType : Swift.Equatable {}
+extension IrLibSwift.IRLocationErrorBlockType : Swift.Hashable {}
+extension IrLibSwift.IRLocationErrorBlockType : Swift.RawRepresentable {}
+extension IrLibSwift.IRPhotoApproveMode : Swift.Equatable {}
+extension IrLibSwift.IRPhotoApproveMode : Swift.Hashable {}
+extension IrLibSwift.IRPhotoApproveMode : Swift.RawRepresentable {}
+@available(*, unavailable, renamed: "Connection")
+extension IrLibSwift.NetworkReachability.NetworkStatus : Swift.Equatable {}
+@available(*, unavailable, renamed: "Connection")
+extension IrLibSwift.NetworkReachability.NetworkStatus : Swift.Hashable {}
+extension IrLibSwift.NetworkReachability.Connection : Swift.Equatable {}
+extension IrLibSwift.NetworkReachability.Connection : Swift.Hashable {}
+extension IrLibSwift.AiletNetworkError : Swift.Equatable {}
+extension IrLibSwift.AiletNetworkError : Swift.Hashable {}
+extension IrLibSwift.AiletNetworkError : Swift.RawRepresentable {}
+extension IrLibSwift.DeletedPhoto.IRDeletedPhotoState : Swift.Equatable {}
+extension IrLibSwift.DeletedPhoto.IRDeletedPhotoState : Swift.Hashable {}
+extension IrLibSwift.DeletedPhoto.IRDeletedPhotoState : Swift.RawRepresentable {}
+extension IrLibSwift.TabBarModel : Swift.Equatable {}
+extension IrLibSwift.TabBarModel : Swift.Hashable {}
+extension IrLibSwift.IRWorkFlow : Swift.Equatable {}
+extension IrLibSwift.IRWorkFlow : Swift.Hashable {}
+extension IrLibSwift.IRWorkFlow : Swift.RawRepresentable {}
+extension IrLibSwift.IRReportPriceType : Swift.Equatable {}
+extension IrLibSwift.IRReportPriceType : Swift.Hashable {}
+extension IrLibSwift.IRReportPriceType : Swift.RawRepresentable {}
