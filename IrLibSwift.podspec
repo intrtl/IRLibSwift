@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "IrLibSwift"
-  spec.version      = "5.13.1b"
+  spec.version      = "5.13.1c"
   spec.summary      = "Framework with IR functionality written on Swift" 
   spec.static_framework = true;
   spec.description  = <<-DESC
@@ -18,6 +18,6 @@ Pod::Spec.new do |spec|
   spec.dependency "BugfenderSDK", "2.0.0"
   spec.dependency "Intercom", "16.6.1"
   spec.dependency "Amplitude", "~> 8.8.0"
-  spec.dependency "IRRealm", "10.54.1"
-  spec.dependency "IRRealmSwift", "10.54.1"
+  spec.dependency "Realm", "10.54.1-xcframework"
+  spec.dependency "RealmSwift", "10.54.1-xcframework"
 end
