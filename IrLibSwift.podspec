@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "IrLibSwift"
-  spec.version      = "5.13.3"
+  spec.version      = "5.14-test"
   spec.summary      = "Framework with IR functionality written on Swift" 
   spec.static_framework = true;
   spec.description  = <<-DESC
@@ -13,7 +13,10 @@ Pod::Spec.new do |spec|
   spec.source       = { :git => "https://github.com/intrtl/IRLibSwift.git", :tag => "#{spec.version}" }
   spec.frameworks = "CoreMotion", "UserNotifications", "Combine"
   spec.ios.vendored_frameworks = 'IrLibSwift.xcframework'
-  spec.dependency "AppCenter", "~> 5.0.5"
+  spec.dependency "FirebaseAnalytics"
+  spec.dependency "FirebaseCrashlytics"
+  spec.dependency "FirebaseMessaging"
+  spec.dependency "GoogleUtilities"
   spec.dependency "OpenCV2", "~> 4.3.0"
   spec.dependency "BugfenderSDK", "2.0.0"
   spec.dependency "Intercom", "16.6.1"
