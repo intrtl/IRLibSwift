@@ -69301,154 +69301,161 @@
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Entities\/Decodable\/Settings\/SettingsEntity.swift",
       "kind": "StringLiteral",
-      "offset": 6679,
+      "offset": 6725,
       "length": 16,
       "value": "\"mandatory_crop\""
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Entities\/Decodable\/Settings\/SettingsEntity.swift",
       "kind": "StringLiteral",
-      "offset": 6729,
+      "offset": 6775,
       "length": 17,
       "value": "\"show_store_name\""
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Entities\/Decodable\/Settings\/SettingsEntity.swift",
       "kind": "StringLiteral",
-      "offset": 6775,
+      "offset": 6821,
       "length": 11,
       "value": "\"eye_level\""
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Entities\/Decodable\/Settings\/SettingsEntity.swift",
       "kind": "StringLiteral",
-      "offset": 6825,
+      "offset": 6871,
       "length": 21,
       "value": "\"offline_recognition\""
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Entities\/Decodable\/Settings\/SettingsEntity.swift",
       "kind": "StringLiteral",
-      "offset": 6880,
+      "offset": 6926,
       "length": 16,
       "value": "\"offline_models\""
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Entities\/Decodable\/Settings\/SettingsEntity.swift",
       "kind": "StringLiteral",
-      "offset": 6933,
+      "offset": 6979,
       "length": 21,
       "value": "\"is_used_mock_report\""
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Entities\/Decodable\/Settings\/SettingsEntity.swift",
       "kind": "StringLiteral",
-      "offset": 7004,
+      "offset": 7050,
       "length": 21,
       "value": "\"use_get_user_stores\""
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Entities\/Decodable\/Settings\/SettingsEntity.swift",
       "kind": "StringLiteral",
-      "offset": 7062,
+      "offset": 7108,
       "length": 25,
       "value": "\"availability_correction\""
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Entities\/Decodable\/Settings\/SettingsEntity.swift",
       "kind": "StringLiteral",
-      "offset": 7124,
+      "offset": 7170,
       "length": 20,
       "value": "\"scene_photos_limit\""
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Entities\/Decodable\/Settings\/SettingsEntity.swift",
       "kind": "StringLiteral",
-      "offset": 7208,
+      "offset": 7254,
       "length": 14,
       "value": "\"show_support\""
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Entities\/Decodable\/Settings\/SettingsEntity.swift",
       "kind": "StringLiteral",
-      "offset": 7278,
+      "offset": 7324,
       "length": 41,
       "value": "\"is_finish_visit_congratulations_enabled\""
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Entities\/Decodable\/Settings\/SettingsEntity.swift",
       "kind": "StringLiteral",
-      "offset": 7352,
+      "offset": 7398,
       "length": 15,
       "value": "\"extended_logs\""
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Entities\/Decodable\/Settings\/SettingsEntity.swift",
       "kind": "StringLiteral",
-      "offset": 7405,
+      "offset": 7451,
       "length": 21,
       "value": "\"unsent_photos_clear\""
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Entities\/Decodable\/Settings\/SettingsEntity.swift",
       "kind": "StringLiteral",
-      "offset": 7504,
+      "offset": 7550,
       "length": 33,
       "value": "\"show_reports_without_categories\""
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Entities\/Decodable\/Settings\/SettingsEntity.swift",
       "kind": "StringLiteral",
-      "offset": 8025,
+      "offset": 7630,
+      "length": 24,
+      "value": "\"reset_widgets_requests\""
+    },
+    {
+      "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Entities\/Decodable\/Settings\/SettingsEntity.swift",
+      "kind": "StringLiteral",
+      "offset": 8142,
       "length": 6,
       "value": "\"mode\""
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Entities\/Decodable\/Settings\/SettingsEntity.swift",
       "kind": "StringLiteral",
-      "offset": 8284,
+      "offset": 8401,
       "length": 13,
       "value": "\"scene_types\""
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Entities\/Decodable\/Settings\/SettingsEntity.swift",
       "kind": "StringLiteral",
-      "offset": 8336,
+      "offset": 8453,
       "length": 18,
       "value": "\"every_scene_type\""
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Entities\/Decodable\/Settings\/SettingsEntity.swift",
       "kind": "StringLiteral",
-      "offset": 8600,
+      "offset": 8717,
       "length": 9,
       "value": "\"enabled\""
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Entities\/Decodable\/Settings\/SettingsEntity.swift",
       "kind": "StringLiteral",
-      "offset": 8642,
+      "offset": 8759,
       "length": 10,
       "value": "\"settings\""
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Entities\/Decodable\/Settings\/SettingsEntity.swift",
       "kind": "StringLiteral",
-      "offset": 8882,
+      "offset": 8999,
       "length": 22,
       "value": "\"replace_sku_required\""
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Entities\/Decodable\/Settings\/SettingsEntity.swift",
       "kind": "StringLiteral",
-      "offset": 9208,
+      "offset": 9325,
       "length": 27,
       "value": "\"show_shelves_on_realogram\""
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Entities\/Decodable\/Settings\/SettingsEntity.swift",
       "kind": "StringLiteral",
-      "offset": 9289,
+      "offset": 9406,
       "length": 35,
       "value": "\"is_online_scene_stitching_enabled\""
     },
@@ -80852,440 +80859,447 @@
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "BooleanLiteral",
       "offset": 636,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
-      "kind": "BooleanLiteral",
-      "offset": 678,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "BooleanLiteral",
-      "offset": 720,
+      "offset": 679,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
+      "kind": "BooleanLiteral",
+      "offset": 721,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "StringLiteral",
-      "offset": 808,
+      "offset": 809,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "StringLiteral",
-      "offset": 866,
+      "offset": 867,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "IntegerLiteral",
-      "offset": 1257,
+      "offset": 1258,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "StringLiteral",
-      "offset": 1338,
+      "offset": 1339,
       "length": 9,
       "value": "\"default\""
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "StringLiteral",
-      "offset": 1375,
+      "offset": 1376,
       "length": 9,
       "value": "\"default\""
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "BooleanLiteral",
-      "offset": 1545,
+      "offset": 1546,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "BooleanLiteral",
-      "offset": 1600,
+      "offset": 1601,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "BooleanLiteral",
-      "offset": 1615,
+      "offset": 1616,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "Array",
-      "offset": 1863,
+      "offset": 1864,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "BooleanLiteral",
-      "offset": 1964,
+      "offset": 1965,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "IntegerLiteral",
-      "offset": 2111,
+      "offset": 2112,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "IntegerLiteral",
-      "offset": 2127,
+      "offset": 2128,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "Array",
-      "offset": 2148,
+      "offset": 2149,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "Array",
-      "offset": 2202,
+      "offset": 2203,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "Array",
-      "offset": 2213,
+      "offset": 2214,
       "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
-      "kind": "Dictionary",
-      "offset": 3913,
-      "length": 3,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
-      "kind": "Dictionary",
-      "offset": 4005,
-      "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "BooleanLiteral",
-      "offset": 4183,
+      "offset": 2298,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "Dictionary",
-      "offset": 4296,
+      "offset": 3963,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "Dictionary",
-      "offset": 4388,
-      "length": 3,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
-      "kind": "Dictionary",
-      "offset": 4503,
+      "offset": 4055,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "BooleanLiteral",
-      "offset": 4612,
+      "offset": 4233,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
+      "kind": "Dictionary",
+      "offset": 4346,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
+      "kind": "Dictionary",
+      "offset": 4438,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
+      "kind": "Dictionary",
+      "offset": 4553,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4662,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "Dictionary",
-      "offset": 4729,
+      "offset": 4779,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "Dictionary",
-      "offset": 4790,
+      "offset": 4840,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "Array",
-      "offset": 4910,
+      "offset": 4960,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "FloatLiteral",
-      "offset": 4953,
+      "offset": 5003,
       "length": 3,
       "value": "0.6"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "BooleanLiteral",
-      "offset": 5001,
+      "offset": 5051,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "IntegerLiteral",
-      "offset": 5040,
+      "offset": 5090,
       "length": 4,
       "value": "3500"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "BooleanLiteral",
-      "offset": 5080,
+      "offset": 5130,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "Array",
-      "offset": 5143,
+      "offset": 5193,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "BooleanLiteral",
-      "offset": 5193,
+      "offset": 5243,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "BooleanLiteral",
-      "offset": 5396,
+      "offset": 5446,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "IntegerLiteral",
-      "offset": 5438,
+      "offset": 5488,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "BooleanLiteral",
-      "offset": 5514,
+      "offset": 5564,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "Array",
-      "offset": 5528,
+      "offset": 5578,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "IntegerLiteral",
-      "offset": 7377,
+      "offset": 7427,
       "length": 4,
       "value": "1"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "IntegerLiteral",
-      "offset": 7391,
+      "offset": 7441,
       "length": 7,
       "value": "2"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "IntegerLiteral",
-      "offset": 7480,
+      "offset": 7530,
       "length": 9,
       "value": "1"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "BooleanLiteral",
-      "offset": 7587,
+      "offset": 7637,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "IntegerLiteral",
-      "offset": 7834,
+      "offset": 7884,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "BooleanLiteral",
-      "offset": 7890,
+      "offset": 7940,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "BooleanLiteral",
-      "offset": 8097,
+      "offset": 8147,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "IntegerLiteral",
-      "offset": 8201,
+      "offset": 8251,
       "length": 2,
       "value": "20"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "IntegerLiteral",
-      "offset": 8232,
+      "offset": 8282,
       "length": 3,
       "value": "200"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "BooleanLiteral",
-      "offset": 8363,
+      "offset": 8413,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "BooleanLiteral",
-      "offset": 8471,
+      "offset": 8521,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "BooleanLiteral",
-      "offset": 8518,
+      "offset": 8568,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "Dictionary",
-      "offset": 8856,
+      "offset": 8906,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "Array",
-      "offset": 8959,
+      "offset": 9009,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "BooleanLiteral",
-      "offset": 11364,
+      "offset": 11414,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "BooleanLiteral",
-      "offset": 11425,
+      "offset": 11475,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "BooleanLiteral",
-      "offset": 11528,
+      "offset": 11578,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "BooleanLiteral",
-      "offset": 11573,
+      "offset": 11623,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "BooleanLiteral",
-      "offset": 11626,
+      "offset": 11676,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "BooleanLiteral",
-      "offset": 11673,
+      "offset": 11723,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "BooleanLiteral",
-      "offset": 11729,
+      "offset": 11779,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "BooleanLiteral",
-      "offset": 11852,
+      "offset": 11902,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "BooleanLiteral",
-      "offset": 11979,
+      "offset": 12029,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "BooleanLiteral",
-      "offset": 12060,
+      "offset": 12110,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Common\/Settings.swift",
       "kind": "BooleanLiteral",
-      "offset": 12109,
+      "offset": 12159,
       "length": 5,
       "value": "false"
     },
@@ -83266,7 +83280,14 @@
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Managers\/RecognitionSequenceManager\/DefaultRecognitionSequenceManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 17707,
+      "offset": 852,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Managers\/RecognitionSequenceManager\/DefaultRecognitionSequenceManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 18419,
       "length": 5,
       "value": "false"
     },
@@ -83616,7 +83637,7 @@
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Core\/FileManager\/AiletFileManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 5584,
+      "offset": 5881,
       "length": 5,
       "value": "false"
     },
@@ -98253,28 +98274,28 @@
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Services\/DefaultServiceBuilder.swift",
       "kind": "IntegerLiteral",
-      "offset": 23135,
+      "offset": 23178,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Services\/DefaultServiceBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 34180,
+      "offset": 34223,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Services\/DefaultServiceBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 34302,
+      "offset": 34345,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ashmakov\/Documents\/Projects\/Intrtl\/IrLibSwift\/IrLib\/Services\/DefaultServiceBuilder.swift",
       "kind": "StringLiteral",
-      "offset": 34656,
+      "offset": 34699,
       "length": 16,
       "value": "\"www.google.com\""
     },
