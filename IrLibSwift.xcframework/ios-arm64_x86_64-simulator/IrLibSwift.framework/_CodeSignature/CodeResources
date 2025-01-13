@@ -26,7 +26,7 @@
 		</data>
 		<key>AppCenter.bundle/Info.plist</key>
 		<data>
-		fEyz3lG6I13rZ6Fth8HarUJErEA=
+		6CPywtd+3v9gSda4NiwHNqLmpI0=
 		</data>
 		<key>AppCenter.bundle/PrivacyInfo.xcprivacy</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>AppCenterAnalytics.bundle/Info.plist</key>
 		<data>
-		lM64C+oWDfxdWHlCEq6DEgq0s2I=
+		3lcDh0euxxNeoOrIGBXxtPGcsQ4=
 		</data>
 		<key>AppCenterAnalytics.bundle/PrivacyInfo.xcprivacy</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>AppCenterCrashes.bundle/Info.plist</key>
 		<data>
-		7qZ2le4njG4gEMFjRlSK9ZNX8YA=
+		wh5Fa/+fXa/AU+k6EJN3RO61aFI=
 		</data>
 		<key>AppCenterCrashes.bundle/PrivacyInfo.xcprivacy</key>
 		<data>
@@ -66,7 +66,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		eGmKKrsu9qEn+tKLuOMX7O/GPOo=
+		GiaJ8NTdafOupEBZFGVlyjtjGyU=
 		</data>
 		<key>AssortmentMatrixDetails.storyboardc/AssortmentMatrixDetailsViewController.nib</key>
 		<data>
@@ -130,7 +130,7 @@
 		</data>
 		<key>Camera.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
 		<data>
-		TiqUkB5NCOkKqtsZpqbMmF8WkKc=
+		0bbV2NPFq/n+H3DQaZkPTjYpopY=
 		</data>
 		<key>Camera.storyboardc/CameraViewController.nib</key>
 		<data>
@@ -234,7 +234,7 @@
 		</data>
 		<key>FeatureInfoNotificationCell.nib</key>
 		<data>
-		iNY46d++TUaA9nzSnssI8C0S/KY=
+		KyRGrVPEZt9LltixwFRVpqIM7MY=
 		</data>
 		<key>FeatureInfoNotificationView.nib</key>
 		<data>
@@ -286,7 +286,7 @@
 		</data>
 		<key>Headers/IrLibSwift-Swift.h</key>
 		<data>
-		dUab90QBKbfSjM9Q/c+Blt0q5S0=
+		HU9N7GVgTWIVx5KxbRdD+nvEbEk=
 		</data>
 		<key>Headers/IrLibSwift.h</key>
 		<data>
@@ -330,7 +330,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Y0SU5cJdBninj0tJ5EGwcR+elQc=
+		FnO7WzOcLJegrgrP7caZ8t3AVHM=
 		</data>
 		<key>InfoCarousel.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
 		<data>
@@ -366,11 +366,11 @@
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		UsjMv4478qlFtg5I81TwgQJlAiY=
+		PjVtb3XvByGX2kPty4c5n1GFwG0=
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		uh4acJCUR/H8fUuHoD1o66k51Lc=
+		tU1Xr/gCAhJbly3YA47K5+DQQFE=
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -378,19 +378,19 @@
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		uh4acJCUR/H8fUuHoD1o66k51Lc=
+		tU1Xr/gCAhJbly3YA47K5+DQQFE=
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		Xf9NC0KyJx4tTgdraGypi4BXhvI=
+		ajp0xQSfhKHj8hW8lVZzEyhKRns=
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		UsjMv4478qlFtg5I81TwgQJlAiY=
+		PjVtb3XvByGX2kPty4c5n1GFwG0=
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		3C6ek8S1hSLOfXoKkw8cz3o5iPg=
+		viKN3Y+lA3YiO5EOhTbNrEg5eR0=
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -398,11 +398,11 @@
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		3C6ek8S1hSLOfXoKkw8cz3o5iPg=
+		viKN3Y+lA3YiO5EOhTbNrEg5eR0=
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		A1nGddSYn3xDt5LmUBbBD9KNa4U=
+		SMLhLNY8KuJx3xqaHeA/9AOVnYU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -526,7 +526,7 @@
 		</data>
 		<key>PhotoBrowse.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
 		<data>
-		eiGfqsoIFmAfX12w/zzETC++F6Q=
+		JZUfl6QfUrh7JcSXiTIMKTHFQPg=
 		</data>
 		<key>PhotoBrowse.storyboardc/Info.plist</key>
 		<data>
@@ -1268,7 +1268,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			QWjzFELvShSWuaQKYVZgQ2eHsUs=
+			yxfwOfLYsxlSG2jnqihyWuvsOwc=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1286,7 +1286,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			LXqvFfe0qRQYltSUar6DxdzU6zc=
+			5DfVUVuOIP6aLE69VB9vIl9VE0o=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1304,7 +1304,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			BmF5S87VLExJxclifiXJ9cWA2B0=
+			MWPEyF7wTtx0Y0sJ83pa3I//qt0=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1322,7 +1322,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			kClEbx/oldwMcpv+5hatTBlqxyM=
+			q4mBypq1qHNbyMHPjRI/6Q8wrvc=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1338,13 +1338,13 @@
 		</dict>
 		<key>realm_swift_privacy.bundle/Info.plist</key>
 		<data>
-		V+gjQW/A4/NTfWUJT4vBdqRP+8o=
+		4H1awi4JYFE4u1SBgrUGbd6E7xQ=
 		</data>
 		<key>ru.lproj/Localized.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			HPLaep0E1T3WutsfaY0ULsrz3eQ=
+			x31ziYCxH8PtE0nd5c7kJLoZ1UY=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1362,7 +1362,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			djnE/App20X93F//2enb/aReml0=
+			seXzniY5/Sa0TlWOoE67ff3sEwY=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1418,7 +1418,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			WDq+/zLuJ7jR45INekBeHf4Gxe7eWeyU5wjrxzWQFXs=
+			nrI91UiX+V5emxjR59b8sJWU4C1AZOzL/FgnnmB/jig=
 			</data>
 		</dict>
 		<key>AppCenter.bundle/PrivacyInfo.xcprivacy</key>
@@ -1432,7 +1432,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			f8yhgdbmhSVB203iFMXq1A2RXRBg4eI/RkqroM1a/L8=
+			VfXvN4oSYsjI6PjwRPxs2NDg5PgfOI+zY3noGZ45PpE=
 			</data>
 		</dict>
 		<key>AppCenterAnalytics.bundle/PrivacyInfo.xcprivacy</key>
@@ -1446,7 +1446,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			tjPWVqe9XVShl/zT7vftfKT8i48/DplsEtzqlDPpC1o=
+			ZbANACzzkDULGV6vRa8L4ylZwzN7pjq2arWIiiY82jA=
 			</data>
 		</dict>
 		<key>AppCenterCrashes.bundle/PrivacyInfo.xcprivacy</key>
@@ -1488,7 +1488,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZwhkmQEMF/SoRFV0ixrtpjfMHEenyJuWxPADQ+lffD8=
+			ZcgM0I6jCb6jdqfklcH7ZcSDeuFUZVNqihyqcxxZqqI=
 			</data>
 		</dict>
 		<key>AssortmentMatrixDetails.storyboardc/AssortmentMatrixDetailsViewController.nib</key>
@@ -1600,7 +1600,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			SL2zu+kumnqIV13nLX1eLxVfraoUyx5vOb2tHBjNw38=
+			xVeruSFtF4UZMEVK+KQc9dHdoY9dxExZPuTy2GZq98w=
 			</data>
 		</dict>
 		<key>Camera.storyboardc/CameraViewController.nib</key>
@@ -1782,7 +1782,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			dycBZzeiCqddGFbhOdgX3za+UjqigLGNDxJBddnETNM=
+			80Lixlf565aBEIZK+avnZlFIDBCcSLTVV3h1uSyoEsg=
 			</data>
 		</dict>
 		<key>FeatureInfoNotificationView.nib</key>
@@ -1873,7 +1873,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			5VTgpIqfPkKOSlqM3QMBMc1aXrBCjq5FoCwkRDKMBh0=
+			SwZul7Te3eu1M8xY6jDkgoMIMRvJ/eb7vYOlnHPgIaY=
 			</data>
 		</dict>
 		<key>Headers/IrLibSwift.h</key>
@@ -2006,14 +2006,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			2HFfaQMspUw39ryTdrEv7k/ZAvItqJ0a409bl72TCfs=
+			zFDi7V0eenG50l+UMH+fH/g0svGPohH6UBzgpVNtbCs=
 			</data>
 		</dict>
 		<key>Modules/IrLibSwift.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IY/uhTWfZNpce0cMFuOxuOhkwsTQlh9vs8Yo/uYEqFc=
+			votgOc217rrg38gwWtqWAB7u5Ryq8hMFVadNzKT3Bps=
 			</data>
 		</dict>
 		<key>Modules/IrLibSwift.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -2027,28 +2027,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			IY/uhTWfZNpce0cMFuOxuOhkwsTQlh9vs8Yo/uYEqFc=
+			votgOc217rrg38gwWtqWAB7u5Ryq8hMFVadNzKT3Bps=
 			</data>
 		</dict>
 		<key>Modules/IrLibSwift.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			kvzMPa+UqYhPFSbmmb6Suz1/AtC4jTFZ+PE1Yq8UuIg=
+			+LIVlouOVVu2HgaUAWObft0pz2ZUQJ3KP1zXCgkhRXI=
 			</data>
 		</dict>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			2HFfaQMspUw39ryTdrEv7k/ZAvItqJ0a409bl72TCfs=
+			zFDi7V0eenG50l+UMH+fH/g0svGPohH6UBzgpVNtbCs=
 			</data>
 		</dict>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RjPHHiDiS1vIHQ0uCAsaqFYWjelig19E4EOYI4n/lqg=
+			BfjPs++zqXbhtUjMrAfJS9Dxzz99hL5m/ORevvv6gfo=
 			</data>
 		</dict>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -2062,14 +2062,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			RjPHHiDiS1vIHQ0uCAsaqFYWjelig19E4EOYI4n/lqg=
+			BfjPs++zqXbhtUjMrAfJS9Dxzz99hL5m/ORevvv6gfo=
 			</data>
 		</dict>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			1OBv92bi2VJbzs5xuTTkVlmX0hHIc+28FEHkZZW2zvI=
+			SYiSb8rdw8ZZvG0OiheSQBKDAI6T9jMdH/gAziqn0ig=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -2286,7 +2286,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			YqShyn6gcLQEFMkdCNCJbpsOHaXyyT1S6YbzAiOvV1Q=
+			m5IQeueJQlgXR6sRuPWwdCv9ghoihnCy9kduHUm7Bn0=
 			</data>
 		</dict>
 		<key>PhotoBrowse.storyboardc/Info.plist</key>
@@ -3581,7 +3581,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jlQtiCyHRs2ykWRyEGYKy1EuhjfQgS8VxC00rInzN8I=
+			h7cPn8wQ0hGA/0dUA2eqRjSkYkjmnLhxjzAmMRJKm3A=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3599,7 +3599,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			DLIfoZj/ID6SWJnBprXxD1NTmGhSNyg6GMtglml8zCQ=
+			RrgtvJGHS0E8eA5Ex+8e1AkP/tVoxs8sipOSNHxipXg=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3617,7 +3617,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			r7jLQwQNiT1wf0xF94JDtZ1pAOrP8QhHXpJv9TblYsE=
+			BzrZi7wnO0B9EC7Tp7f013xBerfntGcL6oezdjKzOAI=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3635,7 +3635,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ssPaCs3ge8ZBGAUijjlFREOEZlvoDuyVhXnfbiqi3Oo=
+			A2mqHHF+pFvjnnxG4s3bqR877A7y+/rUXUCX9rkHJmE=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3653,14 +3653,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			XSSailU7XKl2FjVYdi7nnO/3pqAVp2TQzzQzJhaheew=
+			LakTUf032N7Xy1V9X49IVp4v9/taNcxvXCYW/pAwrz4=
 			</data>
 		</dict>
 		<key>ru.lproj/Localized.strings</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FpBghJMU+m+b/U9mg383xt4iyFR9ziEVhgvmGuHDwSs=
+			1jA+GgxIS7RJFMFqxgp6jrebwRoZvJ9dQzdptZE4rl8=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3678,7 +3678,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			oaFN8k0TtjiVkl9ss6kQwZogDLiu/87xg5fZqjQdP40=
+			uPCEWq8u79KJepS1zLjsocJbpxZF6ZgP3qvCj3rf4XQ=
 			</data>
 			<key>optional</key>
 			<true/>

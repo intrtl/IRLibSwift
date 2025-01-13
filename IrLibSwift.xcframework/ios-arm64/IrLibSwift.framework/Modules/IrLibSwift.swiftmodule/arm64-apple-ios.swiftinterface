@@ -646,12 +646,6 @@ public struct PhotosResultOldAssortmentEntity : Swift.Decodable {
   public init(from decoder: any Swift.Decoder) throws
 }
 @_hasMissingDesignatedInitializers @objc public class VisitWidgetReportDataEntity : ObjectiveC.NSObject {
-  @objc public var main: Swift.Bool {
-    @objc get
-  }
-  @objc public var total: IrLibSwift.VisitWidgetReportDataEntityTotal? {
-    @objc get
-  }
   @objc deinit
 }
 @objc @_hasMissingDesignatedInitializers @objcMembers public class VisitWidgetReportDataEntityTotal : ObjectiveC.NSObject {
