@@ -1,14 +1,10 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0.2 effective-5.10 (swiftlang-6.0.2.1.2 clang-1600.0.26.4)
-// swift-module-flags: -target arm64-apple-ios14.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name IrLibSwift
+// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
+// swift-module-flags: -target arm64-apple-ios15.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name IrLibSwift
 // swift-module-flags-ignorable: -no-verify-emitted-module-interface
 import AVFAudio
 import AVFoundation
 import AVKit
-import Amplitude
-import AppCenter
-import AppCenterAnalytics
-import AppCenterCrashes
 import BugfenderSDK
 import Combine
 import CoreFoundation
@@ -19,30 +15,38 @@ import CoreML
 import CoreMotion
 import CoreTelephony
 import DeveloperToolsSupport
+import FirebaseAnalytics
+import FirebaseCore
+import FirebaseCrashlytics
+import FirebaseMessaging
 import Foundation
+import GRDB
 import Intercom
 @_exported import IrLibSwift
+import MachO
 import MapKit
 import MediaPlayer
+import OSLog
 import Realm
 import RealmSwift
 import Swift
 import SwiftUI
 import SystemConfiguration
 import UIKit
+import UniformTypeIdentifiers
 import WebKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
-@_inheritsConvenienceInitializers @objc public class Shelf : RLMObject {
+@_inheritsConvenienceInitializers @objc public class Shelf : Realm.RLMObject {
   @objc override dynamic public init()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class ScreenTimeEvent : RLMObject {
+@_inheritsConvenienceInitializers @objc public class ScreenTimeEvent : Realm.RLMObject {
   @objc override dynamic public init()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class RecognitionResultActualAssortment : RLMObject {
+@_inheritsConvenienceInitializers @objc public class RecognitionResultActualAssortment : Realm.RLMObject {
   @objc override dynamic public init()
   @objc deinit
 }
@@ -51,12 +55,12 @@ import _SwiftConcurrencyShims
   @objc func didFinishVisit(storeId: Swift.Int)
   @objc func didTriggerOpenSupport()
 }
-@_inheritsConvenienceInitializers @objc public class Route : RLMObject {
+@_inheritsConvenienceInitializers @objc public class Route : Realm.RLMObject {
   @objc override dynamic public class func primaryKey() -> Swift.String?
   @objc override dynamic public init()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class RoutePoint : RLMObject {
+@_inheritsConvenienceInitializers @objc public class RoutePoint : Realm.RLMObject {
   @objc override dynamic public init()
   @objc deinit
 }
@@ -67,15 +71,15 @@ public enum VisitError : Foundation.LocalizedError {
   case noVisit(externalId: Swift.String)
   case shootingForDownloadedVisit
 }
-@_inheritsConvenienceInitializers @objc public class RecognitionResultRealogram : RLMObject {
+@_inheritsConvenienceInitializers @objc public class RecognitionResultRealogram : Realm.RLMObject {
   @objc override dynamic public init()
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers @objcMembers public class RecognitionResultPriceBox : RLMObject {
+@objc @_inheritsConvenienceInitializers @objcMembers public class RecognitionResultPriceBox : Realm.RLMObject {
   @objc override dynamic public init()
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers @objcMembers public class RecognitionResultPriceLink : RLMObject {
+@objc @_inheritsConvenienceInitializers @objcMembers public class RecognitionResultPriceLink : Realm.RLMObject {
   @objc override dynamic public init()
   @objc deinit
 }
@@ -103,16 +107,16 @@ public class ProfileInfoNavigationBarCustomizer {
 }
 public class GradientNavigationBarCustomizer : IrLibSwift.NavigationBarCustomizer {
   final public let viewsToHide: [UIKit.UIView]
-  public var rightTapTarget: Any?
+  weak public var rightTapTarget: Swift.AnyObject?
   public var rightTapAction: ObjectiveC.Selector?
   public init(gradient: IrLibSwift.Gradient, textColor: UIKit.UIColor)
-  public func setup(navigationItem: UIKit.UINavigationItem, navigationController: UIKit.UINavigationController?, buttonTapTarget: Any?, action: ObjectiveC.Selector?)
+  public func setup(navigationItem: UIKit.UINavigationItem, navigationController: UIKit.UINavigationController?, buttonTapTarget: Swift.AnyObject?, action: ObjectiveC.Selector?)
   public func setupCustomNavigationBar()
   public func updateToDefault()
   public func updateToCustom()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class Fix_scenes : RLMObject {
+@_inheritsConvenienceInitializers @objc public class Fix_scenes : Realm.RLMObject {
   @objc override dynamic public init()
   @objc deinit
 }
@@ -129,20 +133,20 @@ extension UIKit.UICollectionView {
 }
 public protocol NavigationBarCustomizer {
   var viewsToHide: [UIKit.UIView] { get }
-  var rightTapTarget: Any? { get set }
+  var rightTapTarget: Swift.AnyObject? { get set }
   var rightTapAction: ObjectiveC.Selector? { get set }
-  func setup(navigationItem: UIKit.UINavigationItem, navigationController: UIKit.UINavigationController?, buttonTapTarget: Any?, action: ObjectiveC.Selector?)
+  func setup(navigationItem: UIKit.UINavigationItem, navigationController: UIKit.UINavigationController?, buttonTapTarget: Swift.AnyObject?, action: ObjectiveC.Selector?)
   func setupCustomNavigationBar()
   func updateToDefault()
   func updateToCustom()
 }
-@_inheritsConvenienceInitializers @objc public class TaskAttachment : RLMObject {
+@_inheritsConvenienceInitializers @objc public class TaskAttachment : Realm.RLMObject {
   @objc override dynamic public init()
   @objc deinit
 }
 public typealias DefaultAiletDataManager = IrLibSwift.IRDataManager
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class IRDataManager : ObjectiveC.NSObject, IrLibSwift.IRDataManagerProtocol {
-  @objc public static var shared: IrLibSwift.IRDataManager
+  @objc public static let shared: IrLibSwift.IRDataManager
   @objc final public let techSupport: IrLibSwift.IRTechSupportInteractionProvider
   @objc final public let visits: IrLibSwift.IRVisitServiceInteractionProvider
   @objc final public let reports: IrLibSwift.IRReportsInteractionProvider
@@ -155,6 +159,7 @@ public typealias DefaultAiletDataManager = IrLibSwift.IRDataManager
   @objc public static func updateAppInfo(isApp: Swift.Bool)
   @objc public static func updateDeeplinkInfo(isStartedViaDeeplink: Swift.Bool)
   @objc public func startAnalytics()
+  @objc public func startConnectionMonitoring()
   @objc public func fetchStores(completion: @escaping (Foundation.NSError?) -> Swift.Void)
   @objc public func fetchSettingsAndRoutes(completion: @escaping (Foundation.NSError?) -> Swift.Void)
   @objc public func restartSendingNotSentData(onUpdate: ((Foundation.NSError?) -> Swift.Void)?)
@@ -185,6 +190,7 @@ public typealias DefaultAiletDataManager = IrLibSwift.IRDataManager
   @objc public func fetchCatalogs(completion: ((Foundation.NSError?) -> Swift.Void)?)
   @objc public func shouldFillAbsenceReasons(externalVisitId: Swift.String) -> Swift.Bool
   @objc public func workflow() -> IrLibSwift.IRWorkFlow
+  @objc public func installId() -> Swift.String
   @objc deinit
 }
 @_hasMissingDesignatedInitializers @objc public class AiletUnsentDataCheckResult : ObjectiveC.NSObject {
@@ -263,7 +269,7 @@ extension IrLibSwift.GradientColor {
   public static let orangeToBlue: IrLibSwift.GradientColor
   public static let lightRedToRed: IrLibSwift.GradientColor
 }
-@_inheritsConvenienceInitializers @objc public class Scene : RLMObject {
+@_inheritsConvenienceInitializers @objc public class Scene : Realm.RLMObject {
   @objc override dynamic public init()
   @objc deinit
 }
@@ -276,7 +282,7 @@ extension QuartzCore.CAGradientLayer {
   @discardableResult
   public func changeColor(to gradient: IrLibSwift.Gradient) -> QuartzCore.CAGradientLayer
 }
-@_inheritsConvenienceInitializers @objc public class RecognitionResultSceneGroup : RLMObject {
+@_inheritsConvenienceInitializers @objc public class RecognitionResultSceneGroup : Realm.RLMObject {
   @objc override dynamic public init()
   @objc deinit
 }
@@ -386,6 +392,12 @@ public enum Fonts {
   }
   public enum Subheadline {
     public static let normal: UIKit.UIFont
+    public static let semibold: UIKit.UIFont
+    public static let italic: UIKit.UIFont
+  }
+  public enum LargerFootnote {
+    public static let normal: UIKit.UIFont
+    public static let medium: UIKit.UIFont
     public static let semibold: UIKit.UIFont
     public static let italic: UIKit.UIFont
   }
@@ -540,7 +552,7 @@ extension IrLibSwift.NetworkReachability {
     get
   }
 }
-@_inheritsConvenienceInitializers @objc public class RecognitionResultWidth : RLMObject {
+@_inheritsConvenienceInitializers @objc public class RecognitionResultWidth : Realm.RLMObject {
   @objc override dynamic public init()
   @objc deinit
 }
@@ -559,7 +571,7 @@ extension IrLibSwift.NetworkReachability {
   @objc final public func updateActivePortal(rootDomain: Swift.String) throws
   @objc final public func authorizeOnAllAvailablePortals(login: Swift.String, password: Swift.String, externalUserId: Swift.String?, completion: @escaping (Foundation.NSError?) -> Swift.Void)
 }
-@_inheritsConvenienceInitializers @objc public class Scene_types : RLMObject {
+@_inheritsConvenienceInitializers @objc public class Scene_types : Realm.RLMObject {
   @objc override dynamic public init()
   @objc deinit
 }
@@ -568,16 +580,16 @@ extension UIKit.UIColor {
 }
 public class TransparentNavigationBarCustomizer : IrLibSwift.NavigationBarCustomizer {
   final public let viewsToHide: [UIKit.UIView]
-  public var rightTapTarget: Any?
+  weak public var rightTapTarget: Swift.AnyObject?
   public var rightTapAction: ObjectiveC.Selector?
   public init(titleColor: UIKit.UIColor, backButtonColor: UIKit.UIColor? = nil, shouldUpdateNavbar: Swift.Bool = false)
-  public func setup(navigationItem: UIKit.UINavigationItem, navigationController: UIKit.UINavigationController?, buttonTapTarget: Any?, action: ObjectiveC.Selector?)
+  public func setup(navigationItem: UIKit.UINavigationItem, navigationController: UIKit.UINavigationController?, buttonTapTarget: Swift.AnyObject?, action: ObjectiveC.Selector?)
   public func setupCustomNavigationBar()
   public func updateToDefault()
   public func updateToCustom()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class VisitTask : RLMObject {
+@_inheritsConvenienceInitializers @objc public class VisitTask : Realm.RLMObject {
   @objc override dynamic public class func primaryKey() -> Swift.String?
   @objc override dynamic public init()
   @objc deinit
@@ -586,7 +598,7 @@ public struct ReportFilter {
 }
 @objc public protocol IRDbConfigProvider {
   @objc var dbVersion: Swift.Int { get }
-  @objc func realmConfig(shouldUseCommonCopy: Swift.Bool) -> RLMRealmConfiguration
+  @objc func realmConfig(shouldUseCommonCopy: Swift.Bool) -> Realm.RLMRealmConfiguration
 }
 @_inheritsConvenienceInitializers @objc @_Concurrency.MainActor @preconcurrency public class SOSReportListCollectionViewCell : UIKit.UICollectionViewCell {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func layoutSubviews()
@@ -603,7 +615,7 @@ extension UIKit.UIImage {
 @objc public protocol BarButtonShowing {
   @objc func addBarButton(_ button: UIKit.UIBarButtonItem, onTap: (() -> Swift.Void)?)
 }
-@_inheritsConvenienceInitializers @objc public class RecognitionResultScene : RLMObject {
+@_inheritsConvenienceInitializers @objc public class RecognitionResultScene : Realm.RLMObject {
   @objc override dynamic public init()
   @objc deinit
 }
@@ -613,6 +625,13 @@ extension CoreGraphics.CGContext {
 extension CoreGraphics.CGImage {
   public func hasAlpha() -> Swift.Bool
 }
+#if compiler(>=5.3) && $Macros && $AttachedMacros && $ExtensionMacros
+#if compiler(>=5.3) && $ExtensionMacroAttr
+@attached(extension, conformances: IrLibSwift.DBSchema, names: arbitrary) public macro GRDBSchema() = #externalMacro(module: "AiletMacroMacros", type: "GRDBSchemaMacro")
+#else
+ public macro GRDBSchema() = #externalMacro(module: "AiletMacroMacros", type: "GRDBSchemaMacro")
+#endif
+#endif
 public struct PhotosResultOldAssortmentEntity : Swift.Decodable {
   public struct RealogramAssortment : Swift.Decodable {
     public let id: Swift.String
@@ -691,7 +710,7 @@ extension IrLibSwift.AiletFonts {
     @objc deinit
   }
 }
-@objc @_inheritsConvenienceInitializers public class TaskKpi : RLMObject {
+@objc @_inheritsConvenienceInitializers public class TaskKpi : Realm.RLMObject {
   @objc override dynamic public init()
   @objc deinit
 }
@@ -724,7 +743,7 @@ public enum Shadows {
   public static let elevation200: IrLibSwift.ComplexShadow
   public static let elevation300: IrLibSwift.ComplexShadow
 }
-@_inheritsConvenienceInitializers @objc public class DeletedPhoto : RLMObject {
+@_inheritsConvenienceInitializers @objc public class DeletedPhoto : Realm.RLMObject {
   @objc public enum IRDeletedPhotoState : Swift.Int {
     case readyToSend = 1
     case sent = 2
@@ -870,24 +889,24 @@ public struct CGLine : Swift.Equatable {
   @objc final public let username: Swift.String
   @objc deinit
 }
-extension RLMRealm {
+extension Realm.RLMRealm {
   @nonobjc public class func schemaVersion(at url: Foundation.URL, usingEncryptionKey key: Foundation.Data? = nil) throws -> Swift.UInt64
-  @nonobjc public func resolve<Confined>(reference: RLMThreadSafeReference<Confined>) -> Confined? where Confined : RLMThreadConfined
+  @nonobjc public func resolve<Confined>(reference: Realm.RLMThreadSafeReference<Confined>) -> Confined? where Confined : Realm.RLMThreadConfined
 }
-extension RLMObject {
-  public class func objects(where predicateFormat: Swift.String, _ args: any Swift.CVarArg...) -> RLMResults<RLMObject>
-  public class func objects(in realm: RLMRealm, where predicateFormat: Swift.String, _ args: any Swift.CVarArg...) -> RLMResults<RLMObject>
+extension Realm.RLMObject {
+  public class func objects(where predicateFormat: Swift.String, _ args: any Swift.CVarArg...) -> Realm.RLMResults<Realm.RLMObject>
+  public class func objects(in realm: Realm.RLMRealm, where predicateFormat: Swift.String, _ args: any Swift.CVarArg...) -> Realm.RLMResults<Realm.RLMObject>
 }
 public struct RLMIterator<T> : Swift.IteratorProtocol {
   public mutating func next() -> T?
   public typealias Element = T
 }
-extension RLMCollection {
-  public func makeIterator() -> IrLibSwift.RLMIterator<RLMObject>
+extension Realm.RLMCollection {
+  public func makeIterator() -> IrLibSwift.RLMIterator<Realm.RLMObject>
 }
-extension RLMCollection {
+extension Realm.RLMCollection {
   public func indexOfObject(where predicateFormat: Swift.String, _ args: any Swift.CVarArg...) -> Swift.UInt?
-  public func objects(where predicateFormat: Swift.String, _ args: any Swift.CVarArg...) -> RLMResults<ObjectiveC.NSObject>
+  public func objects(where predicateFormat: Swift.String, _ args: any Swift.CVarArg...) -> Realm.RLMResults<ObjectiveC.NSObject>
 }
 @objc extension IrLibSwift.IRInteractManager {
   @available(swift, obsoleted: 1.0)
@@ -1003,11 +1022,11 @@ public enum Colors {
     get
   }
 }
-@_inheritsConvenienceInitializers @objc public class TaskAnswer : RLMObject {
+@_inheritsConvenienceInitializers @objc public class TaskAnswer : Realm.RLMObject {
   @objc override dynamic public init()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class Segment : RLMObject {
+@_inheritsConvenienceInitializers @objc public class Segment : Realm.RLMObject {
   @objc override dynamic public class func primaryKey() -> Swift.String?
   @objc override dynamic public init()
   @objc deinit
@@ -1021,9 +1040,6 @@ extension Swift.KeyedDecodingContainer {
   public func decodeDoubleFromStringOrDoubleIfPresent(forKey key: K) -> Swift.Double?
 }
 @_hasMissingDesignatedInitializers @objc public class IRStoredStateSettings : ObjectiveC.NSObject {
-  @objc public var currentVisit: IrLibSwift.IRStoredStateSettingsVisit? {
-    @objc get
-  }
   @objc public var currentStore: IrLibSwift.IRStoredStateSettingsStore? {
     @objc get
   }
@@ -1055,7 +1071,7 @@ public struct Gradient {
   public let direction: IrLibSwift.GradientDirection
   public init(color: IrLibSwift.GradientColor, locations: [Foundation.NSNumber], direction: IrLibSwift.GradientDirection)
 }
-@_inheritsConvenienceInitializers @objc public class RealmString : RLMObject {
+@_inheritsConvenienceInitializers @objc public class RealmString : Realm.RLMObject {
   @objc override dynamic public init()
   @objc deinit
 }
@@ -1100,7 +1116,7 @@ public struct Gradient {
   @objc public func supportTabViewController() -> UIKit.UIViewController
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class RecognitionResultAssortmentAchievement : RLMObject {
+@_inheritsConvenienceInitializers @objc public class RecognitionResultAssortmentAchievement : Realm.RLMObject {
   @objc override dynamic public class func primaryKey() -> Swift.String?
   @objc override dynamic public init()
   @objc deinit
@@ -1118,7 +1134,7 @@ public struct Gradient {
   public static func showVideoTutorialCarousel()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class StoreSceneType : RLMObject {
+@_inheritsConvenienceInitializers @objc public class StoreSceneType : Realm.RLMObject {
   @objc override dynamic public class func primaryKey() -> Swift.String?
   @objc override dynamic public init()
   @objc deinit
@@ -1152,6 +1168,7 @@ extension IrLibSwift.IRAuthServiceInteractionProvider {
   @objc dynamic public func shouldReauthorize(login: Swift.String, password: Swift.String, externalUserId: Swift.String?) -> Swift.Bool
   @objc dynamic public func resetAccess()
   @objc dynamic public func subscribeToAuthTokenIsInvalid(_ handler: (() -> Swift.Void)?)
+  @objc dynamic public func shouldUseOnlyOpenIDAuth() -> Swift.Bool
 }
 public struct PortalEntity : Swift.Decodable {
   public let id: Swift.Int
@@ -1160,8 +1177,8 @@ public struct PortalEntity : Swift.Decodable {
   public let type: Swift.String
   public init(from decoder: any Swift.Decoder) throws
 }
-@_inheritsConvenienceInitializers @objc public class TaskQuestion : RLMObject {
-  @objc override dynamic public class func linkingObjectsProperties() -> [Swift.String : RLMPropertyDescriptor]
+@_inheritsConvenienceInitializers @objc public class TaskQuestion : Realm.RLMObject {
+  @objc override dynamic public class func linkingObjectsProperties() -> [Swift.String : Realm.RLMPropertyDescriptor]
   @objc override dynamic public init()
   @objc deinit
 }
@@ -1170,7 +1187,7 @@ public struct PortalEntity : Swift.Decodable {
   @objc final public let name: Swift.String
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers public class RealmInt : RLMObject {
+@objc @_inheritsConvenienceInitializers public class RealmInt : Realm.RLMObject {
   @objc override dynamic public init()
   @objc deinit
 }
@@ -1183,7 +1200,7 @@ extension UIKit.UITableView {
   @objc override dynamic public init()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class RecognitionResultProductGroup : RLMObject {
+@_inheritsConvenienceInitializers @objc public class RecognitionResultProductGroup : Realm.RLMObject {
   @objc override dynamic public init()
   @objc deinit
 }
@@ -1199,7 +1216,7 @@ public struct ComplexShadow {
   @objc override dynamic public init()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class RecognitionResultValue : RLMObject {
+@_inheritsConvenienceInitializers @objc public class RecognitionResultValue : Realm.RLMObject {
   @objc override dynamic public init()
   @objc deinit
 }
@@ -1239,6 +1256,7 @@ public typealias AiletDataManager = IrLibSwift.IRDataManagerProtocol
   @objc func fetchCatalogs(completion: ((Foundation.NSError?) -> Swift.Void)?)
   @objc func shouldFillAbsenceReasons(externalVisitId: Swift.String) -> Swift.Bool
   @objc func workflow() -> IrLibSwift.IRWorkFlow
+  @objc func installId() -> Swift.String
 }
 @available(*, deprecated, message: "Please use ShadowView class instead of this protocol and its default implementations")
 public protocol ShadowShowing {
@@ -1269,21 +1287,21 @@ extension IrLibSwift.ShadowShowing where Self : UIKit.UIView {
   @objc dynamic public func unsentData(for visitId: Swift.String?) -> IrLibSwift.AiletUnsentDataCheckResult
   @objc dynamic public func photosCount(for visitId: Swift.String) -> Swift.Int
 }
-@_inheritsConvenienceInitializers @objc public class MetricsPlan : RLMObject {
+@_inheritsConvenienceInitializers @objc public class MetricsPlan : Realm.RLMObject {
   @objc override dynamic public class func primaryKey() -> Swift.String?
   @objc override dynamic public init()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class ProductGroup : RLMObject {
+@_inheritsConvenienceInitializers @objc public class ProductGroup : Realm.RLMObject {
   @objc override dynamic public init()
   @objc deinit
 }
 @_inheritsConvenienceInitializers @available(*, deprecated, message: "To be deleted very soon")
-@objc public class RecognitionResultOldAssortment : RLMObject {
+@objc public class RecognitionResultOldAssortment : Realm.RLMObject {
   @objc override dynamic public init()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class Shelves : RLMObject {
+@_inheritsConvenienceInitializers @objc public class Shelves : Realm.RLMObject {
   @objc override dynamic public init()
   @objc deinit
 }
@@ -1322,6 +1340,9 @@ extension UIKit.UITableView {
   @objc final public let url: Swift.String
   @objc final public let rootDomain: Swift.String?
   @objc deinit
+}
+@objc public protocol IRBackgroundEventsDelegate {
+  @objc var backgroundEventsCompletionHandler: (() -> Swift.Void)? { get }
 }
 @_hasMissingDesignatedInitializers @objc public class IRTechSupportInteractionProvider : ObjectiveC.NSObject {
   @objc deinit
