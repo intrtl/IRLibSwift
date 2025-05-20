@@ -22081,38 +22081,6 @@
         ]
       },
       {
-        "kind": "Root",
-        "name": "GRDBSchema",
-        "printedName": "GRDBSchema",
-        "children": [
-          {
-            "kind": "TypeFunc",
-            "name": "Function",
-            "printedName": "() -> ()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ]
-          }
-        ],
-        "declKind": "Macro",
-        "usr": "s:10IrLibSwift10GRDBSchemayycfm",
-        "mangledName": "$s10IrLibSwift10GRDBSchemayycfm",
-        "moduleName": "IrLibSwift",
-        "declAttributes": [
-          "AccessControl",
-          "MacroRole"
-        ]
-      },
-      {
         "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",

@@ -625,13 +625,6 @@ extension CoreGraphics.CGContext {
 extension CoreGraphics.CGImage {
   public func hasAlpha() -> Swift.Bool
 }
-#if compiler(>=5.3) && $Macros && $AttachedMacros && $ExtensionMacros
-#if compiler(>=5.3) && $ExtensionMacroAttr
-@attached(extension, conformances: IrLibSwift.DBSchema, names: arbitrary) public macro GRDBSchema() = #externalMacro(module: "AiletMacroMacros", type: "GRDBSchemaMacro")
-#else
- public macro GRDBSchema() = #externalMacro(module: "AiletMacroMacros", type: "GRDBSchemaMacro")
-#endif
-#endif
 public struct PhotosResultOldAssortmentEntity : Swift.Decodable {
   public struct RealogramAssortment : Swift.Decodable {
     public let id: Swift.String
