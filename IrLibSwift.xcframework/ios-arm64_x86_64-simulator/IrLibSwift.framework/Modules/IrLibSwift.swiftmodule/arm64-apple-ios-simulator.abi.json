@@ -27416,6 +27416,16 @@
       },
       {
         "kind": "Import",
+        "name": "GRDB",
+        "printedName": "GRDB",
+        "declKind": "Import",
+        "moduleName": "IrLibSwift",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -32028,6 +32038,23 @@
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "IrLibSwift",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "GRDB",
+        "printedName": "GRDB",
+        "declKind": "Import",
+        "moduleName": "IrLibSwift"
       },
       {
         "kind": "Import",
@@ -49983,16 +50010,6 @@
       },
       {
         "kind": "Import",
-        "name": "AiletMacro",
-        "printedName": "AiletMacro",
-        "declKind": "Import",
-        "moduleName": "IrLibSwift",
-        "declAttributes": [
-          "AccessControl"
-        ]
-      },
-      {
-        "kind": "Import",
         "name": "Realm",
         "printedName": "Realm",
         "declKind": "Import",
@@ -52509,6 +52526,16 @@
         "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "IrLibSwift",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "IrLibSwift",
         "declAttributes": [
@@ -69288,154 +69315,161 @@
     {
       "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Entities\/Decodable\/RetailTask\/RetailTaskEntity.swift",
       "kind": "StringLiteral",
-      "offset": 3939,
+      "offset": 3974,
       "length": 13,
       "value": "\"metric_type\""
     },
     {
       "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Entities\/Decodable\/RetailTask\/RetailTaskEntity.swift",
       "kind": "StringLiteral",
-      "offset": 3981,
+      "offset": 4016,
       "length": 11,
       "value": "\"metric_id\""
     },
     {
       "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Entities\/Decodable\/RetailTask\/RetailTaskEntity.swift",
       "kind": "StringLiteral",
-      "offset": 4023,
+      "offset": 4058,
       "length": 13,
       "value": "\"metric_name\""
     },
     {
       "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Entities\/Decodable\/RetailTask\/RetailTaskEntity.swift",
       "kind": "StringLiteral",
-      "offset": 4064,
+      "offset": 4099,
       "length": 10,
       "value": "\"kpi_name\""
     },
     {
       "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Entities\/Decodable\/RetailTask\/RetailTaskEntity.swift",
       "kind": "StringLiteral",
-      "offset": 4105,
+      "offset": 4140,
       "length": 13,
       "value": "\"metric_plan\""
     },
     {
       "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Entities\/Decodable\/RetailTask\/RetailTaskEntity.swift",
       "kind": "StringLiteral",
-      "offset": 4150,
+      "offset": 4187,
+      "length": 17,
+      "value": "\"sfa_metric_plan\""
+    },
+    {
+      "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Entities\/Decodable\/RetailTask\/RetailTaskEntity.swift",
+      "kind": "StringLiteral",
+      "offset": 4236,
       "length": 14,
       "value": "\"metric_value\""
     },
     {
       "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Entities\/Decodable\/RetailTask\/RetailTaskEntity.swift",
       "kind": "StringLiteral",
-      "offset": 4196,
+      "offset": 4282,
       "length": 14,
       "value": "\"metric_level\""
     },
     {
       "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Entities\/Decodable\/RetailTask\/RetailTaskEntity.swift",
       "kind": "StringLiteral",
-      "offset": 4236,
+      "offset": 4322,
       "length": 7,
       "value": "\"score\""
     },
     {
       "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Entities\/Decodable\/RetailTask\/RetailTaskEntity.swift",
       "kind": "StringLiteral",
-      "offset": 4489,
+      "offset": 4575,
       "length": 12,
       "value": "\"local_name\""
     },
     {
       "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Entities\/Decodable\/RetailTask\/RetailTaskEntity.swift",
       "kind": "StringLiteral",
-      "offset": 5528,
+      "offset": 5614,
       "length": 21,
       "value": "\"active_period_start\""
     },
     {
       "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Entities\/Decodable\/RetailTask\/RetailTaskEntity.swift",
       "kind": "StringLiteral",
-      "offset": 5581,
+      "offset": 5667,
       "length": 19,
       "value": "\"active_period_end\""
     },
     {
       "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Entities\/Decodable\/RetailTask\/RetailTaskEntity.swift",
       "kind": "StringLiteral",
-      "offset": 5630,
+      "offset": 5716,
       "length": 16,
       "value": "\"max_iterations\""
     },
     {
       "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Entities\/Decodable\/RetailTask\/RetailTaskEntity.swift",
       "kind": "StringLiteral",
-      "offset": 5678,
+      "offset": 5764,
       "length": 18,
       "value": "\"iterations_count\""
     },
     {
       "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Entities\/Decodable\/RetailTask\/RetailTaskEntity.swift",
       "kind": "StringLiteral",
-      "offset": 5720,
+      "offset": 5806,
       "length": 10,
       "value": "\"store_id\""
     },
     {
       "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Entities\/Decodable\/RetailTask\/RetailTaskEntity.swift",
       "kind": "StringLiteral",
-      "offset": 5756,
+      "offset": 5842,
       "length": 12,
       "value": "\"store_info\""
     },
     {
       "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Entities\/Decodable\/RetailTask\/RetailTaskEntity.swift",
       "kind": "StringLiteral",
-      "offset": 5826,
+      "offset": 5912,
       "length": 20,
       "value": "\"assigned_user_info\""
     },
     {
       "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Entities\/Decodable\/RetailTask\/RetailTaskEntity.swift",
       "kind": "StringLiteral",
-      "offset": 5884,
+      "offset": 5970,
       "length": 36,
       "value": "\"result_iteration_actions_questions\""
     },
     {
       "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Entities\/Decodable\/RetailTask\/RetailTaskEntity.swift",
       "kind": "StringLiteral",
-      "offset": 5959,
+      "offset": 6045,
       "length": 38,
       "value": "\"result_iteration_actions_shelf_audit\""
     },
     {
       "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Entities\/Decodable\/RetailTask\/RetailTaskEntity.swift",
       "kind": "StringLiteral",
-      "offset": 6031,
+      "offset": 6117,
       "length": 17,
       "value": "\"with_iterations\""
     },
     {
       "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Entities\/Decodable\/RetailTask\/RetailTaskEntity.swift",
       "kind": "StringLiteral",
-      "offset": 6502,
+      "offset": 6588,
       "length": 13,
       "value": "\"external_id\""
     },
     {
       "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Entities\/Decodable\/RetailTask\/RetailTaskEntity.swift",
       "kind": "StringLiteral",
-      "offset": 6967,
+      "offset": 7053,
       "length": 11,
       "value": "\"file_type\""
     },
     {
       "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Entities\/Decodable\/RetailTask\/RetailTaskEntity.swift",
       "kind": "StringLiteral",
-      "offset": 7053,
+      "offset": 7139,
       "length": 13,
       "value": "\"is_disabled\""
     },
@@ -72328,7 +72362,7 @@
       "kind": "IntegerLiteral",
       "offset": 783,
       "length": 3,
-      "value": "236"
+      "value": "237"
     },
     {
       "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Common\/Constants.swift",
@@ -85327,7 +85361,7 @@
       "kind": "IntegerLiteral",
       "offset": 295,
       "length": 2,
-      "value": "40"
+      "value": "20"
     },
     {
       "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Services\/Photo\/StoredDBPhotoFetching.swift",
@@ -92771,6 +92805,34 @@
       "value": "\"\""
     },
     {
+      "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Entities\/SaveableObjects\/VisitsPlanFactStorableEntity.swift",
+      "kind": "StringLiteral",
+      "offset": 293,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Entities\/SaveableObjects\/VisitsPlanFactStorableEntity.swift",
+      "kind": "IntegerLiteral",
+      "offset": 333,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Entities\/SaveableObjects\/VisitsPlanFactStorableEntity.swift",
+      "kind": "IntegerLiteral",
+      "offset": 369,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Entities\/SaveableObjects\/VisitsPlanFactStorableEntity.swift",
+      "kind": "IntegerLiteral",
+      "offset": 405,
+      "length": 1,
+      "value": "0"
+    },
+    {
       "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Userstories\/Camera\/SceneActionSheet\/View\/Cells\/SceneActionSheetDeleteCell.swift",
       "kind": "IntegerLiteral",
       "offset": 298,
@@ -97010,7 +97072,7 @@
       "kind": "IntegerLiteral",
       "offset": 264,
       "length": 1,
-      "value": "1"
+      "value": "2"
     },
     {
       "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Common\/UI\/ActiveVisitView.swift",
@@ -97378,17 +97440,24 @@
     },
     {
       "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Entities\/RealmObjects\/RetailTask\/RetailTaskActionVisitMetric.swift",
-      "kind": "IntegerLiteral",
-      "offset": 485,
-      "length": 1,
-      "value": "0"
+      "kind": "FloatLiteral",
+      "offset": 507,
+      "length": 3,
+      "value": "0.0"
     },
     {
       "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Entities\/RealmObjects\/RetailTask\/RetailTaskActionVisitMetric.swift",
-      "kind": "IntegerLiteral",
-      "offset": 525,
-      "length": 1,
-      "value": "0"
+      "kind": "FloatLiteral",
+      "offset": 568,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
+      "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Entities\/RealmObjects\/RetailTask\/RetailTaskActionVisitMetric.swift",
+      "kind": "FloatLiteral",
+      "offset": 630,
+      "length": 3,
+      "value": "0.0"
     },
     {
       "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Entities\/RealmObjects\/SfaTask\/SfaTaskSceneTypeShort.swift",
@@ -98352,49 +98421,49 @@
     {
       "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Entities\/SaveableObjects\/AssortmentMatrixStorableEntity.swift",
       "kind": "StringLiteral",
-      "offset": 322,
+      "offset": 295,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Entities\/SaveableObjects\/AssortmentMatrixStorableEntity.swift",
       "kind": "StringLiteral",
-      "offset": 362,
+      "offset": 335,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Entities\/SaveableObjects\/AssortmentMatrixStorableEntity.swift",
       "kind": "IntegerLiteral",
-      "offset": 402,
+      "offset": 375,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Entities\/SaveableObjects\/AssortmentMatrixStorableEntity.swift",
       "kind": "StringLiteral",
-      "offset": 451,
+      "offset": 424,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Entities\/SaveableObjects\/AssortmentMatrixStorableEntity.swift",
       "kind": "StringLiteral",
-      "offset": 501,
+      "offset": 474,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Entities\/SaveableObjects\/AssortmentMatrixStorableEntity.swift",
       "kind": "StringLiteral",
-      "offset": 595,
+      "offset": 568,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Entities\/SaveableObjects\/AssortmentMatrixStorableEntity.swift",
       "kind": "StringLiteral",
-      "offset": 646,
+      "offset": 619,
       "length": 2,
       "value": "\"\""
     },
@@ -102250,36 +102319,15 @@
     },
     {
       "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Services\/RetailTaskService\/DefaultRetailTaskService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 13605,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Services\/RetailTaskService\/DefaultRetailTaskService.swift",
       "kind": "StringLiteral",
-      "offset": 14251,
-      "length": 117,
-      "value": "\"❌ Не удалось найти итерацию для результатов по задаче \""
-    },
-    {
-      "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Services\/RetailTaskService\/DefaultRetailTaskService.swift",
-      "kind": "StringLiteral",
-      "offset": 14367,
-      "length": 29,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Services\/RetailTaskService\/DefaultRetailTaskService.swift",
-      "kind": "StringLiteral",
-      "offset": 14590,
+      "offset": 13576,
       "length": 40,
       "value": "\"❌ Retail task update error: \""
     },
     {
       "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Services\/RetailTaskService\/DefaultRetailTaskService.swift",
       "kind": "StringLiteral",
-      "offset": 14629,
+      "offset": 13615,
       "length": 2,
       "value": "\"\""
     },
@@ -102314,28 +102362,28 @@
     {
       "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Services\/DefaultServiceBuilder.swift",
       "kind": "Array",
-      "offset": 31512,
+      "offset": 31437,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Services\/DefaultServiceBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 37256,
+      "offset": 37181,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Services\/DefaultServiceBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 37379,
+      "offset": 37304,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Services\/DefaultServiceBuilder.swift",
       "kind": "StringLiteral",
-      "offset": 37733,
+      "offset": 37658,
       "length": 16,
       "value": "\"www.google.com\""
     },
@@ -103574,63 +103622,63 @@
     {
       "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Userstories\/RetailTask\/RetailTaskDetail\/Interactor\/RetailTaskDetailInteractor.swift",
       "kind": "StringLiteral",
-      "offset": 9326,
+      "offset": 9534,
       "length": 280,
       "value": "\"Retail задача успешно завершена. Текущая итерация закрыта. Id задачи: \""
     },
     {
       "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Userstories\/RetailTask\/RetailTaskDetail\/Interactor\/RetailTaskDetailInteractor.swift",
       "kind": "StringLiteral",
-      "offset": 9462,
+      "offset": 9670,
       "length": 1,
       "value": "\". Итерация: { id: \""
     },
     {
       "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Userstories\/RetailTask\/RetailTaskDetail\/Interactor\/RetailTaskDetailInteractor.swift",
       "kind": "StringLiteral",
-      "offset": 9510,
+      "offset": 9718,
       "length": 1,
       "value": "\", sfaVisitId: \""
     },
     {
       "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Userstories\/RetailTask\/RetailTaskDetail\/Interactor\/RetailTaskDetailInteractor.swift",
       "kind": "StringLiteral",
-      "offset": 9557,
+      "offset": 9765,
       "length": 5,
       "value": "\"nil\""
     },
     {
       "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Userstories\/RetailTask\/RetailTaskDetail\/Interactor\/RetailTaskDetailInteractor.swift",
       "kind": "StringLiteral",
-      "offset": 9563,
+      "offset": 9771,
       "length": 1,
       "value": "\", duration: \""
     },
     {
       "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Userstories\/RetailTask\/RetailTaskDetail\/Interactor\/RetailTaskDetailInteractor.swift",
       "kind": "StringLiteral",
-      "offset": 9603,
+      "offset": 9811,
       "length": 1,
       "value": "\" }\""
     },
     {
       "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Userstories\/RetailTask\/RetailTaskDetail\/Interactor\/RetailTaskDetailInteractor.swift",
       "kind": "StringLiteral",
-      "offset": 9666,
+      "offset": 9874,
       "length": 113,
       "value": "\"Ошибка завершения Retail задачи. Id задачи: \""
     },
     {
       "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Userstories\/RetailTask\/RetailTaskDetail\/Interactor\/RetailTaskDetailInteractor.swift",
       "kind": "StringLiteral",
-      "offset": 9754,
+      "offset": 9962,
       "length": 1,
       "value": "\". Ошибка: \""
     },
     {
       "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Userstories\/RetailTask\/RetailTaskDetail\/Interactor\/RetailTaskDetailInteractor.swift",
       "kind": "StringLiteral",
-      "offset": 9778,
+      "offset": 9986,
       "length": 14,
       "value": "\"\""
     },
@@ -103791,14 +103839,14 @@
     {
       "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Userstories\/RetailTask\/RetailTaskActions\/ShelfAuditAction\/Interactor\/RetailTaskShelfAuditActionInteractor.swift",
       "kind": "BooleanLiteral",
-      "offset": 2021,
+      "offset": 2099,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/alex\/source\/irlib-ios-ssh\/IrLib\/Userstories\/RetailTask\/RetailTaskActions\/ShelfAuditAction\/Interactor\/RetailTaskShelfAuditActionInteractor.swift",
       "kind": "Array",
-      "offset": 2122,
+      "offset": 2200,
       "length": 2,
       "value": "[]"
     },
@@ -104237,1547 +104285,1547 @@
       "value": "false"
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 774,
       "length": 34,
       "value": "\"action-sheet-offline-instruction\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 988,
       "length": 39,
       "value": "\"action-sheet-offline-instruction-ipad\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1198,
       "length": 34,
       "value": "\"action-sheet-palomna-instruction\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1412,
       "length": 39,
       "value": "\"action-sheet-palomna-instruction-ipad\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1602,
       "length": 24,
       "value": "\"active-visit-time-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1766,
       "length": 18,
       "value": "\"add_comment_icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1926,
       "length": 19,
       "value": "\"ailet-bubble-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 2088,
       "length": 20,
       "value": "\"app_docs_link_icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 2237,
       "length": 12,
       "value": "\"arrow-down\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 2380,
       "length": 13,
       "value": "\"arrow-right\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 2518,
       "length": 10,
       "value": "\"arrow-up\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 2668,
       "length": 18,
       "value": "\"back-button-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 2835,
       "length": 23,
       "value": "\"camera-add-scene-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 3000,
       "length": 19,
       "value": "\"camera-angle-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 3189,
       "length": 34,
       "value": "\"camera-closed-gallery-error-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 3399,
       "length": 37,
       "value": "\"camera-closed-gallery-finished-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 3614,
       "length": 38,
       "value": "\"camera-closed-gallery-receiving-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 3826,
       "length": 36,
       "value": "\"camera-closed-gallery-sending-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 4006,
       "length": 20,
       "value": "\"camera-end-capture\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 4177,
       "length": 24,
       "value": "\"camera-flash-auto-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 4350,
       "length": 23,
       "value": "\"camera-flash-off-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 4520,
       "length": 22,
       "value": "\"camera-flash-on-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 4699,
       "length": 27,
       "value": "\"camera-gallery-close-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 4896,
       "length": 34,
       "value": "\"camera-gallery-context-menu-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 5087,
       "length": 27,
       "value": "\"camera-gallery-error-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 5277,
       "length": 30,
       "value": "\"camera-gallery-finished-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 5462,
       "length": 26,
       "value": "\"camera-gallery-open-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 5649,
       "length": 29,
       "value": "\"camera-gallery-palomna-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 5843,
       "length": 31,
       "value": "\"camera-gallery-receiving-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 6035,
       "length": 29,
       "value": "\"camera-gallery-sending-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 6234,
       "length": 34,
       "value": "\"camera-gallery-stitch-error-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 6431,
       "length": 30,
       "value": "\"camera-gallery-stitched-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 6609,
       "length": 22,
       "value": "\"camera-intercom-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 6786,
       "length": 26,
       "value": "\"camera-offline-mode-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 6958,
       "length": 21,
       "value": "\"camera-palomna-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 7157,
       "length": 38,
       "value": "\"camera-panorama-stitching-error-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 7358,
       "length": 30,
       "value": "\"camera-photo-processing-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 7530,
       "length": 19,
       "value": "\"camera-ruler-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 7708,
       "length": 28,
       "value": "\"camera-sync-restarted-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 7893,
       "length": 27,
       "value": "\"camera-visit-approve-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 8067,
       "length": 21,
       "value": "\"checkbox-deselected\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 8225,
       "length": 16,
       "value": "\"checkbox-empty\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 8386,
       "length": 20,
       "value": "\"checkbox-fulfilled\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 8549,
       "length": 19,
       "value": "\"checkbox-selected\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 8701,
       "length": 14,
       "value": "\"chevron-down\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 8857,
       "length": 19,
       "value": "\"chevron-down-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 9020,
       "length": 20,
       "value": "\"chevron-right-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 9169,
       "length": 12,
       "value": "\"chevron-up\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 9317,
       "length": 16,
       "value": "\"clear-all-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 9475,
       "length": 19,
       "value": "\"close-button-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 9647,
       "length": 25,
       "value": "\"data-sync-download-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 9821,
       "length": 23,
       "value": "\"data-sync-reload-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 9995,
       "length": 24,
       "value": "\"data-sync-success-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 10168,
       "length": 23,
       "value": "\"data-sync-upload-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 10324,
       "length": 14,
       "value": "\"diagram-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 10486,
       "length": 22,
       "value": "\"diagram-icon-disable\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 10644,
       "length": 16,
       "value": "\"done-bold-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 10808,
       "length": 22,
       "value": "\"dowload_palomna_icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 10981,
       "length": 24,
       "value": "\"down-report-arrow-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 11145,
       "length": 18,
       "value": "\"file-folder-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 11304,
       "length": 18,
       "value": "\"filters-checkbox\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 11478,
       "length": 26,
       "value": "\"filters-checkbox-checked\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 11648,
       "length": 20,
       "value": "\"filters-clear-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 11816,
       "length": 22,
       "value": "\"finished-status-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 11991,
       "length": 25,
       "value": "\"forward-arrow-blue-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 12169,
       "length": 25,
       "value": "\"forward-arrow-gray-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 12347,
       "length": 25,
       "value": "\"gallery-edit-scene-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 12523,
       "length": 24,
       "value": "\"hide-feature-info-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 12687,
       "length": 18,
       "value": "\"hint-bubble-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 12853,
       "length": 22,
       "value": "\"horizontal_mode_icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 13029,
       "length": 25,
       "value": "\"horizontal_stick_button\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 13188,
       "length": 15,
       "value": "\"ic_arrow_back\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 13337,
       "length": 15,
       "value": "\"ic_arrow_down\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 13488,
       "length": 16,
       "value": "\"ic_arrow_right\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 13634,
       "length": 13,
       "value": "\"ic_arrow_up\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 13774,
       "length": 11,
       "value": "\"ic_filter\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 13925,
       "length": 18,
       "value": "\"ic_filter_active\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 14066,
       "length": 9,
       "value": "\"ic_info\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 14198,
       "length": 9,
       "value": "\"ic_menu\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 14330,
       "length": 9,
       "value": "\"ic_time\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 14466,
       "length": 11,
       "value": "\"icon_info\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 14628,
       "length": 24,
       "value": "\"in-process-status-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 14811,
       "length": 28,
       "value": "\"incorect_price_filter_icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 14966,
       "length": 11,
       "value": "\"info-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 15110,
       "length": 14,
       "value": "\"jedai-bubble\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 15270,
       "length": 21,
       "value": "\"location-point-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 15433,
       "length": 19,
       "value": "\"navbar-ailet-logo\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 15594,
       "length": 19,
       "value": "\"navbar-jedai-logo\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 15753,
       "length": 18,
       "value": "\"navbar-more-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 15917,
       "length": 21,
       "value": "\"navbar-profile-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 16091,
       "length": 25,
       "value": "\"navbar-profile-icon_old\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 16262,
       "length": 21,
       "value": "\"navbar-shelfex-logo\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 16429,
       "length": 21,
       "value": "\"navbar-support-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 16601,
       "length": 24,
       "value": "\"next-report-arrow-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 16776,
       "length": 24,
       "value": "\"no-visited-status-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 16948,
       "length": 22,
       "value": "\"offline-warning-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 17115,
       "length": 21,
       "value": "\"osa-sku-cancel-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 17277,
       "length": 19,
       "value": "\"osa-sku-done-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 17442,
       "length": 21,
       "value": "\"palomna-switch-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 17632,
       "length": 33,
       "value": "\"palomna_carousel_001_background\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 17820,
       "length": 26,
       "value": "\"palomna_carousel_001_img\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 18015,
       "length": 33,
       "value": "\"palomna_carousel_002_background\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 18203,
       "length": 26,
       "value": "\"palomna_carousel_002_img\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 18398,
       "length": 33,
       "value": "\"palomna_carousel_003_background\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 18586,
       "length": 26,
       "value": "\"palomna_carousel_003_img\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 18806,
       "length": 46,
       "value": "\"panorama-preview-directional-icon-horizontal\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 19042,
       "length": 44,
       "value": "\"panorama-preview-directional-icon-vertical\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 19243,
       "length": 27,
       "value": "\"panorama-preview-tip-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 19412,
       "length": 19,
       "value": "\"photo-browse-crop\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 19597,
       "length": 32,
       "value": "\"photo-browse-crop-approve-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 19780,
       "length": 24,
       "value": "\"photo-browse-crop-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 19972,
       "length": 33,
       "value": "\"photo-browse-crop-mode-poligone\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 20165,
       "length": 29,
       "value": "\"photo-browse-crop-mode-rect\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 20352,
       "length": 28,
       "value": "\"photo-browse-crop-tip-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 20526,
       "length": 21,
       "value": "\"photo-browse-delete\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 20702,
       "length": 26,
       "value": "\"photo-browse-delete-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 20890,
       "length": 30,
       "value": "\"photo-browse-error-blur-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 21073,
       "length": 25,
       "value": "\"photo-browse-error-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 21273,
       "length": 37,
       "value": "\"photo-browse-error-no-location-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 21476,
       "length": 32,
       "value": "\"photo-browse-error-screen-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 21680,
       "length": 35,
       "value": "\"photo-browse-error-stitching-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 21890,
       "length": 37,
       "value": "\"photo-browse-error-wrong-angle-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 22088,
       "length": 29,
       "value": "\"photo-browse-realogram-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 22272,
       "length": 26,
       "value": "\"photo-browse-report-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 22446,
       "length": 22,
       "value": "\"photo-browse-reshoot\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 22625,
       "length": 27,
       "value": "\"photo-browse-reshoot-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 22779,
       "length": 11,
       "value": "\"plus_icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 22919,
       "length": 12,
       "value": "\"point-list\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 23093,
       "length": 30,
       "value": "\"previous-report-arrow-icon 1\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 23288,
       "length": 31,
       "value": "\"price-execution-discount-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 23467,
       "length": 22,
       "value": "\"price-realogram-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 23650,
       "length": 29,
       "value": "\"product-viewer-barcode-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 23840,
       "length": 29,
       "value": "\"product-viewer-comment-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 24026,
       "length": 27,
       "value": "\"product-viewer-photo-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 24203,
       "length": 23,
       "value": "\"progress-offline-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 24389,
       "length": 30,
       "value": "\"progress-receive-report-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 24569,
       "length": 23,
       "value": "\"progress-success-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 24751,
       "length": 28,
       "value": "\"progress-upload-photo-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 24920,
       "length": 18,
       "value": "\"radio-deselected\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 25075,
       "length": 16,
       "value": "\"radio-selected\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 25231,
       "length": 18,
       "value": "\"remove_data_icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 25427,
       "length": 38,
       "value": "\"report-filter-assortment-matrix-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 25634,
       "length": 33,
       "value": "\"report-filter-availability-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 25822,
       "length": 26,
       "value": "\"report-filter-brand-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 26014,
       "length": 32,
       "value": "\"report-filter-brand-owner-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 26207,
       "length": 29,
       "value": "\"report-filter-calendar-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 26391,
       "length": 26,
       "value": "\"report-filter-close-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 26570,
       "length": 25,
       "value": "\"report-filter-open-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 26750,
       "length": 26,
       "value": "\"report-filter-store-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 26929,
       "length": 25,
       "value": "\"report-filter-task-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 27096,
       "length": 19,
       "value": "\"report_arrow_left\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 27259,
       "length": 20,
       "value": "\"report_arrow_right\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 27447,
       "length": 33,
       "value": "\"report_product_is_replaced_icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 27665,
       "length": 42,
       "value": "\"report_product_swipe_action_barcode_icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 27851,
       "length": 20,
       "value": "\"report_radio_empty\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 28021,
       "length": 23,
       "value": "\"report_radio_selected\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 28202,
       "length": 27,
       "value": "\"reports-availability-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 28390,
       "length": 29,
       "value": "\"reports-closed-section-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 28565,
       "length": 21,
       "value": "\"reports-filter-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 28732,
       "length": 21,
       "value": "\"reports-images-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 28895,
       "length": 19,
       "value": "\"reports-info-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 29067,
       "length": 25,
       "value": "\"reports-not-loaded-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 29253,
       "length": 29,
       "value": "\"reports-opened-section-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 29438,
       "length": 27,
       "value": "\"reports-out-of-shelf-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 29643,
       "length": 38,
       "value": "\"reports-price-execution-barcode-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 29844,
       "length": 30,
       "value": "\"reports-price-execution-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 30038,
       "length": 31,
       "value": "\"retail-task-action-photo-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 30233,
       "length": 31,
       "value": "\"retail-task-action-timer-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 30419,
       "length": 26,
       "value": "\"retail-task-comment-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 30589,
       "length": 20,
       "value": "\"retail_task_camera\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 30773,
       "length": 31,
       "value": "\"retail_task_camera_timer_icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 30952,
       "length": 22,
       "value": "\"retail_task_document\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 31125,
       "length": 24,
       "value": "\"retail_task_timer_icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 31289,
       "length": 18,
       "value": "\"route_arrow_down\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 31443,
       "length": 16,
       "value": "\"route_arrow_up\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 31588,
       "length": 12,
       "value": "\"route_icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 31751,
       "length": 24,
       "value": "\"route_photo_count_icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 31917,
       "length": 19,
       "value": "\"route_right_arrow\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 32081,
       "length": 21,
       "value": "\"route_right_arrow_2\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 32251,
       "length": 23,
       "value": "\"route_time_count_icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 32434,
       "length": 29,
       "value": "\"scene-action-sheet-add-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 32629,
       "length": 32,
       "value": "\"scene-action-sheet-change-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 32827,
       "length": 32,
       "value": "\"scene-action-sheet-delete-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 32988,
       "length": 12,
       "value": "\"score_icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 33150,
       "length": 23,
       "value": "\"searchbar-search-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 33328,
       "length": 26,
       "value": "\"select-scene-delete-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 33513,
       "length": 28,
       "value": "\"select-scene-selected-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 33712,
       "length": 35,
       "value": "\"send-photo-success-view-tick-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 33887,
       "length": 18,
       "value": "\"send_photos_icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 34041,
       "length": 16,
       "value": "\"sfa_tasks_icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 34201,
       "length": 20,
       "value": "\"snake_carousel_001\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 34365,
       "length": 20,
       "value": "\"snake_carousel_002\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 34529,
       "length": 20,
       "value": "\"snake_carousel_003\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 34693,
       "length": 20,
       "value": "\"snake_carousel_004\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 34857,
       "length": 20,
       "value": "\"snake_carousel_005\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 35030,
       "length": 25,
       "value": "\"store-details-edit-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 35210,
       "length": 26,
       "value": "\"store-details-image-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 35402,
       "length": 32,
       "value": "\"store-details-matrix-grid-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 35604,
       "length": 34,
       "value": "\"store-details-perfect-store-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 35793,
       "length": 26,
       "value": "\"store-details-score-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 35974,
       "length": 26,
       "value": "\"store-details-smile-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 36159,
       "length": 28,
       "value": "\"store-details-support-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 36351,
       "length": 31,
       "value": "\"store-details-visit-time-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 36543,
       "length": 29,
       "value": "\"store-type-supermarket-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 36710,
       "length": 17,
       "value": "\"store_type_icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 36867,
       "length": 18,
       "value": "\"tabbar-icon-home\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 37038,
       "length": 25,
       "value": "\"tabbar-icon-home-active\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 37207,
       "length": 20,
       "value": "\"tabbar-icon-search\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 37384,
       "length": 27,
       "value": "\"tabbar-icon-search-active\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 37559,
       "length": 22,
       "value": "\"tabbar-icon-settings\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 37742,
       "length": 29,
       "value": "\"tabbar-icon-settings-active\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 37917,
       "length": 21,
       "value": "\"tabbar-icon-support\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 38076,
       "length": 17,
       "value": "\"task-photo-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 38229,
       "length": 16,
       "value": "\"task-text-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 38363,
       "length": 6,
       "value": "\"test\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 38516,
       "length": 22,
       "value": "\"up-report-arrow-icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 38688,
       "length": 23,
       "value": "\"vertical_stick_button\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 38853,
       "length": 19,
       "value": "\"vetical_mode_icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 39010,
       "length": 17,
       "value": "\"visit_tiem_icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 39167,
       "length": 18,
       "value": "\"visits_plan_icon\""
     },
     {
-      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/alex\/Library\/Developer\/Xcode\/DerivedData\/IrLibSwift-fwbfwriszyeeafahspojrakbfqwx\/Build\/Intermediates.noindex\/ArchiveIntermediates\/IrLibSwift-Clients\/IntermediateBuildFilesPath\/IrLibSwift.build\/Clients-Release-iphonesimulator\/IrLibSwift.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 39325,
       "length": 18,
