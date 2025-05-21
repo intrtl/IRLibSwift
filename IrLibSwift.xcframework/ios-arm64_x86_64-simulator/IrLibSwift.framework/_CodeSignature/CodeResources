@@ -244,6 +244,34 @@
 		<data>
 		+GHxdsylbN9nkwtMAtpam0Knqc8=
 		</data>
+		<key>Frameworks/opencv2.framework/Versions/A/Resources/Info.plist</key>
+		<data>
+		xtd43ZLRIhOYPvG8ZsvyvBlmYwg=
+		</data>
+		<key>Frameworks/opencv2.framework/Versions/A/_CodeSignature/CodeDirectory</key>
+		<data>
+		BIvKoyrC20mNUXH4Nac+jLMECfk=
+		</data>
+		<key>Frameworks/opencv2.framework/Versions/A/_CodeSignature/CodeRequirements</key>
+		<data>
+		OnX22wWFKRSOFN1+obRynMCeyXM=
+		</data>
+		<key>Frameworks/opencv2.framework/Versions/A/_CodeSignature/CodeRequirements-1</key>
+		<data>
+		VkKcUdmf8CiYaqrC/K+wDnFW7ks=
+		</data>
+		<key>Frameworks/opencv2.framework/Versions/A/_CodeSignature/CodeResources</key>
+		<data>
+		PgAxCmHm0FQztH58yh1A9O1uqoU=
+		</data>
+		<key>Frameworks/opencv2.framework/Versions/A/_CodeSignature/CodeSignature</key>
+		<data>
+		2jmj7l5rSw0yVb/vlWAYkK/YBwk=
+		</data>
+		<key>Frameworks/opencv2.framework/Versions/A/opencv2</key>
+		<data>
+		rcCh/Dh/YGxsqTlPgKoY4vvVk7A=
+		</data>
 		<key>FullScreenGallery.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
 		<data>
 		OimG9YZT3utuxrep3WPMa6KS8sY=
@@ -1866,6 +1894,70 @@
 			<data>
 			ca4nkq8shSqQU5zTeLK/DqLdF5cPMBJfVbNxjYNAoO4=
 			</data>
+		</dict>
+		<key>Frameworks/opencv2.framework/Resources</key>
+		<dict>
+			<key>symlink</key>
+			<string>Versions/Current/Resources</string>
+		</dict>
+		<key>Frameworks/opencv2.framework/Versions/A/Resources/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			HpSSp33kzlJh/TYz0KxaSnV33MrsonpCZdDfYmdg5e4=
+			</data>
+		</dict>
+		<key>Frameworks/opencv2.framework/Versions/A/_CodeSignature/CodeDirectory</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			C27KbHSNzomoOUUQ47XVYneuZntuHBX9QHuqB8/PVGY=
+			</data>
+		</dict>
+		<key>Frameworks/opencv2.framework/Versions/A/_CodeSignature/CodeRequirements</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			mHkgkE6rZQ51eIwFSqCwUk5qgL/HGqMt+NI3phdD+YY=
+			</data>
+		</dict>
+		<key>Frameworks/opencv2.framework/Versions/A/_CodeSignature/CodeRequirements-1</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			f10SdyDpc96xiQM1ToWxdgcSewPXR7Vc+I05lS08ikc=
+			</data>
+		</dict>
+		<key>Frameworks/opencv2.framework/Versions/A/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			lwFkd1nFMDRlmn+Kx756TWLCz+jikutZu9LlwaHtWrM=
+			</data>
+		</dict>
+		<key>Frameworks/opencv2.framework/Versions/A/_CodeSignature/CodeSignature</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+			</data>
+		</dict>
+		<key>Frameworks/opencv2.framework/Versions/A/opencv2</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			YXrdns6F+5OQarO6qQsGH3O/uLoEb53BW4L1MHOPhH0=
+			</data>
+		</dict>
+		<key>Frameworks/opencv2.framework/Versions/Current</key>
+		<dict>
+			<key>symlink</key>
+			<string>A</string>
+		</dict>
+		<key>Frameworks/opencv2.framework/opencv2</key>
+		<dict>
+			<key>symlink</key>
+			<string>Versions/Current/opencv2</string>
 		</dict>
 		<key>FullScreenGallery.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
 		<dict>
