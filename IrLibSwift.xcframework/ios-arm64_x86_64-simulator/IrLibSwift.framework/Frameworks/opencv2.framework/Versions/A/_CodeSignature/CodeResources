@@ -10,10 +10,10 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			FPXnVlwYr83f4Cr1JGTocQGnlvk=
+			HAXwyad6CPxJzIYC/7/IbkIgpHw=
 			</data>
 			<key>requirement</key>
-			<string>cdhash H"14f5e7565c18afcddfe02af52464e87101a796f9" or cdhash H"b9e91e64a24972252ad844608d120c33dcb92293"</string>
+			<string>cdhash H"1c05f0c9a77a08fc49cc8602ffbfc86e4220a47c" or cdhash H"d8135c140b68de2d807c8486d8cef90ee02404cd"</string>
 		</dict>
 	</dict>
 	<key>rules</key>
