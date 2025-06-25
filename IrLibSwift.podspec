@@ -22,4 +22,5 @@ Pod::Spec.new do |spec|
   spec.dependency "FirebaseCrashlytics", '11.5.0'
   spec.dependency "GoogleUtilities", '8.0.2'
   spec.dependency "GRDB.swift", "6.24.1"
+  spec.dependency "OpenCV2", "~> 4.3.0"
 end
