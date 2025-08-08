@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
-// swift-module-flags: -target arm64-apple-ios15.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name IrLibSwift
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-module-flags: -target arm64-apple-ios15.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name IrLibSwift
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
 import AVFAudio
 import AVFoundation
 import AVKit
@@ -72,6 +72,7 @@ public enum VisitError : Foundation.LocalizedError {
   case shootingForDownloadedVisit
 }
 @_inheritsConvenienceInitializers @objc public class RecognitionResultRealogram : RLMObject {
+  @objc override dynamic public class func primaryKey() -> Swift.String?
   @objc override dynamic public init()
   @objc deinit
 }
@@ -158,6 +159,7 @@ public typealias DefaultAiletDataManager = IrLibSwift.IRDataManager
   @objc final public let featureToggles: IrLibSwift.IRFeatureToggles
   @objc public static func updateAppInfo(isApp: Swift.Bool)
   @objc public static func updateDeeplinkInfo(isStartedViaDeeplink: Swift.Bool)
+  @objc public func initFirebaseIfNeeded()
   @objc public func startAnalytics()
   @objc public func startConnectionMonitoring()
   @objc public func fetchStores(completion: @escaping (Foundation.NSError?) -> Swift.Void)
@@ -191,6 +193,7 @@ public typealias DefaultAiletDataManager = IrLibSwift.IRDataManager
   @objc public func shouldFillAbsenceReasons(externalVisitId: Swift.String) -> Swift.Bool
   @objc public func workflow() -> IrLibSwift.IRWorkFlow
   @objc public func installId() -> Swift.String
+  public static func cleanPerDayCatalogsLoadDate(for version: Swift.String)
   @objc deinit
 }
 @_hasMissingDesignatedInitializers @objc public class AiletUnsentDataCheckResult : ObjectiveC.NSObject {
@@ -571,10 +574,6 @@ extension IrLibSwift.NetworkReachability {
   @objc final public func updateActivePortal(rootDomain: Swift.String) throws
   @objc final public func authorizeOnAllAvailablePortals(login: Swift.String, password: Swift.String, externalUserId: Swift.String?, completion: @escaping (Foundation.NSError?) -> Swift.Void)
 }
-@_inheritsConvenienceInitializers @objc public class Scene_types : RLMObject {
-  @objc override dynamic public init()
-  @objc deinit
-}
 extension UIKit.UIColor {
   convenience public init(hex: Swift.String)
 }
@@ -906,7 +905,7 @@ extension RLMCollection {
   @objc(setupWithUsername:password:guestToken:externalUserId:notification:domainName:isMultiportal:completion:) final public class func setup(username: Swift.String, password: Swift.String, guestToken: Swift.String, externalUserId: Swift.String?, notification: Swift.String? = nil, domainName: Swift.String? = nil, isMultiportal: Swift.Bool = false, completion: IrLibSwift.IRResultObjcCompletion?)
   @objc final public class func startShooting(in presentingVC: UIKit.UIViewController, externalStoreId: Swift.String, externalVisitId: Swift.String) throws
   @available(swift, obsoleted: 1.0)
-  @objc(showSummaryReportIn:visitId:completion:) final public class func showSummaryReport(in presentingViewController: UIKit.UIViewController, visitId: Swift.String, completion: (IrLibSwift.IRResultObjcCompletion)?)
+  @objc(showSummaryReportIn:visitId:completion:) final public class func showSummaryReport(in presentingViewController: UIKit.UIViewController, visitId: Swift.String, completion: IrLibSwift.IRResultObjcCompletion?)
   @objc final public class func reports() throws -> [IrLibSwift.IRVisitReport]
   @objc final public class func report(visitId: Swift.String) throws -> IrLibSwift.IRReport
   @objc final public class func reportsDictionary() -> [[Swift.String : Any]]
@@ -990,6 +989,8 @@ public enum Colors {
     public enum Primary {
       public static let text: UIKit.UIColor
       public static let background: UIKit.UIColor
+      public static let disabledText: UIKit.UIColor
+      public static let disabledBackround: UIKit.UIColor
     }
   }
   public enum Reports {
@@ -1064,10 +1065,6 @@ public struct Gradient {
   public let direction: IrLibSwift.GradientDirection
   public init(color: IrLibSwift.GradientColor, locations: [Foundation.NSNumber], direction: IrLibSwift.GradientDirection)
 }
-@_inheritsConvenienceInitializers @objc public class RealmString : RLMObject {
-  @objc override dynamic public init()
-  @objc deinit
-}
 @objc public protocol LegacyReportFiltersModuleOutput {
   @objc func didUpdateFilters(_ filters: IrLibSwift.IRReportFilters)
 }
@@ -1085,7 +1082,6 @@ public struct Gradient {
   @objc public func cameraViewController(output: (any IrLibSwift.CameraModuleOutput)?, externalVisitId: Swift.String, taskId: Swift.String?, externalStoreId: Swift.String, isOpenedViaDeeplinks: Swift.Bool) throws -> UIKit.UIViewController
   @objc public func sosReportListController(visitId: Swift.String, taskId: Swift.String?) -> UIKit.UIViewController?
   @objc public func sosReportDetailController(visitId: Swift.String, taskId: Swift.String) -> UIKit.UIViewController?
-  @objc public func taskDetailsViewController(output: (any IrLibSwift.TaskDetailsModuleOutput)?, externalVisitId: Swift.String, externalStoreId: Swift.String, visitTaskId: Swift.String) throws -> UIKit.UIViewController
   public func showSummaryReportViewController(shouldLoadPreviousVisit: Swift.Bool, externalVisitId: Swift.String, completion: ((Swift.Result<UIKit.UIViewController, any Swift.Error>) -> Swift.Void)?)
   @objc public func summaryReportViewController(externalVisitId: Swift.String) throws -> UIKit.UIViewController
   @objc public func reportPhotoBrowseViewController(visitId: Swift.String, taskId: Swift.String?) -> UIKit.UIViewController?
@@ -1125,11 +1121,6 @@ public struct Gradient {
 }
 @_hasMissingDesignatedInitializers public class CarouselManager {
   public static func showVideoTutorialCarousel()
-  @objc deinit
-}
-@_inheritsConvenienceInitializers @objc public class StoreSceneType : RLMObject {
-  @objc override dynamic public class func primaryKey() -> Swift.String?
-  @objc override dynamic public init()
   @objc deinit
 }
 @_hasMissingDesignatedInitializers @objc public class IRAuthServiceInteractionProvider : ObjectiveC.NSObject {
@@ -1196,10 +1187,6 @@ extension UIKit.UITableView {
 @_inheritsConvenienceInitializers @objc public class RecognitionResultProductGroup : RLMObject {
   @objc override dynamic public init()
   @objc deinit
-}
-@objc public protocol TaskDetailsModuleOutput {
-  @objc func didTriggerOpenPriceExecutionReportForTaskWithId(_ taskId: Swift.String?)
-  @objc func didTriggerFetchedPerfectStoreShortWidget()
 }
 public struct ComplexShadow {
 }
