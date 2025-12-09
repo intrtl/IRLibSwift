@@ -344,6 +344,33 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) AiletColorsG
 @interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
 @end
 
+@class UIColor;
+SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors16AiletColorsInput")
+@interface AiletColorsInput : NSObject
+/// $field-01
+@property (nonatomic, readonly, strong) UIColor * _Nonnull primary;
+/// $field-02
+@property (nonatomic, readonly, strong) UIColor * _Nonnull secondary;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
+@end
+
+SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors18AiletColorsSupport")
+@interface AiletColorsSupport : NSObject
+/// $support-01
+@property (nonatomic, readonly, strong) UIColor * _Nonnull error;
+/// $support-02
+@property (nonatomic, readonly, strong) UIColor * _Nonnull success;
+/// $support-03
+@property (nonatomic, readonly, strong) UIColor * _Nonnull warning;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
+@end
+
 @class AiletGradientColor;
 SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors19AiletColorsGradient")
 @interface AiletColorsGradient : NSObject
@@ -365,7 +392,62 @@ SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors19AiletColorsGradient")
 @interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
 @end
 
-@class UIColor;
+SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors17AiletColorsAccent")
+@interface AiletColorsAccent : NSObject
+/// $accent-01
+@property (nonatomic, readonly, strong) UIColor * _Nonnull accent01;
+/// $accent-02
+@property (nonatomic, readonly, strong) UIColor * _Nonnull accent02;
+/// $accent-03
+@property (nonatomic, readonly, strong) UIColor * _Nonnull accent03;
+/// $accent-04
+@property (nonatomic, readonly, strong) UIColor * _Nonnull accent04;
+/// $accent-05
+@property (nonatomic, readonly, strong) UIColor * _Nonnull accent05;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
+@end
+
+SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors21AiletColorsBackground")
+@interface AiletColorsBackground : NSObject
+/// $ui-bg, wihte
+@property (nonatomic, readonly, strong) UIColor * _Nonnull primary;
+/// $ui-01, gray10
+@property (nonatomic, readonly, strong) UIColor * _Nonnull background01;
+/// $ui-02, gray20
+@property (nonatomic, readonly, strong) UIColor * _Nonnull background02;
+/// $ui-03, gray30
+@property (nonatomic, readonly, strong) UIColor * _Nonnull background03;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
+@end
+
+SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors17AiletColorsBorder")
+@interface AiletColorsBorder : NSObject
+/// $border-01
+@property (nonatomic, readonly, strong) UIColor * _Nonnull primary;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
+@end
+
+SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors22AiletColorsInteractive")
+@interface AiletColorsInteractive : NSObject
+/// $interactive-01
+@property (nonatomic, readonly, strong) UIColor * _Nonnull primary;
+/// $interactive-02
+@property (nonatomic, readonly, strong) UIColor * _Nonnull secondary;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
+@end
+
 SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors15AiletColorsText")
 @interface AiletColorsText : NSObject
 /// $text-01
@@ -402,88 +484,6 @@ SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors15AiletColorsIcon")
 @property (nonatomic, readonly, strong) UIColor * _Nonnull accent02;
 /// $icon-07
 @property (nonatomic, readonly, strong) UIColor * _Nonnull accent03;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-@interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
-@end
-
-SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors16AiletColorsInput")
-@interface AiletColorsInput : NSObject
-/// $field-01
-@property (nonatomic, readonly, strong) UIColor * _Nonnull primary;
-/// $field-02
-@property (nonatomic, readonly, strong) UIColor * _Nonnull secondary;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-@interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
-@end
-
-SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors18AiletColorsSupport")
-@interface AiletColorsSupport : NSObject
-/// $support-01
-@property (nonatomic, readonly, strong) UIColor * _Nonnull error;
-/// $support-02
-@property (nonatomic, readonly, strong) UIColor * _Nonnull success;
-/// $support-03
-@property (nonatomic, readonly, strong) UIColor * _Nonnull warning;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-@interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
-@end
-
-SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors17AiletColorsBorder")
-@interface AiletColorsBorder : NSObject
-/// $border-01
-@property (nonatomic, readonly, strong) UIColor * _Nonnull primary;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-@interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
-@end
-
-SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors17AiletColorsAccent")
-@interface AiletColorsAccent : NSObject
-/// $accent-01
-@property (nonatomic, readonly, strong) UIColor * _Nonnull accent01;
-/// $accent-02
-@property (nonatomic, readonly, strong) UIColor * _Nonnull accent02;
-/// $accent-03
-@property (nonatomic, readonly, strong) UIColor * _Nonnull accent03;
-/// $accent-04
-@property (nonatomic, readonly, strong) UIColor * _Nonnull accent04;
-/// $accent-05
-@property (nonatomic, readonly, strong) UIColor * _Nonnull accent05;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-@interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
-@end
-
-SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors22AiletColorsInteractive")
-@interface AiletColorsInteractive : NSObject
-/// $interactive-01
-@property (nonatomic, readonly, strong) UIColor * _Nonnull primary;
-/// $interactive-02
-@property (nonatomic, readonly, strong) UIColor * _Nonnull secondary;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-@interface AiletColors (SWIFT_EXTENSION(IrLibSwift))
-@end
-
-SWIFT_CLASS("_TtCC10IrLibSwift11AiletColors21AiletColorsBackground")
-@interface AiletColorsBackground : NSObject
-/// $ui-bg, wihte
-@property (nonatomic, readonly, strong) UIColor * _Nonnull primary;
-/// $ui-01, gray10
-@property (nonatomic, readonly, strong) UIColor * _Nonnull background01;
-/// $ui-02, gray20
-@property (nonatomic, readonly, strong) UIColor * _Nonnull background02;
-/// $ui-03, gray30
-@property (nonatomic, readonly, strong) UIColor * _Nonnull background03;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -667,7 +667,7 @@ SWIFT_CLASS("_TtC10IrLibSwift32IRAuthServiceInteractionProvider")
 - (void)fetchUserPortalsWithLogin:(NSString * _Nonnull)login password:(NSString * _Nonnull)password completion:(void (^ _Nonnull)(NSArray<IRSharedPortal *> * _Nonnull, NSError * _Nullable))completion;
 - (void)authorizeOn:(NSString * _Nonnull)domain login:(NSString * _Nonnull)login password:(NSString * _Nonnull)password externalUserId:(NSString * _Nullable)externalUserId completion:(void (^ _Nonnull)(NSString * _Nonnull, NSError * _Nullable))completion;
 - (BOOL)isAuthTokenValid SWIFT_WARN_UNUSED_RESULT;
-- (void)updateWithShouldUseDevAuthServer:(BOOL)shouldUseDevAuthServer;
+- (void)updateWithShouldUseDevAuthServer:(BOOL)shouldUseDevAuthServer shouldUseNewDevAuth:(BOOL)shouldUseNewDevAuth;
 - (void)updateWithGuestToken:(NSString * _Nonnull)guestToken;
 - (void)updateWithFcmToken:(NSString * _Nullable)fcmToken;
 - (BOOL)shouldReauthorizeWithLogin:(NSString * _Nonnull)login password:(NSString * _Nonnull)password externalUserId:(NSString * _Nullable)externalUserId SWIFT_WARN_UNUSED_RESULT;
@@ -706,7 +706,6 @@ SWIFT_PROTOCOL("_TtP10IrLibSwift21IRDataManagerProtocol_")
 - (void)startAnalytics;
 - (void)fetchSettingsAndRoutesWithCompletion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 - (void)fetchStoresWithCompletion:(void (^ _Nonnull)(NSError * _Nullable))completion;
-- (BOOL)canDoRecognitionResultWithPhotoId:(NSString * _Nonnull)photoId SWIFT_WARN_UNUSED_RESULT;
 - (void)updateCurrentStoreWithStoreId:(NSInteger)storeId externalStoreId:(NSString * _Nullable)externalStoreId;
 - (void)updateExternalDataWithVisitId:(NSString * _Nonnull)visitId;
 + (void)updateExternalDataWithVisitId:(NSString * _Nonnull)visitId;
@@ -756,7 +755,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) IRDataManage
 - (void)fetchStoresWithCompletion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 - (void)fetchSettingsAndRoutesWithCompletion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 - (void)restartSendingNotSentDataOnUpdate:(void (^ _Nullable)(NSError * _Nullable))onUpdate;
-- (BOOL)canDoRecognitionResultWithPhotoId:(NSString * _Nonnull)photoId SWIFT_WARN_UNUSED_RESULT;
 /// Обновление выбранной торговой точки. Используется в случае работы с либой / через диплинки.
 /// \param storeId идентификатор торговой точки
 ///
