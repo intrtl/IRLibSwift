@@ -46,7 +46,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		JZBqu8G/vLVPt9+EYZiiHgzQjmA=
+		mjyvjFCVfqJCaRozzTOxQYa8bUU=
 		</data>
 		<key>AssortmentMatrixDetails.storyboardc/AssortmentMatrixDetailsViewController.nib</key>
 		<data>
@@ -322,7 +322,7 @@
 		</data>
 		<key>Headers/IrLibSwift-Swift.h</key>
 		<data>
-		SFbQRjcsD8LJr/RPAzIzfelcpFA=
+		fWnJl+e6Qwo0jFz0exbNxW0pq0Q=
 		</data>
 		<key>Headers/IrLibSwift.h</key>
 		<data>
@@ -366,7 +366,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		e0A8eqYnfyUC3J8yKM7+KiR+oUs=
+		mWey8HyrIbC7EjtP83l8CFrKff8=
 		</data>
 		<key>InfoCarousel.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
 		<data>
@@ -402,11 +402,11 @@
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		zQf3NTbFPRWrmYCEN47WzswO95M=
+		l8uz19oN1h4O830YWKlHYasiorU=
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		CW4fajtJNby0nG2rAOs5RkVQhMc=
+		+vco/DkklDIF8tvE6CbgsEBu4/c=
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -414,19 +414,19 @@
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		CW4fajtJNby0nG2rAOs5RkVQhMc=
+		+vco/DkklDIF8tvE6CbgsEBu4/c=
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		VBRIayfXAI5SJ9GRFkQc8+UXPEQ=
+		pr1UW+7w87ss1nNSGGTaAOLlVzI=
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		zQf3NTbFPRWrmYCEN47WzswO95M=
+		l8uz19oN1h4O830YWKlHYasiorU=
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		6gzYBK1mKjM7+3QwOJG6u5PNO7c=
+		7mDNwJIMcFy78Anp6vIHAICACao=
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -434,11 +434,11 @@
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		6gzYBK1mKjM7+3QwOJG6u5PNO7c=
+		7mDNwJIMcFy78Anp6vIHAICACao=
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		JvlnnqnNIf1gzFZV+sDq1Izx7fc=
+		RjvwL3f3D7Aoq1b4UgNecze4At0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -702,7 +702,7 @@
 		</data>
 		<key>PriceExecutionReport.storyboardc/PriceExecutionReportViewController.nib</key>
 		<data>
-		dCF2U5ToUe/PZL0AItwktefwDQs=
+		TYqAIOc/a6md0EwaELod2fuwIZ8=
 		</data>
 		<key>Product.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
 		<data>
@@ -854,25 +854,13 @@
 		</data>
 		<key>ReportSwitchHeader.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
 		<data>
-		fS1s3+RlpBsyUmfZqLTAkeZVpls=
+		MAGjP5Zu5awOdBBBiVcROQi3XEU=
 		</data>
 		<key>ReportSwitchHeader.storyboardc/Info.plist</key>
 		<data>
 		IXGgDMncc6ot+edovl+ThV/muv0=
 		</data>
 		<key>ReportSwitchHeader.storyboardc/ReportSwitchHeaderViewController.nib</key>
-		<data>
-		+Ikk9m3YIy/zE7hS7hfWIZsoZ1A=
-		</data>
-		<key>ReportSwitchHeaderFixedForLongTitles.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
-		<data>
-		MAGjP5Zu5awOdBBBiVcROQi3XEU=
-		</data>
-		<key>ReportSwitchHeaderFixedForLongTitles.storyboardc/Info.plist</key>
-		<data>
-		IXGgDMncc6ot+edovl+ThV/muv0=
-		</data>
-		<key>ReportSwitchHeaderFixedForLongTitles.storyboardc/ReportSwitchHeaderViewController.nib</key>
 		<data>
 		+Ikk9m3YIy/zE7hS7hfWIZsoZ1A=
 		</data>
@@ -902,7 +890,7 @@
 		</data>
 		<key>RetailTaskActionCell.nib</key>
 		<data>
-		7mXYo20hxBs6z0t6QDlJqZhsLIQ=
+		k3adwPz8vT2NE8lE7Fny89OR69A=
 		</data>
 		<key>RetailTaskActionKPISwitchCell.nib</key>
 		<data>
@@ -950,7 +938,7 @@
 		</data>
 		<key>RetailTaskDetail.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
 		<data>
-		aSml6YGG1vY8QmD7KSUSlxy6hIs=
+		77VtIJWShOU5VOGOcOYnAb10VcI=
 		</data>
 		<key>RetailTaskDetail.storyboardc/Info.plist</key>
 		<data>
@@ -1234,7 +1222,7 @@
 		</data>
 		<key>SummaryReport.storyboardc/AyY-Nc-I4C-view-sOP-YQ-3In.nib</key>
 		<data>
-		lV60v0+6Ti321OFhJ8amannCIjI=
+		79sEF5Olk+D5oSlLAUgrJMu4M2w=
 		</data>
 		<key>SummaryReport.storyboardc/Info.plist</key>
 		<data>
@@ -1242,7 +1230,7 @@
 		</data>
 		<key>SummaryReport.storyboardc/SummaryReportViewController.nib</key>
 		<data>
-		R7SqyJ1BSSo5HMf73Kn8Ccj1vaM=
+		wVIKin7Hxu76EcqblW4cyh9EuI0=
 		</data>
 		<key>SummaryReportPOSMCollectionViewCell.nib</key>
 		<data>
@@ -1372,7 +1360,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ultFnVtnUbDJYWRv6A4lo4A6NDs=
+			JcSyGkG1MSiKLs+wf1PO7MwLd0k=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1390,7 +1378,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			BNSbd7u9nq0C0WAF6jIMQediq0Q=
+			4wXa2jeMeJb1RXTaN0x7Hy6/hi0=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1442,13 +1430,13 @@
 		</dict>
 		<key>realm_swift_privacy.bundle/Info.plist</key>
 		<data>
-		Z1mDfzRWafdqWi69g5TmdjlNPz0=
+		LwiOi916BWGJPn7cRCGmtI8sR1s=
 		</data>
 		<key>ru.lproj/Localized.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			lu9rfATYSWEnkGMymWx7kefo81Y=
+			wJfHxu35faiJVVgFDQmPqYVgllc=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1557,7 +1545,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			SV6bg4y+LFleXMF5YqLLRJBYJEplP5F98HZ/KFBYbFc=
+			wtE4fAY2z06aY8NEDIgXMIWR70uugik4eyiW+D+WnJI=
 			</data>
 		</dict>
 		<key>AssortmentMatrixDetails.storyboardc/AssortmentMatrixDetailsViewController.nib</key>
@@ -2040,7 +2028,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			cKbBT1xtnHnqhP93GZEHUiC7v2o6q6Fx/6jJKAugp+c=
+			Td/7nBu8ITSg5GGeaPV6xWGhS+tQm9WU0qUcrIXDe/c=
 			</data>
 		</dict>
 		<key>Headers/IrLibSwift.h</key>
@@ -2173,14 +2161,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			6qBpKMobBaMlzLf0bplQrsUwTtol9xgztz4ILQJYRH0=
+			+3YEn/IDjNXmo7qzG6peyADus7JibloXoxcsPQ8TJYQ=
 			</data>
 		</dict>
 		<key>Modules/IrLibSwift.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ci7fEUKxK2w0Kg5MEo33j+De700BZ4JUOug0ZIsim8Q=
+			Rz8KbEIOUyOfBK7sFbVmGZf+kxKu8vTGK66BVaKAESI=
 			</data>
 		</dict>
 		<key>Modules/IrLibSwift.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -2194,28 +2182,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ci7fEUKxK2w0Kg5MEo33j+De700BZ4JUOug0ZIsim8Q=
+			Rz8KbEIOUyOfBK7sFbVmGZf+kxKu8vTGK66BVaKAESI=
 			</data>
 		</dict>
 		<key>Modules/IrLibSwift.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			PWT1UerFXYvFidE4rEzZB4V4uekmYSLL47aO4BkFVTM=
+			/8GTcLJDvWht3cYete4MSCbV9FoIH59fcK91tr0XrRg=
 			</data>
 		</dict>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6qBpKMobBaMlzLf0bplQrsUwTtol9xgztz4ILQJYRH0=
+			+3YEn/IDjNXmo7qzG6peyADus7JibloXoxcsPQ8TJYQ=
 			</data>
 		</dict>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ShbwisqeTqvcvsOGEuGn3S0BA1tq20ki7Cyx91y8Gik=
+			/HV3jj1Tf3aISvLxF2drda0bSIbgtZnGh6/1L2kI+Cw=
 			</data>
 		</dict>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -2229,14 +2217,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ShbwisqeTqvcvsOGEuGn3S0BA1tq20ki7Cyx91y8Gik=
+			/HV3jj1Tf3aISvLxF2drda0bSIbgtZnGh6/1L2kI+Cw=
 			</data>
 		</dict>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RCQJ/t71buvuT3IXefFxCKfY8bh32SjZUvYwgu0jCmQ=
+			J/GbCp2Tdos9Bv8NlkCapFd6WXj0f8vksLVxb1BwTqw=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -2698,7 +2686,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			SxwsN8SQx75p2kbxy+Q+yxPwO+c7bs70F3H5WYZorZY=
+			Syybv3Yo9c6YQvkaGM9vBap3tpflebGxBTInH/v7ZBE=
 			</data>
 		</dict>
 		<key>Product.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
@@ -2964,7 +2952,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			k+f0Tgt8tcfR88d3tcmrOJwLaPmaMPJKngBKBxLJJvY=
+			xaBDlt8GdIHT/2uFcv9dYl9/CSctk/3fkPugEADodYU=
 			</data>
 		</dict>
 		<key>ReportSwitchHeader.storyboardc/Info.plist</key>
@@ -2975,27 +2963,6 @@
 			</data>
 		</dict>
 		<key>ReportSwitchHeader.storyboardc/ReportSwitchHeaderViewController.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			OfYuEt7fkC8WDz8A4BG0FKd8eBF3dbAR2G3OyGI0WaM=
-			</data>
-		</dict>
-		<key>ReportSwitchHeaderFixedForLongTitles.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			xaBDlt8GdIHT/2uFcv9dYl9/CSctk/3fkPugEADodYU=
-			</data>
-		</dict>
-		<key>ReportSwitchHeaderFixedForLongTitles.storyboardc/Info.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			NYE5+MrkoWR7jPnqUGbMJvkm73DunrEkuHwTxedhtvE=
-			</data>
-		</dict>
-		<key>ReportSwitchHeaderFixedForLongTitles.storyboardc/ReportSwitchHeaderViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
@@ -3048,7 +3015,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Z2SFjtZKMsK6YHW8Gng85FiOvSH8IC0pB/XbV1tWPVI=
+			FPlYtqRyPWvaZdhB9sDLE0MOcBXNHGxVVtjXNN3o99w=
 			</data>
 		</dict>
 		<key>RetailTaskActionKPISwitchCell.nib</key>
@@ -3132,7 +3099,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Me1NMjcRW+nwMBdvDsj/CCF52CLRZQbPQfS61lgooIY=
+			LWAl3wylhPt5Y2JTY6cukXSc8zBVZwvtvM7zHEyud0A=
 			</data>
 		</dict>
 		<key>RetailTaskDetail.storyboardc/Info.plist</key>
@@ -3629,7 +3596,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ba8M5asfZ20Wc096MuzPOK3YELmfvELl4ztlD/TB02k=
+			8egUwxGzSim5VGX2ua+NBh1jHN5BMtF6G6xhKHasAQg=
 			</data>
 		</dict>
 		<key>SummaryReport.storyboardc/Info.plist</key>
@@ -3643,7 +3610,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			saDcQZFC2xDmHpiq+OUGzFzYSZy/xizW3lW2F8sAxmM=
+			5CM+zao+HBNrgBZAWVfRXwzdAz/TZ1hiOy7ULU3hxMs=
 			</data>
 		</dict>
 		<key>SummaryReportPOSMCollectionViewCell.nib</key>
@@ -3867,7 +3834,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			1j+83+ZE7b0c7AcnmuMo01fpByNEsIYigNLtvVhE/Ak=
+			1Yk6MxIO47mUYyq36qd8imt4md7IEXNVAUPjI/HQIBE=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3885,7 +3852,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			aohlgZfM9XHijLE6lkPL23zln87wPxTasXMuo+gA6ug=
+			GtecRxYsYADj+jTUOa5wDIEZqUisPOnTRQ8gwhJNzx8=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3939,14 +3906,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			EmfogzpyYTUcOifgKAhZ7pqDx4dmsDmMH04MsaZbQa8=
+			WTr2wzzAXn/iWOpKhYcOWiY9+RCoa+7KAUggU4he3hw=
 			</data>
 		</dict>
 		<key>ru.lproj/Localized.strings</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Qxz+IQuhSNqz5hfterqUH/aVrQ92PBKSIl+xv4+qzC0=
+			N4lrVsHnlZBVVgq0wVUw7E7jNzDsqOMUQl5PB75Zjh8=
 			</data>
 			<key>optional</key>
 			<true/>

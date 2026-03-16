@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "IrLibSwift"
-  spec.version      = "5.19.7"
+  spec.version      = "6.1"
   spec.summary      = "Framework with IR functionality written on Swift" 
   spec.static_framework = true;
   spec.description  = <<-DESC
@@ -22,5 +22,5 @@ Pod::Spec.new do |spec|
   spec.dependency "FirebaseCrashlytics", '11.5.0'
   spec.dependency "GoogleUtilities", '8.0.2'
   spec.dependency "GRDB.swift", "6.24.1"
-  spec.dependency "OpenCV2", "~> 4.3.0"
+  spec.dependency "OpenCV2", "4.3.0-xcframework"
 end

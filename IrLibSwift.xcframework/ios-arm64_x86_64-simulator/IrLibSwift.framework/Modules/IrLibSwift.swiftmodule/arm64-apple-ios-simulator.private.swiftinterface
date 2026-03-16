@@ -27,6 +27,7 @@ import MachO
 import MapKit
 import MediaPlayer
 import OSLog
+import PhotosUI
 import Realm
 import RealmSwift
 import Swift
@@ -36,8 +37,10 @@ import UIKit
 import UniformTypeIdentifiers
 import WebKit
 import _Concurrency
+import _PhotosUI_SwiftUI
 import _StringProcessing
 import _SwiftConcurrencyShims
+import os
 @_inheritsConvenienceInitializers @objc public class Shelf : RLMObject {
   @objc override dynamic public init()
   @objc deinit
@@ -54,15 +57,6 @@ import _SwiftConcurrencyShims
   @objc func didStartVisitForStoreWithId(_ storeId: Swift.Int)
   @objc func didFinishVisit(storeId: Swift.Int)
   @objc func didTriggerOpenSupport()
-}
-@_inheritsConvenienceInitializers @objc public class Route : RLMObject {
-  @objc override dynamic public class func primaryKey() -> Swift.String?
-  @objc override dynamic public init()
-  @objc deinit
-}
-@_inheritsConvenienceInitializers @objc public class RoutePoint : RLMObject {
-  @objc override dynamic public init()
-  @objc deinit
 }
 public enum VisitError : Foundation.LocalizedError {
   case noVisitFound
@@ -200,12 +194,17 @@ public typealias DefaultAiletDataManager = IrLibSwift.IRDataManager
   @objc final public let errorLog: Swift.String?
   @objc deinit
 }
-public enum GradientDirection {
+public enum GradientDirection : Swift.Hashable {
   case topToBottom
   case leftToRight
   case leftTopToRightBottom
   case leftBottomToRightTop
   case custom(startPoint: CoreFoundation.CGPoint, endPoint: CoreFoundation.CGPoint)
+  public static func == (a: IrLibSwift.GradientDirection, b: IrLibSwift.GradientDirection) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
 }
 @_hasMissingDesignatedInitializers @objc public class IRGradientDirection : ObjectiveC.NSObject {
   @objc final public let startPoint: CoreFoundation.CGPoint
@@ -256,8 +255,13 @@ extension IrLibSwift.AnketDataEntity.Question {
   public struct Answer {
   }
 }
-public struct GradientColor {
+public struct GradientColor : Swift.Hashable {
   public let colors: [UIKit.UIColor]
+  public static func == (a: IrLibSwift.GradientColor, b: IrLibSwift.GradientColor) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
 }
 extension IrLibSwift.GradientColor {
   public static let blue: IrLibSwift.GradientColor
@@ -592,7 +596,8 @@ public class TransparentNavigationBarCustomizer : IrLibSwift.NavigationBarCustom
   @objc override dynamic public init()
   @objc deinit
 }
-public struct ReportFilter {
+public struct ReportFilter : Swift.Equatable {
+  public static func == (a: IrLibSwift.ReportFilter, b: IrLibSwift.ReportFilter) -> Swift.Bool
 }
 @objc public protocol IRDbConfigProvider {
   @objc var dbVersion: Swift.Int { get }
@@ -707,7 +712,9 @@ extension IrLibSwift.AiletFonts {
 }
 @objc public enum AiletNetworkError : Swift.Int, Swift.Error {
   case noConnection = 503
+  case badRequest = 400
   case notFound = 404
+  case notAcceptable = 406
   case conflict = 409
   case authError = 403
   case processing = 202
@@ -1058,11 +1065,16 @@ extension Swift.KeyedDecodingContainer {
   @objc final public let name: Swift.String?
   @objc deinit
 }
-public struct Gradient {
+public struct Gradient : Swift.Hashable {
   public let color: IrLibSwift.GradientColor
   public let locations: [Foundation.NSNumber]
   public let direction: IrLibSwift.GradientDirection
   public init(color: IrLibSwift.GradientColor, locations: [Foundation.NSNumber], direction: IrLibSwift.GradientDirection)
+  public static func == (a: IrLibSwift.Gradient, b: IrLibSwift.Gradient) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
 }
 @objc public protocol LegacyReportFiltersModuleOutput {
   @objc func didUpdateFilters(_ filters: IrLibSwift.IRReportFilters)
@@ -1299,6 +1311,14 @@ extension UIKit.UITableView {
 @objc public protocol CameraModuleOutput {
   @objc func didCompleteCapture()
 }
+extension SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public func applyLinearGradient(_ gradient: IrLibSwift.Gradient) -> some SwiftUICore.View
+  
+}
+extension SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public func font(_ font: UIKit.UIFont) -> some SwiftUICore.View
+  
+}
 @_inheritsConvenienceInitializers @objc @_Concurrency.MainActor @preconcurrency final public class DiagramReportCollectionViewCell : UIKit.UICollectionViewCell {
   @objc @_Concurrency.MainActor @preconcurrency final public var titleTapHandler: (() -> Swift.Void)?
   @objc @_Concurrency.MainActor @preconcurrency final public var reportTapHandler: (() -> Swift.Void)?
@@ -1350,6 +1370,7 @@ extension IrLibSwift.IRInteractManager {
   @objc override dynamic public init()
   @objc deinit
 }
+
 @_hasMissingDesignatedInitializers @objc public class IRVisitReport : ObjectiveC.NSObject, IrLibSwift.ReflectedStringConvertible {
   @objc deinit
 }
