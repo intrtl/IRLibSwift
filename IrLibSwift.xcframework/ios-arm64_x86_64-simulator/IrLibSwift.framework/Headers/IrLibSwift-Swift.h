@@ -591,11 +591,6 @@ SWIFT_PROTOCOL("_TtP10IrLibSwift16BarButtonShowing_")
 - (void)addBarButton:(UIBarButtonItem * _Nonnull)button onTap:(void (^ _Nullable)(void))onTap;
 @end
 
-SWIFT_PROTOCOL("_TtP10IrLibSwift18CameraModuleOutput_")
-@protocol CameraModuleOutput
-- (void)didCompleteCapture;
-@end
-
 @class NSCoder;
 @class UITouch;
 @class UIEvent;
@@ -684,11 +679,10 @@ SWIFT_PROTOCOL("_TtP10IrLibSwift26IRBackgroundEventsDelegate_")
 @class IRTechSupportInteractionProvider;
 @class IRVisitServiceInteractionProvider;
 @class IRReportsInteractionProvider;
-@class IRScreensBuilderInteractionProvider;
 @class IRFeatureToggles;
 @class IRStoredStateSettings;
-@class NSError;
 @class VisitWidgetReportMatrixDataEntity;
+@class NSError;
 @class UIViewController;
 enum IRWorkFlow : NSInteger;
 SWIFT_PROTOCOL("_TtP10IrLibSwift25IRDataManagerObjcProtocol_")
@@ -699,7 +693,6 @@ SWIFT_PROTOCOL("_TtP10IrLibSwift25IRDataManagerObjcProtocol_")
 @property (nonatomic, readonly, strong) IRTechSupportInteractionProvider * _Nonnull techSupport;
 @property (nonatomic, readonly, strong) IRVisitServiceInteractionProvider * _Nonnull visits;
 @property (nonatomic, readonly, strong) IRReportsInteractionProvider * _Nonnull reports;
-@property (nonatomic, readonly, strong) IRScreensBuilderInteractionProvider * _Nonnull screens;
 @property (nonatomic, readonly, strong) IRFeatureToggles * _Nonnull featureToggles;
 @property (nonatomic, readonly, strong) IRStoredStateSettings * _Nonnull storedStateSettings;
 - (void)startAnalytics;
@@ -708,7 +701,6 @@ SWIFT_PROTOCOL("_TtP10IrLibSwift25IRDataManagerObjcProtocol_")
 - (void)updateExternalDataWithVisitId:(NSString * _Nonnull)visitId;
 + (void)updateExternalDataWithVisitId:(NSString * _Nonnull)visitId;
 + (void)clearExternalData;
-- (void)fetchWidgetsWithVisitId:(NSString * _Nonnull)visitId completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 - (VisitWidgetReportMatrixDataEntity * _Nullable)defaultReportMatrixWithVisitId:(NSString * _Nonnull)visitId taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
 - (void)updatePhotoResultIntervals:(NSArray<NSNumber *> * _Nonnull)intervals;
 - (void)restartSendingNotSentDataOnUpdate:(void (^ _Nullable)(NSError * _Nullable))onUpdate;
@@ -737,7 +729,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) IRDataManage
 @property (nonatomic, readonly, strong) IRAuthServiceInteractionProvider * _Nonnull auth;
 @property (nonatomic, readonly, strong) IRMultiportalAuthServiceInteractionProvider * _Nonnull multiportalAuth;
 @property (nonatomic, readonly, strong) id <IRDbConfigProvider> _Nonnull database;
-@property (nonatomic, readonly, strong) IRScreensBuilderInteractionProvider * _Nonnull screens;
 @property (nonatomic, readonly, strong) IRFeatureToggles * _Nonnull featureToggles;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -755,7 +746,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) IRDataManage
 - (void)updateExternalDataWithVisitId:(NSString * _Nonnull)visitId;
 + (void)updateExternalDataWithVisitId:(NSString * _Nonnull)visitId;
 + (void)clearExternalData;
-- (void)fetchWidgetsWithVisitId:(NSString * _Nonnull)visitId completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 - (NSArray<VisitWidgetReportDataEntity *> * _Nonnull)widgetReportsForVisitWithVisitId:(NSString * _Nonnull)visitId widgetType:(NSString * _Nonnull)widgetType taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
 - (VisitWidgetReportDataEntity * _Nullable)widgetReportForVisitWithVisitId:(NSString * _Nonnull)visitId widgetType:(NSString * _Nonnull)widgetType matrixType:(NSString * _Nonnull)matrixType taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
 - (VisitWidgetReportMatrixDataEntity * _Nullable)defaultReportMatrixWithVisitId:(NSString * _Nonnull)visitId taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
@@ -896,14 +886,27 @@ SWIFT_CLASS("_TtC10IrLibSwift17IRInteractManager")
 /// Presents IrLibSwift camera from passed viewController.
 /// \param presentingVC UIViewController to present Camera from
 ///
-/// \param externalStoreId id of store to make shooting for
+/// \param externalStoreId ID of the store to make shooting for. When creating a new visit, the visit is linked to this store. When resuming an existing visit by <code>externalVisitId</code>, the stored visit is returned as-is — <code>externalStoreId</code> is not used to look up the visit and is not validated against the visit’s store. The client is responsible for passing a consistent store and visit ID pair.
 ///
-/// \param externalVisitId id of visit to make shooting for. Visit id must be unique for every store and every day of shooting.
+/// \param externalVisitId ID of the visit to make shooting for. The client is responsible for the ID to be unique. If a local visit with the ID already exists, it is resumed; otherwise a new visit is created. A resumed visit may be non-editable if the portal visit edit period has expired.
 ///
 ///
 /// throws:
 /// throws an error (IRError in Swift, NSError in Obj-c) if something went wrong.
 + (BOOL)startShootingIn:(UIViewController * _Nonnull)presentingVC externalStoreId:(NSString * _Nonnull)externalStoreId externalVisitId:(NSString * _Nonnull)externalVisitId error:(NSError * _Nullable * _Nullable)error;
+/// Presents IrLibSwift camera from passed viewController.
+/// \param presentingVC UIViewController to present Camera from
+///
+/// \param externalStoreId ID of the store to make shooting for. When creating a new visit, the visit is linked to this store. When resuming an existing visit by <code>externalVisitId</code>, the stored visit is returned as-is — <code>externalStoreId</code> is not used to look up the visit and is not validated against the visit’s store. The client is responsible for passing a consistent store and visit ID pair.
+///
+/// \param externalVisitId ID of the visit to make shooting for. The client is responsible for the ID to be unique. If a local visit with the ID already exists, it is resumed; otherwise a new visit is created. A resumed visit may be non-editable if the portal visit edit period has expired.
+///
+/// \param taskId ID of the task template to use for shooting. If the template exists, depending on the portal setting other.features.skip_task_details, the method will open either the task details screen or the camera screen.
+///
+///
+/// throws:
+/// throws an error (IRError in Swift, NSError in Obj-c) if something went wrong.
++ (BOOL)startShootingIn:(UIViewController * _Nonnull)presentingVC externalStoreId:(NSString * _Nonnull)externalStoreId externalVisitId:(NSString * _Nonnull)externalVisitId taskId:(NSString * _Nullable)taskTemplateId error:(NSError * _Nullable * _Nullable)error;
 /// Asynchronously downloads all the data required for summary report and presents UIViewController with the report
 /// \param presentingViewController viewController where will be summary report viewController presented on
 ///
@@ -1163,55 +1166,6 @@ SWIFT_CLASS("_TtC10IrLibSwift28IRReportsInteractionProvider")
 - (NSInteger)photosCountFor:(NSString * _Nonnull)visitId SWIFT_WARN_UNUSED_RESULT;
 @end
 
-@protocol StoreDetailsOutput;
-@protocol WidgetsModuleInput;
-@protocol LegacyReportFiltersModuleOutput;
-@class UITabBarController;
-SWIFT_CLASS("_TtC10IrLibSwift35IRScreensBuilderInteractionProvider")
-@interface IRScreensBuilderInteractionProvider : NSObject
-/// Method returns UIViewController depending on input parameteres and values persisted in local DB.
-/// <ul>
-///   <li>
-///     If input <code>taskId</code> is not nil and visit with input <code>externalVisitId</code> exists with such task, the method returns Task Details viewController
-///   </li>
-///   <li>
-///     If input <code>taskId</code> is nil and store with input <code>externalStoreId</code> has tasks, the method returns Store details viewController.
-///   </li>
-///   <li>
-///     In any other cases the method returns Camera viewController
-///   </li>
-/// </ul>
-- (UIViewController * _Nullable)startViewControllerWithExternalStoreId:(NSString * _Nonnull)externalStoreId externalVisitId:(NSString * _Nonnull)externalVisitId taskId:(NSString * _Nullable)taskId cameraOutput:(id <CameraModuleOutput> _Nonnull)cameraOutput storeDetailsOutput:(id <StoreDetailsOutput> _Nonnull)storeDetailsOutput error:(NSError * _Nullable * _Nullable)error backButtonHandler:(void (^ _Nullable)(void))backButtonHandler SWIFT_WARN_UNUSED_RESULT;
-- (UIViewController * _Nullable)cameraViewControllerWithOutput:(id <CameraModuleOutput> _Nullable)output externalVisitId:(NSString * _Nonnull)externalVisitId taskId:(NSString * _Nullable)taskId externalStoreId:(NSString * _Nonnull)externalStoreId isOpenedViaDeeplinks:(BOOL)isOpenedViaDeeplinks error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
-- (UIViewController * _Nullable)sosReportListControllerWithVisitId:(NSString * _Nonnull)visitId taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
-- (UIViewController * _Nullable)sosReportDetailControllerWithVisitId:(NSString * _Nonnull)visitId taskId:(NSString * _Nonnull)taskId SWIFT_WARN_UNUSED_RESULT;
-- (UIViewController * _Nullable)summaryReportViewControllerWithExternalVisitId:(NSString * _Nonnull)externalVisitId error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
-- (UIViewController * _Nullable)reportPhotoBrowseViewControllerWithVisitId:(NSString * _Nonnull)visitId taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
-- (UIViewController * _Nullable)summaryReportOOSReportViewControllerWithVisitId:(NSString * _Nonnull)visitId taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
-- (UIViewController * _Nullable)standaloneOOSReportViewControllerWithVisitId:(NSString * _Nonnull)visitId taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
-- (UIViewController * _Nullable)OSAReportViewControllerWithVisitId:(NSString * _Nonnull)visitId taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
-- (UIViewController * _Nullable)searchController SWIFT_WARN_UNUSED_RESULT;
-- (UIViewController * _Nonnull)retailExecutionStoresScreen SWIFT_WARN_UNUSED_RESULT;
-- (UIViewController * _Nonnull)sfaStoresScreen SWIFT_WARN_UNUSED_RESULT;
-- (UIViewController * _Nonnull)filterScreenResults SWIFT_WARN_UNUSED_RESULT;
-- (id <WidgetsModuleInput> _Nullable)widgetsController SWIFT_WARN_UNUSED_RESULT;
-- (UIViewController * _Nonnull)storeDetailScreenWithOutput:(id <StoreDetailsOutput> _Nonnull)output storeId:(NSInteger)storeId externalVisitId:(NSString * _Nullable)externalVisitId SWIFT_WARN_UNUSED_RESULT;
-- (UIViewController * _Nonnull)visitStatsScreenWithVisitId:(NSString * _Nonnull)visitId SWIFT_WARN_UNUSED_RESULT;
-- (UIViewController * _Nonnull)reportFiltersScreenWithOutput:(id <LegacyReportFiltersModuleOutput> _Nonnull)output storeId:(NSInteger)storeId visitId:(NSString * _Nonnull)visitId taskId:(NSString * _Nullable)taskId matrixId:(NSString * _Nullable)matrixId currentReportType:(NSString * _Nullable)currentReportType SWIFT_WARN_UNUSED_RESULT;
-- (UIViewController * _Nonnull)appDocsScreen SWIFT_WARN_UNUSED_RESULT;
-- (UIViewController * _Nonnull)retailTasksViewController SWIFT_WARN_UNUSED_RESULT;
-- (UITabBarController * _Nonnull)tabBarControllerWithSettingsController:(UIViewController * _Nonnull)settingsController SWIFT_WARN_UNUSED_RESULT;
-/// Returns UIViewController for workflow stored in settings
-/// retailExecution - storesViewController
-/// retailTasks - retailsTasksViewController
-- (UIViewController * _Nonnull)workflowBasedStartViewController SWIFT_WARN_UNUSED_RESULT;
-- (UIViewController * _Nonnull)manageAppDataViewController SWIFT_WARN_UNUSED_RESULT;
-- (UIViewController * _Nonnull)debugFeaturesViewController SWIFT_WARN_UNUSED_RESULT;
-- (UIViewController * _Nonnull)supportTabViewController SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
 SWIFT_CLASS("_TtC10IrLibSwift24IRSharedAuthorizedPortal")
 @interface IRSharedAuthorizedPortal : NSObject
 @property (nonatomic, readonly, copy) NSString * _Nonnull url;
@@ -1297,10 +1251,6 @@ SWIFT_CLASS("_TtC10IrLibSwift33IRVisitServiceInteractionProvider")
 @interface IRVisitServiceInteractionProvider : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-@interface IRVisitServiceInteractionProvider (SWIFT_EXTENSION(IrLibSwift))
-- (void)fetchPreviousVisitIfNeededWithExternalVisitId:(NSString * _Nonnull)externalVisitId completion:(void (^ _Nullable)(NSError * _Nullable))completion;
 @end
 
 typedef SWIFT_ENUM(NSInteger, IRWorkFlow, open) {
@@ -2109,11 +2059,6 @@ SWIFT_PROTOCOL("_TtP10IrLibSwift16BarButtonShowing_")
 - (void)addBarButton:(UIBarButtonItem * _Nonnull)button onTap:(void (^ _Nullable)(void))onTap;
 @end
 
-SWIFT_PROTOCOL("_TtP10IrLibSwift18CameraModuleOutput_")
-@protocol CameraModuleOutput
-- (void)didCompleteCapture;
-@end
-
 @class NSCoder;
 @class UITouch;
 @class UIEvent;
@@ -2202,11 +2147,10 @@ SWIFT_PROTOCOL("_TtP10IrLibSwift26IRBackgroundEventsDelegate_")
 @class IRTechSupportInteractionProvider;
 @class IRVisitServiceInteractionProvider;
 @class IRReportsInteractionProvider;
-@class IRScreensBuilderInteractionProvider;
 @class IRFeatureToggles;
 @class IRStoredStateSettings;
-@class NSError;
 @class VisitWidgetReportMatrixDataEntity;
+@class NSError;
 @class UIViewController;
 enum IRWorkFlow : NSInteger;
 SWIFT_PROTOCOL("_TtP10IrLibSwift25IRDataManagerObjcProtocol_")
@@ -2217,7 +2161,6 @@ SWIFT_PROTOCOL("_TtP10IrLibSwift25IRDataManagerObjcProtocol_")
 @property (nonatomic, readonly, strong) IRTechSupportInteractionProvider * _Nonnull techSupport;
 @property (nonatomic, readonly, strong) IRVisitServiceInteractionProvider * _Nonnull visits;
 @property (nonatomic, readonly, strong) IRReportsInteractionProvider * _Nonnull reports;
-@property (nonatomic, readonly, strong) IRScreensBuilderInteractionProvider * _Nonnull screens;
 @property (nonatomic, readonly, strong) IRFeatureToggles * _Nonnull featureToggles;
 @property (nonatomic, readonly, strong) IRStoredStateSettings * _Nonnull storedStateSettings;
 - (void)startAnalytics;
@@ -2226,7 +2169,6 @@ SWIFT_PROTOCOL("_TtP10IrLibSwift25IRDataManagerObjcProtocol_")
 - (void)updateExternalDataWithVisitId:(NSString * _Nonnull)visitId;
 + (void)updateExternalDataWithVisitId:(NSString * _Nonnull)visitId;
 + (void)clearExternalData;
-- (void)fetchWidgetsWithVisitId:(NSString * _Nonnull)visitId completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 - (VisitWidgetReportMatrixDataEntity * _Nullable)defaultReportMatrixWithVisitId:(NSString * _Nonnull)visitId taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
 - (void)updatePhotoResultIntervals:(NSArray<NSNumber *> * _Nonnull)intervals;
 - (void)restartSendingNotSentDataOnUpdate:(void (^ _Nullable)(NSError * _Nullable))onUpdate;
@@ -2255,7 +2197,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) IRDataManage
 @property (nonatomic, readonly, strong) IRAuthServiceInteractionProvider * _Nonnull auth;
 @property (nonatomic, readonly, strong) IRMultiportalAuthServiceInteractionProvider * _Nonnull multiportalAuth;
 @property (nonatomic, readonly, strong) id <IRDbConfigProvider> _Nonnull database;
-@property (nonatomic, readonly, strong) IRScreensBuilderInteractionProvider * _Nonnull screens;
 @property (nonatomic, readonly, strong) IRFeatureToggles * _Nonnull featureToggles;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -2273,7 +2214,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) IRDataManage
 - (void)updateExternalDataWithVisitId:(NSString * _Nonnull)visitId;
 + (void)updateExternalDataWithVisitId:(NSString * _Nonnull)visitId;
 + (void)clearExternalData;
-- (void)fetchWidgetsWithVisitId:(NSString * _Nonnull)visitId completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 - (NSArray<VisitWidgetReportDataEntity *> * _Nonnull)widgetReportsForVisitWithVisitId:(NSString * _Nonnull)visitId widgetType:(NSString * _Nonnull)widgetType taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
 - (VisitWidgetReportDataEntity * _Nullable)widgetReportForVisitWithVisitId:(NSString * _Nonnull)visitId widgetType:(NSString * _Nonnull)widgetType matrixType:(NSString * _Nonnull)matrixType taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
 - (VisitWidgetReportMatrixDataEntity * _Nullable)defaultReportMatrixWithVisitId:(NSString * _Nonnull)visitId taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
@@ -2414,14 +2354,27 @@ SWIFT_CLASS("_TtC10IrLibSwift17IRInteractManager")
 /// Presents IrLibSwift camera from passed viewController.
 /// \param presentingVC UIViewController to present Camera from
 ///
-/// \param externalStoreId id of store to make shooting for
+/// \param externalStoreId ID of the store to make shooting for. When creating a new visit, the visit is linked to this store. When resuming an existing visit by <code>externalVisitId</code>, the stored visit is returned as-is — <code>externalStoreId</code> is not used to look up the visit and is not validated against the visit’s store. The client is responsible for passing a consistent store and visit ID pair.
 ///
-/// \param externalVisitId id of visit to make shooting for. Visit id must be unique for every store and every day of shooting.
+/// \param externalVisitId ID of the visit to make shooting for. The client is responsible for the ID to be unique. If a local visit with the ID already exists, it is resumed; otherwise a new visit is created. A resumed visit may be non-editable if the portal visit edit period has expired.
 ///
 ///
 /// throws:
 /// throws an error (IRError in Swift, NSError in Obj-c) if something went wrong.
 + (BOOL)startShootingIn:(UIViewController * _Nonnull)presentingVC externalStoreId:(NSString * _Nonnull)externalStoreId externalVisitId:(NSString * _Nonnull)externalVisitId error:(NSError * _Nullable * _Nullable)error;
+/// Presents IrLibSwift camera from passed viewController.
+/// \param presentingVC UIViewController to present Camera from
+///
+/// \param externalStoreId ID of the store to make shooting for. When creating a new visit, the visit is linked to this store. When resuming an existing visit by <code>externalVisitId</code>, the stored visit is returned as-is — <code>externalStoreId</code> is not used to look up the visit and is not validated against the visit’s store. The client is responsible for passing a consistent store and visit ID pair.
+///
+/// \param externalVisitId ID of the visit to make shooting for. The client is responsible for the ID to be unique. If a local visit with the ID already exists, it is resumed; otherwise a new visit is created. A resumed visit may be non-editable if the portal visit edit period has expired.
+///
+/// \param taskId ID of the task template to use for shooting. If the template exists, depending on the portal setting other.features.skip_task_details, the method will open either the task details screen or the camera screen.
+///
+///
+/// throws:
+/// throws an error (IRError in Swift, NSError in Obj-c) if something went wrong.
++ (BOOL)startShootingIn:(UIViewController * _Nonnull)presentingVC externalStoreId:(NSString * _Nonnull)externalStoreId externalVisitId:(NSString * _Nonnull)externalVisitId taskId:(NSString * _Nullable)taskTemplateId error:(NSError * _Nullable * _Nullable)error;
 /// Asynchronously downloads all the data required for summary report and presents UIViewController with the report
 /// \param presentingViewController viewController where will be summary report viewController presented on
 ///
@@ -2681,55 +2634,6 @@ SWIFT_CLASS("_TtC10IrLibSwift28IRReportsInteractionProvider")
 - (NSInteger)photosCountFor:(NSString * _Nonnull)visitId SWIFT_WARN_UNUSED_RESULT;
 @end
 
-@protocol StoreDetailsOutput;
-@protocol WidgetsModuleInput;
-@protocol LegacyReportFiltersModuleOutput;
-@class UITabBarController;
-SWIFT_CLASS("_TtC10IrLibSwift35IRScreensBuilderInteractionProvider")
-@interface IRScreensBuilderInteractionProvider : NSObject
-/// Method returns UIViewController depending on input parameteres and values persisted in local DB.
-/// <ul>
-///   <li>
-///     If input <code>taskId</code> is not nil and visit with input <code>externalVisitId</code> exists with such task, the method returns Task Details viewController
-///   </li>
-///   <li>
-///     If input <code>taskId</code> is nil and store with input <code>externalStoreId</code> has tasks, the method returns Store details viewController.
-///   </li>
-///   <li>
-///     In any other cases the method returns Camera viewController
-///   </li>
-/// </ul>
-- (UIViewController * _Nullable)startViewControllerWithExternalStoreId:(NSString * _Nonnull)externalStoreId externalVisitId:(NSString * _Nonnull)externalVisitId taskId:(NSString * _Nullable)taskId cameraOutput:(id <CameraModuleOutput> _Nonnull)cameraOutput storeDetailsOutput:(id <StoreDetailsOutput> _Nonnull)storeDetailsOutput error:(NSError * _Nullable * _Nullable)error backButtonHandler:(void (^ _Nullable)(void))backButtonHandler SWIFT_WARN_UNUSED_RESULT;
-- (UIViewController * _Nullable)cameraViewControllerWithOutput:(id <CameraModuleOutput> _Nullable)output externalVisitId:(NSString * _Nonnull)externalVisitId taskId:(NSString * _Nullable)taskId externalStoreId:(NSString * _Nonnull)externalStoreId isOpenedViaDeeplinks:(BOOL)isOpenedViaDeeplinks error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
-- (UIViewController * _Nullable)sosReportListControllerWithVisitId:(NSString * _Nonnull)visitId taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
-- (UIViewController * _Nullable)sosReportDetailControllerWithVisitId:(NSString * _Nonnull)visitId taskId:(NSString * _Nonnull)taskId SWIFT_WARN_UNUSED_RESULT;
-- (UIViewController * _Nullable)summaryReportViewControllerWithExternalVisitId:(NSString * _Nonnull)externalVisitId error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
-- (UIViewController * _Nullable)reportPhotoBrowseViewControllerWithVisitId:(NSString * _Nonnull)visitId taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
-- (UIViewController * _Nullable)summaryReportOOSReportViewControllerWithVisitId:(NSString * _Nonnull)visitId taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
-- (UIViewController * _Nullable)standaloneOOSReportViewControllerWithVisitId:(NSString * _Nonnull)visitId taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
-- (UIViewController * _Nullable)OSAReportViewControllerWithVisitId:(NSString * _Nonnull)visitId taskId:(NSString * _Nullable)taskId SWIFT_WARN_UNUSED_RESULT;
-- (UIViewController * _Nullable)searchController SWIFT_WARN_UNUSED_RESULT;
-- (UIViewController * _Nonnull)retailExecutionStoresScreen SWIFT_WARN_UNUSED_RESULT;
-- (UIViewController * _Nonnull)sfaStoresScreen SWIFT_WARN_UNUSED_RESULT;
-- (UIViewController * _Nonnull)filterScreenResults SWIFT_WARN_UNUSED_RESULT;
-- (id <WidgetsModuleInput> _Nullable)widgetsController SWIFT_WARN_UNUSED_RESULT;
-- (UIViewController * _Nonnull)storeDetailScreenWithOutput:(id <StoreDetailsOutput> _Nonnull)output storeId:(NSInteger)storeId externalVisitId:(NSString * _Nullable)externalVisitId SWIFT_WARN_UNUSED_RESULT;
-- (UIViewController * _Nonnull)visitStatsScreenWithVisitId:(NSString * _Nonnull)visitId SWIFT_WARN_UNUSED_RESULT;
-- (UIViewController * _Nonnull)reportFiltersScreenWithOutput:(id <LegacyReportFiltersModuleOutput> _Nonnull)output storeId:(NSInteger)storeId visitId:(NSString * _Nonnull)visitId taskId:(NSString * _Nullable)taskId matrixId:(NSString * _Nullable)matrixId currentReportType:(NSString * _Nullable)currentReportType SWIFT_WARN_UNUSED_RESULT;
-- (UIViewController * _Nonnull)appDocsScreen SWIFT_WARN_UNUSED_RESULT;
-- (UIViewController * _Nonnull)retailTasksViewController SWIFT_WARN_UNUSED_RESULT;
-- (UITabBarController * _Nonnull)tabBarControllerWithSettingsController:(UIViewController * _Nonnull)settingsController SWIFT_WARN_UNUSED_RESULT;
-/// Returns UIViewController for workflow stored in settings
-/// retailExecution - storesViewController
-/// retailTasks - retailsTasksViewController
-- (UIViewController * _Nonnull)workflowBasedStartViewController SWIFT_WARN_UNUSED_RESULT;
-- (UIViewController * _Nonnull)manageAppDataViewController SWIFT_WARN_UNUSED_RESULT;
-- (UIViewController * _Nonnull)debugFeaturesViewController SWIFT_WARN_UNUSED_RESULT;
-- (UIViewController * _Nonnull)supportTabViewController SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
 SWIFT_CLASS("_TtC10IrLibSwift24IRSharedAuthorizedPortal")
 @interface IRSharedAuthorizedPortal : NSObject
 @property (nonatomic, readonly, copy) NSString * _Nonnull url;
@@ -2815,10 +2719,6 @@ SWIFT_CLASS("_TtC10IrLibSwift33IRVisitServiceInteractionProvider")
 @interface IRVisitServiceInteractionProvider : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-@interface IRVisitServiceInteractionProvider (SWIFT_EXTENSION(IrLibSwift))
-- (void)fetchPreviousVisitIfNeededWithExternalVisitId:(NSString * _Nonnull)externalVisitId completion:(void (^ _Nullable)(NSError * _Nullable))completion;
 @end
 
 typedef SWIFT_ENUM(NSInteger, IRWorkFlow, open) {

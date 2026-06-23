@@ -129,11 +129,6 @@ extension UIKit.UICollectionView {
 @_hasMissingDesignatedInitializers @objc public class IRVisitServiceInteractionProvider : ObjectiveC.NSObject {
   @objc deinit
 }
-@objc extension IrLibSwift.IRVisitServiceInteractionProvider {
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc dynamic public func fetchPreviousVisitIfNeeded(externalVisitId: Swift.String, completion: ((Foundation.NSError?) -> Swift.Void)?)
-  #endif
-}
 public protocol NavigationBarCustomizer {
   var viewsToHide: [UIKit.UIView] { get }
   #if compiler(>=5.3) && $NonescapableTypes
@@ -154,7 +149,7 @@ public protocol NavigationBarCustomizer {
   @objc deinit
 }
 public typealias DefaultAiletDataManager = IrLibSwift.IRDataManager
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class IRDataManager : ObjectiveC.NSObject, IrLibSwift.IRDataManagerProtocol {
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class IRDataManager : ObjectiveC.NSObject, IrLibSwift.IRDataManagerProtocol {
   @objc public static let shared: IrLibSwift.IRDataManager
   @objc final public let techSupport: IrLibSwift.IRTechSupportInteractionProvider
   @objc final public let visits: IrLibSwift.IRVisitServiceInteractionProvider
@@ -163,7 +158,6 @@ public typealias DefaultAiletDataManager = IrLibSwift.IRDataManager
   @objc final public let auth: IrLibSwift.IRAuthServiceInteractionProvider
   @objc final public let multiportalAuth: IrLibSwift.IRMultiportalAuthServiceInteractionProvider
   @objc final public let database: any IrLibSwift.IRDbConfigProvider
-  @objc final public let screens: IrLibSwift.IRScreensBuilderInteractionProvider
   @objc final public let featureToggles: IrLibSwift.IRFeatureToggles
   @objc public static func updateAppInfo(isApp: Swift.Bool)
   @objc public static func updateDeeplinkInfo(isStartedViaDeeplink: Swift.Bool)
@@ -180,9 +174,6 @@ public typealias DefaultAiletDataManager = IrLibSwift.IRDataManager
   @objc public func updateExternalData(visitId: Swift.String)
   @objc public static func updateExternalData(visitId: Swift.String)
   @objc public static func clearExternalData()
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc public func fetchWidgets(visitId: Swift.String, completion: @escaping (Foundation.NSError?) -> Swift.Void)
-  #endif
   #if compiler(>=5.3) && $NonescapableTypes
   @objc public func widgetReportsForVisit(visitId: Swift.String, widgetType: Swift.String, taskId: Swift.String?) -> [IrLibSwift.VisitWidgetReportDataEntity]
   #endif
@@ -991,7 +982,10 @@ extension RLMCollection {
   @available(swift, obsoleted: 1.0)
   @objc(setupWithUsername:password:guestToken:externalUserId:notification:domainName:isMultiportal:completion:) final public class func setup(username: Swift.String, password: Swift.String, guestToken: Swift.String, externalUserId: Swift.String?, notification: Swift.String? = nil, domainName: Swift.String? = nil, isMultiportal: Swift.Bool = false, completion: IrLibSwift.IRResultObjcCompletion?)
   #endif
-  @objc final public class func startShooting(in presentingVC: UIKit.UIViewController, externalStoreId: Swift.String, externalVisitId: Swift.String) throws
+  @objc @_Concurrency.MainActor final public class func startShooting(in presentingVC: UIKit.UIViewController, externalStoreId: Swift.String, externalVisitId: Swift.String) throws
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @_Concurrency.MainActor final public class func startShooting(in presentingVC: UIKit.UIViewController, externalStoreId: Swift.String, externalVisitId: Swift.String, taskId taskTemplateId: Swift.String?) throws
+  #endif
   #if compiler(>=5.3) && $NonescapableTypes
   @available(swift, obsoleted: 1.0)
   @objc(showSummaryReportIn:visitId:completion:) final public class func showSummaryReport(in presentingViewController: UIKit.UIViewController, visitId: Swift.String, completion: IrLibSwift.IRResultObjcCompletion?)
@@ -1180,6 +1174,14 @@ public struct Gradient : Swift.Hashable {
     get
   }
 }
+extension SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public func applyLinearGradient(_ gradient: IrLibSwift.Gradient) -> some SwiftUICore.View
+  
+}
+extension SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public func font(_ font: UIKit.UIFont) -> some SwiftUICore.View
+  
+}
 @objc public protocol LegacyReportFiltersModuleOutput {
   @objc func didUpdateFilters(_ filters: IrLibSwift.IRReportFilters)
 }
@@ -1190,60 +1192,6 @@ public struct Gradient : Swift.Hashable {
   @objc final public let taskId: Swift.String?
   @objc final public let matrixId: Swift.String?
   @objc final public let matrixName: Swift.String?
-  @objc deinit
-}
-@_hasMissingDesignatedInitializers @objc public class IRScreensBuilderInteractionProvider : ObjectiveC.NSObject {
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc public func startViewController(externalStoreId: Swift.String, externalVisitId: Swift.String, taskId: Swift.String?, cameraOutput: any IrLibSwift.CameraModuleOutput, storeDetailsOutput: any IrLibSwift.StoreDetailsOutput, backButtonHandler: (() -> Swift.Void)?) throws -> UIKit.UIViewController
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc public func cameraViewController(output: (any IrLibSwift.CameraModuleOutput)?, externalVisitId: Swift.String, taskId: Swift.String?, externalStoreId: Swift.String, isOpenedViaDeeplinks: Swift.Bool) throws -> UIKit.UIViewController
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc public func sosReportListController(visitId: Swift.String, taskId: Swift.String?) -> UIKit.UIViewController?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc public func sosReportDetailController(visitId: Swift.String, taskId: Swift.String) -> UIKit.UIViewController?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  public func showSummaryReportViewController(shouldLoadPreviousVisit: Swift.Bool, externalVisitId: Swift.String, completion: ((Swift.Result<UIKit.UIViewController, any Swift.Error>) -> Swift.Void)?)
-  #endif
-  @objc public func summaryReportViewController(externalVisitId: Swift.String) throws -> UIKit.UIViewController
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc public func reportPhotoBrowseViewController(visitId: Swift.String, taskId: Swift.String?) -> UIKit.UIViewController?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc public func summaryReportOOSReportViewController(visitId: Swift.String, taskId: Swift.String?) -> UIKit.UIViewController?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc public func standaloneOOSReportViewController(visitId: Swift.String, taskId: Swift.String?) -> UIKit.UIViewController?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc public func OSAReportViewController(visitId: Swift.String, taskId: Swift.String?) -> UIKit.UIViewController?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc public func searchController() -> UIKit.UIViewController?
-  #endif
-  @objc public func retailExecutionStoresScreen() -> UIKit.UIViewController
-  @objc public func sfaStoresScreen() -> UIKit.UIViewController
-  @objc public func filterScreenResults() -> UIKit.UIViewController
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc public func widgetsController() -> (any IrLibSwift.WidgetsModuleInput)?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc public func storeDetailScreen(output: any IrLibSwift.StoreDetailsOutput, storeId: Swift.Int, externalVisitId: Swift.String?) -> UIKit.UIViewController
-  #endif
-  @objc public func visitStatsScreen(visitId: Swift.String) -> UIKit.UIViewController
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc public func reportFiltersScreen(output: any IrLibSwift.LegacyReportFiltersModuleOutput, storeId: Swift.Int, visitId: Swift.String, taskId: Swift.String?, matrixId: Swift.String?, currentReportType: Swift.String?) -> UIKit.UIViewController
-  #endif
-  @objc public func appDocsScreen() -> UIKit.UIViewController
-  @objc public func retailTasksViewController() -> UIKit.UIViewController
-  @objc public func tabBarController(settingsController: UIKit.UIViewController) -> UIKit.UITabBarController
-  @objc public func workflowBasedStartViewController() -> UIKit.UIViewController
-  @objc public func manageAppDataViewController() -> UIKit.UIViewController
-  @objc public func debugFeaturesViewController() -> UIKit.UIViewController
-  @objc public func supportTabViewController() -> UIKit.UIViewController
   @objc deinit
 }
 @_inheritsConvenienceInitializers @objc public class RecognitionResultAssortmentAchievement : RLMObject {
@@ -1355,14 +1303,6 @@ public struct ComplexShadow {
   @objc override dynamic public init()
   @objc deinit
 }
-extension SwiftUICore.View {
-  @_Concurrency.MainActor @preconcurrency public func applyLinearGradient(_ gradient: IrLibSwift.Gradient) -> some SwiftUICore.View
-  
-}
-extension SwiftUICore.View {
-  @_Concurrency.MainActor @preconcurrency public func font(_ font: UIKit.UIFont) -> some SwiftUICore.View
-  
-}
 @_inheritsConvenienceInitializers @objc public class RecognitionResultValue : RLMObject {
   @objc override dynamic public init()
   @objc deinit
@@ -1376,7 +1316,6 @@ public typealias IRDataManagerProtocol = IrLibSwift.IRDataManagerObjcProtocol & 
   @objc var techSupport: IrLibSwift.IRTechSupportInteractionProvider { get }
   @objc var visits: IrLibSwift.IRVisitServiceInteractionProvider { get }
   @objc var reports: IrLibSwift.IRReportsInteractionProvider { get }
-  @objc var screens: IrLibSwift.IRScreensBuilderInteractionProvider { get }
   @objc var featureToggles: IrLibSwift.IRFeatureToggles { get }
   @objc var storedStateSettings: IrLibSwift.IRStoredStateSettings { get }
   @objc func startAnalytics()
@@ -1387,9 +1326,6 @@ public typealias IRDataManagerProtocol = IrLibSwift.IRDataManagerObjcProtocol & 
   @objc func updateExternalData(visitId: Swift.String)
   @objc static func updateExternalData(visitId: Swift.String)
   @objc static func clearExternalData()
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc func fetchWidgets(visitId: Swift.String, completion: @escaping (Foundation.NSError?) -> Swift.Void)
-  #endif
   #if compiler(>=5.3) && $NonescapableTypes
   @objc func defaultReportMatrix(visitId: Swift.String, taskId: Swift.String?) -> IrLibSwift.VisitWidgetReportMatrixDataEntity?
   #endif
@@ -1491,9 +1427,6 @@ extension UIKit.UITableView {
   @_Concurrency.MainActor @preconcurrency public func dequeueReusableCell<T>(withClass: T.Type, indexPath: Foundation.IndexPath) -> T where T : UIKit.UITableViewCell
   @_Concurrency.MainActor @preconcurrency public func dequeueReusableView<T>(withClass: T.Type) -> T where T : UIKit.UITableViewHeaderFooterView
 }
-@objc public protocol CameraModuleOutput {
-  @objc func didCompleteCapture()
-}
 @_inheritsConvenienceInitializers @objc @_Concurrency.MainActor @preconcurrency final public class DiagramReportCollectionViewCell : UIKit.UICollectionViewCell {
   @objc @_Concurrency.MainActor @preconcurrency final public var titleTapHandler: (() -> Swift.Void)?
   @objc @_Concurrency.MainActor @preconcurrency final public var reportTapHandler: (() -> Swift.Void)?
@@ -1573,6 +1506,7 @@ public enum CatalogLoadingItem : Swift.Hashable {
   case sceneGroups(_: Swift.Double)
   case matchingStoresAndSegments
   case users
+  case barcodes(_: Swift.Double)
   public func loadingDescription() -> Swift.String
   public static func == (a: IrLibSwift.CatalogLoadingItem, b: IrLibSwift.CatalogLoadingItem) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
