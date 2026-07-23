@@ -46,7 +46,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		r9eHQA1XPGYH84fGdBFvWDYfHAc=
+		exj/70+WgDTr4yqgvScd19T7Hzo=
 		</data>
 		<key>AssortmentMatrixDetails.storyboardc/AssortmentMatrixDetailsViewController.nib</key>
 		<data>
@@ -378,7 +378,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		eZ/A2d0KnjnKJ2gr6bX0WRucdyI=
+		rOIf89LF69lNygcjxp1qfVAV2xY=
 		</data>
 		<key>InfoCarousel.storyboardc/AyY-Nc-I4C-view-aPB-Tf-gvS.nib</key>
 		<data>
@@ -414,11 +414,11 @@
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		I9OGlyZy3rzpsPaq5aS42M6CKUY=
+		9ckAYTZ2FVuj9b9+TWR5Hd/fUww=
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		v6EgLjSU6zvg9Egb/NvJbdch+fM=
+		dg4N4z9Y1tRbnBgPZiSg6CNKQKI=
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -426,19 +426,19 @@
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		v6EgLjSU6zvg9Egb/NvJbdch+fM=
+		dg4N4z9Y1tRbnBgPZiSg6CNKQKI=
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		uCnNfREGd+FDRAHL2X0xXxHIPDI=
+		jZl9iNBITEYhA5opdDTIBQKU6rs=
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		I9OGlyZy3rzpsPaq5aS42M6CKUY=
+		2/xq9Qokj/qO9JZhRkWnp2uop8U=
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		UwhKpDoeInXUDJf/OMUwpGMdvSU=
+		gIJTU7WBRiW6iqpX9Vw6bV/FXaU=
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -446,11 +446,11 @@
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		UwhKpDoeInXUDJf/OMUwpGMdvSU=
+		gIJTU7WBRiW6iqpX9Vw6bV/FXaU=
 		</data>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		FZn9CVI13f+oI/Bx8eEQdymLbQM=
+		zSRGj+eNpwCmxqQyCiEdA/gbINQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -1376,7 +1376,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			JhadTV0D0ADKinItcCVN7pgfJuk=
+			R8z+mE+TLKmtXmp+tKN+Rs+2fXU=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1452,7 +1452,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			WCP+jZu79eU8rEWPRXkM2pk0V30=
+			U42e7pAUY3DYBGVVTtEiNtKDP20=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1561,7 +1561,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			8FEWPT3dRdb6P0qC+7lHXT/p4z0C+xIp9lRUmjApakU=
+			Qp6vz1Ob4LYL+jPNn5Oum+FnceExSUTd6WX8rD7CB38=
 			</data>
 		</dict>
 		<key>AssortmentMatrixDetails.storyboardc/AssortmentMatrixDetailsViewController.nib</key>
@@ -2198,14 +2198,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			vrlmsk59BCpqhx3fRXWk8G67V+DcJAjx8fDd6oLjDQQ=
+			o5qVFplqGFHKcscQVa4GMyOH8FgunUoNlGgINUg6TmU=
 			</data>
 		</dict>
 		<key>Modules/IrLibSwift.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			GwbEYYxz5cueXp2T2D00LWVB6+CnhiXCdJk1JFazhOY=
+			QAAdX98ygDV/yZ8QC8BZlYI5HnS2A3f0V8xdEPwF6Kg=
 			</data>
 		</dict>
 		<key>Modules/IrLibSwift.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -2219,28 +2219,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			GwbEYYxz5cueXp2T2D00LWVB6+CnhiXCdJk1JFazhOY=
+			QAAdX98ygDV/yZ8QC8BZlYI5HnS2A3f0V8xdEPwF6Kg=
 			</data>
 		</dict>
 		<key>Modules/IrLibSwift.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			JfhoYkKMcGOkIp1zFn3/9GLpQYVFHvg3v+U3Z8oFtCM=
+			HANjFZsx1vLgUqSp+93UA8m+Vru1ZCfYPAQ3cguztrw=
 			</data>
 		</dict>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			vrlmsk59BCpqhx3fRXWk8G67V+DcJAjx8fDd6oLjDQQ=
+			Eopuf9Cn7Tujr9zxzFeyLlJO0s7Cc1oGF8ajho53jdk=
 			</data>
 		</dict>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			R73bdi3hO61emtkc9i4cUrKLztdxN1otAh4609O+kPk=
+			xiXntCWOY+1t3SL+vLleX5iA7aEmBnXkDQZPRbTTDWI=
 			</data>
 		</dict>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -2254,14 +2254,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			R73bdi3hO61emtkc9i4cUrKLztdxN1otAh4609O+kPk=
+			xiXntCWOY+1t3SL+vLleX5iA7aEmBnXkDQZPRbTTDWI=
 			</data>
 		</dict>
 		<key>Modules/IrLibSwift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			20VXz+h0knkQcivby1x9nFQ3PJ/CAgHiipSwZlbAiOw=
+			AK0Y06lGiUtQHOp2C1kQg4GCdjC2zVMFAPyqVmAYw8A=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -3878,7 +3878,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			QzkXcWUGn2YYIZP0dv4GUVqwAw+pBY/f7BsqbP/Jr5M=
+			dsel85622R5CXFSRH5bvbfmWcLJicM5ypVVIf0xpHKc=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3957,7 +3957,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0SH3gxFGZZVRZPV9jACpTDSeq6rWx8cxepvnFKKbfgs=
+			6gbKuTyGGnl1TvDjHQ3a5xJuyqXWxrJgdbhyh1I7wq8=
 			</data>
 			<key>optional</key>
 			<true/>

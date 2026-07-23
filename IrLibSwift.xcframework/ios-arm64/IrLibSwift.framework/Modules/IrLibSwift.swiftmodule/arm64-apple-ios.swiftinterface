@@ -1174,14 +1174,6 @@ public struct Gradient : Swift.Hashable {
     get
   }
 }
-extension SwiftUICore.View {
-  @_Concurrency.MainActor @preconcurrency public func applyLinearGradient(_ gradient: IrLibSwift.Gradient) -> some SwiftUICore.View
-  
-}
-extension SwiftUICore.View {
-  @_Concurrency.MainActor @preconcurrency public func font(_ font: UIKit.UIFont) -> some SwiftUICore.View
-  
-}
 @objc public protocol LegacyReportFiltersModuleOutput {
   @objc func didUpdateFilters(_ filters: IrLibSwift.IRReportFilters)
 }
@@ -1605,6 +1597,14 @@ extension Swift.Array where Element : UIKit.UIView {
 extension UIKit.UIView {
   @_Concurrency.MainActor @preconcurrency public func decorateText(with color: UIKit.UIColor)
   @_Concurrency.MainActor @preconcurrency public func decorateFont(with font: UIKit.UIFont)
+}
+extension SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public func applyLinearGradient(_ gradient: IrLibSwift.Gradient) -> some SwiftUICore.View
+  
+}
+extension SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public func font(_ font: UIKit.UIFont) -> some SwiftUICore.View
+  
 }
 extension IrLibSwift.ProfileInfoNavigationBarCustomizer.ProfileInfoPosition : Swift.Equatable {}
 extension IrLibSwift.ProfileInfoNavigationBarCustomizer.ProfileInfoPosition : Swift.Hashable {}
